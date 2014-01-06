@@ -43,6 +43,14 @@
   /*padding-bottom: 20px;*/
 }
 
+.feature-row h3 {
+  text-align: center;
+}
+.feature-row .glyphicon {
+  font-size: 36px;
+  color: #000;
+}
+
 .vwf-frame {
   width: 100%;
   height: 350px;
