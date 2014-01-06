@@ -1,0 +1,3757 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<title>Virtual World Framework</title>
+
+		<!-- Site CSS/JS Files References -->
+		
+			<script src="js/less-1.3.0.min.js" type="text/javascript"></script>
+			<link rel='stylesheet' type='text/css' href='css/bootstrap.css' />
+			<link rel='stylesheet' type='text/css' href='css/bootstrap.min.css' />
+			<!--link rel='stylesheet' type='text/css' href='css/bootstrap-responsive.min.css' /-->
+			<link rel='stylesheet' type='text/css' href='css/vwf.css' />
+			<link rel="stylesheet/less" type="text/css" href="css/bootswatch.less">
+			<link rel="stylesheet/less" type="text/css" href="css/variables.less">
+			<script src="js/widgets.js"></script>
+			<script src="js/jquery-1.10.2.min.js"></script>
+			<script src="js/bootstrap-carousel.js"></script>
+			<script src="js/bootstrap-tab.js"></script>		
+			<script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+			<link rel='stylesheet' type='text/css' href='css/jquery-ui-1.10.3.custom.min.css' />			
+
+		<!-- SHIM FOR HTML5 Display in early IE browsers -->
+		
+			<!--[if lt IE 9]>
+				<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+			<![endif]-->
+		
+		<!-- Meta Information -->	
+		
+			<meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+			<meta name="description" content="The Virtual World Framework (VWF) is a fast, light-weight, web-based architecture for creating and distributing secure, scalable, component-based, collaborative virtual spaces. It leverages existing web-based standards, infrastructure, and emerging technologies with the intent of establishing a powerful yet simple to use platform that is built on top of the next generation of web browsers.">	
+			<meta name="keywords" content="virtual worlds, mmo, online gaming, online simulation, browser based gaming, 3d online games, framework, platform, vwf, virtual world framework, 3d browser gaming, html5 games, html5 simulation, webgl games, webgl simulation, websockets framework, webgl framework, webgl platform, chrome games, safari games, firefox games, online 3d simulation, mmo simulation, mmo 3d online, mmo 3d browser, mmo 3d games, mmo 3d framework, webgl mmo">	
+	</head>
+	
+	<body>
+		<header class="navbar navbar-fixed-top" style="z-index=1;">
+				<a href="https://github.com/virtual-world-framework/vwf"><img style="position: absolute; top: 0; left: 0; border: 0;z-index=-1;" src="images/github.png" alt="Fork me on GitHub"></a>
+			<div class="navbar-inner" style="z-index=1;">
+				<div class="container"><div id="logo" style="z-index=1;">Virtual World Framework</div>
+					<nav>
+						<ul class="nav pull-right">
+						  <li><a href="about.html">About</a></li>
+						  <li><a href="catalog.html">Demos</a></li>
+						  <li><a href="documentation.html">Documentation</a></li>
+						  <li><a href="downloads.html">Downloads</a></li>
+						  <li><a href="forum.html">Forum</a></li>
+						</ul>
+				  </nav>
+				</div>
+			</div>
+		</header>
+			
+		<div class="container" style="margin-top: 50px;">
+
+				<!-- Convert source.txt using markdown converter: http://daringfireball.net/projects/markdown/dingus -->
+				<!-- INSERT MARKDOWN HERE -->
+		</div>
+		<div style="text-align:center;">
+			<div style="text-align:left;margin:auto;width:940px">
+				<table style="width:100%">
+					<tr>
+						<td style="width:20%;vertical-align:top;">
+							<div class='navmenu' id='navmenu'>
+								<ul>
+									<li><a href='documentation.html#introduction' class='header' title='Introduction'>Introduction</a></li>
+									<li><a href='documentation.html#requirements' title='Requirements'>Requirements</a></li>
+									<li><a href='documentation.html#troubleshooting' title='Troubleshooting'>Troubleshooting</a></li>
+									<li><a href='documentation.html#install' title='Installation'>Installation</a></li>
+									<br />
+									<li><a href='documentation.html#tutorials' class='header' title='Tutorials'>Tutorials</a></li>
+									<li><a href='documentation.html#tutorial1' title='Tutorial1'>Hello World Tutorial</a></li>
+									<li><a href='documentation.html#tutorial2' title='Tutorial2'>Sandtable Tutorial</a></li>
+									<br />
+									<li><a href='documentation.html#devguide' class='header' title='Dev Guide'>Dev Guide</a></li>
+									<li><a href='documentation.html#architecture' title='Architecture'>Architecture</a></li>
+									<li><a href='documentation.html#components' title='Components'>Components</a></li>
+									<li><a href='documentation.html#cameras' title='Cameras'>Cameras</a></li>
+									<li><a href='documentation.html#lights' title='Lights'>Lights</a></li>
+									<li><a href='documentation.html#prototypes' title='Prototypes'>Prototypes</a></li>
+									<li><a href='documentation.html#behaviors' title='Behaviors'>Behaviors</a></li>
+									<li><a href='documentation.html#animations' title='Animations'>Animations</a></li>
+									<li><a href='documentation.html#html' title='HTML'>HTML</a></li>
+									<li><a href='documentation.html#drivers' title='Drivers'>Drivers</a></li>
+									<li><a href='documentation.html#editor' title='Editor'>Editor</a></li>
+									<li><a href='documentation.html#querying' title='Querying'>Querying</a></li>
+									<br />
+									<li><a href='documentation.html#cookbook' class='header' title='Cookbook'>Cookbook</a></li>
+									<li><a href='documentation.html#multiuser' title='Multiuser'>Multiuser</a></li>
+									<li><a href='documentation.html#simulation' title='Simulation'>Simulation</a></li>
+									<li><a href='documentation.html#2d-interface' title='2D-Interface'>2D Interface</a></li>
+									<li><a href='documentation.html#materials' title='Materials'>Materials</a></li>
+									<li><a href='documentation.html#chat' title='Chat'>Chat</a></li>
+									<li><a href='documentation.html#sound' title='Sound'>Sound</a></li>
+									<li><a href='documentation.html#transforms' title='Transforms'>Transforms</a></li>
+									<li><a href='documentation.html#lesson' title='Lesson'>Lesson</a></li>
+									<li><a href='documentation.html#logging' title='Logging'>Logging</a></li>
+									<li><a href='documentation.html#testing' title='Testing'>Testing</a></li>
+									<li><a href='documentation.html#pitfalls' title='Pitfalls'>Pitfalls</a></li>
+									<br />
+									<li><a href='documentation.html#application-api' class='header' title='APIs'>APIs</a></li>
+									<li><a href='documentation.html#application-api' title='Application API'>Application API</a></li>
+									<li><a href='documentation.html#system-api' title='System API'>System API</a></li>
+								</ul>
+							</div>	
+						</td>
+						<td style='width:80%;vertical-align:top;'>
+							<div style='margin-left:20px;margin-right:20px;' markdown="1">
+								<br/>
+								<!-- INSERT MARKDOWN HERE -->
+<p><a name="introduction"></a></p>
+
+<div class="well">
+  <h1 id="introduction">Introduction</h1>
+  <hr />
+  <p>The Virtual World Framework (VWF) provides a synchronized collaborative 3D environment for the web browser. VWF allows for easy application creation, and provides a simple interface to allow multiple users to interact with the state of the application that is synchronized across clients. </p>
+
+  <p>VWF leverages existing web-based standards, infrastructure, and emerging technologies with the intent of establishing a powerful yet simple to use platform that is built on top of the next generation of web browsers. The same concepts will get you this shared 3D environment. VWF applications run directly in browser with no additional plugins.</p>
+</div>
+
+<hr />
+
+<div class="well">
+  <p>Use the Virtual World Framework (VWF) to create apps that are:</p>
+
+  <ul>
+    <li><strong>3D</strong></li>
+    <li><strong>Collaborative</strong></li>
+    <li><strong>Web-based</strong></li>
+  </ul>
+
+  <p>… and create them <strong>fast</strong>.</p>
+
+  <script>
+  this.createAppUrl = function() {
+  var sessionId = "";
+  var chars = [ '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f' ];
+    for ( var i = 0; i < 16; i++ )
+      sessionId += chars[ Math.floor( Math.random() * 16 ) ];
+    return "../duck/" + sessionId;
+  };
+
+  this.Url = this.createAppUrl();
+
+  this.createIframes = function() {
+    document.write( "<p>Imagine that you are in New York...</p>" );
+    document.write( "<iframe height='400' width='660' src='" + this.Url + "'></iframe>" );
+    document.write( "<p>...and you're working with someone in San Francisco.</p>" );
+    document.write( "<p>(Click the duck to see them spin in synchrony)</p>" );
+    document.write( "<iframe height='400' width='660' src='" + this.Url + "'></iframe>" );
+  }();
+</script>
+
+</div>
+
+<hr />
+
+<div class="well">
+  <h1 id="technology">Technology</h1>
+  <hr />
+
+  <p>The underlying technology of VWF includes:</p>
+
+  <ul>
+    <li>
+      <p>WebGL, a high performance rendering engine for 3D on the web.</p>
+    </li>
+    <li>
+      <p>Modern javascript and ECMAScript5, a more standardized programming environment.</p>
+    </li>
+    <li>
+      <p>WebSockets, providing high performance communication. </p>
+    </li>
+  </ul>
+</div>
+
+<hr />
+
+<div class="well">
+  <h1 id="audience">Audience</h1>
+  <hr />
+
+  <p>The developer’s guide is designed for those with web development skills (HTML5, JavaScript, etc), and will serve as a guide to the user creating applications with the Virtual World Framework. </p>
+</div>
+
+<hr />
+
+<div class="well">
+  <h1 id="using-vwf">Using VWF</h1>
+  <hr />
+
+  <p>The Virtual World Framework is a server package and zero-install client. Demo application can be directly run on the <a href="http://virtualworldframework.com/web/catalog.html">VWF website</a>. A server can be set up locally to build new applications. Please download the source packages from <a href="https://github.com/virtual-world-framework/vwf">github</a> and follow the readme and <a href="install.html">installation instructions</a> to start your own server.</p>
+</div>
+
+<hr />
+
+<p><a name="compliance"></a></p>
+
+<div class="well">
+  <h1 id="what-it-means-to-use-the-virtual-world-framework">What it Means to Use the Virtual World Framework</h1>
+  <hr />
+
+  <p><strong>The following are the basic tasks required to successfully run a genuine VWF application:</strong></p>
+
+  <p><img src="images/check.png" alt="VWF Checkbox" /> Download and run the VWF reflector server to provide built-in client synchronization.</p>
+
+  <p><img src="images/check.png" alt="VWF Checkbox" /> Create a VWF model to maintain the replicated state of the application.</p>
+
+  <p><img src="images/check.png" alt="VWF Checkbox" /> Include in the model any properties, nodes, methods, and events that should be replicated for all users.</p>
+
+  <p><img src="images/check.png" alt="VWF Checkbox" /> Run the application in a compatible browser by connecting to the VWF server through the appropriate application URL.</p>
+</div>
+
+<hr />
+
+<p><a name="requirements"></a></p>
+
+<div class="well">
+  <h1 id="browser-requirements">Browser Requirements</h1>
+  <hr />
+
+  <p>In order to successfully run the Virtual World Framework, the following browser requirements must be met:</p>
+
+  <ul>
+    <li>HTML5</li>
+    <li>ECMAScript5</li>
+    <li>Browser with WebGL enabled (for 3D content)</li>
+    <li>Browser with WebSocket enabled for multi-user functionality</li>
+  </ul>
+
+  <p>The following browsers are recommended for use:</p>
+
+  <ul>
+    <li><a href="https://www.google.com/intl/en/chrome/browser/">Chrome 27+</a></li>
+    <li><a href="http://www.mozilla.org/en-US/firefox/new/">Firefox 21+</a></li>
+    <li><a href="http://www.opera.com/developer/next">Opera 15+</a></li>
+  </ul>
+</div>
+
+<hr />
+
+<div class="well">
+  <h1 id="vwf-compatibility-quirks">VWF Compatibility Quirks</h1>
+  <hr />
+
+  <p>WINDOWS</p>
+
+  <ul>
+    <li>
+      <p>At this time we have limited support for Internet Explorer 10. Please see our demos of Google Earth and Tile Puzzle 2D to see what can be done with the framework without WebGL.  </p>
+    </li>
+    <li>
+      <p>Internet Explorer 11 is rumored at this time to support WebGL, and we are constantly looking to the future of modern browsers to determine how well the Virtual World Framework is supported.</p>
+    </li>
+  </ul>
+
+  <p>MACINTOSH OS X</p>
+
+  <ul>
+    <li>
+      <p>Safari 5 is experiencing some issues at this time. We are working through multiple issues with Safari to get VWF and Safari compatibility completed.</p>
+    </li>
+    <li>
+      <p>Firefox 22 Proxy Support for firewalls requires that under Firefox -&gt; Preferences -&gt; Network -&gt; Settings, you must select “Manual Proxy Configuration”, and place a check in the “use this proxy server for all protocols” checkbox.</p>
+    </li>
+  </ul>
+
+</div>
+
+<hr />
+
+<div class="well">
+  <h1 id="enabling-webgl">Enabling WebGL</h1>
+  <hr />
+
+  <p>Use the following steps to verify that WebGL is enabled in your browser.</p>
+
+  <p>CHROME</p>
+
+  <ul>
+    <li>Open a new tab and type <em>chrome://flags</em> in the address bar.</li>
+    <li>Search for WebGL.</li>
+    <li>Verify <em>Disable WebGL</em> is not enabled. </li>
+    <li>If on an Android device, verify <em>Enable WebGL Android</em> is enabled.</li>
+  </ul>
+
+  <p>FIREFOX</p>
+
+  <ul>
+    <li>Open a new tab and type <em>about:config</em> in the address bar. </li>
+    <li>Search for <em>WebGL.</em></li>
+    <li>Verify <em>webgl.disabled</em> is set to false. Alternatively, set <em>webgl.force-enabled</em> to true.</li>
+  </ul>
+
+</div>
+
+<hr />
+
+<p><a name="troubleshooting"></a></p>
+
+<div class="well">
+  <h1 id="troubleshooting">Troubleshooting</h1>
+  <hr />
+
+  <p>The following resources may be helpful for troubleshooting any issues that arise.</p>
+
+  <ul>
+    <li>
+      <p>Verify <a href="install.html">installation instructions</a> were followed.</p>
+    </li>
+    <li>
+      <p>Load an application, and verify all the requirements are met on the loading screen. </p>
+    </li>
+    <li>
+      <p>Open the developer console to check for any error messages. </p>
+
+      <ul>
+        <li>In Google Chrome, press Ctrl+Shift+J or select the tools menu -&gt; Tools -&gt; Developer Tools -&gt; JavaScript Console. </li>
+      </ul>
+
+      <p><img src="images/chrome.png" alt="chrome" style="width:500px" /></p>
+
+      <ul>
+        <li>In Mozilla Firefox, download and install <a href="https://addons.mozilla.org/en-us/firefox/addon/firebug">Firebug</a>. Select the bug icon in the upper right of the browser to run, and then select the Console window. </li>
+      </ul>
+
+      <p><img src="images/firebug.png" alt="firebug" style="width:500px" /></p>
+    </li>
+    <li>
+      <p>Search or post a question to the <a href="http://virtualworldframework.com/web/forum.html">VWF Forum</a> for additional assistance. </p>
+    </li>
+  </ul>
+</div>
+
+<hr />
+
+<div class="well">
+  <h1 id="additional-resources">Additional Resources</h1>
+  <hr />
+
+  <p>Additional information can be found on the <a href="http://virtualworldframework.com">VWF website</a> and on <a href="http://en.wikipedia.org/wiki/Virtual_world_framework">wikipedia</a>. </p>
+
+  <p>Download the source on <a href="https://github.com/virtual-world-framework/vwf">github</a>. Fork the project and submit pull requests to add new features back to the project.</p>
+</div>
+
+<hr />
+
+<p><a name="install"></a></p>
+
+<div class="well">
+  <h1 id="installation-instructions">Installation Instructions</h1>
+  <hr />
+</div>
+
+<hr />
+
+<div class="well">
+  <h2 id="source-code">Source Code</h2>
+  <hr />
+
+  <p>The VWF source can be downloaded from <a href="https://github.com/virtual-world-framework/vwf">github</a> for both Windows and Linux.</p>
+</div>
+
+<hr />
+<div class="well">
+  <h2 id="windows-installation">Windows Installation</h2>
+  <hr />
+
+  <p><strong>1. Install Cygwin</strong></p>
+
+  <p>Download and run setup.exe from <a href="http://www.cygwin.com/install.html">Cygwin</a>.</p>
+
+  <p>Accept the default settings, except for:</p>
+
+  <ul>
+    <li>Set <strong>Root Directory</strong> to C:\Cygwin (with a capital C).</li>
+    <li>Consider changing <strong>Local Package Directory</strong> to your browser downloads folder to avoid cluttering your desktop.</li>
+  </ul>
+
+  <p>Select a download site from the list. Choose one that seems close and reliable.</p>
+
+  <p>At <strong>Select Packages</strong>, click the <em>View</em> button once to choose the <em>Full</em> view, which is a straight list and is easier to navigate than the default nested category view.</p>
+
+  <p>Select the following packages for installation. Use the search box or scroll down the list to find each one. In the table, find the <em>New</em> column.  In this column, you will see packages listed typically with the word <em>Skip</em>.  Click on the word <em>Skip</em> in the <em>New</em> column will change the word to <em>Install</em>.  If the word is <em>Keep</em>, you already have the package needed installed.  We will want to change the following packages to <em>Install</em> by clicking on the word <em>Skip</em> to change the word.  Once the following listed packages are all marked for <em>Install</em> or <em>Keep</em> in the New column of the table, you may continue.</p>
+
+  <ul>
+    <li>curl</li>
+    <li>gcc-g++</li>
+    <li>git</li>
+    <li>make</li>
+    <li>ruby</li>
+    <li>openssl</li>
+    <li>perl</li>
+    <li>python</li>
+    <li>p7zip</li>
+    <li>libxml2</li>
+    <li>libxml2-devel</li>
+    <li>libxslt</li>
+    <li>libxslt-devel</li>
+  </ul>
+
+  <p>Click through to <em>Finish</em> to close Cygwin setup. Save setup.exe for later since you may need it to add or update packages.</p>
+
+  <hr />
+
+  <p><strong>2. Install Java</strong></p>
+
+  <p>Please make sure your computer has the latest version of Java installed.  You may install java from <a href="http://www.java.com">Java’s Website</a></p>
+
+  <hr />
+
+  <p><strong>Option A: Automatic Windows Installation</strong></p>
+
+  <p><em>A.1 Shell Command</em></p>
+
+  <p>Please make sure your HTTP_PROXY and HTTPS_PROXY environment variable are set in cygwin. Please make sure your git http proxy are also set (ie. git config –global http.proxy http://yourproxy.com)</p>
+
+  <p>Perform the following shell command at a user shell prompt within Cygwin:</p>
+
+  <pre><code>curl -k https://raw.github.com/virtual-world-framework/vwf/master/support/build/Scripts/build_windows.sh | bash -x
+</code></pre>
+
+  <hr />
+
+  <p><strong>Option B: Manual Windows Installation</strong></p>
+
+  <p><em>B.1 Install RubyGems</em></p>
+
+  <p>Cygwin’s ruby installs without the library manager, so we have to install it from source: <a href="http://rubygems.org/pages/download">http://rubygems.org/pages/download</a>
+Open a new Cygwin terminal session.
+Unpack into a directory and cd there
+Install with command: ruby setup.rb</p>
+
+  <p><em>B.2 Extract VWF from ZIP File</em></p>
+
+  <p><a href="../downloads.html">Download</a> the latest release and unzip to your user directory (for example, “C:\Users\YOU\pathto\VirtualWorldFramework”) to ensure that you have full directory permissions.</p>
+
+  <p><strong>Note:</strong> Windows’ built-in zip utility may report path length errors when unzipping.  We recommend <a href="http://www.7-zip.org/">7-Zip</a> (free), <a href="http://www.rarlab.com/">WinRAR</a> (not free), or <a href="http://www.winzip.com/win/en/index.htm">WinZip</a> (not free) to unzip the file.</p>
+
+  <p><em>B.3 Install the Gems</em></p>
+
+  <p>Use the previous Cygwin terminal window or launch a new one and cd to your VWF development directory:</p>
+
+  <pre><code>cd "C:\Users\YOU\pathto\VirtualWorldFramework"
+</code></pre>
+
+  <p>The easiest way is to type c-d-space as above, drag a VWF directory icon from Windows Explorer, drop it onto the Cygwin terminal, then hit return.</p>
+
+  <p>Then enter these commands:</p>
+
+  <pre><code>gem install bundler
+
+bundle install
+
+bundle exec rake 
+</code></pre>
+
+  <p>Ignore the warning about sudo not found for bundle install. If you get linker relocation errors, you probably need to tell Cygwin to rebaseall. See <a href="http://www.heikkitoivonen.net/blog/2008/11/26/cygwin-upgrades-and-rebaseall">Cygwin rebaseall</a> for details. The required rebase and dash packages should already be installed.</p>
+
+  <p><em>B.4 Launch the Server</em></p>
+
+  <p>Enter the following command:</p>
+
+  <pre><code>bundle exec thin start 
+</code></pre>
+
+  <p><em>B.5 Connect</em></p>
+
+  <p>The server runs on port 3000 in development mode by default. Use Google Chrome to connect to <a href="http://localhost:3000/duck">http://localhost:3000/duck</a> and <a href="http://localhost:3000/plane">http://localhost:3000/plane</a>. View the excellent duck and the fascinating plane. Other applications may be available at other paths.</p>
+</div>
+<hr />
+<div class="well">
+  <h2 id="linux-installations">Linux Installations</h2>
+  <hr />
+
+  <p><strong>1. Ubuntu/Debian Automatic Installation</strong></p>
+
+  <p>Perform the following shell command at a user shell prompt:</p>
+
+  <pre><code>sudo curl https://raw.github.com/virtual-world-framework/vwf/master/support/build/Scripts/build_debian.sh | bash -x
+</code></pre>
+
+  <hr />
+
+  <p><strong>2. Red Hat Enterprise Linux Automatic Installation</strong></p>
+
+  <p>Perform the following shell command at a user shell prompt:</p>
+
+  <pre><code>sudo curl https://raw.github.com/virtual-world-framework/vwf/master/support/build/Scripts/build_redhat.sh | bash -x
+</code></pre>
+
+  <hr />
+
+  <p><strong>3. Manual Installation on Linux</strong></p>
+
+  <p><em>3.1 RubyGems</em></p>
+
+  <p>Ensure RubyGems is installed (for Debian/Ubuntu). </p>
+
+  <pre><code># sudo apt-get update
+# sudo apt-get install ruby1.9.1 ruby1.9.1-dev \ rubygems1.9.1 irb1.9.1 ri1.9.1 rdoc1.9.1 \ build-essential libopenssl-ruby1.9.1 libssl-dev zlib1g-dev
+# sudo update-alternatives --install /usr/bin/ruby ruby /usr/bin/ruby1.9.1 400 \
+     --slave   /usr/share/man/man1/ruby.1.gz ruby.1.gz \
+                    /usr/share/man/man1/ruby1.9.1.1.gz \
+    --slave   /usr/bin/ri ri /usr/bin/ri1.9.1 \
+    --slave   /usr/bin/irb irb /usr/bin/irb1.9.1 \
+    --slave   /usr/bin/rdoc rdoc /usr/bin/rdoc1.9.1
+# sudo update-alternatives --config ruby
+# sudo update-alternatives --config gem	
+</code></pre>
+
+  <p>Now try 
+	# ruby –version</p>
+
+  <p>and you should get the 1.9.# baseline for ruby reported back.	</p>
+
+  <p>Or (for Red Hat/Fedora)</p>
+
+  <pre><code># yum install ruby rubygems
+</code></pre>
+
+  <p>Or (for OSX with Homebrew)</p>
+
+  <pre><code>Make sure you have the [Command Line Tools for XCode](https://developer.apple.com/downloads/index.action) installed.
+
+# ruby -e "$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"
+# brew install automake
+The script explains what it will do and then pauses before it does it
+
+# \curl -L https://get.rvm.io | bash -s stable --ruby
+# source ~/.rvm/scripts/rvm
+This installs RVM which is a version manager for Ruby.
+
+# rvm install 1.9.3-head
+# rvm use ruby-1.9.3-head
+# rvm rubygems current
+This adds Ruby 1.9.3 to your machine and sets 1.9.3 as the default Ruby version.
+
+# brew install git
+This installs git if you do not have it already on your machine.
+</code></pre>
+
+  <p><em>3.2 Extract VWF from TAR File</em></p>
+
+  <p>Download the contents of the GitHub Master VWF Baseline to your local directory:</p>
+
+  <pre><code>$ sudo git clone http://www.github.com/virtual-world-framework/vwf --recursive
+</code></pre>
+
+  <p><em>3.3 Install the Gems</em></p>
+
+  <p>Launch a terminal window and cd to your VWF development directory:</p>
+
+  <pre><code>$ cd vwf/
+</code></pre>
+
+  <p>Then enter these commands:</p>
+
+  <pre><code># sudo gem install rubygems-update
+# sudo update_rubygems 
+# sudo gem install bundler
+</code></pre>
+
+  <p>On Debian-based systems, RubyGems is not automatically added to the path. Find the following lines in bash:</p>
+
+  <pre><code>if [ "`id -u`" -eq 0 ]; then
+  PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+else
+  PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games"
+fi
+export PATH
+</code></pre>
+
+  <p>And update them to:</p>
+
+  <pre><code>if [ "`id -u`" -eq 0 ]; then
+  PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/var/lib/gems/1.8/bin/"
+else
+  PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/var/lib/gems/1.8/bin/"
+fi
+export PATH
+</code></pre>
+
+  <p>Now you can install the RubyGems to the system (as root):</p>
+
+  <pre><code># sudo bundle install
+</code></pre>
+
+  <p><em>3.4 Build the Server</em></p>
+
+  <pre><code># sudo bundle exec rake 
+</code></pre>
+
+  <p><em>3.5 Launch the Server</em></p>
+
+  <pre><code># sudo bundle exec thin start
+</code></pre>
+
+  <p><em>3.6 Connect</em></p>
+
+  <p>The server runs on port 3000 in development mode by default. Use Google Chrome to connect to <a href="http://localhost:3000/duck">http://localhost:3000/duck</a> and <a href="http://localhost:3000/plane">http://localhost:3000/plane</a>. </p>
+</div>
+<hr />
+
+<div class="well">
+  <h2 id="nodejs-server-installation--launch--debug">Node.js Server Installation / Launch / Debug</h2>
+  <hr />
+
+  <p><strong>Installation</strong></p>
+
+  <hr />
+
+  <p><em>1. Install Node.js for your specific environment <a href="http://www.nodejs.org">http://www.nodejs.org</a>.  At the time of this update the current version was v0.10.20.</em>  </p>
+
+  <p><em>2.	Download the VWF source from <a href="https://github.com/virtual-world-framework/vwf">github</a>.</em></p>
+
+  <p><em>3.	Launch a terminal window and cd to your VWF root directory.  For windows a ‘node.js command prompt’ was provided with the node.js windows install.  Cygwin may also be used assuming the Cygwin Windows Installation instructions have been successfully completed.  Caveat, there are known issues using Node.js with Cygwin.</em></p>
+
+  <pre><code>$ cd "//path/to/VirtualWorldFramework"
+</code></pre>
+
+  <p><em>4.	Run the Node Package Manager (npm) to install the correct version of the node module dependencies.  npm is included with your Node.js install.  This will construct the node_modules directory at the top level VWF.</em></p>
+
+  <pre><code>$ npm install
+</code></pre>
+
+  <p><em>5.	(Optional) Check to see that all packages were successful installed.</em></p>
+
+  <pre><code>$ npm ls 
+</code></pre>
+
+  <hr />
+
+  <p><strong>Launch Node Server</strong></p>
+
+  <hr />
+
+  <p><em>6.	Launch the node server.</em></p>
+
+  <pre><code>$ npm start
+</code></pre>
+
+  <p>or</p>
+
+  <pre><code>$ node node-server.js -a ./public
+</code></pre>
+
+  <p>The <code>-a</code> or <code>--applicationPath</code> options can be used to specify where to serve
+VWF applications from. <code>node-server</code> defaults to serving applications from
+the current directory, so be sure to specify the public directory using 
+<code>-a</code> or <code>--applicationPath</code> if you want to run from the root of your VWF
+installation.</p>
+
+  <p><em>7. Connect</em></p>
+
+  <p>The server runs on port 3000 in development mode by default. Use your browser to connect to <a href="http://localhost:3000/duck">http://localhost:3000/duck</a> and <a href="http://localhost:3000/plane">http://localhost:3000/plane</a>. </p>
+
+  <hr />
+
+  <p><strong>Node.js Debugging Tool</strong></p>
+
+  <hr />
+
+  <p>One option for Node.js runtime debugging is the ‘node-inspector’ tool.  To use the tool do the following:</p>
+
+  <p><em>1. Install the node-inspector (from root VWF directory).</em></p>
+
+  <pre><code>$ npm install -g node-inspector   //global install
+</code></pre>
+
+  <p><em>2. Run node-inspector from your terminal.</em></p>
+
+  <pre><code>$ node-inspector &amp;
+</code></pre>
+
+  <p><em>3. Run the node server with debug flag.</em></p>
+
+  <pre><code> $ npm run debug
+</code></pre>
+
+  <p>or</p>
+
+  <pre><code> $ node --debug node-server.js -a ./public
+</code></pre>
+
+  <p>or to pause the debugger at start</p>
+
+  <pre><code> $ node --debug-brk node-server.js  -a ./public
+</code></pre>
+
+  <p><em>4. In your browser go to <a href="http://127.0.0.1:8080/debug?port=5858">http://127.0.0.1:8080/debug?port=5858</a> and use as you would with your typical browser tools.</em></p>
+
+  <p>Additional configuration options can be found at <a href="https://github.com/node-inspector/node-inspector">https://github.com/node-inspector/node-inspector</a></p>
+
+</div>
+<div class="well">
+  <h2 id="configuring-httpsssl-traffic">Configuring HTTPS/SSL Traffic</h2>
+  <hr />
+
+  <p>The Virtual World Framework is able to work over an HTTPS/SSL configuration.  Below we outline how to setup a Linux environment running Thin web server with SSL as this is our preferred operational environment for the VWF server; however you may use SSL for any combination of operating system, and we ask that if you do configure and run SSL installations on other platforms that you please generate a Pull Request on GitHub and update this page with instructions on your preferred platform. Thank you in advance!</p>
+
+  <p>The following is an extremely simplified view of how SSL is implemented and what part the certificate plays in the entire process.</p>
+
+  <p>Normal web traffic is sent unencrypted over the Internet. That is, anyone with access to the right tools can snoop all of that traffic. Obviously, this can lead to problems, especially where security and privacy is necessary, such as in credit card data and bank transactions. The Secure Socket Layer is used to encrypt the data stream between the web server and the web client (the browser).</p>
+
+  <h3 id="step-1-generate-a-private-key">Step 1. Generate a Private Key</h3>
+  <p><br />
+The openssl toolkit is used to generate an RSA Private Key and CSR (Certificate Signing Request). It can also be used to generate self-signed certificates which can be used for testing purposes or internal usage.</p>
+
+  <p>The first step is to create your RSA Private Key. This key is a 1024 bit RSA key which is encrypted using Triple-DES and stored in a PEM format so that it is readable as ASCII text.</p>
+
+  <pre><code>openssl genrsa -des3 -out server.key 1024
+</code></pre>
+
+  <p>Generating RSA private key, 1024 bit long modulus<br />
+…………………………………………………++++++<br />
+……..++++++<br />
+e is 65537 (0x10001)<br />
+Enter PEM pass phrase:<br />
+Verifying password - Enter PEM pass phrase:<br /><br /></p>
+
+  <h3 id="step-2-generate-a-csr-certificate-signing-request">Step 2: Generate a CSR (Certificate Signing Request)</h3>
+  <p><br />
+Once the private key is generated a Certificate Signing Request can be generated. The CSR is then used in one of two ways. Ideally, the CSR will be sent to a Certificate Authority, such as Thawte or Verisign who will verify the identity of the requestor and issue a signed certificate. The second option is to self-sign the CSR, which will be demonstrated in the next section.</p>
+
+  <p>During the generation of the CSR, you will be prompted for several pieces of information. These are the X.509 attributes of the certificate. One of the prompts will be for “Common Name (e.g., YOUR name)”. It is important that this field be filled in with the fully qualified domain name of the server to be protected by SSL. If the website to be protected will be https://public.akadia.com, then enter public.akadia.com at this prompt. The command to generate the CSR is as follows:</p>
+
+  <pre><code>openssl req -new -key server.key -out server.csr
+</code></pre>
+
+  <p>Country Name (2 letter code) [GB]:US<br />
+State or Province Name (full name) [Berkshire]:Florida<br />
+Locality Name (eg, city) [Newbury]:Orlando<br />
+Organization Name (eg, company) [My Company Ltd]:Test<br />
+Organizational Unit Name (eg, section) []:Test Technology<br />
+Common Name (eg, your name or your server’s hostname) []:public.whatever.com<br />
+Email Address []:test@test.com<br />
+Please enter the following ‘extra’ attributes<br />
+to be sent with your certificate request<br />
+A challenge password:<br />
+An optional company name:<br /><br /></p>
+
+  <h3 id="step-3-remove-passphrase-from-key">Step 3: Remove Passphrase from Key</h3>
+  <p><br />
+One unfortunate side-effect of the pass-phrased private key is that Apache will ask for the pass-phrase each time the web server is started. Obviously this is not necessarily convenient as someone will not always be around to type in the pass-phrase, such as after a reboot or crash. mod_ssl includes the ability to use an external program in place of the built-in pass-phrase dialog, however, this is not necessarily the most secure option either. It is possible to remove the Triple-DES encryption from the key, thereby no longer needing to type in a pass-phrase. If the private key is no longer encrypted, it is critical that this file only be readable by the root user! If your system is ever compromised and a third party obtains your unencrypted private key, the corresponding certificate will need to be revoked. With that being said, use the following command to remove the pass-phrase from the key:</p>
+
+  <pre><code>cp server.key server.key.org
+openssl rsa -in server.key.org -out server.key
+</code></pre>
+
+  <p>The newly created server.key file has no more passphrase in it.</p>
+
+  <p>-rw-r–r– 1 root root 745 Jun 29 12:19 server.csr
+-rw-r–r– 1 root root 891 Jun 29 13:22 server.key
+-rw-r–r– 1 root root 963 Jun 29 13:22 server.key.org</p>
+
+  <h3 id="step-4-generating-a-self-signed-certificate">Step 4: Generating a Self-Signed Certificate</h3>
+  <p><br />
+At this point you will need to generate a self-signed certificate because you either don’t plan on having your certificate signed by a CA, or you wish to test your new SSL implementation while the CA is signing your certificate. This temporary certificate will generate an error in the client browser to the effect that the signing certificate authority is unknown and not trusted.</p>
+
+  <p>To generate a temporary certificate which is good for 365 days, issue the following command:</p>
+
+  <pre><code>openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt Signature ok&lt;br/&gt; subject=/C=CH/ST=Test/L=TestName/O=Test Co/OU=Test Technology/CN=public.whatever.com/Email=test@test.com&lt;br/&gt; Getting Private key&lt;br/&gt;
+</code></pre>
+
+  <h3 id="step-5-installing-the-private-key-and-certificate">Step 5: Installing the Private Key and Certificate</h3>
+  <p><br />
+Thin is capable of reading SSL within a configuration yml file for startup.  First we move the certificates generated to a permanent location.</p>
+
+  <pre><code>mkdir /etc/thin_ssl
+cp server.crt /etc/thin_ssl/ssl.crt
+cp server.key /etc/thin_ssl/ssl.key
+</code></pre>
+
+  <p>At this point you will want to add three lines to your Thin Server yml file:</p>
+
+  <pre><code>ssl: true
+ssl_cert_file: /etc/thin_ssl/ssl.crt
+ssl_key_file: /etc/thin_ssl/ssl.key
+</code></pre>
+
+  <p>Restart your thin servers at this point and you should now be able to connect to your server using https://<br />
+Please remember that SSL traffic is on port 443, and you will need to have this port open in your firewall.</p>
+</div>
+<p><a name="tutorials"></a></p>
+
+<div class="well">
+  <h1 id="tutorials">Tutorials</h1>
+  <hr />
+
+  <p>To get started, please view the sample step by step guides to building an application within the framework. The <a href="documentation.html#tutorial1">first example</a> walks through the basic components of an application, and serves as a <em>Hello World</em> for the Virtual World Framework.</p>
+
+  <p>The <a href="documentation.html#tutorial1">second example</a> is a basic tutorial that consists of four stages, bringing the developer from the creation of a primitive scene to a simple sandtable application. </p>
+</div>
+
+<hr />
+
+<p><a name="tutorial1"></a></p>
+
+<div class="well">
+  <h1 id="hello-world-tutorial">Hello World Tutorial</h1>
+  <hr />
+
+  <p>Virtual World Framework (VWF) is a collaborative training platform that is scalable, sustainable and can be run via a browser.</p>
+
+  <hr />
+
+  <p>The most basic implementation of VWF is a single asset in a COLLADA format. A URL pointing directly to an asset COLLADA file (.dae) with no code will result in a scene containing the specified asset with default light, camera, and navigation.</p>
+
+  <p>Sample URL: <em>http://vwf.example.com/application/hello.dae</em></p>
+
+  <hr />
+
+  <p>An asset can be wrapped in a VWF application by specifying the source file in the code.</p>
+
+  <p>Code View: <em>index.vwf.yaml</em></p>
+
+  <pre><code>---
+source: hello.dae
+</code></pre>
+
+  <p>Sample URL: <em>http://vwf.example.com/application/index.vwf</em></p>
+
+  <hr />
+
+  <p>Prototypes for nodes are defined within the framework. Extend these prototypes and specify a file source to create application components. For example, an application child can extend a node type with a COLLADA file.</p>
+
+  <pre><code>--- 
+children:
+  hello:
+    extends: http://vwf.example.com/node3.vwf
+    source: hello.dae
+    type: model/vnd.collada+xml
+</code></pre>
+
+  <hr />
+
+  <p>An application scene can extend the navscene type and transform properties may be set directly on a child node.</p>
+
+  <p>Code View: <em>index.vwf.yaml</em></p>
+
+  <pre><code>--- 
+extends: http://vwf.example.com/navscene.vwf
+children: 
+  hello: 
+    extends: http://vwf.example.com/node3.vwf
+    source: hello.dae
+    type: model/vnd.collada+xml
+    properties: 
+      translation: [ 0, 0, 0 ]
+</code></pre>
+
+  <p>Sample URL: <em>http://vwf.example.com/web/example/1/</em></p>
+
+  <!-- <iframe src="../../web/example/1">Example 1</iframe> -->
+  <div style="text-align:center">
+<span style="color:3399FF" onclick="document.getElementById('ex1_frame').src = '../../web/example/1'">Activate Application</span><br /><br />
+<iframe id="ex1_frame" src="about:blank" style="width:100%;"></iframe>
+</div>
+
+  <hr />
+
+  <p>Nodes inherit data from their prototype, including the following:</p>
+
+  <ul>
+    <li>Source / Type
+      <ul>
+        <li>Specifying a source or type within a derived node replaces the value in the prototype.</li>
+      </ul>
+    </li>
+    <li>Properties / Methods / Events
+      <ul>
+        <li>A derived node’s definition augments those in the prototype.</li>
+        <li>Creating one of a new name is a new definition</li>
+        <li>Using an existing name overrides the prototype’s definition</li>
+      </ul>
+    </li>
+    <li>Children
+      <ul>
+        <li>A derived node’s children augment the prototype</li>
+        <li>Creating one of a new name is a new definition</li>
+        <li>Using an existing name configures the definition from the prototype</li>
+      </ul>
+    </li>
+    <li>Scripts
+      <ul>
+        <li>A derived node’s scripts augment the prototype</li>
+      </ul>
+    </li>
+  </ul>
+
+  <hr />
+
+  <p>Add additional children to the application and set their properties. </p>
+
+  <p>Code View: <em>index.vwf.yaml</em></p>
+
+  <pre><code>--- 
+extends: http://vwf.example.com/navscene.vwf
+children:
+  hello:
+    extends: http://vwf.example.com/node3.vwf
+    source: hello.dae
+    type: model/vnd.collada+xml
+    properties:
+      translation: [ 0, 0, 5 ]
+      rotation: [ 1, 0, 0, 0]
+      scale: 1
+  world:
+    extends: http://vwf.example.com/node3.vwf
+    source: world.dae
+    type: model/vnd.collada+xml
+    properties:
+      translation: [ 0, 0, -5 ]
+      rotation: [ 1, 0, 0, 0]
+      scale: 1
+</code></pre>
+
+  <p>Sample URL: <em>http://vwf.example.com/web/example/2/</em></p>
+
+  <!-- <iframe src="../../web/example/2">Example 2</iframe> -->
+  <div style="text-align:center">
+<span style="color:3399FF" onclick="document.getElementById('ex2_frame').src = '../../web/example/2'">Activate Application</span><br /><br />
+<iframe id="ex2_frame" src="about:blank" style="width:100%;"></iframe>
+</div>
+
+  <hr />
+
+  <p><strong>Note:</strong> A component specification may be an object literal, a uniform resource identifier (URI) to a .vwf or another type such as .dae, or a JSON-encoded object (primarily for use in the single-user mode application= URI parameter). Components may appear as an extends, implements, or child within the application or another component. </p>
+
+  <hr />
+
+  <p>Define properties of the application and children with or without accessors.</p>
+
+  <pre><code>--- 
+extends: http://vwf.example.com/navscene.vwf
+children:
+  hello:
+    extends: http://vwf.example.com/node3.vwf
+    source: hello.dae
+    type: model/vnd.collada+xml
+    properties:
+      translation:
+        set: |
+          this.translation = value;
+        value: [ 0, 0, 5 ]
+</code></pre>
+
+  <hr />
+
+  <p>Specifying set or get as null prevents writing and/or reading, respectively.</p>
+
+  <pre><code>--- 
+extends: http://vwf.example.com/navscene.vwf
+children:
+  hello:
+    extends: http://vwf.example.com/node3.vwf
+    source: hello.dae
+    type: model/vnd.collada+xml
+    properties:
+      translation:
+        set: null
+        get: null
+</code></pre>
+
+  <hr />
+
+  <p>Bind child nodes defined in the asset file to the application and modify their properties. Set materials with direct access from the main node to the material node of the asset file, without defining the entire structure in code.</p>
+
+  <p>Code View: <em>index.vwf.yaml</em></p>
+
+  <pre><code>---
+extends: http://vwf.example.com/navscene.vwf
+children:
+  hello:
+    extends: http://vwf.example.com/node3.vwf
+    source: hello.dae
+    type: model/vnd.collada+xml
+    properties:
+      translation: [ 0, 0, 5 ]
+    children:
+      material:
+        extends: http://vwf.example.com/material.vwf
+        properties: 
+          color: red
+  world:
+    extends: http://vwf.example.com/node3.vwf
+    source: world.dae
+    type: model/vnd.collada+xml
+    properties:
+      translation: [ 0, 0, -5 ]
+    children:
+      material:
+        extends: http://vwf.example.com/material.vwf
+        properties: 
+          color: blue
+</code></pre>
+
+  <p>URL: <em>http://vwf.example.com/web/example/3/</em></p>
+
+  <!-- <iframe src="../../web/example/3">Example 3</iframe> -->
+  <div style="text-align:center">
+<span style="color:3399FF" onclick="document.getElementById('ex3_frame').src = '../../web/example/3'">Activate Application</span><br /><br />
+<iframe id="ex3_frame" src="about:blank" style="width:100%;"></iframe>
+</div>
+
+  <hr />
+
+  <p>The properties of the default lighting and navigation can be specified within the application file.</p>
+
+  <pre><code>---
+children:
+  maincamera:
+    extends: http://vwf.example.com/camera.vwf
+    properties:
+      rotation: [ 1, 0, 0, 90 ]
+</code></pre>
+
+  <hr />
+
+  <p>Assemble applications from content on multiple servers.</p>
+
+  <pre><code>--- 
+children:
+  hello:
+    extends: http://vwf.example.com/node3.vwf
+    source: hello.dae
+    type: model/vnd.collada+xml
+  world:
+    extends: http://vwf.example.com/node3.vwf
+    source: http://anotherserver.com/world.dae
+    type: model/vnd.collada+xml
+</code></pre>
+
+  <hr />
+
+  <p>Specify methods related to children of application.</p>
+
+  <pre><code>--- 
+children:
+  hello:
+    extends: http://vwf.example.com/node3.vwf
+    source: hello.dae
+    type: model/vnd.collada+xml
+    properties:
+      rotation: [ 1, 0, 0, 0]
+    methods:
+      click: this.rotation.z += 5
+</code></pre>
+
+  <hr />
+
+  <p>Move the child of the application or asset to a component, placing related code in a separate .yaml file. Reuse the created component on other assets.</p>
+
+  <p>Code View: <em>rotate.vwf.yaml</em></p>
+
+  <pre><code>---
+methods:
+  click: this.rotation.z += 5
+</code></pre>
+
+  <p>Code View: <em>index.vwf.yaml</em></p>
+
+  <pre><code>---
+children:
+  hello:
+    extends: rotate.vwf
+    source: hello.dae
+  world:
+    extends: rotate.vwf
+    source: world.dae
+</code></pre>
+
+  <p>URL: <em>http://vwf.example.com/application/index.vwf</em></p>
+
+  <hr />
+
+  <p>Add JavaScript functions to application components by defining scripts as a child of the application or a specific component. Prototypes define some functions that can be extended, such as pointerClick.</p>
+
+  <p>Code View: <em>index.vwf.yaml</em></p>
+
+  <pre><code>---
+extends: http://vwf.example.com/navscene.vwf
+children:
+  hello:
+    extends: http://vwf.example.com/node3.vwf
+    source: hello.dae
+    type: model/vnd.collada+xml
+    properties:
+      translation: [ 0, 0, 5 ]
+    children:
+      material:
+        extends: http://vwf.example.com/material.vwf
+        properties: 
+          color: red
+    scripts:
+    - |
+        this.pointerClick = function() {
+          if ( this.material.color == "rgb(255,0,0)" ) {
+            this.material.color = "blue";
+          } else {
+            this.material.color = "red";
+          }
+        }
+  world: 
+    extends: http://vwf.example.com/node3.vwf
+    source: world.dae
+    type: model/vnd.collada+xml
+    properties: 
+      translation: [ 0, 0, -5 ]
+    children:
+      material:
+        extends: http://vwf.example.com/material.vwf
+        properties: 
+          color: blue
+    scripts:
+    - |
+        this.pointerClick = function() {
+          if ( this.material.color == "rgb(255,0,0)" ) {
+            this.material.color = "blue";
+          } else {
+            this.material.color = "red";
+          }
+        }
+</code></pre>
+
+  <p>URL: <em>http://vwf.example.com/web/example/4/</em></p>
+
+  <p>In this example, clicking on an object will run the pointerClick function, changing the color of the object’s material. </p>
+
+  <!-- <iframe src="../../web/example/4">Example 4</iframe> -->
+  <div style="text-align:center">
+<span style="color:3399FF" onclick="document.getElementById('ex4_frame').src = '../../web/example/4'">Activate Application</span><br /><br />
+<iframe id="ex4_frame" src="about:blank" style="width:100%;"></iframe>
+</div>
+
+  <hr />
+
+  <p>Define additional HTML and jQuery components in an index.vwf.html file. The application will look for a file of this name on load, and will load any scripts or two dimensional components identified. This HTML file interaction can bind user interface components to children and properties defined in the application file. The following example shows the JavaScript defined in the HTML file interacting with the property defined in the YAML file.</p>
+
+  <p>Code View: <em>index.vwf.yaml</em></p>
+
+  <pre><code>--- 
+extends: http://vwf.example.com/node.vwf
+children: 
+  game:
+    extends: http://vwf.example.com/node.vwf
+    properties:
+      position01: [ 0, 0 ]
+</code></pre>
+
+  <p>Code View: <em>index.vwf.html</em></p>
+
+  <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;script type="text/javascript"&gt;
+      function sample() {
+        // Set property value in the application
+        vwf_view.kernel.setProperty( vwf_view.kernel.find("", "/game")[0], "position01", some_position );
+      }
+
+      // Defines a function to execute upon an application property change	
+      vwf_view.satProperty = function (nodeId, propertyName, propertyValue) {
+        if (nodeId == vwf_view.kernel.find("", "/game")[0] ) {
+          switch (propertyName) {
+            case "position01":
+              doSomething( propertyValue );
+              break;
+          }
+        }
+      }
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div style="text-align:center"&gt;
+      &lt;div id="board" style="position:relative"&gt;
+        &lt;span id="01" style="position:absolute"&gt;
+          &lt;img src="images/01.png" alt="01" onclick="sample()"/&gt;
+        &lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+  <p>URL: <em>http://vwf.example.com/application/index.vwf</em></p>
+
+  <hr />
+
+  <p>By default, the framework will search for the index.vwf.yaml file. Thus, if the application is defined in that file, the application can be reached with the following URL: http://<em>IP:port</em>/<em>applicationname</em>/ and index.vwf will automatically be initiated. If the application is defined in another file, the application can be reached with the following URL: http://<em>servername</em>/<em>applicationname</em>/<em>applicationname</em>.vwf.</p>
+
+  <hr />
+
+  <p>The Virtual World Framework can be used in either single user or multi-user mode. An independent session of the application can be initialized by a URL without a session ID: <em>http://vwf.example.com/application/</em>. The URL from the initial user can be used to allow additional users to join the session, specified by the session ID. Example: <em>http://vwf.example.com/application/561f86e42b6763d0/</em>. This session ID will be pulled out of the URL, and replaced with a session variable that will still be accessible via the URL. The session can run for a given time, and as a new user joins, the content will be synched to the current state of the application.</p>
+
+</div>
+
+<hr />
+<p><a name="tutorial2"></a></p>
+
+<div class="well">
+  <h1 id="sandtable-tutorial">Sandtable Tutorial</h1>
+  <hr />
+
+  <iframe width="560" height="315" src="http://www.youtube.com/embed/mMhgA9fwdWs" frameborder="0" allowfullscreen=""></iframe>
+
+  <p>The goal of the following tutorial is to allow a developer to build an application from a simple primitive to small sandtable application. The tutorial is broken up into four stages, each building upon itself to create a more complex application.</p>
+
+  <ul>
+    <li>Stage 1 - Primitive Scene</li>
+    <li>Stage 2 - Terrain Model and Orbit Navigation</li>
+    <li>Stage 3 - Multiple Models and Behaviors</li>
+    <li>Stage 4 - HTML Overlays and Interaction</li>
+  </ul>
+
+  <hr />
+
+  <h2 id="stage-1---primitive-scene">Stage 1 - Primitive Scene</h2>
+  <p>In the first stage, we’ll add in a basic primitive collada file, and set up the initial camera position. The application will contain the default navigation of a fly mode.</p>
+
+  <p>The following code creates a child node of the application named blueCube, of type node3, and defines the source file. In the scripts section, the camera transform is initialized, and will be set during the application load. </p>
+
+  <pre><code>---
+extends: http://vwf.example.com/scene.vwf
+children:
+  blueCube:
+    extends: http://vwf.example.com/node3.vwf
+    source: models/BlueCube.dae
+    type: model/vnd.collada+xml
+methods:
+  initializeCamera:
+scripts:
+- |
+  this.initialize = function() {
+    this.future( 0 ).initializeCamera();
+  }
+
+  this.initializeCamera = function() {
+    this.camera.translation = [ 0, -100, 0 ];
+  }
+</code></pre>
+
+  <p>The above is all that is needed to create an application. The default fly mode allows the user to navigate with the standard WASD keys, as well as Q and E to rotate. </p>
+
+  <p>Example: <a href="../../tutorial/00">Primitive Scene</a></p>
+
+  <hr />
+
+  <h2 id="stage-2---terrain-model-and-orbit-navigation">Stage 2 - Terrain Model and Orbit Navigation</h2>
+  <p>In the second stage, we will:</p>
+
+  <ul>
+    <li>Set the background color scene property to an RGB value to give the appearance of sky</li>
+    <li>Use the navscene component and navmode scene property to change the navigation mode to orbit around a single point</li>
+    <li>Replace the blue cube with a terrain model</li>
+    <li>Set the terrain’s position, rotation, and scale</li>
+    <li>Add a “sceneCenter” child to the application (setting its translation property)</li>
+    <li>Tell the camera to always look at sceneCenter by setting the camera’s “lookat” property to the id of sceneCenter</li>
+    <li>Set other camera properties in the initializeCamera function, including “far” and “near”, setting up clipping planes for this much larger terrain model. </li>
+  </ul>
+
+  <p>The code to do so is as follows:</p>
+
+  <pre><code>---
+extends: http://vwf.example.com/navscene.vwf
+properties:
+  backgroundColor: [ 83, 157, 194 ]
+  navmode: "orbit"
+methods:
+  initializeCamera:
+children:
+  flat_terrain:
+    extends: http://vwf.example.com/node3.vwf
+    source: models/vwf_terrain.dae
+    type: model/vnd.collada+xml
+    properties:
+      translation: [ 0, 0, -1000 ]
+      scale: [ 0.008, 0.008, 0.020 ]
+  sceneCenter:
+    extends: http://vwf.example.com/node3.vwf
+    properties:
+      translation: [ 0, 0, 0 ]
+scripts:
+- |
+  this.initialize = function() {
+    this.future( 0 ).initializeCamera();
+  }
+
+  this.initializeCamera = function() {
+    this.camera.translation = [ 0, 20000, 10000 ];
+    this.camera.far = 500000;
+    this.camera.near = 2;
+    this.camera.lookAt = this.sceneCenter.id;
+  }
+</code></pre>
+
+  <p>In this application, the WASD controls can be used for navigation; however, the camera will continue to focus on the sceneCenter point.</p>
+
+  <p>Example: <a href="../../tutorial/01">Terrain Model and Orbit Navigation</a></p>
+
+  <hr />
+
+  <h2 id="stage-3---multiple-models-and-behaviors">Stage 3 - Multiple Models and Behaviors</h2>
+  <p>In the third stage, we’ll add an additional child node for a predator vehicle called ‘predator’ with similar property definitions. We’ll then apply a behavior to the ‘predator’ node, which is defined in a separate yaml file. Setting the property ‘fly-flying’ to true will enable the flying behavior immediately upon application load. </p>
+
+  <pre><code>---
+extends: http://vwf.example.com/navscene.vwf
+properties:
+  backgroundColor: [ 83, 157, 194 ]
+  navmode: "orbit"
+children:
+  flat_terrain:
+    extends: http://vwf.example.com/node3.vwf
+    source: models/vwf_terrain.dae
+    type: model/vnd.collada+xml
+    properties:
+      translation: [ 0, 0, -1000 ]
+      scale: [ 0.008, 0.008, 0.020 ]
+  sceneCenter:
+    extends: http://vwf.example.com/node3.vwf
+    properties:
+      translation: [ 0, 0, 0 ]
+  predator:
+	extends: http://vwf.example.com/node3.vwf
+	implements:
+	- http://vwf.example.com/fly.vwf
+	source: models/Predator.dae
+	type: model/vnd.collada+xml
+	properties:
+	  translation: [ 0, 500, 1800 ]
+	  rotation: [ 0, 0, 1, 180 ]
+	  scale: 50
+	  fly-flying: true
+scripts:
+- |
+  this.initialize = function() {
+    this.future( 0 ).initializeCamera();
+  }
+  
+  this.initializeCamera = function() {
+    this.camera.translation = [ 0, 20000, 10000 ];
+    this.camera.far = 500000;
+    this.camera.near = 2;
+    this.camera.lookAt = this.sceneCenter.id;
+  }
+</code></pre>
+
+  <p>Example: <a href="../../tutorial/02">Multiple Models and Behaviors</a></p>
+
+  <hr />
+
+  <h2 id="stage-4---html-overlays-and-interaction">Stage 4 - HTML Overlays and Interaction</h2>
+  <p>In the fourth stage, we’ll add an HTML overlay to the application, and setup the javascript to allow the 2D HTML components interact with the 3D nodes. For this application, we’ll create a toolbar of two images, one to select navigation mode, and one to select pindrop mode, where navigation will be disabled, and a click of the mouse will mark the location selected. </p>
+
+  <p>First, we’ll create a file called ‘index.vwf.html’ that will load separately or on top of the application. The name must match that of the ‘index.vwf.yaml’ file, and the framework will automatically look for that file. We’ll define the body with a simple HTML toolbar div containing the two button images. This will allow us to select either navigation mode, or pindrop mode. </p>
+
+  <p>In the yaml file, we’ll add a mouseMode property with a setter. This property will determine whether the navmode is set to ‘orbit’ or turned off. We’ll then add javascript variables and additional functions to drop the pins. The pushpin variable describes the child node that will be added, and will look similar to a child definition. The pointerUp function checks the navigation mode and will call the pindrop function if necessary to create the new node. </p>
+
+  <pre><code>---
+extends: http://vwf.example.com/navscene.vwf
+properties:
+  backgroundColor: [ 83, 157, 194 ]
+  navmode: "orbit"
+  mouseMode:
+    set: |
+      if( value == "orbit" ) {
+        this.navmode = "orbit";
+      } else {
+        this.navmode = "none";
+      }
+    value: "orbit"
+children:
+  flat_terrain:
+    extends: http://vwf.example.com/node3.vwf
+    source: models/vwf_terrain.dae
+    type: model/vnd.collada+xml
+    properties:
+      translation: [ 0, 0, -1000 ]
+      scale: [ 0.008, 0.008, 0.020 ]
+  sceneCenter:
+    extends: http://vwf.example.com/node3.vwf
+    properties:
+      translation: [ 0, 0, 0 ]
+  predator:
+	extends: http://vwf.example.com/node3.vwf
+	implements:
+	- http://vwf.example.com/fly.vwf
+	source: models/Predator.dae
+	type: model/vnd.collada+xml
+	properties:
+	  translation: [ 0, 500, 1800 ]
+	  rotation: [ 0, 0, 1, 180 ]
+	  scale: 50
+	  fly-flying: true
+scripts:
+- |
+  this.initialize = function() {
+    this.future( 0 ).initializeCamera();
+  }
+  
+  this.initializeCamera = function() {
+    this.camera.translation = [ 0, 20000, 10000 ];
+    this.camera.far = 500000;
+    this.camera.near = 2;
+    this.camera.lookAt = this.sceneCenter.id;
+  }
+
+  var pushpinIndex = 1;
+  var pushpin = {
+    extends: "http://vwf.example.com/node3.vwf",
+    source: "models/pushpinblack.dae",
+    type: "model/vnd.collada+xml",
+    properties: {
+      scale: 6
+    },
+  };
+
+  this.pointerUp = function( parms, pickInfo ){
+    if( this.mouseMode == "pindrop") {
+        this.pindrop( pickInfo );
+    }
+  }
+  
+  this.pindrop = function( pickInfo ) {
+    if ( pickInfo &amp;&amp; pickInfo.globalPosition ) {
+      pushpin.properties.translation = pickInfo.globalPosition;
+
+      var name = "pushpin"+pushpinIndex;
+      this.children.create( name, pushpin );
+      pushpinIndex++;
+    }
+  }
+</code></pre>
+
+  <p>Finally, back in the HTML file, we’ll need to add a few javascript functions to highlight the appropriate button selected, as well as to set the global application property, mouseMode. The final thing to add is a listener for the mouseMode property. This will come into play if the mode is changed on another client, and the button highlighted is appropriately changed. </p>
+
+  <pre><code>function setMode(mode) {
+	highlightMode(mode);
+    vwf_view.kernel.setProperty(vwf.find("", "/")[0], "mouseMode", mode);
+  	}
+
+function highlightMode(mode) {
+   	document.getElementById('orbit').style.border = "2px solid black";
+   	document.getElementById('pindrop').style.border = "2px solid black";
+
+   	document.getElementById(mode).style.border = "3px solid red";
+}
+
+vwf_view.satProperty = function (nodeId, propertyName, propertyValue) {
+  	if (nodeId == vwf.find("", "/")[0] ) {
+  		switch (propertyName) {
+  		  case "mouseMode":
+  		    highlightMode( propertyValue );
+  		    break;
+        }
+    }
+}	  
+</code></pre>
+
+  <p>Example: <a href="../../tutorial/03">HTML Overlays and Interaction</a></p>
+
+</div>
+
+<hr />
+<p><a name="devguide"></a></p>
+
+<div class="well">
+  <h1 id="dev-guide">Dev Guide</h1>
+  <hr />
+
+  <p>The developers guide is an overview of the different components and concepts used with the framework. Try the links to the left to view the current guide. </p>
+
+</div>
+<hr />
+<p><a name="architecture"></a></p>
+
+<div class="well">
+  <h1 id="architecture">Architecture</h1>
+  <hr />
+
+  <p>The architecture behind the Virtual World Framework is by design:</p>
+
+  <ul>
+    <li>Fully web-based</li>
+    <li>Component-based</li>
+    <li>Multi-user collaborative</li>
+  </ul>
+
+  <p>The VWF architecture allows an application developer to focus on creating content in the mindset of a single-user application. If development is performed using the standard framework conventions, nothing else must be done to achieve a synchronized state across multiple users in the environment. </p>
+
+  <hr />
+
+  <p><strong>Collaborative Nature</strong></p>
+
+  <p>The Virtual World Framework is a model - view based architecture. Views exist for each client joined in the application. Each view provides input into a model that keeps track of the state of the simulation. </p>
+
+  <div style="width:100%;text-align:center"><img src="images/arch1.png" alt="arch" width="512" /></div>
+
+  <p>The single model, or shared state, of the application has multiple copies that represent the shared simulation. </p>
+
+  <div style="width:100%;text-align:center"><img src="images/arch2.png" alt="arch" width="512" /></div>
+
+  <p>Each client then has their own replicated model that they take with them. The model, however, remains the same as the one that every other user is viewing. All clients show the same state with each having an indentical copy of the application. The applications are separately but simultaneously updated to retain identical states. </p>
+
+  <p>The application then is a state machine. The same state machine is in different locations (different clients). If the state machines all have the same properties and children, they will all move to the same successive state.</p>
+
+  <p>A client’s browser may have multiple views. For example, a user may see and renderer view and an editor view in their browser window. The renderer view shows a 3D visualization of the model state, and the editor view shows the hierachy of the scene and the pieces that make it up such as it’s properties and children.</p>
+
+  <div style="width:100%;text-align:center"><img src="images/arch3.png" alt="arch" width="512" /></div>
+
+  <p>External inputs from one user get thrown “across the moat” into the shared simulation (model) [1]. The model deflects incoming input from a view, and sends it directly to the reflector [2]. The reflector can then send out the information to all of the replicated models [3]. Thus all inputs to a model happen identically on the timeline to all clients within the application. </p>
+
+  <div style="width:100%;text-align:center"><img src="images/arch4.png" alt="arch" width="512" /></div>
+
+  <p>The architecture separates external input from internal input. All external input (ie. user input from a view), once received by the model is deferred to the reflector, which then sends it out to everyone. However, the model is free to make any additional state changes (ie. internal input) provided that it was caused by something internal to the model. This would include things such as setter methods that can manipulate other internal properties. </p>
+
+  <hr />
+
+  <p><strong>Component Structure</strong></p>
+
+  <p>A VWF application is made up of components. Each component in the system is built up from smaller components (i.e. children) or through inheritance (i.e. prototypes) within the user’s programming space. </p>
+
+  <p>The application is essentially a component itself, and can have one or more child components. Each child component can then have one or more children, creating a tree structure.</p>
+
+  <div style="width:100%;text-align:center"><img src="images/arch5.png" alt="arch" width="600" /></div>
+
+  <p>Additionally, components may extend prototype components, and will inherit their properties, methods, and events. A prototype may have multiple components that extend it in an application.</p>
+
+  <div style="width:100%;text-align:center"><img src="images/arch6.png" alt="arch" width="600" /></div>
+
+  <p>The <a href="components.html">components</a> section provides further detail about creating application components, and the <a href="prototypes.html">prototypes</a> page describes the VWF base types. </p>
+
+  <hr />
+
+  <p><strong>The Drivers</strong></p>
+
+  <p>We’ve discussed how to write an application using the framework. The next section describes how the system works, and how to reconfigure the system to accomplish more complex tasks. The drivers of the system are the things that connect components to the 3D visualization and the user interaction that you see. </p>
+
+  <p>The drivers define the autonomic actions that happen within a system, dividing responsibility and delegating work for each action of the system. These actions include things such as creating or deleting a node, getting or setting a property, calling methods, and firing events. Please reference the <a href="system.html">API</a> for a complete list. The drivers stand side by side without direct interaction between them. Rather, they interact by autonomic actions that the kernel manages. </p>
+
+  <p>For example, the GLGE driver is responsible for any manipulation on the node that’s part of the scene, like setting the translation of a node. This information may be ignored by the rest of the drivers if it is not needed. </p>
+
+  <p>Model and view drivers have the same structure; however, the model driver doesn’t reach out, and a view driver does not have direct control. </p>
+
+  <p>For more detailed information regarding the drivers, please reference the <a href="drivers.html">drivers</a> page.</p>
+
+</div>
+<hr />
+
+<p><a name="components"></a></p>
+
+<div class="well">
+  <h1 id="components">Components</h1>
+  <hr />
+
+  <p>Components define the behavior, state and visual representation of an object, and are the basic building blocks of VWF. Components make up a hierarchical structure, with each component acting as the parent or child to another component. At the root of the structure is the application, which is also a component, and is created automatically when the application loads.</p>
+
+  <hr />
+
+  <h2 id="component-contents">Component Contents</h2>
+  <hr />
+
+  <p>There are eight parts that make up a component, seen here as a skeleton in YAML.</p>
+
+  <pre><code>---
+extends:
+implements:
+source:
+type:
+properties:
+methods:
+events:
+children:
+scripts:
+</code></pre>
+
+  <p>Each part is optional and only needs to be include in the component definition if that part needs to be customized in the component. All relative paths are resolved using the current component as the base.</p>
+
+  <p><strong>extends</strong></p>
+
+  <p>This specifies the URI or descriptor of the prototype component that is extended to make the new component. All behaviors, properties, methods, events, children and scripts are inherited by the component. The default prototype is <code>http://vwf.example.com/node.vwf</code>.</p>
+
+  <p>To specify a prototype using a URI, simply provide the URI.</p>
+
+  <pre><code>extends: http://vwf.example.com/path/to/prototype.vwf
+</code></pre>
+
+  <p>Since a prototype is also a component, it can be specified using the same format.</p>
+
+  <pre><code>extends:
+  extends:
+  implements:
+  source:
+  type:
+  properties:
+  methods:
+  events:
+  children:
+  scripts:
+</code></pre>
+
+  <p>See <a href="prototypes.html">prototypes</a> for more information.</p>
+
+  <p><strong>implements</strong></p>
+
+  <p>This specifies the URIs of components that will be used as behaviors. All behaviors, properties, methods, events, children and scripts are inherited by the component, allowing functionality to be added from a separate file.</p>
+
+  <pre><code>implements:
+- http://vwf.example.com/path/to/behavior.vwf
+</code></pre>
+
+  <p>See <a href="behaviors.html">behaviors</a> for more information.</p>
+
+  <p><strong>source/type</strong></p>
+
+  <p>The source and type allow the component to load a seperate data blob, usually in the form of a 3D model or image. Source is the URI of the data, and type is the MIME type. If type is not specified, it will default to the MIME type taken from the server’s response.</p>
+
+  <pre><code>source: model.dae
+type: model/vnd.collada+xml
+</code></pre>
+
+  <p><strong>properties</strong></p>
+
+  <p>Properties are the public variables of the component. The component inherits properties from its prototype and any behaviors. Initializing a property will override any default values from the prototype or behavior.</p>
+
+  <p>The declaration for a property provides only a name, and an optional value.</p>
+
+  <pre><code>properties:
+  aProperty: value
+</code></pre>
+
+  <p>Properties can also be declared with accessor functions that allow the component to detect changes, allow only acceptable values, or serve as a proxy for another property. </p>
+
+  <pre><code>properties:
+  aProperty:
+    set: | # calculate and set the value
+      this.aProperty = value
+    get: | # calculate and return the value
+      return this.aProperty
+    value: # the value is available to the accessor functions
+      value
+</code></pre>
+
+  <p><strong>methods</strong></p>
+
+  <p>Methods are the public functions of the component. The component inherits methods from its prototype and behaviors. Redefining those methods here will override the inherited ones.</p>
+
+  <p>The method declaration only provides the body of the method.</p>
+
+  <pre><code>methods:
+  aMethod: |
+  	// method body
+</code></pre>
+
+  <p>The extended method specifier allows named parameters. Additional parameters can still be parsed out of the arguments object when needed.</p>
+
+  <pre><code>methods:
+  anotherMethod:
+    parameters:
+    - one
+    - two
+    body: |
+      var three = arguments[2];
+      this.something(one, two, three);
+</code></pre>
+
+  <p>Methods can also be declared empty, and intialized in a script later.</p>
+
+  <pre><code>methods:
+  aMethod:
+scripts:
+- |
+  this.aMethod = function(one, two, three) {
+
+  }
+</code></pre>
+
+  <p><strong>events</strong></p>
+
+  <p>Events define the outgoing messages a node can trigger. The component inherits events from its prototype and behaviors. </p>
+
+  <p>The event specifier only provides the name of the event.</p>
+
+  <pre><code>events:
+  anEvent:
+</code></pre>
+
+  <p>The extended event specifier describes the arguments passed to the event. As with methods, additional parameters can still be parsed out of the arguments object in the event handler.</p>
+
+  <pre><code>events:
+  anotherEvent:
+    parameters:
+    - one
+    - two
+</code></pre>
+
+  <p>To listen for events, a javascript function that matches the event name is added to the Scripts section of the component.</p>
+
+  <pre><code>events:
+  anEvent:
+scripts:
+- |
+  this.anEvent = function() {
+
+  }
+</code></pre>
+
+  <p>VWF also defines several dispatched events. These are triggered when outside actions, such as a key press or mouse click occur. When one of these events occurs, the system automatically finds any nodes that have been definined as triggering the event, and dispatches the event from those nodes. Currently, the dispatched events defined by VWF are:</p>
+
+  <ul>
+    <li>keyDown</li>
+    <li>keyUp</li>
+    <li>pointerClick</li>
+    <li>pointerDown</li>
+    <li>pointerOver</li>
+    <li>pointerHover</li>
+    <li>pointerOut</li>
+    <li>pointerMove</li>
+    <li>pointerUp</li>
+    <li>pointerWheel</li>
+  </ul>
+
+  <p><strong>children</strong></p>
+
+  <p>Children are instances of other components that are attached to this component. A child can be a simple reference to a seperate component, or the reference can include a configuration. The format for a child specification is the same as for a component.</p>
+
+  <pre><code>children:
+  childFromURI: http://vwf.example.com/path/to/component.vwf
+  childFromDescriptor:
+    extends: http://vwf.example.com/path/to/component.vwf
+    properties:
+      something: value
+  childFromDescriptorDetailed:
+    extends: http://vwf.example.com/path/to/prototype.vwf
+    implements:
+    - http://vwf.example.com/path/to/behavior.vwf
+    - http://vwf.example.com/a/different/behavior.vwf
+    source:
+      asset.dat
+    type:
+      mime/type
+    properties:
+      name:
+        descriptor
+      another:
+        descriptor
+    methods:
+      name:
+        descriptor
+      another:
+        descriptor
+    events:
+      name:
+        descriptor
+      another:
+        descriptor
+    children:
+    - name:
+        component
+    - another:
+        component
+    scripts:
+    - specifier
+    - specifier
+</code></pre>
+
+  <p><strong>scripts</strong></p>
+
+  <p>Scripts define the component’s internal behavior and can be used to create and use private variables and methods, and event handlers. Currently the only language supported for scripts is JavaScript.</p>
+
+  <pre><code>scripts:
+- |
+  var aVariable;
+  this.aFunction = function() {
+  	...
+  }
+</code></pre>
+
+  <p>Inside a script <code>this</code> always refers to the component that owns the script. Other components can be accessed by navigating up or down the component hierarchy using <code>this.parent</code> and <code>this.children.childName</code>. VWF also defines an <code>intialize</code> function that is automatically executed when a component is intialized. In order to use this function, define it like any other function.</p>
+
+  <pre><code>scripts:
+- |
+  this.initialize = function() {
+  	...
+  }
+</code></pre>
+
+  <hr />
+
+  <h2 id="manipulating-components-with-javascript">Manipulating Components With JavaScript</h2>
+  <hr />
+
+  <p>The various parts of a component can also be modified from JavaScript after the component has been initialized as a node. VWF defines several functions to make these changes.</p>
+
+  <p><strong>properties</strong></p>
+
+  <p>New properties can be added using the following syntax.</p>
+
+  <pre><code>this.properties.create("propertyName", value);
+</code></pre>
+
+  <p>The first parameter is the name of the new property, and the second is the value the property will be initialized with. There are also two optional parameters that customize the getter and setter of the parameter. These are passed in as strings.</p>
+
+  <pre><code>this.properties.create("propertyName", value, "return this.propertyName;", "this.propertyName = value;");
+</code></pre>
+
+  <p><strong>methods</strong></p>
+
+  <p>New methods can be added using the following syntax.</p>
+
+  <pre><code>this.methods.create("methodName", [methodParameters,...], methodBody);
+</code></pre>
+
+  <p>The first parameter is the name of the new method, the second is an array of any parameters the method will take, and the third is the body of the method, as a string.</p>
+
+  <p><strong>events</strong></p>
+
+  <p>Creating a new event uses the following syntax.</p>
+
+  <pre><code>this.events.create("eventName", [eventParameters]);
+</code></pre>
+
+  <p>The first parameter is the name of the new event and the second is an array of any parameters the event will take.</p>
+
+  <p>New event listeners can also be added.</p>
+
+  <pre><code>this.events.eventName = this.events.add(function() { ... }, phases, this.children.listeningNode);
+</code></pre>
+
+  <p>The first parameter is the function that will be executed when the event occurs. The second parameter is optional and defaults to “bubble”. Setting phases to “capture” will prevent the event from propagating to other nodes. The final parameter is the node that is listening for the event. </p>
+
+  <p><strong>children</strong></p>
+
+  <p>A component can be written as a JavaScript object in the following format.</p>
+
+  <pre><code>var component = {
+  extends: "http://vwf.example.com/path/to/prototype.vwf",
+  implements: ["http://vwf.example.com/path/to/behavior.vwf"],
+  properties: {
+    aProperty: value
+  },
+  methods: {
+    aMethod: function( parameter, ... ) { ... },
+    anotherMethod: function( parameter, ... ) { ... }
+  },
+  events: {
+    anEvent: function() { ... },
+    anotherEvent: function() { ... }
+  },
+  children: {
+    childFromURI: "http://vwf.example.com/path/to/component.vwf",
+    childFromDescriptor: {
+      extends: "http://vwf.example.com/path/to/component.vwf",
+      properties: {
+          something: "value"
+      }
+    }
+  },
+  scripts: [  "this.aFunction = function() { ... }"]
+};
+</code></pre>
+
+  <p>From inside an existing node, the new component can be created using the following syntax.</p>
+
+  <pre><code>this.children.create("componentName", component);
+</code></pre>
+
+  <p>The first argument is the name the new component will be created with, and the second is the JavaScript object for the component itself. The new component will be created as a child of <code>this</code>, and will be treated the same as any other children that were already present.</p>
+
+  <p>Children can also be deleted. The delete function takes the JavaScript object of the child that will be deleted.</p>
+
+  <pre><code>this.children.delete(this.children.component);
+</code></pre>
+
+</div>
+<hr />
+
+<p><a name="cameras"></a></p>
+
+<div class="well">
+  <h1 id="cameras">Cameras</h1>
+  <hr />
+
+  <p>The camera capability provides the users viewpoint into the application. Every application automatically creates a camera as part of the scene. This camera can be accessed in javascript through the <code>camera</code> property of the scene node, or through the editor. </p>
+
+  <hr />
+
+  <h2 id="creating-new-cameras">Creating New Cameras</h2>
+  <hr />
+
+  <p>New cameras can be created by creating a node that extends <code>http://vwf.example.com/camera.vwf</code>. </p>
+
+  <pre><code>var newCamera = {
+  extends: "http://vwf.example.com/camera.vwf"
+};
+this.children.create("newCamera", newCamera);
+</code></pre>
+
+  <p>See <a href="components.html">components</a> for more information about creating new nodes.</p>
+
+  <hr />
+
+  <h2 id="camera-type">Camera Type</h2>
+  <hr />
+
+  <p>The <code>cameraType</code> property controls whether the camera is a <em>persepective</em> or <em>orthographic</em> camera. With a perspective camera, the further away an object is, the smaller it will appear. Orthographic cameras always display objects as their actual size. <code>cameraType</code> defaults to “perspective” and can be set using the following syntax.</p>
+
+  <pre><code>this.children['newCamera'].cameraType = "orthographic";
+</code></pre>
+
+  <hr />
+
+  <h2 id="transform-properties">Transform Properties</h2>
+  <hr />
+
+  <p>The camera component extends from node3, and inherits the transform properties, such as translation and rotation. </p>
+
+  <p>The <code>translation</code> property controls the position of the camera. Changing the property will move the camera to the new coordinates, and the view will automatically update with it. <code>translation</code> defaults to [ 0, 0, 0 ] and can be set using the following syntax. The coordinate system defaults to +x to the right, +y forward, and +z up, if no rotation has been applied.</p>
+
+  <pre><code>this.children['newCamera'].translation = [ 100, -20, 30 ]; // Moves the camera to 100 on the x-axis, -20 on the y-axis, and 30 on the z-axis
+</code></pre>
+
+  <p>The <code>rotation</code> property controls the direction the camera is pointing, as an offset from the default orientation. Changing the property will rotate the camera and automatically update the view. The value takes the from of [ x, y, z, angle ] where the amount rotation around an axis is axis * angle. </p>
+
+  <pre><code>this.children['newCamera].rotation = [ 1, 2, 0.5, 90 ]; // From looking down the positive y-axis, rotate 90 degrees around the x-axis, rotation 180 degrees around the y-axis and 45 degrees around the z-axis.
+</code></pre>
+
+  <p>Also, note that the x, y and z values in the rotation array are automatically normalized to a unit vector. So after the above example, reading the value of <code>rotation</code> would return [ 0.4364357888698578, 0.8728715777397156, 0.21821792423725128, 90 ].</p>
+
+  <hr />
+
+  <h2 id="clipping-plane">Clipping Plane</h2>
+  <hr />
+
+  <p>The <code>near</code> and <code>far</code> properties are used to control the clipping plane. <code>far</code> controls how far away from the camera another node can get before it is no longer displayed and <code>near</code> property controls how close to the camera another node can get before it is no longer displayed. The values of <code>near</code> and <code>far</code> are restricted so that 0 &lt; near &lt; far. They can be set with the following syntax.</p>
+
+  <pre><code>this.children['newCamera'].far = 10000;
+this.children['newCamera'].near = 1.0;
+</code></pre>
+
+  <p><code>near</code> and <code>far</code> also control the view buffer. The ratio of far / near should roughly match the size of the world, in order to have accurate depth calculations and avoid overlapping models.</p>
+
+  <hr />
+
+  <h2 id="lookat">Lookat</h2>
+  <hr />
+
+  <p>The <code>lookAt</code> property affects how the camera moves. If it is set to the id of another node, that node will always be at the center of the cameras view. If the position of the camera changes, the camera will automatically stay pointed at the other node. <code>lookAt</code> can only be set to a valid id, and defaults to “”. It can be set using the following syntax.</p>
+
+  <pre><code>this.children['newCamera'].lookAt = this.children['interestingNode'].id;
+</code></pre>
+
+  <hr />
+
+  <h2 id="using-multiple-cameras">Using Multiple Cameras</h2>
+  <hr />
+
+  <p>The application uses the <code>activeCamera</code> property of the scene to determine which camera to use as the main viewpoint. Other cameras can be created, but they will not affect what is displayed in the browser unless they have been set as the active camera. Cameras in the model are shared by all clients, and <code>activeCamera</code> will be seen by all clients, unless they switch to a different one in their private view. Setting <code>activeCamera</code> to the id of a camera will automatically switch the view that is displayed in the browser to the view of that camera.</p>
+
+  <pre><code>// this is the scene
+this.activeCamera = this.children['newCamera'].id;
+</code></pre>
+
+</div>
+<hr />
+<p><a name="lights"></a></p>
+
+<div class="well">
+  <h1 id="lights">Lights</h1>
+  <hr />
+
+  <p>The VWF Lights capability provides control of lighting within a VWF application. By default, VWF provides default lighting. In addition, there are three basic light types that can be created within the framework. Each light has properties associated with it that can be manipulated, including attenuation, effects, and shadows. A complete list of light properties can be found under <a href="jsdoc_cmp/symbols/light.vwf.html">light</a> in the <a href="application.html">Application API</a>.</p>
+
+  <hr />
+
+  <h2 id="light-types">Light Types</h2>
+
+  <p><strong>Point</strong></p>
+
+  <p>A point light is represented by a point source in 3D space, and emits light in all directions. The closer an object is to the light source, the more illuminated it becomes.</p>
+
+  <pre><code> Omni01:
+    extends: http://vwf.example.com/light.vwf
+    properties:
+      lightType: "point"
+      translation: [ -150, 150, 150 ]
+</code></pre>
+
+  <p><strong>Directional</strong></p>
+
+  <p>Directional lights equally illuminate all objects from a given direction. An application should only have a small number of directional lights if needed, as computations for directional lights need to be done on all pixels on the screen. </p>
+
+  <pre><code>  dir1:
+    extends: http://vwf.example.com/light.vwf
+    properties:
+      lightType: "directional"
+      rotation: [ 1, 0, 0, -10 ]
+</code></pre>
+
+  <p><strong>Spot</strong></p>
+
+  <p>Spot lights emit light in a cone shape instead of a sphere. Other than that, spot lights and point lights share the similar properties. Spot lights also have the additional properties of spotCosCutOff and spotExponent, as described in the light API.</p>
+
+  <pre><code> Spot01:
+    extends: http://vwf.example.com/light.vwf
+    properties:
+      lightType: "spot"
+      spotCosCutOff: 0.95
+      spotExponent: 10
+      translation: [ -150, 150, 150 ]
+</code></pre>
+
+  <hr />
+
+  <h2 id="light-attenuation">Light Attenuation</h2>
+
+  <p>Light attenuation is the decrease in intensity of the light with respect to distance, and applies to both point and spot lights. There are three types of light attenuation: constant, linear, and quadratic. Values for each attenuation type fall between 0 and 1. Attenuation types may be blended to sum of 1. The default values for these are:</p>
+
+  <ul>
+    <li>glge-constantAttenuation  = 1</li>
+    <li>glge-linearAttenuation    = 0</li>
+    <li>glge-quadraticAttenuation = 0</li>
+  </ul>
+
+  <p><strong>glge-constantAttenuation</strong></p>
+
+  <p>Constant attenuation of 1 will result in a light where the intensity is unaffected by distance, and will remain constant until it hits a surface.</p>
+
+  <p><strong>glge-linearAttenuation</strong></p>
+
+  <p>Linear attenutation will result in a light thats intensity is inversely proportial to the distance from the light source. In other words, the light intensity will diminish at a fixed rate as it travels from the source. </p>
+
+  <p><strong>glge-quadraticAttenuation</strong></p>
+
+  <p>Quadratic attenuation is the most dramatic, where the drop off is exponential to the distance an object is from the light source.</p>
+
+  <hr />
+
+  <h2 id="lighting-effects">Lighting Effects</h2>
+
+  <p><strong>Specular Reflection</strong></p>
+
+  <p>Specular reflection is the reflection of light from a surface where the ray is reflected in a single direction. </p>
+
+  <p><strong>Diffuse Reflection</strong></p>
+
+  <p>Diffuse reflection is the reflection of light from a surface where the ray is reflected at many angles.</p>
+
+</div>
+<hr />
+<p><a name="prototypes"></a></p>
+
+<div class="well">
+  <h1 id="prototypes">Prototypes</h1>
+  <hr />
+
+  <p>Prototypes are the base component types for inheritance in the Virtual World Framework. A prototype has the same structure as a VWF <a href="components.html">component</a>, and contains common properties, methods, and events. </p>
+
+  <p>A component can inherit from a prototype by using the <code>extends</code> keyword and specifying the URI of the prototype component. All behaviors, properties, methods, events, children and scripts are inherited by the component. </p>
+
+  <pre><code>extends: http://vwf.example.com/path/to/prototype.vwf
+</code></pre>
+
+  <p>The default values for properties are defined in the prototype file. These properties can be overridden in the component definition file, or left alone to keep the default value. The same is true for methods and events, which can be extended in the component definition. </p>
+
+  <p>The default prototype for all components is <code>http://vwf.example.com/node.vwf</code>.</p>
+
+  <p>Prototypes can be housed on any server, and any URI passed to the extends keyword. Common VWF prototypes use a URI of <em>vwf.example.com</em>.</p>
+
+  <p><strong>Common Prototypes</strong></p>
+
+  <ul>
+    <li><em>node2.vwf</em> - base type for 2D components</li>
+    <li><em>node3.vwf</em> - base type for 3D components</li>
+    <li><em>camera.vwf</em> - base type for cameras</li>
+    <li><em>light.vwf</em> - base type for lights</li>
+    <li><em>material.vwf</em> - base type for materials</li>
+    <li><em>navscene.vwf</em> - base type for a navigational scene</li>
+  </ul>
+
+  <p>The <a href="application.html">Application API</a> covers the complete list of VWF prototypes and their property, method, and event definitions.</p>
+
+</div>
+<hr />
+<p><a name="behaviors"></a></p>
+
+<div class="well">
+  <h1 id="behaviors">Behaviors</h1>
+  <hr />
+
+  <p>A behavior is a component that is used to add functionality to another component. It is referenced from a seperate file, allowing multiple components to reuse the same behavior. To use a behavior, add an <code>implements</code> section to the component with the URI to the behavior.</p>
+
+  <pre><code>implements:
+- http://vwf.example.com/path/to/behavior.vwf
+</code></pre>
+
+  <p>When a behavior is loaded, all behaviors, properties, methods, events, children and scripts are inherited by the new component. All the inherited functionality can be used as part of the component. Behaviors can also use properties from the component that implement the behavior. For example, in this behavior, <code>someMethod</code> will perform an action based on the value of <code>behavior-someProperty</code>, which defaults to true. The convention for properties from the behavior is to prefix the property name with the name of the behavior, to avoid accidently overriding the value with a property from the implementing component.</p>
+
+  <pre><code>---
+properties:
+  behavior-someProperty: true 
+methods:
+  someMethod: |
+    if(this.behavior-someProperty &amp;&amp; this.anotherProperty) {
+      // Do something
+    }
+    else {
+      // Do something else
+    }
+</code></pre>
+
+  <p><code>anotherProperty</code> is definied in the implementing component, but is still usable in the behavior. If the component that is implementing the behavior needs <code>behavior-someProperty</code> to be false, it simply overrides the value in its own properties. </p>
+
+  <pre><code>---
+implements:
+- http://vwf.example.com/path/to/behavior.vwf
+properties:
+  behavior-someProperty: false
+  anotherProperty: true
+scripts:
+- |
+  this.doSomething = function() {
+    this.someMethod();
+  }
+</code></pre>
+
+  <p>When <code>someMethod</code> executes, it will read the overridden value of <code>behavior-someProperty</code>, and go into the else statement.</p>
+
+</div>
+<hr />
+
+<p><a name="animations"></a></p>
+
+<div class="well">
+  <h1 id="animations">Animations</h1>
+  <hr />
+
+  <p><strong>Animation Behavior</strong></p>
+
+  <p>The primary way to accomplish animations in VWF is the animation behavior. All components that extend node3 automatically implement the animation behavior, which provides standardized methods and properties for creating and executing an animation. </p>
+
+  <p>In order to create an animation on a node, the <code>animationUpdate</code> method needs to be implemented. This method is called each time the animation time changes, and is used to update the node to the correct state for that time.</p>
+
+  <pre><code>scripts:
+- |
+  this.animationUpdate = function(time, duration) {
+    // Animate the node. For example, update the translation based on the time
+    this.translateBy([0, 0, 1 * time], 0);
+  }
+</code></pre>
+
+  <p>The animation can then be started by calling the <code>animationPlay</code> method and stopped by calling <code>animationStop</code>.</p>
+
+  <p>Common properties used to customize the animation include:</p>
+
+  <ul>
+    <li>animationDuration - The length of the animation</li>
+    <li>animationRate - The animation playback rate</li>
+    <li>animationLoop - Whether or not the animation should replay after reaching the end</li>
+  </ul>
+
+  <p>A full list of methods and properties can be found under <a href="jsdoc_cmp/symbols/animation.vwf.html">animation</a> in the <a href="application.html">Application API</a>.</p>
+
+  <hr />
+
+  <p><strong>Collada Animations</strong></p>
+
+  <p>Animations defined in the collada document will also be loaded and available to the framework. They are controlled the same way as animations created in a component, except there is no need to implement an <code>animationUpdate</code> method, since the animation information is pulled from the collada file.</p>
+
+  <p>Common properties used to customize collada animations include:</p>
+
+  <ul>
+    <li>animationStartTime - The time the animation should start at. Used to play a subsection of the animation.</li>
+    <li>animationStopTime - The time the animation should stop at. Used to play a subsection of the animation.</li>
+    <li>animationStartFrame - Equivalent to animationStartTime, but in frames, instead of seconds.</li>
+    <li>animationStopFrame - Equivalent to animationStopTime, but in frames, instead of seconds.</li>
+    <li>fps - The frames per second the animation should play at.</li>
+  </ul>
+
+  <hr />
+
+  <p><strong>Future Call</strong></p>
+
+  <p>Animations can also be created using the future call. The VWF future call can be used to run a method at a specified time in the future. This call can be inserted into the method call chain, and a parameter passed with an amount of time from the current point for when the method should be called. An example of the future call is shown below. </p>
+
+  <pre><code>methods:
+  methodName: |
+    if( criteriaMet )
+    {
+      doSomething();
+      this.future( 0.05 ).methodName();
+    }
+</code></pre>
+
+  <p>The future call schedules the next step. The parameter passed to the function call can be raised or lowered to smooth or optimize the animation, respectively.</p>
+
+  <p>Future calls may also be used for property assignment or to fire an event at a given time in the future. </p>
+
+  <pre><code>this.future.eventName();
+this.future.propertyName = value;
+</code></pre>
+
+  <!-- Coming soon! Relative vs. Absolute future calls: this.in() and this.at() -->
+
+</div>
+<hr />
+<p><a name="html"></a></p>
+
+<div class="well">
+  <h1 id="html-overlays">HTML Overlays</h1>
+  <hr />
+
+  <p>Two dimensional components may be added to any application via HTML. When an application loads, the framework automatically looks for an HTML file of the same name. For instance, if your application is entitled <code><i>application</i>.vwf.yaml</code>, VWF will look for a file in the same directory called <code><i>application</i>.vwf.html</code>. This HTML is of a standard format, and can, in fact, be loaded standalone in a browser. </p>
+
+  <p>A few additions to the file can attach the 2D content as an overlay directly over the VWF view, and scripts can be added to attach the HTML content to the application pieces itself. </p>
+
+  <hr />
+
+  <p><strong>Overlay HTML Content</strong></p>
+
+  <p>The first step is to create the HTML content as you’d like it to appear on the screen. In the example below, everything contained within the first div can stand alone as it’s own HTML file, with standard css rules applied.</p>
+
+  <pre><code>&lt;body&gt;
+  &lt;div id="wrapper" class="wrapper"&gt;
+    &lt;div class="toolstyle" id="toolbar"&gt;
+      &lt;img id="icon1" src="images/icon1.png" style="border:3px solid red" alt="icon1" 
+        onclick="setMode('mode1')"/&gt;
+      &lt;img id="icon2" src="images/icon2.png" style="border:2px solid black" alt="icon2" 
+        onclick="setMode('mode2')"/&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;script type="text/javascript"&gt;
+    $('#wrapper').appendTo('#vwf-root');
+  &lt;/script&gt;
+&lt;/body&gt;
+</code></pre>
+
+  <p>In order to attach the content as an overlay to the application, we’ve added an additonal script tag, that appends the <em>wrapper</em> div to <em>vwf-root</em>, or the main application view. </p>
+
+  <p><em>Note</em> - The loader strips out header and body tags and inserts content directly into index.html. HTML5 formatting is helpful for testing as a standalone webpage, but not required for VWF. </p>
+
+  <hr />
+
+  <p><strong>Allow HTML to Monitor and Change the Simulation State</strong></p>
+
+  <p>The HTML has access to the VWF application models through vwf_view. Thus, the HTML can watch what happens within the simulation and make changes to it such as setting properties, calling methods, and firing events. </p>
+
+  <p>The <code>vwf.api.kernel</code> in the <a href="system.html">system API</a> contains a full list of possible kernel calls that can be made from the HTML.</p>
+
+  <p>The following sections show examples of how to do just that. Refer to <a href="query.html">querying</a> for more information about obtaining node IDs to pass to the following functions.</p>
+
+  <hr />
+
+  <p><strong>Allow HTML to Set Application Properties</strong></p>
+
+  <p>Properties of the application or of specific nodes may be set directly in the javascript of an HTML file. In order to set a property, the following syntax should be used. </p>
+
+  <pre><code>vwf_view.kernel.setProperty(vwf_view.kernel.application(), "property1", value);
+</code></pre>
+
+  <p>The first argument is the ID of the node containing the given property. In this case, the property is on the application itself, and uses the function call for the root node of the application. The second parameter is the name of the property to set, and the third argument is the value to be passed to the specified property. </p>
+
+  <hr />
+
+  <p><strong>Allow HTML to Call Application Methods</strong></p>
+
+  <p>Application methods can be called directly from the HTML, with or without parameters. In order to call a method, the following syntax should be used.</p>
+
+  <pre><code>vwf_view.kernel.callMethod(vwf_view.kernel.find(undefined, "/nodeName")[0], "method1");
+</code></pre>
+
+  <p>The first argument is the ID of the node where the method resides. In this case, the ID is found using the <a href="query.html">find</a> function call passing in the name of the node. The second parameter is the name of the method as defined in the main application file. In order to pass parameters directly to the method call, a third parameter may be passed as an array of values. </p>
+
+  <pre><code>vwf_view.kernel.callMethod(vwf_view.kernel.find(undefined, "/nodeName")[0], "method1", [ parameter1, parameter2, etc ]);
+</code></pre>
+
+  <hr />
+
+  <p><strong>Allow HTML to Create Components</strong></p>
+
+  <p>New components can also be created from the HTML. In order to create a node, the following syntax should be used.</p>
+
+  <pre><code>vwf_view.kernel.createChild(vwf_view.kernel.application(), "componentName", component, undefined, callback);
+</code></pre>
+
+  <p>The first argument is the ID of the node that will be the parent of the new component. The second argument is the name of the new component, and the third is the JavaScript object defining the new component. The final argument is optional, and is a function that will be called after the new component has been created.  Note the callback is not
+currently functional.</p>
+
+  <hr />
+
+  <p><strong>Monitor the Simulation to Manipulate HTML</strong></p>
+
+  <p>The HTML can reflect changes to the simulation as they occur. These changes can include property updates, method calls, or event fires. The following example allows the HTML to be notified of property changes in the simulation. </p>
+
+  <pre><code>vwf_view.satProperty = function (nodeId, propertyName, propertyValue) {
+  if (nodeId == vwf_view.kernel.application() ) {
+    switch (propertyName) {
+      case "mouseMode":
+        doSomething( propertyValue );
+        break;
+    }
+  }
+}
+</code></pre>
+
+  <p>In this case, any time a property has been set, this function will check to see if the property was changed on a specific node, and if so, will check the name of the property. If found, javascript can then be performed to update the HTML state.</p>
+
+  <p>Similarly, the HTML can monitor other types of application updates as well. A few common ones are listed below.</p>
+
+  <ul>
+    <li>Node created - vwf_view.createdNode = function …</li>
+    <li>Node deleted - vwf_view.deletedNode = function …</li>
+    <li>Method called - vwf_view.calledMethod = function …</li>
+    <li>Event fired - vwf_view.firedEvent = function …</li>
+  </ul>
+
+  <p>The <code>vwf.api.view</code> in the <a href="system.html">system API</a> contains a full list of view driver calls.</p>
+
+</div>
+<hr />
+
+<p><a name="drivers"></a></p>
+
+<div class="well">
+  <h1 id="drivers">Drivers</h1>
+  <hr />
+
+  <h3 id="configuring-drivers-for-an-application">Configuring Drivers for an Application</h3>
+
+  <p>An application allows for both its model and view drivers to be selected and activated via a configuration file. This system will look for a config file with the same base name as the application being loaded. For instance, <em>application.vwf</em> will search for and attempt to load a config file entitled <em>application.vwf.config.yaml.</em></p>
+
+  <p>Within the configuration, both model and view drivers may be defined within the <em>model:</em> or <em>view:</em> tag, using the path to the driver file, as shown below. </p>
+
+  <pre><code>---
+model:
+  vwf/model/threejs:
+view:
+  vwf/view/threejs: "#vwf-root"
+  vwf/view/lesson: 
+</code></pre>
+
+  <p>For drivers that require parameters, such as the renderer view driver that requires the correct HTML element ID, these can be passed in one of two ways. If there is only one parameter, it can be passed in as shown above to the right of the colon: <em>“#vwf-root”</em>. Alternatively, the parameter name may also be explicitly listed as defined below.</p>
+
+  <pre><code>---
+view:
+  vwf/view/glge: 
+    application-root: "#vwf-root"
+</code></pre>
+
+  <hr />
+
+  <h3 id="default-drivers">Default Drivers</h3>
+
+  <p>By default, the following drivers are active:</p>
+
+  <ul>
+    <li>Threejs (vwf/model/threejs, vwf/view/threejs)</li>
+    <li>Javascript (vwf/model/javscript)</li>
+    <li>Object (vwf/model/object)</li>
+    <li>Document (vwf/view/document)</li>
+    <li>Editor (vwf/view/editor)</li>
+  </ul>
+
+  <p>Alternative driver options also include:</p>
+
+  <ul>
+    <li>GLGE (vwf/model/glge, vwf/view/glge)</li>
+    <li>JigLib (vwf/model/jiblib)</li>
+    <li>Cesium (vwf/model/cesium, vwf/view/cesium)</li>
+    <li>Google Earth (vwf/view/google-earth)</li>
+    <li>Lesson (vwf/view/lesson)</li>
+    <li>WebRTC (vwf/view/webrtc)</li>
+  </ul>
+
+  <p>For 2D applications, or any application where the default drivers are not necessary, the keyword <em>nodriver</em> may be used. For example, in tile-puzzle-2D, a WebGL renderer is not required, and thus uses the following configuration:</p>
+
+  <pre><code>---
+model:
+  nodriver: 
+</code></pre>
+
+  <hr />
+
+  <h3 id="additional-information">Additional Information</h3>
+
+  <p>In addition to defining the driver configuration for your application, the <em>config.yaml</em> file also allows you to set some additional information: an HTML title for the page. The following example configuration will set the title to the specified value, rather than the default <em>Virtual World Framework.</em></p>
+
+  <pre><code>---
+info:
+  title: "My New VWF Application"
+</code></pre>
+
+  <hr />
+
+  <h3 id="passing-configuration-parameters-in-url">Passing Configuration Parameters in URL</h3>
+
+  <p>An alternative option to using the <em>config.yaml</em> file is to pass in driver parameters via the URL. </p>
+
+  <p>For instance, the Google Earth view driver may be loaded in an application without a configuration file:</p>
+
+  <pre><code>http://virtualworldframework.com/earth/#!google-earth
+</code></pre>
+
+  <p>Both a model and a view driver may be loaded in an application with the following URL:</p>
+
+  <pre><code>http://virtualworldframework.com/humvee/?glge#!glge
+</code></pre>
+
+  <p>Parameters may also be passed in via the URL. The following example passes in parameters for the application root and setting the pick interval:</p>
+
+  <pre><code>http://virtualworldframework.com/sandtable/?threejs#!threejs={"application-root":"#vwf-root","experimental-pick-interval":50}
+</code></pre>
+
+  <p><em>Note</em>: The URL takes precedence and will override anything defined via the configuration file.</p>
+
+</div>
+<hr />
+
+<!-- **How Drivers Connect to the Kernel** -->
+
+<!-- The kernel has a list of drivers that stand side by side. It is setup so that there is a pipeline between the kernel and the drivers that setup the stages by performing things such as logging or translation between the kernel IDs and the object references. Drivers that don't care about the prototype relationship, can remove this information (ie glge can think about only a tree without thinking about the prototypes that make it up.) -->
+
+<!-- KERNEL -> PIPELINE STAGES (ability to transform messages going across, currently only supported by the models) -> DRIVER / Check out redmine wiki article called 'Declaring a driver with pipeline stages' -->
+
+<!-- Notes: Draw barrier between the view and the model? / User modules can be added or removed from the application (eventually will be loaded dynamically depending on what the application needs to function properly.) -->
+
+<p><a name="editor"></a></p>
+
+<div class="well">
+  <h1 id="editor">Editor</h1>
+  <hr />
+
+  <p>The editor capability of the Virtual World Framework allows for the application to be edited in a live environment. It provides full control to the user and has the ability to navigate through the current state of the application, consisting of its various nodes and properties. The editor allows changes to be made to the shared simulation by setting properties, calling methods, and firing events. </p>
+
+  <hr />
+
+  <h2 id="opening-the-editor">Opening the Editor</h2>
+
+  <p>To open the editor interface, move the mouse to the upper ride side of the screen. Upon a mouse rollover, five editor tabs should be displayed. Selecting one will open the editor on the right hand side of the screen, pushing the application view to the left.</p>
+
+  <p>The editor consists of five tabs:</p>
+
+  <ul>
+    <li>Application</li>
+    <li>Users</li>
+    <li>Time</li>
+    <li>Models</li>
+    <li>About</li>
+  </ul>
+
+  <p>To close the editor, rollover just to the left of the upper left corner of the editor. The five tabs will appear as well as an <em>X</em> tab. Click on the <em>X</em> tab to close the editor interface. </p>
+
+  <hr />
+
+  <h2 id="application">Application</h2>
+
+  <p>The Application tab displays a list of all children, properties, methods, events, behaviors, and scripts in the application. In addition, this tab provides a drill down capability on selected items, allowing complete navigation of the scene structure. Some items can also be edited directly with text based inputs.</p>
+
+  <div style="width:100%;text-align:center"><img src="images/editor_hierarchy.png" alt="hierarchy" /></div>
+
+  <p><strong>Properties</strong></p>
+
+  <p>All properties of a given node can be edited while the application is running. Using the editor interface, drill down into the appropriate node, or find the property in the application’s property list. The property value can simply be edited by entering or changing the value and clicking the <em>Enter</em> key.</p>
+
+  <div style="width:100%;text-align:center"><img src="images/editor_properties.png" alt="properties" /></div>
+
+  <p>Properties may be booleans, numbers, or strings, and their values are represented in form they would be as a javascript format. Strings must be quoted, and arrays must be intered in the form of <em>[ 0, 0, 0 ]</em>. Values can also be null or undefined.</p>
+
+  <p><strong>Methods</strong></p>
+
+  <p>All methods associated with the current node are listed in the editor. They can be called directly from the main window, if they do not require parameters, by clicking the <em>Call</em> button. If parameters are required for a method, a white arrow will appear by rolling over the right of the <em>Call</em> button. Clicking the white arrow will drill down into the method, and parameters can be specified in the given text fields. The <em>Call</em> button can then be clicked from the header. To go back to the node, select the white back arrow in the upper left corner. </p>
+
+  <div style="width:100%;text-align:center">
+<img src="images/editor_method.png" alt="method" />
+<img src="images/editor_method_2.png" alt="method" />
+</div>
+
+  <p><strong>Events</strong></p>
+
+  <p>All events associated with the current node are listed in the editor. They can be fired directly from the main window, if they do not require parameters, by clicking the <em>Fire</em> button.  If parameters are required for an event, a white arrow will appear by rolling over the right of the <em>Fire</em> button. Clicking the white arrow will drill down into the event, and parameters can be specified in the given text fields. The <em>Fire</em> button can then be clicked from the header. To go back to the node, select the white back arrow in the upper left corner. </p>
+
+  <div style="width:100%;text-align:center">
+<img src="images/editor_event.png" alt="event" />
+<img src="images/editor_event_2.png" alt="event" />
+</div>
+
+  <p><strong>Children</strong></p>
+
+  <p>All children of the current node are listed in the editor, and each can be drilled into to see a level deeper in the tree structure. Each child node is marked with a white arrow to the right of the child’s name. Click on any child in the list in order to drill down. The new node information will be displayed including any scripts, behaviors, properties, children, methods, and events associated with the node. </p>
+
+  <div style="width:100%;text-align:center"><img src="images/editor_children.png" alt="children" /></div>
+
+  <p><strong>Behaviors</strong></p>
+
+  <p>Behaviors can be attached to any node in the scene. For all nodes with behaviors, upon drilling into the selected node, a list of all implemented behaviors will be displayed. </p>
+
+  <div style="width:100%;text-align:center"><img src="images/editor_behavior.png" alt="behavior" /></div>
+
+  <p><strong>Scripts</strong></p>
+
+  <p>Scripts can be both created and edited in the editor interface. </p>
+
+  <div style="width:100%;text-align:center"><img src="images/editor_scripts.png" alt="scripts" /></div>
+
+  <p><em>Creating New Script</em></p>
+
+  <p>To create a new script on a node in the application hierarchy, click on the <em>New Script</em> item listed first. Click in the text area that appears to give it focus. The editor window will expand to allow more room for typing the script. A new script can be added here that extends an existing function, for example, mouse events, or can be brand new. Once the script is ready to go, click on the <em>Create</em> button at the bottom of the editor. To exit to script editor, either close the editor by selecting the <em>X</em> tab or selecting the back arrow in the upper left corner to drill back up to the node. </p>
+
+  <p><em>Editing Script</em></p>
+
+  <p>To edit an existing script, click on the corresponding script listed in the editor on the appropriate node. The script editor will open, displaying the current script. Click in the text area to expand the editor working area. Make any updates as needed, and click the <em>Update</em> button at the bottom of the editor. To exit to script editor, either close the editor by selecting the <em>X</em> tab or selecting the back arrow in the upper left corner to drill back up to the node. </p>
+
+  <div style="width:100%;text-align:center"><img src="images/editor_script.png" alt="script" /></div>
+
+  <hr />
+
+  <h2 id="users">Users</h2>
+
+  <p>The Users tab shows a list of all user IDs currently in the application instance.</p>
+
+  <div style="width:100%;text-align:center"><img src="images/editor_users.png" alt="users" /></div>
+
+  <hr />
+
+  <h2 id="time">Time</h2>
+
+  <p>The Time tab contains a pause and stop button which, when pressed, will pause and stop the application clock, respectively. In this case, the pause button will change to a play button which will allow the clock to be started again. Additionally, the Timeline tab also allows the clock speed to be adjusted to be faster or slower, depending on where the slider is dragged. The rate will be numerically displayed below in relation to the normal time.</p>
+
+  <div style="width:100%;text-align:center"><img src="images/editor_timeline.png" alt="timeline" /></div>
+
+  <hr />
+
+  <h2 id="models">Models</h2>
+
+  <p>The Models tab is a listing of assets on the server that are available for dragging into the application, creating new children in the scene. Upon opening the tab, a list of all available models on the server is displayed. Clicking on any of the listed models will drill down into that model, allowing the user to set properties of the node to be created, including the rotation, scale, and translation offset (distance from the drop location). After setting these properties, the user can then drag the <em>Drag to Create</em> area and drop it on any location in the scene. Upon the drop, the new object will be created with the specified properties. </p>
+
+  <div style="width:100%;text-align:center">
+<img src="images/editor_models.png" alt="models" />
+<img src="images/editor_models_2.png" alt="models" />
+</div>
+
+  <hr />
+
+  <h2 id="about">About</h2>
+
+  <p>The About tab displays the current version of the Virtual World Framework used in the application, where the first number describes a major release, the second a minor release, the third a patch, and finally, the revision number of the build. The tab also contains links to the main webpage and github repository for user reference.</p>
+
+  <div style="width:100%;text-align:center"><img src="images/editor_about.png" alt="about" /></div>
+
+</div>
+<hr />
+
+<p><a name="querying"></a></p>
+
+<div class="well">
+  <h1 id="querying">Querying</h1>
+  <hr />
+
+  <p>Within VWF, there are several ways to query for a specific node for use in any application script. The <em>this.find</em> function runs a search and returns a set of matching nodes. The <em>this.test</em> function takes in a parameter to test against and returns a boolean value depending on whether the search was successful. </p>
+
+  <p>From a component of the application, the function takes in a search criteria parameter and will run a search on the specified component. Thus, if the function is called on the main application, it will search all nodes of the application. The functions may also be called on any other component of the application, and will run a search on all the children of that node. </p>
+
+  <p>The remainer of this section will focus on how to use the find and test query functions and provide several examples of various scenarios. </p>
+
+  <hr />
+
+  <h2 id="example-queries">Example Queries</h2>
+
+  <h3 id="on-the-application-level-in-the-modelarchitecturehtml">On the application level (in the <a href="architecture.html">model</a>)</h3>
+
+  <p>The following will return any nodes with the specified path. </p>
+
+  <pre><code>this.find( "/radio/bone1/MaxScene/Radio" );
+</code></pre>
+
+  <p>The following will search for all children nodes of the component on which it is called.</p>
+
+  <pre><code>this.find( "/*" );
+</code></pre>
+
+  <p>This call will execute the function defined for each ID that is returned from the query. </p>
+
+  <pre><code>this.find( "/*", function( id ) { console.info( this.name( id ) ) } );
+</code></pre>
+
+  <p>The <em>//</em> represents all children at any level beneath the node upon which the query is called. The following query will return any nodes within the scene matching Radio.</p>
+
+  <pre><code>this.find( "//Radio" );
+</code></pre>
+
+  <p>The following query will return nodes at any level that have a parent named <em>Radio</em>. </p>
+
+  <pre><code>this.find( "//Radio/*" );
+</code></pre>
+
+  <p>The element keyword can also be used to specify search criteria (note that it is sensitive to white space - do not put spaces in the parameter list).</p>
+
+  <pre><code>this.find( "element(dir2)" );
+</code></pre>
+
+  <p>The following query will return descendent nodes of the specified type (again, no spaces in <em>element</em>’s parameter list). </p>
+
+  <pre><code>this.find( ".//element(*,'http://vwf.example.com/light.vwf')" )
+</code></pre>
+
+  <p>The following query will return all children with <em>name1</em> who have a child with <em>name2</em>.</p>
+
+  <pre><code>this.find( "name1[name2]" );
+</code></pre>
+
+  <p>The following query will return all children that have at least one child.</p>
+
+  <pre><code>this.find( "*[*]" );
+</code></pre>
+
+  <p>Properties can also be used in a query. The following query searches for all children of <em>name1</em> that have the given property condition. </p>
+
+  <pre><code>this.find( "name1[@property]" );
+</code></pre>
+
+  <p>To test whether a node with certain criteria exist, use <em>test()</em> with the same parameters as <em>find()</em>. It will return true or false.</p>
+
+  <pre><code>this.test( "/camera" );
+</code></pre>
+
+  <h3 id="on-the-driver-level-in-the-viewarchitecturehtml">On the driver level (in the <a href="architecture.html">view</a>)</h3>
+
+  <p>The driver-level syntax is very similar, with three exceptions:</p>
+
+  <ol>
+    <li><em>find()</em> or <em>test()</em> is called on the view object instead of a node in the scene.</li>
+    <li>An extra parameter is added to the beginning for the id of the node from which you are searching - this can be <em>undefined</em> for absolute path searches (those that begin with a slash).</li>
+    <li><em>find()</em> returns an array of ids corresponding to the matched nodes, rather than a reference to the node itself (since at the driver level all access to nodes is done through their ids).</li>
+  </ol>
+
+  <p>For example:</p>
+
+  <pre><code>var matchedIds = vwf_view.kernel.find( parentNodeId, "/radio/bone1/MaxScene/Radio" );
+var nodeExists = vwf_view.kernel.test( nodeId, "/*" );
+</code></pre>
+
+</div>
+<hr />
+<p><a name="cookbook"></a></p>
+
+<div class="well">
+  <h1 id="cookbook">Cookbook</h1>
+  <hr />
+
+  <p>The cookbook is a collection of “recipes” to teach the user how to create some basic functionality within the Virtual World Framework. Try the links to the left to view the current recipes. </p>
+
+  <p>Check back often, and if there are any suggestions or comments, please post to the <a href="../forum.html">forum</a>.</p>
+
+</div>
+<hr />
+<p><a name="multiuser"></a></p>
+
+<div class="well">
+  <h1 id="create-a-multi-user-application">Create a Multi-user Application</h1>
+  <hr />
+
+  <p><sup>(Note: This recipe is based on the <a href="../example/multiuser">multiuser example app</a> - check it out for greater context.  You can find the source for the app in the <a href="https://github.com/virtual-world-framework/vwf">github repository</a> in public/web/example/multiuser.)</sup></p>
+
+  <p>All that is needed for a VWF app to become a multi-user app is for a second person to navigate to the same url.  By default, both users share the same view of the virtual world.</p>
+
+  <p>Often, you will want your users to be different “characters” in the scene.  For this to happen, we need to set the scene’s <em>usersShareView</em> property to false:</p>
+
+  <pre><code>extends: http://vwf.example.com/scene.vwf
+properties:
+  usersShareView: false
+</code></pre>
+
+  <p>By default, the system will create a camera for each user who joins the application so users can move independently through the scene.  Often you will want some represention of each user (an avatar) in your application so users can see each other.  To specify the object that we want the system to create for each user, we need to set the scene’s <em>userObject</em> property to a description of the desired object.  This userObject must play by two rules:</p>
+
+  <ul>
+    <li>It must implement the <em>navigable</em> behavior to be recognized as something the user can control.</li>
+    <li>It must contain a camera so the user can see.</li>
+  </ul>
+
+  <p>Here is an example of a user object that is a duck with a camera attached:</p>
+
+  <pre><code>  userObject:
+    extends: http://vwf.example.com/node3.vwf
+    implements: [ "http://vwf.example.com/navigable.vwf" ]
+    properties:
+      translationSpeed: 10000
+    children:     
+      camera:
+        extends: http://vwf.example.com/camera.vwf
+        properties:
+          translation: [ 0, 0, 800 ]
+          far: 1000000
+          near: 1
+      avatar:
+        extends: http://vwf.example.com/node3.vwf
+        source: models/duck.dae
+        type: model/vnd.collada+xml
+        properties:
+          rotation: [ 0, 0, 1, 90 ]
+          scale: 4.5
+</code></pre>
+
+  <p>That’s all!</p>
+
+  <h2 id="notes">Notes</h2>
+
+  <ul>
+    <li>Currently these instructions work with only the three.js renderer (since the functionality is implemented in the VWF drivers for three.js).</li>
+    <li>Though the userObject property looks like a node description, it is only a property (later, the system will create a node for the user from this property). Therefore, one cannot manipulate userObject by calling methods for node operations (for example, we cannot call <em>userObject.createChild(..)</em>).  Once the system creates the actual node, we may call such functions on that node.</li>
+  </ul>
+
+  <h2 id="common-pitfalls">Common Pitfalls</h2>
+
+  <ul>
+    <li>Do not use <em>this.moniker</em> in the model (.yaml)!</li>
+  </ul>
+
+  <p><em>this.moniker</em> contains an id that is unique for every user in the application.  It might be tempting to make users behave differently by creating conditionals around this variable.  However, doing so breaks VWF’s replicated computation since each user’s model then diverges from the others.  All user-specific actions need to be on the view side.</p>
+
+  <ul>
+    <li>Do not access the <em>vwf</em> variable anywhere</li>
+  </ul>
+
+  <p><em>vwf</em> gives a coder direct access to manipulate the model.  This may seem convenient, but it side-steps VWF’s mechanisms to ensure that state stays synchronized between users.  In the future this variable will be hidden from us coders for our safety, but in the mean time, steer clear of it!</p>
+
+  <ul>
+    <li>For a full list of pitfalls, see the document located <a href="pitfalls.html">here</a>.</li>
+  </ul>
+
+</div>
+<hr />
+<p><a name="simulation"></a></p>
+
+<div class="well">
+  <h1 id="create-a-simulation">Create a Simulation</h1>
+  <hr />
+
+  <p>Let’s define a <em>simulation</em> as any application that models a sequence of causes and effects.  Here’s how to create one:</p>
+
+  <h2 id="load-the-3d-scene">Load the 3D scene</h2>
+
+  <p>Let’s use the 3D model of a radio that comes with the VWF source in /public/radio:</p>
+
+  <p><img src="images/radio.png" alt="The radio 3D model for this recipe" /></p>
+
+  <p>Let’s load it in our index.vwf.yaml file:</p>
+
+  <pre><code>---
+extends: http://vwf.example.com/navscene.vwf
+children:
+  radio:
+    extends: http://vwf.example.com/node3.vwf
+    source: radio.DAE
+</code></pre>
+
+  <h2 id="add-a-behavior-to-an-object-that-reacts-to-user-interaction">Add a behavior to an object that reacts to user interaction</h2>
+
+  <p>A <em>behavior</em> is a component that can be added to another to give it added functionality.  Once created, these behaviors can be reused like building blocks, making it faster to create your applications.  Luckily, someone has already written a <em>control</em> behavior that we can reuse.  Let’s put it on the volume knob, inside the radio 3D model.</p>
+
+  <p>Hold down the Alt key and click anywhere in the scene; the console will print the hierarchy of the scene in both yaml and json format.  Copy and paste the yaml into your application document (unfortunately, it will bring the console line numbers with it, but they are all identical, so a string replace can rid you of them easily).  Here is a subset of it below with the behavior added to the <em>ic40Volume</em> node:</p>
+
+  <pre><code>---
+extends: http://vwf.example.com/navscene.vwf
+children:
+  radio:
+    extends: http://vwf.example.com/node3.vwf
+    source: radio.DAE
+    children:
+      Radio:
+        extends: http://vwf.example.com/node3.vwf
+        children:
+          ic40Volume:
+            extends: http://vwf.example.com/node3.vwf
+            implements:
+            - http://vwf.example.com/control-old.vwf
+            properties:
+              rotation: [0, 0, 1, 0]
+              controlType: rotate
+              controlMode: positions
+              transformIncrement: 12
+              transformAxis: [ 0, 1, 0 ]
+</code></pre>
+
+  <h2 id="add-a-behavior-to-another-object-that-reacts-to-the-first">Add a behavior to another object that reacts to the first</h2>
+
+  <p>We need another behavior to turn the screen on when the power switch is clicked.  This one we will create ourselves.  Let’s create a file called <em>turnon.vwf.yaml</em> and place it in support/proxy/vwf.example.com.  </p>
+
+  <pre><code>---
+extends: http://vwf.example.com/node3.vwf
+scripts:
+- |
+  var material = this.glgeObj14.material;
+
+  this.setScreenOn = function( updatedValue ) {
+    switch ( updatedValue ) {
+      case 0:
+        material.texture = "images/lcd.png"; // off
+        break;
+      default:
+        material.texture = "images/LCD_Overall_Glow_On.png"; // on
+        break;
+    }
+  }
+</code></pre>
+
+  <p>Place this behavior on the display screen and add a child to the screen of type material (this is the material specified in the code above, on which we will swap the texture):</p>
+
+  <pre><code>---
+extends: http://vwf.example.com/navscene.vwf
+children:
+  radio:
+    ...
+              Radio:
+                extends: http://vwf.example.com/node3.vwf
+                children:
+                  ic40Volume:
+                    ...
+                  LCD:
+                    extends: http://vwf.example.com/node3.vwf
+                    implements:
+                    - http://vwf.example.com/turnon.vwf
+                    children:
+                      glgeObj14:
+                        extends: http://vwf.example.com/mesh.vwf
+                        children:
+                          material:
+                            extends: http://vwf.example.com/material.vwf
+</code></pre>
+
+  <p>Next, we just need to add a line of code on the Radio that will add the screen’s <em>setScreenOn</em> function as an event handler for the  control’s <em>controlValueUpdated</em> event:</p>
+
+  <pre><code>---
+extends: http://vwf.example.com/navscene.vwf
+children:
+  radio:
+    ...
+              Radio:
+                extends: http://vwf.example.com/node3.vwf
+                children:
+                  ic40Volume:
+                    ...
+                  LCD:
+                    ...
+                    scripts:
+                    - |
+                      this.initialize = function() {
+                        this.ic40Volume.controlValueUpdated = this.LCD.setScreenOn();
+                      }
+</code></pre>
+
+  <p>Voila!  You have created your very first “simulation”.  Now you’re ready for the <em>Advanced Event Handling</em> tutorial which will complete your knowledge and give you all the tools you need to create a simulation of any complexity.</p>
+
+  <p>Tips:</p>
+
+  <ul>
+    <li>Always be on the lookout for existing components that you can use and save yourself some work</li>
+    <li>Consider paying it forward by sharing (or selling!) the components that you create so that others can stand on your shoulders to reach even greater heights</li>
+  </ul>
+
+</div>
+<hr />
+<p><a name="2d-interface"></a></p>
+
+<div class="well">
+  <h1 id="create-a-2d-interface">Create a 2D Interface</h1>
+  <hr />
+
+  <p>You can add two dimensional components to a user’s <em>view</em> via html.  These components can interact with the <em>model</em> state (update it and be updated from it).</p>
+
+  <p>The first step is to create an html file that matches the name of your application’s vwf.yaml file.  For example, if your application is titled <em>application</em>.vwf.yaml, create a file in the same directory named <em>application</em>.vwf.html.  When your application loads, the framework automatically looks for an html file by this name.</p>
+
+  <p>Inside that file, you can place any valid html, but you must obey two rules:</p>
+
+  <ul>
+    <li>Your html must have the style attribute “position:absolute” to show up in front of the 3D scene.  Sorry.  You can achieve this by wrapping everything in a div with that attribute or assign that attribute to everything in a css file.</li>
+    <li>Name any css files something <strong>other</strong> than <em>index.css</em>.  VWF uses an <em>index.css</em> file already, and it will ignore yours by that same name.</li>
+  </ul>
+
+  <p><em>Note</em> - The loader strips out header and body tags and inserts your content directly into a nameless, classless div in the VWF index.html page (view your app’s page source to see what we mean). Including header and body tags is helpful for testing as a standalone webpage, but not required for VWF. </p>
+
+  <p><em>Note</em> - The example application <a href="../example/transforms">transforms</a> provides a basic demonstration of the principles described in this recipe. It provides a series of 2D HTML form panels which can be used to set properties, call methods, and receive data from the VWF model. The source for this app can be found in the <a href="https://github.com/virtual-world-framework/vwf">github repository</a> in public/web/example/transforms.)</p>
+
+  <hr />
+
+  <p><strong>Monitor and Change the Simulation State</strong></p>
+
+  <p>The view (html) can access the model (yaml) through the vwf_view.kernel object. Thus, the html can watch what happens within the simulation and make changes to it such as setting properties, calling methods, and firing events. </p>
+
+  <p>The <a href="jsdoc/2c8753578a.html">vwf/api/kernel</a> in the <a href="system.html">system API</a> contains the list of kernel calls that can be made from the html.</p>
+
+  <p>The following sections show some examples.</p>
+
+  <hr />
+
+  <p><strong>Set Properties</strong></p>
+
+  <p>To set a property on an object, we first find a reference to that object and then set the property.  Like so:</p>
+
+  <pre><code>var nodeId = vwf_view.find( ... );
+vwf_view.kernel.setProperty( nodeId, "property1", value );
+</code></pre>
+
+  <p>Explanations of the parameters can be found in the <a href="query.html">find</a> and <a href="jsdoc/2c8753578a.html#setProperty">setProperty</a> documentation.  Note that the call to <em>find</em> returns immediately, but <em>setProperty</em> and the other kernel calls in this recipe are asynchronous.  You can know when the property has been set by creating an event handler for the <a href="jsdoc/a2d7e1ef81.html#satProperty">satProperty</a> event - more on that under <a href="#monitor"><em>Monitor the Model from HTML</em></a> - and yes … we know that <em>sat</em> is not really the past tense of <em>set</em>.</p>
+
+  <hr />
+
+  <p><strong>Call Methods</strong></p>
+
+  <p>To call a model method from the view, we first find a reference to the object (in the same manner as above) and then call the method like so:</p>
+
+  <pre><code>vwf_view.kernel.callMethod( nodeId, "method1" );
+</code></pre>
+
+  <p>Pass parameters to the method by passing an array of values as a third parameter: </p>
+
+  <pre><code>vwf_view.kernel.callMethod( nodeId, "method1", [ parameter1, parameter2, etc ] );
+</code></pre>
+
+  <p>Explanations of the parameters can be found in the <a href="jsdoc/2c8753578a.html#callMethod">callMethod</a>  API description.</p>
+
+  <hr />
+
+  <p><strong>Create Components</strong></p>
+
+  <p>Create a model component from the view like so:</p>
+
+  <pre><code>vwf_view.kernel.createChild( nodeId, "componentName", component, undefined, callback );
+</code></pre>
+
+  <p>Explanations of the parameters can be found in the <a href="jsdoc/2c8753578a.html#createChild">createChild</a> API description.</p>
+
+  <hr />
+
+  <p><a name="monitor"><strong>Monitor the Model from HTML</strong></a></p>
+
+  <p>The html can reflect changes to the simulation such as property updates, method calls, or events. The following example enables the html to catch property changes in the application. </p>
+
+  <pre><code>vwf_view.satProperty = function (nodeId, propertyName, propertyValue) {
+  if ( nodeId == someSpecificNodeId ) {
+    switch ( propertyName ) {
+      case "mouseMode":
+        doSomething( propertyValue );
+        break;
+    }
+  }
+}
+</code></pre>
+
+  <p>In this case, any time a property has been set, this function will check to see if the property was changed on a specific node, and if so, will check the name of the property. If it is the property we are looking for, we can write javascript to update the html state.</p>
+
+  <p>Similarly, the html can monitor other application updates, such as those listed below:</p>
+
+  <ul>
+    <li>Method called - vwf_view.calledMethod = function …</li>
+    <li>Event fired - vwf_view.firedEvent = function …</li>
+    <li>Node created - vwf_view.createdNode = function …</li>
+    <li>Node deleted - vwf_view.deletedNode = function …</li>
+  </ul>
+
+  <p>To learn more about these events, you can look at the system api for the <a href="jsdoc/a2d7e1ef81.html">view</a>.  Earlier we mentioned that calls to set a property and call a method are asynchronous.  If you would like to know when the action has completed, you may do so in <a href="jsdoc/a2d7e1ef81.html#satProperty">satProperty</a>/<a href="jsdoc/a2d7e1ef81.html#calledMethod">calledMethod</a>/etc.  However, remember that you will get calls into those event handlers for every property/method/etc that is set/called/etc.</p>
+
+  <p>Note: if a property setter alters the incoming value before storing it, <a href="jsdoc/a2d7e1ef81.html#satProperty">satProperty</a> will notify the app of the transformed value that is stored, not the original value.  See the API description of <a href="jsdoc_cmp/symbols/node.vwf.html">node</a> for more details.</p>
+
+  <hr />
+
+  <p><strong>Change the Application Title and Favicon</strong></p>
+
+  <p>The default browser title for a VWF application is <em>Virtual World Framework</em>. The title may be specified in an application’s configuration file as shown below. </p>
+
+  <pre><code>---
+info:
+  title: "Name of Application"
+</code></pre>
+
+  <p>Additionally, the favicon of an application may be set simply by dropping a <em>favicon.ico</em> file into the application folder. </p>
+
+  <p>For an example of setting these items, visit the <a href="../../../duck">duck application</a>.</p>
+
+</div>
+<hr />
+<p><a name="materials"></a></p>
+
+<div class="well">
+  <h1 id="switch-materials-on-an-object">Switch Materials on an Object</h1>
+  <hr />
+
+  <p>Imagine you have a simple scene (a cube) and you would like to programatically change the material on the cube.  (Note: it is important that the collada file for the 3D object have properly mapped texture coordinates)</p>
+
+  <p>Let’s look at the code for the simple scene, with a material object added as a child to the cube:</p>
+
+  <pre><code>--- 
+extends: http://vwf.example.com/navscene.vwf
+properties:
+children:
+  cube:
+    extends: node3.vwf
+    source: cube.dae
+    type: model/vnd.collada+xml
+    children:
+      material:
+        extends: http://vwf.example.com/material.vwf
+scripts:
+- |
+    this.initialize = function() {
+    }
+</code></pre>
+
+  <p>You can change the cube’s material anywhere in the code that you would like.  For the purpose of this example, let’s assume that you want to change it right at the beginning in the <em>initialize</em> function.  Everything you could want to change about the material can actually be changed via the properties of the existing material:</p>
+
+  <pre><code>this.initialize = function() {
+
+	var material = this.cube.material;
+
+	// Change the color
+	material.color = [ 0, 0, 205 ];
+
+	// Change the texture
+	material.texture = "images/grandma.png";
+
+	// Make the object transparent
+	material.alpha = 0.1;
+}
+</code></pre>
+
+  <p>A full list of material properties can be found in the <a href="jsdoc_cmp/symbols/material.vwf.html">material</a> application API.</p>
+
+  <p>Sometimes it may be desirable to switch out the entire material - if for example, you wanted to toggle between two that had many distinct properties or have more than one object share the same material.  Here’s how you could do that:</p>
+
+  <pre><code>this.initialize = function() {
+
+	var self = this;
+
+	this.children.create( "material1", "http://vwf.example.com/material.vwf", function() {
+		this.color = [ 0, 0, 205 ];
+		this.texture = "images/grandma.png";
+		this.alpha = 0.1;
+		self.cube.material = self.material1;
+	} );
+}
+</code></pre>
+
+  <p>You can read about the parameters of the create function on the API page for <a href="jsdoc_cmp/symbols/node.vwf.html#children">node.children</a>.</p>
+
+</div>
+<hr />
+<p><a name="chat"></a></p>
+
+<div class="well">
+  <h1 id="add-chat-to-your-application">Add Chat to Your Application</h1>
+  <hr />
+
+  <p>Often for multi-user applications, it is useful to have text-based communication among all users. In VWF, the model and the HTML view need to be integrated through the use of methods and/or events. </p>
+
+  <p>For a basic chat feature within a VWF application, define a method or event within the model. Setup the HTML view to call that method with the appropriate parameters (i.e. who is sending the message and the actual text of the message). The view will also need an event listener to capture these parameters. When one client calls “send chat”, the model will then call the method, and each view will pick up the parameters from the associated listener. </p>
+
+  <hr />
+
+  <h3 id="additions-to-the-model">Additions to the Model</h3>
+
+  <p>The application model first needs a method to allow one user to send out a chat message to everyone in the application. The view can then listen for the method call and update the HTML chat view accordingly. The code below shows a sample method definition in yaml.</p>
+
+  <pre><code>methods:
+  sendChat:
+    parameters:
+      - player
+      - message
+</code></pre>
+
+  <hr />
+
+  <h3 id="additions-to-the-html-view">Additions to the HTML View</h3>
+
+  <p>Begin by adding a section to the HTML to capture a chat conversation and an input field for new messages. Here we’ll use a <em>div</em> to display the conversation text and a <em>textarea</em> to capture new chat messages. These two tags are then wrapped in a containing <em>div</em> for easy css styling. </p>
+
+  <pre><code>&lt;div id="chatWindow"&gt;
+  &lt;div id="chatContent"&gt;&lt;/div&gt;
+  &lt;textarea id="chatInput" rows="1" style='width:100%'/&gt;
+&lt;/div&gt;
+</code></pre>
+
+  <p>In the view side JavaScript, we’ll need a way to track which client is represented by the view (so that when a message is sent, all clients will know who sent it). In this example, we’ll create a variable playerName to store this information. Because this is defined in the view, it will be unique to each client in the application. This field can be populated by either a login input screen or upon creation of the player node. Visit the <a href="multiuser.html">multi-user recipe</a> for more information. </p>
+
+  <pre><code>var playerName = $("#playerNameInput").val();;
+</code></pre>
+
+  <p>Next, setup a jQuery listener for the chat <em>textarea</em> input field. Set a keydown listener for the <em>Enter</em> key to trigger the sendChat method, by passing in the following: the scene node, where the method is defined, the name of the method to call, and the method parameters - the value of the playerName field defined above, and the current value of the <em>chatInput textarea</em>. Additionally, set a keyup listener to clear the <em>textarea</em> upon sending, so it’s ready for the next chat message. </p>
+
+  <pre><code>$('#chatInput').keydown(function(e) {
+  e.stopPropagation();
+  var code = (e.keyCode ? e.keyCode : e.which);
+  if (code == 13) { //Enter
+    vwf_view.kernel.callMethod( sceneNode, "sendChat", [ playerName, $(this).val() ]);
+  }
+}).keyup(function(e) {
+  e.stopPropagation();
+  var code = (e.keyCode ? e.keyCode : e.which);
+  if (code == 13) { //Enter
+    $(this).val('');
+  }
+});
+</code></pre>
+
+  <p>Finally, setup a VWF method listener in the view, so that each client in the application can respond to the <em>sendChat</em> method call. </p>
+
+  <pre><code>vwf_view.calledMethod = function (nodeId, methodName, methodParameters) {
+  if (nodeId == sceneNode ) {
+    switch (methodName) {
+      case "sendChat":
+        $('#chatContent').append( "&lt;span&gt;&lt;b&gt;" + methodParameters[0] + ": " + methodParameters[1] + "&lt;/b&gt;&lt;br/&gt;&lt;/span&gt;" );
+        break;
+    }
+  }
+}
+</code></pre>
+
+  <p>Essentially this listener will add the chat message to the <em>chatContent div</em> created above. </p>
+
+</div>
+<hr />
+<p><a name="sound"></a></p>
+
+<div class="well">
+  <h1 id="add-sound-effects-to-your-application">Add Sound Effects to Your Application</h1>
+  <hr />
+
+  <p>For any interactive application, you may want to add sound, either for effect or to notify all users that something has occurred (e.g. a laser was fired, a message has been sent, etc). As with much of the framework, we can accomplish simple sound effects through the use of HTML5’s native features. </p>
+
+  <p>A method or event within the application’s model may be used to play a synchronized sound effect by setting up a VWF listener in the HTML view that will play the sound whenever a specific method is called or an event is fired.</p>
+
+  <hr />
+
+  <h3 id="define-the-sound-source">Define the Sound Source</h3>
+
+  <p>HTML5 allows one to specify sound through the use of the <em>audio</em> tag. The audio tag simply contains a source which specifies the file location of a sound effect. This audio tag will need to be added to the application’s HTML. </p>
+
+  <pre><code>&lt;audio id='exampleAudio'&gt;
+  &lt;source src="sounds/example.wav"&gt;&lt;/source&gt;
+&lt;/audio&gt;
+</code></pre>
+
+  <hr />
+
+  <h3 id="additions-to-the-model">Additions to the Model</h3>
+
+  <p>Within the model, define a method or event. This method can either be completely separate, used solely to play a sound, or attached to another method or event, so that a sound is played in conjunction with another action. </p>
+
+  <pre><code>methods:
+  playSound:
+</code></pre>
+
+  <hr />
+
+  <h3 id="additions-to-the-view">Additions to the View</h3>
+
+  <p>In addition to defining the sound source using the HTML5 native audio tag, set up a listener for the method call. </p>
+
+  <pre><code>vwf_view.calledMethod = function (nodeId, methodName, methodParameters) {
+  if (nodeId == sceneNode ) {
+    switch (methodName) {
+      case "playSound":
+        $('#exampleAudio')[0].play();
+        break;
+    }
+  }
+}
+</code></pre>
+
+  <p>Each time the <em>playSound</em> method is called, each client will hear the <em>exampleAudio</em> sound bite.</p>
+
+</div>
+<hr />
+<p><a name="transforms"></a></p>
+
+<div class="well">
+  <h1 id="complex-transforms">Complex Transforms</h1>
+  <hr />
+
+  <p>Among the most common properties to set on a node within the Virtual World Framework are various transforms. The <a href="jsdoc_cmp/symbols/node3.vwf.html">node3</a> component defines the basic transforms including the following:</p>
+
+  <ul>
+    <li>worldTransform</li>
+    <li>transform</li>
+    <li>translation </li>
+    <li>rotation </li>
+    <li>quaternion</li>
+    <li>scale</li>
+  </ul>
+
+  <p>These properties may be used to either initially set the property on application load, or to specifically set a value as a result of an action or event. Directly setting these properties are most useful in simple cases, when the proper values to pass in are known.</p>
+
+  <p>Transform property values may be set directly in the property definition, as shown below.</p>
+
+  <pre><code>properties:
+  rotation: [ 1, 0, 0, 90 ]
+  scale: 10
+</code></pre>
+
+  <p>Additionally, property values can be set within script, as shown below. </p>
+
+  <pre><code>this.transform = [ 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 10, 500, 100, 1 ];
+this.translation = [ 0, 100, 0 ];
+this.scale = [ 10, 0, 0];
+</code></pre>
+
+  <p><em>Note</em> - There is an example application by the name of <a href="../example/transforms">transforms</a>. This application allows the user to set and view the various properties discussed in this recipe, and see the outcome on an actual model. The source for this app can be found in the <a href="https://github.com/virtual-world-framework/vwf">github repository</a> in public/web/example/transforms.) </p>
+
+  <hr />
+
+  <h3 id="transform-by-methods">Transform By Methods</h3>
+
+  <p>Alternatively, the <em>node3</em> component defines several methods to aid in more complex transformations of 3D objects in the scene. The following methods are available to combine various transforms on top of each other. Such methods include:</p>
+
+  <ul>
+    <li>translateBy</li>
+    <li>rotateBy</li>
+    <li>quaterniateBy</li>
+    <li>scaleBy</li>
+  </ul>
+
+  <p>Each of these methods takes in an array transform (or scalar value in the case of <em>scaleBy</em>) to combine with the existing transform on the node. Additionally, these methods will take an optional value <em>duration</em> to perform the transform over time. </p>
+
+  <p>Example from the model:</p>
+
+  <pre><code>this.objectNode.rotateTo( [ 0, 0, 1, 45 ], 10 );
+</code></pre>
+
+  <p>Example from the view:</p>
+
+  <pre><code>vwf_view.kernel.callMethod( objectNode, "rotateTo", [ [ 0, 0, 1, 45 ], 10 ] );
+</code></pre>
+
+  <p>The above method calls will rotate objectNode 45 degrees around the z-axis, over a duration of 10 milliseconds. </p>
+
+  <hr />
+
+  <h3 id="transform-to-methods">Transform To Methods</h3>
+
+  <p>Another option for transforming an object over time is the transform to methods. These methods will take in an array or scalar value in the same format as in the property definition itself. However, unlike setting the property directly, use of these methods allow for an optional <em>duration</em> to animate a node’s transformation. </p>
+
+  <ul>
+    <li>translateTo</li>
+    <li>rotateTo</li>
+    <li>quaterniateTo</li>
+    <li>scaleTo</li>
+    <li>transformTo</li>
+  </ul>
+
+  <p>Example from the model:</p>
+
+  <pre><code>this.camera.translateTo( [ 0, 0, 5 ], 10 );
+</code></pre>
+
+  <p>Example from the view:</p>
+
+  <pre><code>vwf_view.kernel.callMethod( camera, "translateTo", [ [ 0, 0, 5 ], 10 ] );
+</code></pre>
+
+  <p>The above method calls will translate the camera to [ 0, 0, 5 ], over a duration of 10 milliseconds. </p>
+
+  <hr />
+
+  <h3 id="closure-library">Closure Library</h3>
+
+  <p>Another alternative for complex transformations is simply to use the transform property or the transformTo method in conjuction with complex matrix math. Both of these options require a 16 value array, representing the transform matrix. Vector arrays may also be calculated and used with the individual transform properties and methods. Any combination of transformations can be calculated using matrix math and the vector classes of the <a href="https://developers.google.com/closure/library/">Google Closure Library</a>, which has been integrated into the framework. </p>
+
+  <p>The following are some examples of the closure library in action. There are several vector and matrix operations that can be used to calculate a vector and/or matrix to assign to the transform properties or passed to the transform methods.</p>
+
+  <p>The functions below will create a new vector or matrix. </p>
+
+  <pre><code>var newVector = goog.vec.Vec3.create();
+
+var newMatrix = goog.vec.Mat4.create();
+
+newVector = goog.vec.Vec3.createFromArray( [ value[0], value[1], value[2] + newValue ] );
+</code></pre>
+
+  <p>Below are examples of using the closure library to perform operations on vectors and matrices, and assigning them to a variable or directly to a transform. </p>
+
+  <pre><code>var newMat = goog.vec.Mat4.multMat( mat1, mat2,
+  goog.vec.Mat4.create()                       
+);
+
+var trans = goog.vec.Vec3.scale(
+  this.directionVector,
+  this.distance,
+  goog.vec.Vec3.create()
+);
+
+this.camera.translation = goog.vec.Vec3.add(
+  this.camera.translation,
+  this.translationToAdd,
+  goog.vec.Vec3.create()
+);
+</code></pre>
+
+  <p>Finally, here are few more examples to do matrix operations such as normalization, transposition, inversion, and quaternions. </p>
+
+  <pre><code>goog.vec.Vec3.normalize( v1, normalizedV1 );
+
+goog.vec.Mat4.transpose( example, exampleTranspose ); 
+
+goog.vec.Mat4.invert( example, exampleInverse );
+
+goog.vec.Quaternion.createFromValues( 0, 0, 0, 1 );
+</code></pre>
+
+</div>
+<hr />
+<p><a name="lesson"></a></p>
+
+<div class="well">
+  <h1 id="add-training-instruction">Add Training Instruction</h1>
+  <p>===================
+——————-</p>
+
+  <p>One purpose of using VWF is to create a lesson application, with the intent of teaching a user how to accomplish a series of tasks, or steps in a process. </p>
+
+  <p>We’ll start with the simplest form of a lesson - one with a single correct path. This means there is only one sequence of steps in the lesson, and no choice of which step to take next.</p>
+
+  <hr />
+
+  <h3 id="the-task-component">The Task Component</h3>
+
+  <p>At every step, the lesson will issue a task to the student. The sequence of tasks will form the building blocks of the lesson. The <a href="jsdoc_cmp/symbols/lesson.task.vwf.html">task component</a> serves as the prototype for lesson tasks, and may be used for each required lesson step. </p>
+
+  <p>The task component contains the following properties that can be set in the lesson model file:</p>
+
+  <ul>
+    <li><strong>text</strong>: Text to display to the user to explain the task</li>
+    <li><strong>cameraPoseRef</strong>: Search string used to find a node3 that represents the transform to which the camera will move at the beginning of this task</li>
+    <li><strong>scenePath</strong>: xpath reference to the top node of the scene to which the lesson listens for task completion events</li>
+    <li><strong>taskIndex</strong>: Index of the currently active subtask; used internally and does not need to be explicitly set in the application</li>
+  </ul>
+
+  <p>In the following example, we’ll focus on the <em>text</em> and <em>cameraPoseRef</em> properties. </p>
+
+  <p>The task component also consists of the following methods and events:</p>
+
+  <p>Methods:</p>
+
+  <ul>
+    <li><strong>enter</strong></li>
+    <li><strong>next</strong></li>
+    <li><strong>exit</strong></li>
+  </ul>
+
+  <p>Events:</p>
+
+  <ul>
+    <li><strong>entering</strong></li>
+    <li><strong>completed</strong></li>
+    <li><strong>exiting</strong></li>
+  </ul>
+
+  <p>We can use the events defined above to add steps to the event handlers for each task. For instance, the entering event is in most cases the best place to define the success event, or the step required to complete the task (i.e. fire the <em>completed</em> event), as stated in the text property.</p>
+
+  <pre><code>this.entering = function() {
+  var self = this;
+  appObject.pointerClick = appObject.events.add( function() {
+    appObject.pointerClick = appObject.events.flush( this );
+    this.completed();
+  }, this );
+}
+</code></pre>
+
+  <hr />
+
+  <h3 id="setting-up-lesson-structure-in-the-model">Setting Up Lesson Structure in the Model</h3>
+
+  <p>One can turn a VWF application into an instructional lesson by adding a task hierarchy to the model, using the task component type, described above.</p>
+
+  <p>First we’ll need to add an overall lesson task as a child of the application. </p>
+
+  <pre><code>--- 
+extends: http://vwf.example.com/navscene.vwf
+children:
+  lesson:
+    extends: http://vwf.example.com/lesson/task.vwf
+    properties:
+      scenePath: /
+</code></pre>
+
+  <p>Subtasks of the lesson can then be defined as children of the lesson component. Here the <em>text</em> and <em>cameraPosRef</em> are set, and the entering event is used to define the success event - where clicking on the application object flushes the click event and calls the completed event for the step. </p>
+
+  <pre><code>    children:
+      step1:
+        extends: http://vwf.example.com/lesson/task.vwf
+        properties:
+          text: First, do the first task.
+          cameraPoseRef: /cameraPose1
+        scripts:
+        - |
+          this.entering = function() {
+            this.logger.info( "Step 1 entering" );
+            var self = this;
+            var appObject = this.find( "/applicationObject" )[ 0 ];
+            appObject.pointerClick = appObject.events.add( function() {
+              appObject.pointerClick = appObject.events.flush( this );
+              this.logger.info( "Step 1 completed" );
+              self.completed();
+            }, this );
+          } //@ sourceURL=step1.entering
+          this.exiting = function() {
+            this.logger.info( "Step 1 exiting" );
+          } //@ sourceURL=step1.exiting
+</code></pre>
+
+  <p>The overall lesson entering script can also be defined, as needed.</p>
+
+  <pre><code>    scripts:
+    - |
+      this.entering = function() {
+        this.logger.info( "Lesson entering" );
+      } //@ sourceURL=lesson.entering
+      this.exiting = function() {
+        this.logger.info( "Lesson exiting" );
+      } //@ sourceURL=lesson.exiting
+</code></pre>
+
+  <p>Additionally, the cameraPoses referenced in the task properties each need to be defined. These represent the transform to which the camera will move at the beginning of the task. </p>
+
+  <pre><code>  cameraPose1:
+    extends: http://vwf.example.com/node3.vwf
+    properties:
+      translation: [ 0, 0, 0 ]
+      rotation: [ 1, 0, 0, 0 ]
+</code></pre>
+
+  <p>Thus the complete lesson hierarchy is defined in the VWF model, including all lesson tasks, their cameraPoses, and their entering and exit methods. </p>
+
+  <p><strong>Multiple Levels</strong></p>
+
+  <p>For more complex lessons, define tasks with a structure that is more than one level deep. These levels of tasking can be used for tasks that consist of multiple actions, or for those requiring additional instructions in order to complete. </p>
+
+  <pre><code>lesson:
+  extends: http://vwf.example.com/lesson/task.vwf
+  properties:
+  scenePath: /
+  children:
+    step_1:
+      extends: http://vwf.example.com/lesson/task.vwf
+      properties:
+        text: "1.0"
+        cameraPoseRef: /lesson/cameraPose1
+      children:
+        step_1_1:
+          extends: http://vwf.example.com/lesson/task.vwf
+          properties:
+            text: "1.1"
+          children:
+            step_1_1_1:
+              extends: http://vwf.example.com/lesson/task.vwf
+              properties:
+                text: "1.1.1"
+              scripts:
+              - |
+                this.entering = function() {
+                  this.logger.info( "Step: 1.1.1" );
+                }
+        step_1_2:
+          extends: http://vwf.example.com/lesson/task.vwf
+          properties:
+            text: "1.2"
+          children:
+            step_1_2_1:
+              extends: http://vwf.example.com/lesson/task.vwf
+              properties:
+                text: "1.2.1"
+              scripts:
+              - |
+                this.entering = function() {
+                  this.logger.info( "Step: 1.2.1" );
+                }
+</code></pre>
+
+  <p>The standard lesson interface view driver, described below, supports multiple levels automatically. The figure below shows an example lesson with three levels of tasks in the hierarchy below the overall lesson task. Any additional levels will be appended to the innermost content section. </p>
+
+  <div style="width:100%;text-align:center"><img src="images/lesson.png" alt="hierarchy" /></div>
+
+  <hr />
+
+  <h3 id="add-lesson-interface-to-the-view">Add Lesson Interface to the View</h3>
+
+  <p>The user interface for the lesson will mainly be defined in the application using the lesson view driver. The primary interface for a lesson will consist of the instructional text for each lesson step, a bar to show overall lesson progress, and navigation buttons to start, complete, and skip over lesson tasks.</p>
+
+  <p>In order to pull in the lesson view driver (defined in <em>support/client/lib/vwf/view/lesson.js</em>), we simply need to create a configuration file for the application and activate the lesson view.</p>
+
+  <p>The configuration file will have the same name as the model file, with the addition of a <em>.config</em>. For instance, if your model file is entited <em>index.vwf.yaml</em>, the configuration file will be titled <em>index.vwf.config.yaml</em>. </p>
+
+  <p>The contents of the file will look as follows:</p>
+
+  <pre><code>---
+model:
+  vwf/model/glge:
+view:
+  vwf/view/glge: "#vwf-root"
+  vwf/view/lesson: "#vwf-root"
+</code></pre>
+
+  <p>This configuration sets the renderer to use the glge model and view driver in addition to the lesson view driver. </p>
+
+  <p>By activating the lesson driver, the application’s user interface will automatically be updated to autogenerate an instruction panel upon lesson start. This instruction panel will pull in the <em>text</em> properties defined in the task components in the model. Additionally, the instruction panel will update based on <em>entering</em> and <em>completed</em> events fired in order to show the current step and progress of the overall lesson. </p>
+
+  <p>Visit the <a href="../../../humvee-lesson">humvee lesson</a> or the <a href="../../../lesson">duck lesson</a> to view the final result.</p>
+
+</div>
+<hr />
+
+<!-- **Note: need to update build to include subfolders** 
+[task component](jsdoc_cmp/symbols/instruction.vwf.html) -->
+
+<!-- Add screenshots -->
+<p><a name="logging"></a></p>
+
+<div class="well">
+  <h1 id="logging-and-debugging">Logging and Debugging</h1>
+  <hr />
+
+  <p>As you’re building applications in the framework, it often helps to be familiar with the different logging and debugging tools available, both built into the browser as well as in the framwework. </p>
+
+  <hr />
+
+  <h3 id="logging">Logging</h3>
+
+  <p><strong>VWF Logging</strong></p>
+
+  <p>The logging levels are defined in <em>support/client/lib/logger.js</em>, documented under <a href="jsdoc/module-logger.html">logger</a> in the <a href="system.html">system API</a>. The logging options are TRACE, DEBUG, INFO, WARN,  and ERROR. This module requires the configuration module, defined in <em>support/client/lib/vwf/configuration.js</em>. The default log level on a development server is <strong>info</strong> and the default log level on a production server is <strong>warn</strong>. These values can be updated in the configuration.js file. </p>
+
+  <p>Logging is preferred over generic console output(e.g. <em>console.error</em>), as console output can cause the browser to crash if proper debugging tools are not installed. </p>
+
+  <p>The loggers can be used throughout the framework and have a knowledge of their context, or the object to which they’re attached. The following example will output the context of the message followed by the message itself.</p>
+
+  <pre><code>this.logger.warn( message );
+</code></pre>
+
+  <p>While the above example shows the most common type of logger message, the “x” variants are available for specifying deeper context, such as a specific function name. In the following example, the logger message adds an extra one-time label before the message. </p>
+
+  <pre><code>this.logger.warnx( "someFunction", "This message is coming from someFunction." )
+</code></pre>
+
+  <p>This type of message is primarily for the kernel and drivers, and most likely is not relevant for components. </p>
+
+  <p><strong>Log Files</strong></p>
+
+  <p>Turn logging to files on in <em>lib/vwf/application/reflector.rb</em>. Setting the <em>if</em> statement to true in the <em>def log</em> area will log events to a directory under “log/”. The path will match the application’s location in “public/” plus application/instance/client. Messages are logged to a separate file for each unique time stamp.</p>
+
+  <pre><code>def log fields, direction
+  if true 
+</code></pre>
+
+  <p>This form of logging is a heavy operation and should only be used for trace-level debugging. This option is planned to be configurable, so the reflector will not need to be edited. At it’s current state, if this option is set to true, the server will need to be restarted to begin logging. </p>
+
+  <hr />
+
+  <h3 id="debugging">Debugging</h3>
+
+  <p><strong>Browser Console</strong></p>
+
+  <p>Open the developer console to check for any information and error messages. </p>
+
+  <ul>
+    <li>In Mozilla Firefox, download and install <a href="https://addons.mozilla.org/en-us/firefox/addon/firebug">Firebug</a>. Select the bug icon in the upper right of the browser to run, and then select the Console window. </li>
+  </ul>
+
+  <p><img src="images/firebug.png" alt="firebug" style="width:500px" /></p>
+
+  <ul>
+    <li>In Google Chrome, press Ctrl+Shift+J or select the tools menu -&gt; Tools -&gt; Developer Tools -&gt; JavaScript Console. </li>
+  </ul>
+
+  <p><img src="images/chrome.png" alt="chrome" style="width:500px" /></p>
+
+  <p>Additionally, in Chrome, the <em>Elements</em> tab allows browsing the HTML of the document. <em>Network</em> allows for viewing of network traffic. <em>Sources</em> allows for browsing the javascript and css associated with the application. <em>Profiles</em> has an option for collecting the JavaScript CPU profile, which can be helpful in optimizing your VWF application. </p>
+
+  <p><strong>Model Source</strong></p>
+
+  <p>By adding “//@ sourceURL=<em>file reference</em>” to the end of scripts in the model file as show below, the script functions will be available in the <em>Sources</em> tab of the browser console. From here, breakpoints and other debugging tools can be used. </p>
+
+  <pre><code>scripts:
+- |
+  this.initialize = function() {
+    doSomething();
+  } //@ sourceURL=index.vwf
+</code></pre>
+
+  <p><img src="images/source.png" alt="chrome" style="width:500px" /></p>
+
+</div>
+<hr />
+<p><a name="testing"></a></p>
+
+<div class="well">
+  <h1 id="running-tests">Running Tests</h1>
+  <hr />
+
+  <p>The Virtual World Framework has tests against the server and some of the core client libraries. This page provides information on how to run the tests on your development machine.</p>
+
+  <p><strong>NOTE:</strong> If you are not changing the core VWF files, you probably don’t need to run these tests. See the “Troubleshoting” section of the <a href="introduction.html">Introduction</a> for info on verifying that your VWF application is working in the browser.</p>
+
+  <hr />
+
+  <h3 id="ruby">Ruby</h3>
+
+  <p>The Ruby tests exercise parts of the Ruby server and are run using rake.</p>
+
+  <pre><code>bundle exec rake test
+</code></pre>
+
+  <hr />
+
+  <h3 id="qunit-javascript">QUnit (JavaScript)</h3>
+
+  <p>The QUnit tests exercise some of the front-end JavaScript code. They require you have PhantomJS installed in order to run.</p>
+
+  <p>To install PhantomJS, follow the instructions for your platform.</p>
+
+  <p><strong>Linux</strong></p>
+
+  <p>1. Install PhantomJS using APT-GET or YUM install commands depending on your Linux flavor.</p>
+
+  <pre><code>apt-get install phantomjs or yum instal phantomjs
+</code></pre>
+
+  <p>2. Run the tests.</p>
+
+  <pre><code>bundle exec rake client:test
+</code></pre>
+
+  <p><strong>Mac</strong></p>
+
+  <p>1. Install PhantomJS using <a href="http://brew.sh/">Homebrew</a>.</p>
+
+  <pre><code>brew install phantomjs
+</code></pre>
+
+  <p>2. Run the tests.</p>
+
+  <pre><code>bundle exec rake client:test
+</code></pre>
+
+  <p><strong>Windows</strong></p>
+
+  <p>1. Visit <a href="http://phantomjs.org/download.html">PhantomJS Downloads</a> and download the Windows zip file. </p>
+
+  <p>2. Unzip the file and copy phantomjs.exe to a known location.</p>
+
+  <p>3. Run the tests, specifying the location of phantomjs.exe, like so.</p>
+
+  <pre><code>PHANTOMJS_BIN=/path/to/phantomjs.exe rake client:test
+</code></pre>
+
+  <p>NOTE: If you have a space in your path, make sure to surround it with quotes 
+and escape it with a “", like so.</p>
+
+  <pre><code>PHANTOMJS_BIN="/space\ path/path/to/phantomjs.exe rake client:test
+</code></pre>
+
+</div>
+<hr />
+<p><a name="pitfalls"></a></p>
+
+<div class="well">
+  <h1 id="pitfalls">Pitfalls</h1>
+  <hr />
+
+  <p>When you begin programming with VWF, it can be easy to wander off the well-worn path that keeps your apps synchronized across users.  Here are a mix of best practices and the most common pitfalls to avoid:</p>
+
+  <h2 id="ensure-that-youve-got-the-picky-yaml-formatting-right">Ensure that you’ve got the picky .yaml formatting right</h2>
+
+  <ul>
+    <li>Two spaces for an indentation.  No tabs!</li>
+    <li>Put a line return at the end of the file</li>
+  </ul>
+
+  <p>You will know if your .yaml format is incorrect because you will get a 500 (Server Internal) error in your page.</p>
+
+  <h2 id="do-not-reference-thismoniker-in-the-modelarchitecturehtml">Do not reference <em>this.moniker</em> in the <a href="architecture.html">model</a></h2>
+
+  <p><em>this.moniker</em> is a read-only property that contains an id that is unique for every user in the application.  It might be tempting to make users behave differently by creating conditionals around this variable.  However, doing so breaks VWF’s replicated computation since each user’s <a href="architecture.html">model</a> then diverges from the others.  All user-specific actions need to be on the <a href="architecture.html">view</a> side.  To see an example, read the <a href="multiuser.html"><em>Create a Multi-user Application</em></a> cookbook recipe.</p>
+
+  <h2 id="do-not-access-the-vwf-object-anywhere">Do not access the <em>vwf</em> object anywhere</h2>
+
+  <p>The <em>vwf</em> object gives a coder direct access to manipulate the <a href="architecture.html">model</a> from the <a href="architecture.html">view</a>.  This may seem convenient, but it side-steps VWF’s mechanisms to ensure that state stays synchronized between users.  In the future this variable will be hidden from us coders for our safety, but in the mean time, steer clear of it!  (though while it is available, it can be useful to investigate the properties of the vwf object from the browser console for debugging purposes).  To see an example of how to properly manipulate the model from the view, read the <a href="2d-interface.html"><em>Create a 2D Interface</em></a> cookbook recipe. </p>
+
+  <h2 id="when-setting-a-field-on-a-modelarchitecturehtml-property-set-the-whole-property">When setting a field on a <a href="architecture.html">model</a> property, set the whole property</h2>
+
+  <p>When changing a property, the property’s setter must be called to trigger VWF’s synchronization mechanism.  If one sets only a field of a property (for example, the <em>x</em> field on a vector property), the setter will not be called, and that change will not be replicated to other users.  Instead (using the vector example again), create a new vector that has the updated properties and assign the entire vector to the property (to call the property’s setter).</p>
+
+  <p>In cases like above when a property (let’s call it <em>containerProperty</em>) has properties of its own, it is often better to make containerProperty a child of the object it is on, rather than a property.  That way its sub-properties can automatically be synchronized when set.  Beware of doing this on components, though.  See <a href="#childrenOfComponents"><em>Do not add children to components</em></a> for more details.</p>
+
+  <h2 id="avoid-most-uses-of-global-local-variables-in-the-modelarchitecturehtml">Avoid most uses of global local variables in the <a href="architecture.html">model</a></h2>
+
+  <p>Only public properties get saved and loaded with the scene (including the implicit save/load that occurs when a new user joins an exisiting app).  Generally, if a piece of state is important enough to be stored in a global local variable, it’s important enough to get replicated to new users – so store it in a public property.  However, global local variables are sometimes useful – for example, pre-computing a value calculated from public properties so that it does not have to be recomputed every frame.  But make sure that such a variable contains no new state information or the application will not replicate to new users properly.</p>
+
+  <p><a name="childrenOfComponents"></a></p>
+
+  <h2 id="do-not-add-children-to-components">Do not add children to components</h2>
+
+  <p>When accessing children of an object, the kernel does not delegate to the object’s prototype.  In other words, children are not “inherited” from the prototype.  If you add children to a component specification and then create an object of that type, the new object will not have the children.</p>
+
+  <h2 id="do-not-hard-code-node-ids">Do not hard-code node ids</h2>
+
+  <p>From the <a href="architecture.html">view</a>, you will reference nodes by using <a href="query.html"><em>find()</em></a> to get their nodeIDs and then using that nodeID in <a href="jsdoc/2c8753578a.html">kernel calls</a> to get and set properties and call methods.  These nodeIDs are not guaranteed to be identical from one run of the application to the next.  Therefore, you must not hard-code them. For more information on accessing <a href="architecture.html">model</a> nodes from the <a href="architecture.html">view</a>, read the <a href="2d-interface.html"><em>Create a 2D Interface</em></a> cookbook recipe.</p>
+
+  <p><a name="noAccessHtmlFromModel"></a></p>
+
+  <h2 id="do-not-access-the-html-document-from-the-modelarchitecturehtml">Do not access the html document from the <a href="architecture.html">model</a></h2>
+
+  <p>The <a href="architecture.html">model</a> (.yaml) should not have any knowledge of the <a href="architecture.html">view</a> (.html).  Therefore, the .yaml should not make any reference to the .html document.  Instead, the <a href="architecture.html">model</a> can throw an event or set a property, etc, that the <a href="architecture.html">view</a> can listen for to access or change the document appropriately.  For more information about listening for <a href="architecture.html">model</a> events from the <a href="architecture.html">view</a>, read the <a href="2d-interface.html"><em>Create a 2D Interface</em></a> cookbook recipe. </p>
+
+  <h2 id="do-not-call-viewarchitecturehtml-functions-from-modelarchitecturehtml">Do not call <a href="architecture.html">view</a> functions from <a href="architecture.html">model</a></h2>
+
+  <p>As mentioned in <a href="#noAccessHtmlFromModel"><em>Do not access the html document from the model</em></a>, the <a href="architecture.html">model</a> should have no knowledge of the <a href="architecture.html">view</a>.  Therefore, the <a href="architecture.html">model</a> should not call <a href="architecture.html">view</a> functions.  Calling <a href="architecture.html">view</a> functions is especially dangerous if one passes a <a href="architecture.html">model</a> object to a <a href="architecture.html">view</a> function - the <a href="architecture.html">view</a> function can then change the object without going through the VWF kernel which ensures synchronization between users.  That change would only be reflected for the user who made the change locally.</p>
+
+  <h2 id="be-aware-of-asynchronicity">Be aware of asynchronicity</h2>
+
+  <p>When programming in the <a href="architecture.html">view</a>, calls to get/set <a href="architecture.html">model</a> properties and call <a href="architecture.html">model</a> methods do not execute immediately (the are sent to the <a href="architecture.html">reflector</a> and queued in proper time order).  Therefore, you must wait until the <a href="architecture.html">model</a> throws the appropriate event to indicate that your operation is complete.  For more information on accessing the <a href="architecture.html">model</a> from the <a href="architecture.html">view</a>, read the <a href="2d-interface.html"><em>Create a 2D Interface</em></a> cookbook recipe.</p>
+
+  <h2 id="be-careful-assigning-named-functions-to-event-handlers">Be careful assigning named functions to event handlers</h2>
+
+  <p>If you assign something like:</p>
+
+  <pre><code>node1.event = node2.method;
+</code></pre>
+
+  <p>VWF will try to call <em>method</em> from node1, not node2.  Instead, set the event handler like so:</p>
+
+  <pre><code>node1.event = function() {
+  node2.method();
+}
+</code></pre>
+
+</div>
+<hr />
+<p><a name="application-api"></a></p>
+
+<h1 id="application-api">Application API</h1>
+<hr />
+
+<iframe src="docs/jsdoc_cmp/index.html" style="height:600px;width:100%;" scrolling="auto" allowtransparency="false">Application API Reference</iframe>
+<p><a name="system-api"></a></p>
+
+<h1 id="system-api">System API</h1>
+<hr />
+
+<iframe src="docs/jsdoc/index.html" style="height:600px;width:100%;" scrolling="auto" allowtransparency="false">System API Reference</iframe>
+                <!-- END MARKDOWN -->
+              </div>  
+            </td>
+          </tr>
+        </table>
+      </div>
+				<!-- END MARKDOWN -->	
+		</div>
+	</body>
+</html>

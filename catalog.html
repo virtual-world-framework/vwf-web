@@ -1,0 +1,687 @@
+<html>
+  <head>
+    <title>Virtual World Framework - Examples and Demonstrations</title>
+	
+		<!-- Site CSS/JS Files References -->
+		
+			<script src="js/less-1.3.0.min.js" type="text/javascript"></script>
+			<link rel='stylesheet' type='text/css' href='css/bootstrap.css' />
+			<link rel='stylesheet' type='text/css' href='css/bootstrap.min.css' />
+			<!--link rel='stylesheet' type='text/css' href='css/bootstrap-responsive.min.css' /-->
+			<link rel='stylesheet' type='text/css' href='css/vwf.css' />
+			<link rel="stylesheet/less" type="text/css" href="css/bootswatch.less">
+			<link rel="stylesheet/less" type="text/css" href="css/variables.less">
+			<script src="js/widgets.js"></script>
+			<script src="js/jquery-1.10.2.min.js"></script>
+			<script src="js/bootstrap-carousel.js"></script>
+			<script src="js/bootstrap-tab.js"></script>		
+
+		<!-- SHIM FOR HTML5 Display in early IE browsers -->
+		
+			<!--[if lt IE 9]>
+				<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+			<![endif]-->
+		
+		<!-- Meta Information -->	
+		
+			<meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+			<meta name="description" content="The Virtual World Framework (VWF) is a fast, light-weight, web-based architecture for creating and distributing secure, scalable, component-based, collaborative virtual spaces. It leverages existing web-based standards, infrastructure, and emerging technologies with the intent of establishing a powerful yet simple to use platform that is built on top of the next generation of web browsers.">	
+			<meta name="keywords" content="virtual worlds, mmo, online gaming, online simulation, browser based gaming, 3d online games, framework, platform, vwf, virtual world framework, 3d browser gaming, html5 games, html5 simulation, webgl games, webgl simulation, websockets framework, webgl framework, webgl platform, chrome games, safari games, firefox games, online 3d simulation, mmo simulation, mmo 3d online, mmo 3d browser, mmo 3d games, mmo 3d framework, webgl mmo">	
+	
+    <script type='text/javascript'>
+      function showInfo(app, query)
+      {
+        function update(app) 
+		{
+			 var instances$ = $('.'+ app.replace(/\//g,'') + 'instances');
+			 var match;
+			 jQuery.getJSON( "../" + app + "/admin/instances", function( data ) {
+			 instances$.empty();
+			 instances$.html("<p><b>Current Sessions</b></p>");
+					jQuery.each
+						( 
+						data, function( key, value ) 
+							{
+							  if ( match = /* assignment! */ key.match( RegExp( "/([^/]*)$" ) ) )
+							  { 
+									var instanceHTML = htmlEscape( match[1] );
+									var size = Object.size(value.clients); 
+									instances$.append("<table style='width:75%;'><tr><td style='width:10%;'><span class='badge badge-success'>" + size + "</span>"+"</td><td style='width:60%;'>Name: " + instanceHTML + "</td><td style='text-align:right;width:30%;'><a class='btn btn-success btn-small' target='_blank' href='../" + app + "/" + instanceHTML + ( query || "" ) + "'>Join Session</a>" + "</td></tr></table>" );
+							  }
+							} 
+						);
+					setTimeout(update, 60000, app);
+				  });
+				
+		}
+        update(app);
+
+      }
+    </script>
+    <script>
+
+      // From http://stackoverflow.com/a/7124052
+
+      function htmlEscape( string ) {
+        return String( string ).
+          replace( /&/g, "&amp;" ).
+          replace( /"/g, "&quot;" ).
+          replace( /'/g, "&#39;" ).
+          replace( /</g, "&lt;" ).
+          replace( />/g, "&gt;" );
+      }
+
+      Object.size = function(obj) { 
+        var size = 0, key; 
+        for (key in obj) { 
+          if (obj.hasOwnProperty(key)) size++; 
+        } 
+        return size; 
+      }; 
+
+    </script>
+  </head>
+<body>
+	<header class="navbar navbar-fixed-top" style="z-index=1;">
+			<a href="https://github.com/virtual-world-framework/vwf"><img style="position: absolute; top: 0; left: 0; border: 0;z-index=-1;" src="images/github.png" alt="Fork me on GitHub"></a>
+		<div class="navbar-inner" style="z-index=1;">
+			<div class="container"><div id="logo" style="z-index=1;">Virtual World Framework</div>
+				<nav>
+					<ul class="nav pull-right">
+					  <li><a href="about.html">About</a></li>
+            <li><a href="catalog.html">Demos</a></li>
+            <li><a href="documentation.html">Documentation</a></li>
+            <li><a href="downloads.html">Downloads</a></li>
+            <li><a href="forum.html">Forum</a></li>
+					</ul>
+			  </nav>
+			</div>
+		</div>
+	</header>
+			
+<div class="container" style="margin-top:50px;">
+	<h1>VWF Demos</h1>
+	<hr style="margin:18px 0 18px 0;border-bottom:1px solid #1C1E22;"/>
+
+	<!--  Direct link to ADL Sandbox -->
+	<div class="span12">
+		<div style="padding-top: 15px;" class="adl/sandboxhover">
+			<table class="table table-striped">
+				<tr>
+					<td style="width:25%">
+						<a href="http://vwf.adlnet.gov/adl/sandbox/" target="_blank">
+							<img src="../adl/sandbox/index.vwf.catalog.png" alt="adl/sandbox" / style="vertical-align:middle;">            
+						</a>
+					</td>
+					<td style="width:75%">
+						<h3 style="float:left;vertical-align:middle;">adl/sandbox</h3> 
+						<a style="float:right;vertical-align:middle;" class="btn btn-info btn-small" target="_blank" href="http://vwf.adlnet.gov/adl/sandbox/">Launch New Session</a>
+						<br/>
+						<hr>
+						<p style="font-size:13px;">ADL's sandbox application allows the user to create and edit their own environment. Be sure to check out some of the demo environments - you can reach them from the "Visit an Existing World" button. </p>
+						<br/>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<!-- End ADL Sandbox -->
+	
+	<!--  Direct link to KimRay Valve -->
+	<div class="span12">
+		<div style="padding-top: 15px;" class="adl/sandboxhover">
+			<table class="table table-striped">
+				<tr>
+					<td style="width:25%">
+						<a href="https://ec2-54-226-9-164.compute-1.amazonaws.com/kimray" target="_blank">
+							<img src="http://ec2-54-226-9-164.compute-1.amazonaws.com/kimray/index.vwf.catalog.png" alt="kimray" / style="vertical-align:middle;">            
+						</a>
+					</td>
+					<td style="width:75%">
+						<h3 style="float:left;vertical-align:middle;">Kimray Valve</h3> 
+						<a style="float:right;vertical-align:middle;" class="btn btn-info btn-small" target="_blank" href="https://ec2-54-226-9-164.compute-1.amazonaws.com/kimray">Launch New Session</a>
+						<br/>
+						<hr>
+						<p style="font-size:13px;">KimRay Valve is a live 3-D Immersive Maintenance Demonstration built on top of Virtual World Framework to demonstrate the capabilities of Remote Subject Matter Experts interacting with a student using a shared real time lesson workspace utilizing webRTC to deliver real time video and voice over IP without any browser plugins. This demo requires the latest Firefox or Chrome browsers.</p>
+						<br/>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<!-- End Kimray Valve -->
+
+      <div class="span12">
+
+        <!-- agi/cesium -->
+		<div style="padding-top: 15px;" class="agi/cesiumhover">
+			<table class="table table-striped">
+				<tr>
+					<td style="width:25%">
+							<a href="../agi/cesium#!cesium" target="_blank">
+							<img src="../agi/cesium/index.vwf.catalog.jpg" alt="agi/cesium" / style="vertical-align:middle;">            
+					  </a>
+					</td>
+					<td style="width:75%">
+						  <h3 style="float:left;vertical-align:middle;">agi/cesium</h3> 
+						  <a style="float:right;vertical-align:middle;" class="btn btn-info btn-small" target="_blank" href="../agi/cesium#!cesium">
+						  Launch New Session</a>
+						  <br/>
+						  <hr>
+						  <p style="font-size:13px;">Cesium is a web-based globe and map engine for visualizing dynamic data. This demo application allows a user to have synchronized camera views across multiple clients. Pressing the "R" key will reset the synchronized views across all instances.</p>
+						  <br/>
+						  <div id='agi/cesium-content' class='overlayContent'>
+							  <div class="overlay">
+								  <div class='agicesiuminstances'>
+									<p><b>Current Sessions</b></p>
+								</div>
+								<script type="text/javascript">
+								$(document.getElementById('agicesiuminstances')).ready(showInfo('agi/cesium', '#!cesium'));							
+								</script>
+							</div>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<!-- END agi/cesium -->
+      </div>
+      <div class="span12">
+
+        <!-- bzflag -->
+		<div style="padding-top: 15px;" class="bzflaghover">
+			<table class="table table-striped">
+				<tr>
+					<td style="width:25%">
+							<a href="../bzflag" target="_blank">
+							<img src="../bzflag/index.vwf.catalog.png" alt="bzflag" / style="vertical-align:middle;">            
+					  </a>
+					</td>
+					<td style="width:75%">
+						  <h3 style="float:left;vertical-align:middle;">bzflag</h3> 
+						  <a style="float:right;vertical-align:middle;" class="btn btn-info btn-small" target="_blank" href="../bzflag">
+						  Launch New Session</a>
+						  <br/>
+						  <hr>
+						  <p style="font-size:13px;">The bzflag application is the Virtual World Framework's version of the classic arcade game. Use the WASD keys to navigate the scene and the Enter key to fire a laser. Use the chat feature to communicate and taunt your opponents, but most of all look out for opposing tanks!</p>
+						  <br/>
+						  <div id='bzflag-content' class='overlayContent'>
+							  <div class="overlay">
+								  <div class='bzflaginstances'>
+									<p><b>Current Sessions</b></p>
+								</div>
+								<script type="text/javascript">
+								$(document.getElementById('bzflaginstances')).ready(showInfo('bzflag', ''));							
+								</script>
+							</div>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<!-- END bzflag -->
+      </div>
+      <div class="span12">
+
+        <!-- cesium-webrtc -->
+		<div style="padding-top: 15px;" class="cesium-webrtchover">
+			<table class="table table-striped">
+				<tr>
+					<td style="width:25%">
+							<a href="../cesium-webrtc" target="_blank">
+							<img src="../cesium-webrtc/index.vwf.catalog.jpg" alt="cesium-webrtc" / style="vertical-align:middle;">            
+					  </a>
+					</td>
+					<td style="width:75%">
+						  <h3 style="float:left;vertical-align:middle;">cesium-webrtc</h3> 
+						  <a style="float:right;vertical-align:middle;" class="btn btn-info btn-small" target="_blank" href="../cesium-webrtc">
+						  Launch New Session</a>
+						  <br/>
+						  <hr>
+						  <p style="font-size:13px;">Cesium is a web-based globe and map engine for visualizing dynamic data. This demo application allows a user to have synchronized camera views across multiple clients. Pressing the "R" key will reset the synchronized views across all instances.</p>
+						  <br/>
+						  <div id='cesium-webrtc-content' class='overlayContent'>
+							  <div class="overlay">
+								  <div class='cesium-webrtcinstances'>
+									<p><b>Current Sessions</b></p>
+								</div>
+								<script type="text/javascript">
+								$(document.getElementById('cesium-webrtcinstances')).ready(showInfo('cesium-webrtc', ''));							
+								</script>
+							</div>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<!-- END cesium-webrtc -->
+      </div>
+      <div class="span12">
+
+        <!-- chat -->
+		<div style="padding-top: 15px;" class="chathover">
+			<table class="table table-striped">
+				<tr>
+					<td style="width:25%">
+							<a href="../chat" target="_blank">
+							<img src="../chat/index.vwf.catalog.png" alt="chat" / style="vertical-align:middle;">            
+					  </a>
+					</td>
+					<td style="width:75%">
+						  <h3 style="float:left;vertical-align:middle;">chat</h3> 
+						  <a style="float:right;vertical-align:middle;" class="btn btn-info btn-small" target="_blank" href="../chat">
+						  Launch New Session</a>
+						  <br/>
+						  <hr>
+						  <p style="font-size:13px;">Chat is a simple chat application, created to serve as a demonstration of the techniques described in the chat cookbook recipe.</p>
+						  <br/>
+						  <div id='chat-content' class='overlayContent'>
+							  <div class="overlay">
+								  <div class='chatinstances'>
+									<p><b>Current Sessions</b></p>
+								</div>
+								<script type="text/javascript">
+								$(document.getElementById('chatinstances')).ready(showInfo('chat', ''));							
+								</script>
+							</div>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<!-- END chat -->
+      </div>
+      <div class="span12">
+
+        <!-- command-center -->
+		<div style="padding-top: 15px;" class="command-centerhover">
+			<table class="table table-striped">
+				<tr>
+					<td style="width:25%">
+							<a href="../command-center" target="_blank">
+							<img src="../command-center/index.vwf.catalog.png" alt="command-center" / style="vertical-align:middle;">            
+					  </a>
+					</td>
+					<td style="width:75%">
+						  <h3 style="float:left;vertical-align:middle;">command-center</h3> 
+						  <a style="float:right;vertical-align:middle;" class="btn btn-info btn-small" target="_blank" href="../command-center">
+						  Launch New Session</a>
+						  <br/>
+						  <hr>
+						  <p style="font-size:13px;">The command center application is a collaborative training environment. Navigate using the standard key and mouse controls.</p>
+						  <br/>
+						  <div id='command-center-content' class='overlayContent'>
+							  <div class="overlay">
+								  <div class='command-centerinstances'>
+									<p><b>Current Sessions</b></p>
+								</div>
+								<script type="text/javascript">
+								$(document.getElementById('command-centerinstances')).ready(showInfo('command-center', ''));							
+								</script>
+							</div>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<!-- END command-center -->
+      </div>
+      <div class="span12">
+
+        <!-- earth -->
+		<div style="padding-top: 15px;" class="earthhover">
+			<table class="table table-striped">
+				<tr>
+					<td style="width:25%">
+							<a href="../earth#!google-earth" target="_blank">
+							<img src="../earth/index.vwf.catalog.png" alt="earth" / style="vertical-align:middle;">            
+					  </a>
+					</td>
+					<td style="width:75%">
+						  <h3 style="float:left;vertical-align:middle;">earth</h3> 
+						  <a style="float:right;vertical-align:middle;" class="btn btn-info btn-small" target="_blank" href="../earth#!google-earth">
+						  Launch New Session</a>
+						  <br/>
+						  <hr>
+						  <p style="font-size:13px;">The Google Earth application allows a user to view the Google Earth application using the same standard navigation controls.  For example, scrolling the mouse wheel up and down causes the camera to zoom in and out.</p>
+						  <br/>
+						  <div id='earth-content' class='overlayContent'>
+							  <div class="overlay">
+								  <div class='earthinstances'>
+									<p><b>Current Sessions</b></p>
+								</div>
+								<script type="text/javascript">
+								$(document.getElementById('earthinstances')).ready(showInfo('earth', '#!google-earth'));							
+								</script>
+							</div>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<!-- END earth -->
+      </div>
+      <div class="span12">
+
+        <!-- humvee-lesson -->
+		<div style="padding-top: 15px;" class="humvee-lessonhover">
+			<table class="table table-striped">
+				<tr>
+					<td style="width:25%">
+							<a href="../humvee-lesson" target="_blank">
+							<img src="../humvee-lesson/index.vwf.catalog.png" alt="humvee-lesson" / style="vertical-align:middle;">            
+					  </a>
+					</td>
+					<td style="width:75%">
+						  <h3 style="float:left;vertical-align:middle;">humvee-lesson</h3> 
+						  <a style="float:right;vertical-align:middle;" class="btn btn-info btn-small" target="_blank" href="../humvee-lesson">
+						  Launch New Session</a>
+						  <br/>
+						  <hr>
+						  <p style="font-size:13px;">Using the VWF lesson configuration and interface, the humvee lesson application walks the user through the process of starting and driving the humvee.</p>
+						  <br/>
+						  <div id='humvee-lesson-content' class='overlayContent'>
+							  <div class="overlay">
+								  <div class='humvee-lessoninstances'>
+									<p><b>Current Sessions</b></p>
+								</div>
+								<script type="text/javascript">
+								$(document.getElementById('humvee-lessoninstances')).ready(showInfo('humvee-lesson', ''));							
+								</script>
+							</div>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<!-- END humvee-lesson -->
+      </div>
+      <div class="span12">
+
+        <!-- humvee -->
+		<div style="padding-top: 15px;" class="humveehover">
+			<table class="table table-striped">
+				<tr>
+					<td style="width:25%">
+							<a href="../humvee" target="_blank">
+							<img src="../humvee/index.vwf.catalog.png" alt="humvee" / style="vertical-align:middle;">            
+					  </a>
+					</td>
+					<td style="width:75%">
+						  <h3 style="float:left;vertical-align:middle;">humvee</h3> 
+						  <a style="float:right;vertical-align:middle;" class="btn btn-info btn-small" target="_blank" href="../humvee">
+						  Launch New Session</a>
+						  <br/>
+						  <hr>
+						  <p style="font-size:13px;">The humvee application allows the user to use the WASD, QE, and RC cursor keys as well as the left mouse button drag to spin around the humvee. In addition, the slider bar at the bottom of the screen allows the user to turn the front wheels of the vehicle left and right.</p>
+						  <br/>
+						  <div id='humvee-content' class='overlayContent'>
+							  <div class="overlay">
+								  <div class='humveeinstances'>
+									<p><b>Current Sessions</b></p>
+								</div>
+								<script type="text/javascript">
+								$(document.getElementById('humveeinstances')).ready(showInfo('humvee', ''));							
+								</script>
+							</div>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<!-- END humvee -->
+      </div>
+      <div class="span12">
+
+        <!-- minesweeper -->
+		<div style="padding-top: 15px;" class="minesweeperhover">
+			<table class="table table-striped">
+				<tr>
+					<td style="width:25%">
+							<a href="../minesweeper" target="_blank">
+							<img src="../minesweeper/index.vwf.catalog.png" alt="minesweeper" / style="vertical-align:middle;">            
+					  </a>
+					</td>
+					<td style="width:75%">
+						  <h3 style="float:left;vertical-align:middle;">minesweeper</h3> 
+						  <a style="float:right;vertical-align:middle;" class="btn btn-info btn-small" target="_blank" href="../minesweeper">
+						  Launch New Session</a>
+						  <br/>
+						  <hr>
+						  <p style="font-size:13px;">The VWF's take on the class Minesweeper game. Click tiles to turn them over. The number that appears is representative of the number of neighboring mines. Unveiling all numbers wins the game - selecting the wrong tile and it's game over.</p>
+						  <br/>
+						  <div id='minesweeper-content' class='overlayContent'>
+							  <div class="overlay">
+								  <div class='minesweeperinstances'>
+									<p><b>Current Sessions</b></p>
+								</div>
+								<script type="text/javascript">
+								$(document.getElementById('minesweeperinstances')).ready(showInfo('minesweeper', ''));							
+								</script>
+							</div>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<!-- END minesweeper -->
+      </div>
+      <div class="span12">
+
+        <!-- physics -->
+		<div style="padding-top: 15px;" class="physicshover">
+			<table class="table table-striped">
+				<tr>
+					<td style="width:25%">
+							<a href="../physics" target="_blank">
+							<img src="../physics/index.vwf.catalog.png" alt="physics" / style="vertical-align:middle;">            
+					  </a>
+					</td>
+					<td style="width:75%">
+						  <h3 style="float:left;vertical-align:middle;">physics</h3> 
+						  <a style="float:right;vertical-align:middle;" class="btn btn-info btn-small" target="_blank" href="../physics">
+						  Launch New Session</a>
+						  <br/>
+						  <hr>
+						  <p style="font-size:13px;">The physics application allows a user to navigate with the WASD, QE, and RC keys, and the space bar shoots alternating spheres and cubes.</p>
+						  <br/>
+						  <div id='physics-content' class='overlayContent'>
+							  <div class="overlay">
+								  <div class='physicsinstances'>
+									<p><b>Current Sessions</b></p>
+								</div>
+								<script type="text/javascript">
+								$(document.getElementById('physicsinstances')).ready(showInfo('physics', ''));							
+								</script>
+							</div>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<!-- END physics -->
+      </div>
+      <div class="span12">
+
+        <!-- radio-lesson -->
+		<div style="padding-top: 15px;" class="radio-lessonhover">
+			<table class="table table-striped">
+				<tr>
+					<td style="width:25%">
+							<a href="../radio-lesson" target="_blank">
+							<img src="../radio-lesson/index.vwf.catalog.png" alt="radio-lesson" / style="vertical-align:middle;">            
+					  </a>
+					</td>
+					<td style="width:75%">
+						  <h3 style="float:left;vertical-align:middle;">radio-lesson</h3> 
+						  <a style="float:right;vertical-align:middle;" class="btn btn-info btn-small" target="_blank" href="../radio-lesson">
+						  Launch New Session</a>
+						  <br/>
+						  <hr>
+						  <p style="font-size:13px;">The radio lesson application walks a user through turning the radio on and its basic operations using the VWF lesson interface.</p>
+						  <br/>
+						  <div id='radio-lesson-content' class='overlayContent'>
+							  <div class="overlay">
+								  <div class='radio-lessoninstances'>
+									<p><b>Current Sessions</b></p>
+								</div>
+								<script type="text/javascript">
+								$(document.getElementById('radio-lessoninstances')).ready(showInfo('radio-lesson', ''));							
+								</script>
+							</div>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<!-- END radio-lesson -->
+      </div>
+      <div class="span12">
+
+        <!-- radio -->
+		<div style="padding-top: 15px;" class="radiohover">
+			<table class="table table-striped">
+				<tr>
+					<td style="width:25%">
+							<a href="../radio" target="_blank">
+							<img src="../radio/index.vwf.catalog.png" alt="radio" / style="vertical-align:middle;">            
+					  </a>
+					</td>
+					<td style="width:75%">
+						  <h3 style="float:left;vertical-align:middle;">radio</h3> 
+						  <a style="float:right;vertical-align:middle;" class="btn btn-info btn-small" target="_blank" href="../radio">
+						  Launch New Session</a>
+						  <br/>
+						  <hr>
+						  <p style="font-size:13px;">The radio application allows a user to click its buttons and knobs and the radio will update its screen accordingly.  For example, clicking the top right most knob will cause the screen to turn on. Additionally, clicking the middle knob will cause the channels to change or clicking the red button will scroll through the backlight, beep function, sql, and channel functions.  The side bottom buttons can update the backlight, beep, and sql functions.  NOTE This application works best in Firefox.</p>
+						  <br/>
+						  <div id='radio-content' class='overlayContent'>
+							  <div class="overlay">
+								  <div class='radioinstances'>
+									<p><b>Current Sessions</b></p>
+								</div>
+								<script type="text/javascript">
+								$(document.getElementById('radioinstances')).ready(showInfo('radio', ''));							
+								</script>
+							</div>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<!-- END radio -->
+      </div>
+      <div class="span12">
+
+        <!-- sandtable -->
+		<div style="padding-top: 15px;" class="sandtablehover">
+			<table class="table table-striped">
+				<tr>
+					<td style="width:25%">
+							<a href="../sandtable" target="_blank">
+							<img src="../sandtable/index.vwf.catalog.png" alt="sandtable" / style="vertical-align:middle;">            
+					  </a>
+					</td>
+					<td style="width:75%">
+						  <h3 style="float:left;vertical-align:middle;">sandtable</h3> 
+						  <a style="float:right;vertical-align:middle;" class="btn btn-info btn-small" target="_blank" href="../sandtable">
+						  Launch New Session</a>
+						  <br/>
+						  <hr>
+						  <p style="font-size:13px;">The sandtable application allows a user to draw and place push pins using multiple colors.</p>
+						  <br/>
+						  <div id='sandtable-content' class='overlayContent'>
+							  <div class="overlay">
+								  <div class='sandtableinstances'>
+									<p><b>Current Sessions</b></p>
+								</div>
+								<script type="text/javascript">
+								$(document.getElementById('sandtableinstances')).ready(showInfo('sandtable', ''));							
+								</script>
+							</div>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<!-- END sandtable -->
+      </div>
+      <div class="span12">
+
+        <!-- tile-puzzle-2D -->
+		<div style="padding-top: 15px;" class="tile-puzzle-2Dhover">
+			<table class="table table-striped">
+				<tr>
+					<td style="width:25%">
+							<a href="../tile-puzzle-2D" target="_blank">
+							<img src="../tile-puzzle-2D/index.vwf.catalog.png" alt="tile-puzzle-2D" / style="vertical-align:middle;">            
+					  </a>
+					</td>
+					<td style="width:75%">
+						  <h3 style="float:left;vertical-align:middle;">tile-puzzle-2D</h3> 
+						  <a style="float:right;vertical-align:middle;" class="btn btn-info btn-small" target="_blank" href="../tile-puzzle-2D">
+						  Launch New Session</a>
+						  <br/>
+						  <hr>
+						  <p style="font-size:13px;">The 2D tile puzzle application shows VWF's ability to create applications that do not use 3D graphics or models. Play by clicking on a tile to move it to the open space.</p>
+						  <br/>
+						  <div id='tile-puzzle-2D-content' class='overlayContent'>
+							  <div class="overlay">
+								  <div class='tile-puzzle-2Dinstances'>
+									<p><b>Current Sessions</b></p>
+								</div>
+								<script type="text/javascript">
+								$(document.getElementById('tile-puzzle-2Dinstances')).ready(showInfo('tile-puzzle-2D', ''));							
+								</script>
+							</div>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<!-- END tile-puzzle-2D -->
+      </div>
+      <div class="span12">
+
+        <!-- tile-puzzle -->
+		<div style="padding-top: 15px;" class="tile-puzzlehover">
+			<table class="table table-striped">
+				<tr>
+					<td style="width:25%">
+							<a href="../tile-puzzle" target="_blank">
+							<img src="../tile-puzzle/index.vwf.catalog.png" alt="tile-puzzle" / style="vertical-align:middle;">            
+					  </a>
+					</td>
+					<td style="width:75%">
+						  <h3 style="float:left;vertical-align:middle;">tile-puzzle</h3> 
+						  <a style="float:right;vertical-align:middle;" class="btn btn-info btn-small" target="_blank" href="../tile-puzzle">
+						  Launch New Session</a>
+						  <br/>
+						  <hr>
+						  <p style="font-size:13px;">The tile puzzle application allows a user to shuffle the board or solve the board automatically.  It also allows the user to play by clicking on a tile and the tile will move to the open space.  The goal of the game is to have the numbers show in sequential order from left to right, top to bottom.</p>
+						  <br/>
+						  <div id='tile-puzzle-content' class='overlayContent'>
+							  <div class="overlay">
+								  <div class='tile-puzzleinstances'>
+									<p><b>Current Sessions</b></p>
+								</div>
+								<script type="text/javascript">
+								$(document.getElementById('tile-puzzleinstances')).ready(showInfo('tile-puzzle', ''));							
+								</script>
+							</div>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<!-- END tile-puzzle -->
+      </div>
+    </div>
+
+    <!-- Overlay div to display additional information -->
+    <div style="position:absolute;top:30%;width:99%;height:99%;pointer-events:none">
+      <div class="overlay">
+      </div>
+    </div>
+  </body>
+</html>
