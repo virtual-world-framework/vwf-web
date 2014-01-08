@@ -25,10 +25,19 @@ $(document).ready(function() {
 
     setTimeout(setFocusPongFrame, 100);
 
-    $("#pongFrame").on("click", setFocusPongFrame);
-
     $('.jumbotron').tooltip({
-      selector: "[data-toggle=tooltip]",
-      container: "body"
+        selector: "[data-toggle=tooltip]",
+        container: "body"
+    });
+
+    $( "body" ).keydown(function( event ) {
+        switch( event.which ) {
+            case 76:
+            case 79:
+            case 70:
+            case 82:
+                setFocusPongFrame();
+        }
+        event.preventDefault();
     });
 });
