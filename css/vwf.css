@@ -45,6 +45,10 @@
 
 .feature-row h3 {
   text-align: center;
+  text-transform: uppercase;
+}
+.feature-row p {
+  font-size: 18px;
 }
 .feature-row .glyphicon {
   font-size: 36px;
