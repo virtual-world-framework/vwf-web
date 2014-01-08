@@ -54,9 +54,9 @@
           <div class="col-md-6">
             <iframe class="vwf-frame" id="pongFrame" frameborder="0" src=""></iframe>
             <div class="input-group" data-toggle="tooltip" data-title="Copy link to play with a friend." data-placement="bottom">
-              <input type="text" class="form-control" id="vwfPongId" placeholder="Loading VWF...">
+              <input type="text" class="form-control" id="vwfPongId" placeholder="Loading VWF..." disabled="true">
               <span class="input-group-btn">
-                <button class="btn btn-primary" type="button">Copy!</button>
+                <button id="copy-button" data-clipboard-target="vwfPongId" class="btn btn-primary" type="button">Copy!</button>
               </span>
             </div>
           </div>
@@ -127,6 +127,7 @@
     <script src="js/jquery-1.10.2.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/ZeroClipboard.min.js"></script>
     <script src="js/index.js"></script>
   </body>
 </html>

@@ -14,6 +14,22 @@ function makeid() {
     return text;
 }
 
+function setUpCopy() {
+    var clip = new ZeroClipboard( document.getElementById("copy-button"), {
+      moviePath: "/swf/ZeroClipboard.swf"
+    } );
+
+    clip.on( "load", function(client) {
+      // alert( "movie is loaded" );
+
+      client.on( "complete", function(client, args) {
+        // `this` is the element that was clicked
+        // this.style.display = "none";
+        // alert("Copied text to clipboard: " + args.text );
+      } );
+    } );
+}
+
 $(document).ready(function() {
     var id = makeid();
     var vwfServer = "http://localhost:3000"; // "http://apps.virtual.wf";
@@ -40,4 +56,6 @@ $(document).ready(function() {
         }
         event.preventDefault();
     });
+
+    setUpCopy();
 });
