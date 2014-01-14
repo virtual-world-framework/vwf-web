@@ -13,8 +13,44 @@
   color: #333;
 }
 
+@-webkit-keyframes flip {
+  from {
+    -webkit-transform: rotateY(0deg) scale(1); 
+  }
+  50% {
+    -webkit-transform: rotateY(180deg) scale(1);
+    -webkit-animation-timing-function: linear;
+  }
+  to {
+    -webkit-transform: rotateY(360deg) scale(1); 
+  }
+}
+
+@-webkit-keyframes unflip {
+  from {
+    -webkit-transform: rotateY(360deg);
+  }
+
+  to {
+    -webkit-transform: rotateY(0deg);
+  }
+}
+
 .navbar .navbar-brand img {
   padding-right: 10px;
+  padding-left: 10px;
+  width: 70px;
+  height: 50px;
+  -webkit-animation-duration: 0.8s;
+  -webkit-animation-name: unflip;
+  -webkit-perspective: 800px;
+}
+
+.navbar .navbar-brand:hover img {
+  -webkit-animation-duration: 0.7s;
+  -webkit-animation-name: flip;
+  -webkit-perspective: 800px;
+  -webkit-animation-timing-function: ease-in-out;
 }
 
 .navbar {
