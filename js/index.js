@@ -32,8 +32,8 @@ function setUpCopy() {
 
 $(document).ready(function() {
     var id = makeid();
-    var vwfServer = "http://localhost:3000"; // "http://apps.virtual.wf";
-    var pongUrl = vwfServer + "/" + id;
+    var vwfServer = "https://development.virtualworldframework.com"; // "http://apps.virtual.wf";
+    var pongUrl = vwfServer + "/vwf-pong/" + id;
 
     $('#vwfPongId').val(pongUrl);
     var iframe = $("#pongFrame")[0];
