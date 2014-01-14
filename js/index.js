@@ -32,7 +32,7 @@ function setUpCopy() {
 
 $(document).ready(function() {
     var id = makeid();
-    var vwfServer = "https://development.virtualworldframework.com"; // "http://apps.virtual.wf";
+    var vwfServer = "http://development.virtualworldframework.com"; // "http://apps.virtual.wf";
     var pongUrl = vwfServer + "/vwf-pong/" + id;
 
     $('#vwfPongId').val(pongUrl);
