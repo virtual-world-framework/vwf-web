@@ -37,7 +37,7 @@
             <li><a href="#">Documentation</a></li>
             <li><a href="#">Downloads</a></li>
           </ul>
-          <a class="btn btn-primary navbar-btn pull-right" role="button" href="#">View on GitHub</a>
+          <a class="btn btn-info navbar-btn pull-right" role="button" href="#">View on Github</a>
         </div><!--/.nav-collapse -->
       </div>
     </div>
@@ -73,12 +73,21 @@
           </div>
           
           <div class="col-md-6 hidden-xs">
-            <iframe class="vwf-frame" id="pongFrame" frameborder="0" src=""></iframe>
-            <div class="input-group" data-toggle="tooltip" data-title="Copy link to play with a friend." data-placement="bottom">
-              <input type="text" class="form-control" id="vwfPongId" placeholder="Loading VWF..." disabled="true">
-              <span class="input-group-btn">
-                <button id="copy-button" data-clipboard-target="vwfPongId" class="btn btn-primary" type="button">Copy!</button>
-              </span>
+            <div class="panel panel-default vwf-panel">
+              <div class="panel-body">
+                <iframe class="vwf-frame" id="pongFrame" frameborder="0" src=""></iframe>
+              </div>
+              <div class="panel-footer">
+                <p class="small">
+                  Play VWF Pong with a friend with the below URL.
+                </p>
+                <div class="input-group">
+                  <input type="text" class="form-control" id="vwfPongId" placeholder="Loading VWF..." disabled="true">
+                  <span class="input-group-btn">
+                    <button id="copy-button" data-clipboard-target="vwfPongId" class="btn btn-info" type="button" disabled="disabled">Copy and share!</button>
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
         </div>

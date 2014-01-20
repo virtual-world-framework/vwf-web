@@ -20,13 +20,15 @@ function setUpCopy() {
     } );
 
     clip.on( "load", function(client) {
-      // alert( "movie is loaded" );
+        var copyButton = $("#copy-button");
+        copyButton.removeAttr("disabled");
 
-      client.on( "complete", function(client, args) {
-        // `this` is the element that was clicked
-        // this.style.display = "none";
-        // alert("Copied text to clipboard: " + args.text );
-      } );
+        client.on( "complete", function(client, args) {
+            copyButton = $("#copy-button");
+            copyButton.removeClass("btn-info");
+            copyButton.text("Copied!");
+            copyButton.addClass("btn-success");
+        } );
     } );
 }
 

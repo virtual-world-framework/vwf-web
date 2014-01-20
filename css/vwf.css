@@ -133,6 +133,10 @@ h3 small {
   font-size: 75%;
 }
 
+.vwf-panel .panel-body {
+  padding: 0;
+  line-height: 0;
+}
 .vwf-frame {
   width: 100%;
   height: 350px;
