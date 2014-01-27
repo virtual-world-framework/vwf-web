@@ -3,7 +3,7 @@ layout: page
 title: Getting Started - Virtual World Framework
 ---
 
-# Getting Started: Pong in XX minutes
+# Getting Started: Pong In An Hour
 
 You're going to need to have VWF installed in order to follow along with this guide. If you haven't installed it yet, check out our [Installation Instructions](https://github.com/virtual-world-framework/vwf#installation).
 
@@ -31,7 +31,7 @@ Change into the directory you just created.
 $ cd vwf-pong
 ```
 
-In that directory you'll find a file called `index.vwf.yaml`, which describes the simplest possible VWF application.
+In that directory you'll find a file called `index.vwf.yaml`, which describes the simplest possible VWF application. In each section of this document, we will be adding code to this file as we add and demonstrate features. Open the file in a text editor to get started and add the following:
 
 ```yaml
 ---
@@ -56,13 +56,13 @@ But so far all we have is a black screen. Let's add some content to our applicat
 
 Displaying 3D models with VWF is really easy. For Pong, we'll need a board, a ball, and two paddles. Go ahead and download the Collada models from the following links and save them in your application's directory:
 
-- [Board](https://raw.github.com/jessmartin/vwf-pong/master/board.dae)
-- [Ball](https://raw.github.com/jessmartin/vwf-pong/master/ball.dae)
-- [Paddle](https://raw.github.com/jessmartin/vwf-pong/master/paddle.dae)
+- [Board](/models/board.dae)
+- [Ball](/models/ball.dae)
+- [Paddle](/models/paddle.dae)
 
-### Setting Up A 3D Scene
+### Setting Up a 3D Scene
 
-In order to tell VWF that our application involves a 3D scene, we'll want the application to extend a special *component* called `scene.vwf`:
+In order to tell VWF that our application involves a 3D scene, we'll want the application to extend a special *component* called `scene.vwf`.
 
 ```yaml
 ---
@@ -84,7 +84,7 @@ children:
     source: board.dae
 ```
 
-Go ahead and run the application. You should see something like the following:
+Copy the above code to `index.vwf.yaml` and save.  Now go ahead and run the application. You should see something like the following:
 
 ![](/images/shot1.png)
 
@@ -172,7 +172,7 @@ Once again, we added a few special properties to `light` that `light.vwf` depend
 
 Lights default to being point lights, meaning they shine in all directions simultaneously. VWF also supports directional and spot lights, as well as a host of properties for manipulating lighting including color, intensity, and softness. For more information on lighting in VWF, see the [Lighting Documentation](http://virtual.wf/web/docs/lights.html).
 
-### Positioning The Camera
+### Positioning the Camera
 
 So far, it's probably getting pretty annoying to have to navigate around using the arrow keys every time we reload the application. Let's position the camera so that it starts in an intelligent place each time.
 
@@ -197,7 +197,7 @@ scripts:
     }
 ```
 
-Our new `initializeCamera` method is pretty simple. As I mentioned, the application will have a camera added it to it automagically due to extending `scene.vwf`. Also, we can access child nodes on the application from within JavaScript using `this.nodeName` where `nodeName` is the name of the node. (Duh.) We can then set any of the properties (remember those from above?) on that node.
+Our new `initializeCamera` method is pretty simple. As I mentioned, the application will have a camera added it to it automagically due to extending `scene.vwf`. Also, we can access child nodes on the application from within JavaScript using `this.nodeName` where `nodeName` is the name of the node. We can then set any of the properties (remember those from above?) on that node.
 
 So, `this.camera.translation = [ x, y, z ]` will move the camera to that point in the 3D scene. We're moving the camera out to the side of the board, and then up in the air to look down on the scene.
 
@@ -230,7 +230,7 @@ Give that a reload, and you should have the board centered in your application's
 
 For more information about manipulating the camera, see the [Camera Documentation](http://virtual.wf/web/docs/cameras.html).
 
-### Position The Paddle
+### Position the Paddle
 
 With your new and improved view of the scene, you'll notice that only one paddle appears, even though we're loading two of them. That's because they're on top of each other. Let's move one of the paddles to the other side of the board using... you guessed it: `translation`.
 
@@ -249,9 +249,9 @@ As you now know, simply setting the `translation` property will get that paddle 
 
 The stage is set. We've got a board, a ball, two paddles, and a camera directed at the lighted scene. It's time to get things moving by wiring up some actual behavior and animation.
 
-## Animating The Scene
+## Animating the Scene
 
-### Bouncing The Ball
+### Bouncing the Ball
 
 Our scene will get a lot more interesting once things start moving. Let's start with the ball. We'll need to start by adding some properties on the ball that we can use to keep track of it's movement.
 
@@ -389,7 +389,7 @@ We'll need to be a little smarter when colliding with paddles.
       ySpeed: 5
     methods:
       move:
-      didHitPaddle:
+      dealWithPaddleBounce:
     scripts:
     - |
       this.move = function() {
@@ -451,9 +451,9 @@ Awesome! Now we've got a ball bouncing up and down the board and bouncing off of
 
 ### Pushing The Paddles
 
-Moving our piddly widdle paddles will be a multi-step process. First, we need to capture keystrokes. Then, we need to assign movement up and down to specific keys. Finally, we need to actually move each paddle, being careful not to move our paddles off the edge of the board.
+Moving our paddles will be a multi-step process. First, we need to capture keystrokes. Then, we need to assign movement up and down to specific keys. Finally, we need to actually move each paddle, being careful not to move our paddles off the edge of the board.
 
-The first step, capturing keystrokes, is pretty straightforward in VWF.
+The first step, capturing keystrokes, is pretty straightforward in VWF. We'll add a `properties` section at the top level and a new method to our `scripts` section.
 
 ```yaml
 properties:
@@ -466,7 +466,7 @@ scripts:
     }
 ```
 
-First, we'll add a `keyPressInfo` property to track the current state of the keyboard - what's pressed, what's not pressed. Then we'll take advantage of two more special functions called `keyDown` and `keyUp`. Each of these functions is called whenever any key is pressed or released on the keyboard, respectively. We'll simply assign the keyboard's state to our property each time it changes.
+The `keyPressInfo` property will track the current state of the keyboard - what's pressed, what's not pressed. Then we'll take advantage of two more special functions called `keyDown` and `keyUp`. Each of these functions is called whenever any key is pressed or released on the keyboard, respectively. We'll simply assign the keyboard's state to our property each time it changes.
 
 Next, we'll need to assign specific keys to the movement function.
 
@@ -509,7 +509,7 @@ Each time our `update` method updates the application, we'll check to see what k
 
 As you can see from the above switch statement, we chose the very significant 'R' and 'F' keys for Up and Down for Left Paddle and the almost-as-significant 'O' and 'L' for the Up and Down for Right Paddle. Excellent choices, if I do say so myself.
 
-Give it a try. Should look something like the following.
+Give it a try. It should look something like the following.
 
 ![](/images/shot9.gif)
 
@@ -558,6 +558,8 @@ scripts:
       }
     }
 ```
+
+Notice that we didn't need to add the `movePlayer` function to the `methods` section. Does that seem odd? Well, we're only using `movePlayer` to re-use code in our switch statement. We don't want it to be publicly accessible. The methods defined in `methods` are part of the application's public API.
 
 Don't forget to add the property `paddleSpeed` to the properties section. If you feel like giving yourself a little boost, tweak that number a bit higher.
 
