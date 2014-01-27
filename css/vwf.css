@@ -1,5 +1,5 @@
 ﻿body {
-  padding-top: 60px;
+  padding-top: 80px;
   background-color: #fff;
 }
 
@@ -146,6 +146,7 @@ h3 small {
 
 .vwf-footer {
   border-top: 1px solid #ddd;
+  margin-top: 30px;
   padding-top: 40px;
   padding-bottom: 30px;
   color: #777;
