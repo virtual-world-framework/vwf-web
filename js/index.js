@@ -46,22 +46,43 @@ function makeid() {
     return text;
 }
 
-function setUpCopy() {
-    var clip = new ZeroClipboard( document.getElementById("copy-button"), {
-      moviePath: "/swf/ZeroClipboard.swf"
+function setUpCopyButtons() {
+    var client = new ZeroClipboard( $(".copy-button"), { 
+        moviePath: "/swf/ZeroClipboard.swf" 
     } );
-
-    clip.on( "load", function(client) {
-        var copyButton = $("#copy-button");
-        copyButton.removeAttr("disabled");
-
+    client.on( "load", function(client) {
         client.on( "complete", function(client, args) {
-            copyButton = $("#copy-button");
-            copyButton.removeClass("btn-info");
-            copyButton.text("Copied!");
-            copyButton.addClass("btn-success");
+            $(this).removeClass("btn-info");
+            $(this).text("Copied!");
+            $(this).addClass("btn-success");
         });
     } );
+}
+
+function setUpInstallButton() {
+    if (platform) {
+        $(".mac-install").click(function () {
+            $("#macInstall").removeClass("hide");
+        });
+
+        if (platform.os.family.indexOf("OS X") != -1) {
+            $("button.mac-install").removeClass("hide");
+            $("button.windows-install").addClass("hide");
+        } else if (platform.os.family.indexOf("Win") != -1) {
+            $("button.mac-install").addClass("hide");
+            $("button.windows-install").removeClass("hide");
+        } else if (platform.os.family.indexOf("iOS") != -1) {
+            $("button.mac-install").addClass("hide");
+            $("button.windows-install").addClass("hide");
+        } else if (platform.os.family.indexOf("Linux") != -1) {
+            $("button.mac-install").removeClass("hide");
+            $("button.windows-install").addClass("hide");
+        } else {
+            // We don't know what platform it is, so it's probably a weird *nix.
+            $("button.mac-install").removeClass("hide");
+            $("button.windows-install").addClass("hide");
+        }
+    }
 }
 
 $(document).ready(function() {
@@ -78,5 +99,7 @@ $(document).ready(function() {
         event.preventDefault();
     });
 
-    setUpCopy();
+    setUpCopyButtons();
+
+    setUpInstallButton();
 });

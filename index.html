@@ -6,46 +6,44 @@ title: Virtual World Framework
 <div class="jumbotron">
   <div class="container">
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-6 col-lg">
         <h1 class="vwf-title">The Next 3D Platform<br>Is Your Browser</h1>
         <p>Create interactive, multi-user apps without the headache.</p>
         <!-- <p>Create your own Pong app in 10 minutes. Check out our <a href="#">Getting Started Guide</a>.</p> -->
-        <button type="button" class="btn btn-default btn-lg github-view">
+        <a href="http://github.com/virtual-world-framework/vwf" class="btn btn-default btn-lg github-view" role="button">
           View on Github &nbsp;
           <img class="github-img" src="/images/github-mark.png"/>
+        </a>
+        <button type="button" class="windows-install btn btn-primary btn-lg hide">
+          Install VWF &nbsp;
+          <span class="glyphicon glyphicon-download-alt"></span>
         </button>
-        <button type="button" class="btn btn-primary btn-lg">
+        <button type="button" class="mac-install btn btn-primary btn-lg hide">
           Install VWF &nbsp;
           <span class="glyphicon glyphicon-download-alt"></span>
         </button>
 
-        <br/>
-
-<!--             <div class="input-group">
-          <span class="input-group-addon ">Install VWF</span>
-          <input type="text" class="form-control">
-          <span class="input-group-btn">
-            <button class="btn btn-info" type="button">Copy!</button>
-          </span>
+        <div id="macInstall" class="hide">
+          <span class="small">Paste the following in your terminal:</span>
+          <div class="input-group">
+            <input type="text" id="installCommand" class="form-control" value="curl -kL http://get.virtual.wf  | sh">
+            <span class="input-group-btn">
+              <button id="copyInstallButton" data-clipboard-target="installCommand" class="btn btn-info copy-button" type="button">Copy!</button>
+            </span>
+          </div>
         </div>
--->
-        <br/>
-
       </div>
       
       <div class="col-md-6 hidden-xs">
         <div class="panel panel-default vwf-panel">
-          <div class="panel-body">
-            <iframe class="vwf-frame" id="pongFrame" frameborder="0" src=""></iframe>
+          <div class="panel-body"> <iframe class="vwf-frame" id="pongFrame" frameborder="0" src=""></iframe>
           </div>
           <div class="panel-footer">
-            <p class="small">
-              Play VWF Pong with a friend with the below URL.
-            </p>
+            <span class="small">Play VWF Pong with a friend with the below URL:</span>
             <div class="input-group">
-              <input type="text" class="form-control" id="vwfPongId" placeholder="Loading VWF..." disabled="true">
+              <input type="text" class="form-control" id="vwfPongId" placeholder="Loading VWF...">
               <span class="input-group-btn">
-                <button id="copy-button" data-clipboard-target="vwfPongId" class="btn btn-info" type="button" disabled="disabled">Copy and share!</button>
+                <button id="copyButton" data-clipboard-target="vwfPongId" class="btn btn-info copy-button" type="button">Copy and share!</button>
               </span>
             </div>
           </div>
@@ -139,3 +137,4 @@ title: Virtual World Framework
   </div><!-- /.container -->
 </div><!-- /.feature-wrap -->
 
+<script src="/js/platform.js"></script>
