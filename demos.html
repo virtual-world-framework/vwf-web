@@ -21,7 +21,7 @@ title: Demos - Virtual World Framework
       function update(app) {
         var instances$ = $('#'+ app.replace(/\//g,'') + 'instances');
         var match;
-        jQuery.getJSON( "../" + app + "/admin/instances", function( data ) {
+        jQuery.getJSON( "http://virtual.wf/" + app + "/admin/instances", function( data ) {
           instances$.empty();
           instances$.html("<p><b>Current Sessions</b></p>");
           jQuery.each( 
