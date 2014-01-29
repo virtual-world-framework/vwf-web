@@ -5,12 +5,8 @@ title: Demos - Virtual World Framework
 
 <div class="container">
   <h2>Demos</h2>
-
   <div id="demoDiv"></div>
-
-  <!-- BEGIN WHO'S USING VWF SECTION -->
   <h2>Who's Using VWF</h2>
-
   <div id="organizationDiv"></div>
 </div>
 
@@ -23,7 +19,9 @@ title: Demos - Virtual World Framework
         var match;
         jQuery.getJSON( "http://virtual.wf/" + app + "/admin/instances", function( data ) {
           instances$.empty();
-          instances$.html("<p><b>Current Sessions</b></p>");
+          if ( Object.keys(data).length != 0 ) {
+            instances$.html("<p><b>Current Sessions</b></p>");
+          }
           jQuery.each( 
             data, function( key, value ) {
               if ( match = /* assignment! */ key.match( RegExp( "/([^/]*)$" ) ) ) { 
@@ -79,6 +77,13 @@ title: Demos - Virtual World Framework
         description: 'The bzflag app is VWF\'s version of the classic arcade game. Use the WASD keys to move and the Enter key to fire your laser cannon. Use the chat feature to communicate and taunt your opponents, but most of all look out for opposing tanks!', 
         hyperlink: 'http://virtual.wf/bzflag',
         logo: '/images/gallery-bzflag.png',
+        core: true
+      },
+      {
+        name: 'command-center',
+        description: 'The command center app is a virtual representation of a joint operations center, intended for use as a collaborative training classroom. Navigate using the standard VWF key and mouse controls. ', 
+        hyperlink: 'http://virtual.wf/command-center',
+        logo: '/images/gallery-command-center.png',
         core: true
       },
       {
@@ -176,8 +181,7 @@ title: Demos - Virtual World Framework
         innerSessionDivElement.className = 'overlay';
 
         var instancesDivElement = document.createElement('div');
-        instancesDivElement.id = name + 'instances';
-        instancesDivElement.innerHTML = '<p><b>Current Sessions</b></p>';
+        instancesDivElement.id = name.replace(/\//g,'') + 'instances';
 
         var scriptElement = document.createElement('script');
         scriptElement.type = 'text/javascript';
