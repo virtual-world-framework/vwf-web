@@ -2,3 +2,15 @@ VWF-Web
 =======
 
 Public website of the [Virtual World Framework](http://virtual.wf) project.
+
+## Getting Started
+
+```
+gem install bundler
+bundle install
+bundle exec jekyll serve --watch
+```
+
+That will start the server on port 4000 and set jekyll to regenerate files when they change.
+
+See the jekyll docs for more information: http://jekyllrb.com.
