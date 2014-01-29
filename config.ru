@@ -1,3 +1,3 @@
 require "rack/jekyll"
 
-run Rack::Jekyll.new
+jekyll serve --watch
