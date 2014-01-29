@@ -52,3 +52,4 @@ PLATFORMS
 DEPENDENCIES
   jekyll
   jekyll-contentblocks
+  redcarpet
