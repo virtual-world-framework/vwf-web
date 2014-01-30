@@ -1,3 +1,8 @@
+---
+layout: page
+title: Documentation - Virtual World Framework
+---
+
 <div id="install" class="well" markdown="1">
 App Developer Installation 
 ==========================
