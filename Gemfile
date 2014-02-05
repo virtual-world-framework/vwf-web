@@ -1,6 +1,9 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 ruby '2.0.0'
 
 gem 'redcarpet'
-gem 'jekyll'
+gem 'jekyll', "1.4.2"
 gem 'jekyll-contentblocks'
+
+require 'rbconfig'
+gem 'wdm', '>= 0.1.0' if RbConfig::CONFIG['target_os'] =~ /mswin|mingw/i
