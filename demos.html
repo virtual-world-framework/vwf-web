@@ -1,41 +1,47 @@
 ---
-layout: default
+layout: page
 title: Demos - Virtual World Framework
 ---
 
-<div class="container">
-  <h2>Demos</h2>
-
-  <div id="demoDiv"></div>
-
-  <!-- BEGIN WHO'S USING VWF SECTION -->
-  <h2>Who's Using VWF</h2>
-
-  <div id="organizationDiv"></div>
-</div>
+<h1>Demos</h1>
+<div id="demoDiv"></div>
+<h1>Who's Using VWF</h1>
+<div id="organizationDiv"></div>
 
 {% contentfor scripts %}
   <!-- CURRENT SESSION UPDATE SCRIPT -->
   <script type='text/javascript'>
+    var instances$;
+    var match;
+
     function showInfo(app, query) {
       function update(app) {
-        var instances$ = $('#'+ app.replace(/\//g,'') + 'instances');
-        var match;
-        jQuery.getJSON( "http://virtual.wf/" + app + "/admin/instances", function( data ) {
-          instances$.empty();
-          instances$.html("<p><b>Current Sessions</b></p>");
-          jQuery.each( 
-            data, function( key, value ) {
-              if ( match = /* assignment! */ key.match( RegExp( "/([^/]*)$" ) ) ) { 
-                var instanceHTML = htmlEscape( match[1] );
-                var size = Object.size(value.clients); 
-                instances$.append("<table style='width:75%;'><tr><td style='width:10%;'><span class='badge badge-success'>" + size + "</span>"+"</td><td style='width:60%;'>Name: " + instanceHTML + "</td><td style='text-align:right;width:30%;'><a class='btn btn-success btn-small' target='_blank' href='../" + app + "/" + instanceHTML + ( query || "" ) + "'>Join Session</a>" + "</td></tr></table>" );
-              }
-            } );
-          setTimeout(update, 60000, app);
-        } );    
+        instances$ = $('#'+ app.replace(/\//g,'') + 'instances');
+        jQuery.ajax({
+          url: "http://master.virtual.wf/" + app + "/admin/instances/jsonp",
+          dataType: "jsonp",
+          jsonp: "jsonCallback"
+        });
+        setTimeout(update, 60000, app);
       }
       update(app);
+    }
+
+    function jsonCallback(data) {
+      instances$.empty();
+      if ( Object.keys(data).length != 0 ) {
+        instances$.html("<p><b>Current Sessions</b></p>");
+      }
+      jQuery.each( 
+        data, function( key, value ) {
+          var app = key.substr( 1, key.indexOf('/') );
+          if ( match = key.match( RegExp( "/([^/]*)$" ) ) ) { 
+            var instanceHTML = htmlEscape( match[1] );
+            var size = Object.size(value.clients); 
+            instances$.append("<table style='width:75%;'><tr><td style='width:10%;'><span class='badge badge-success'>" + size + "</span>"+"</td><td style='width:60%;'>Name: " + instanceHTML + "</td><td style='text-align:right;width:30%;'><a class='btn btn-success btn-small' target='_blank' href='../" + app + "/" + instanceHTML + "'>Join Session</a>" + "</td></tr></table>" );
+          }
+        } 
+      );
     }
 
     // From http://stackoverflow.com/a/7124052
@@ -77,42 +83,49 @@ title: Demos - Virtual World Framework
       {
         name: 'bzflag',
         description: 'The bzflag app is VWF\'s version of the classic arcade game. Use the WASD keys to move and the Enter key to fire your laser cannon. Use the chat feature to communicate and taunt your opponents, but most of all look out for opposing tanks!', 
-        hyperlink: 'http://virtual.wf/bzflag',
+        hyperlink: 'http://master.virtual.wf/bzflag',
         logo: '/images/gallery-bzflag.png',
+        core: true
+      },
+      {
+        name: 'command-center',
+        description: 'The command center app is a virtual representation of a joint operations center, intended for use as a collaborative training classroom. Navigate using the standard VWF key and mouse controls. ', 
+        hyperlink: 'http://master.virtual.wf/command-center',
+        logo: '/images/gallery-command-center.png',
         core: true
       },
       {
         name: 'humvee-lesson',
         description: 'Using the VWF lesson configuration and interface, the humvee lesson app walks the user through the process of starting and driving the humvee.', 
-        hyperlink: 'http://virtual.wf/humvee-lesson',
+        hyperlink: 'http://master.virtual.wf/humvee-lesson',
         logo: '/images/gallery-humvee-lesson.png',
         core: true
       },
       {
         name: 'radio-lesson',
         description: 'The radio lesson app uses VWF\'s lesson interface to walk a user through the basic operations of the radio.', 
-        hyperlink: 'http://virtual.wf/radio-lesson',
+        hyperlink: 'http://master.virtual.wf/radio-lesson',
         logo: '/images/gallery-radio-lesson.png',
         core: true
       },
       {
         name: 'agi/cesium',
         description: '<a target="_blank" href="http://www.agi.com/">Analytical Graphics, Inc\'s (AGI)</a> Cesium is a web-based globe and map engine for visualizing dynamic data. This demo app allows a user to have synchronized camera views across multiple clients. Pressing the "R" key will reset the synchronized views across all instances.', 
-        hyperlink: 'http://virtual.wf/agi/cesium#!cesium',
+        hyperlink: 'http://master.virtual.wf/agi/cesium#!cesium',
         logo: '/images/gallery-agi-cesium.jpg',
         core: true
       },
       {
         name: 'minesweeper',
         description: 'VWF\'s take on the classic Minesweeper game. Click tiles to turn them over and see the number of neighboring mines. Unveiling all numbers wins the game - select the wrong tile and it\'s game over.', 
-        hyperlink: 'http://virtual.wf/minesweeper',
+        hyperlink: 'http://master.virtual.wf/minesweeper',
         logo: '/images/gallery-minesweeper.png',
         core: true
       },
       {
         name: 'tile-puzzle-2D',
         description: 'Apps don\'t have to be 3D! The 2D tile puzzle is an example of a VWF app that does not use 3D graphics or models. Play by clicking on a tile to move it to the open space.', 
-        hyperlink: 'http://virtual.wf/tile-puzzle-2D',
+        hyperlink: 'http://master.virtual.wf/tile-puzzle-2D',
         logo: '/images/gallery-tile-puzzle-2D.png',
         core: true
       }
@@ -124,15 +137,13 @@ title: Demos - Virtual World Framework
 
     function addDemoEntry( name, description, hyperlink, logo, partOfCore ) {
       var demoDivElement = document.createElement('div');
-      demoDivElement.className = 'demo-entry';
 
       var tableElement = document.createElement('table');
       tableElement.className = 'table table-striped';
+      tableElement.setAttribute( "style", "border: 1px solid #EEE" );
 
       var trElement = document.createElement('tr');
-
       var col1Element = document.createElement('td');
-      col1Element.className = 'demo-entry-col1';
 
       var linkElement = document.createElement('a');
       linkElement.href = hyperlink;
@@ -146,13 +157,14 @@ title: Demos - Virtual World Framework
       $(col1Element).append(linkElement);
 
       var col2Element = document.createElement('td');
-      col2Element.className = 'demo-entry-col2';
 
       var nameElement = document.createElement('h3');
+      nameElement.setAttribute("style", "display:inline");
       nameElement.innerHTML = name;
 
       var launchElement = document.createElement('a');
       launchElement.className = 'session-btn btn btn-info btn-small';
+      launchElement.setAttribute("style", "float:right");
       launchElement.target = '_blank';
       launchElement.href = hyperlink;
       launchElement.innerHTML = 'Launch New Session';
@@ -176,8 +188,7 @@ title: Demos - Virtual World Framework
         innerSessionDivElement.className = 'overlay';
 
         var instancesDivElement = document.createElement('div');
-        instancesDivElement.id = name + 'instances';
-        instancesDivElement.innerHTML = '<p><b>Current Sessions</b></p>';
+        instancesDivElement.id = name.replace(/\//g,'') + 'instances';
 
         var scriptElement = document.createElement('script');
         scriptElement.type = 'text/javascript';
@@ -208,7 +219,7 @@ title: Demos - Virtual World Framework
       },
       {
         name: 'Analytical Graphics, Inc.',
-        description: '<a target="_blank" href="http://www.agi.com/">Analytical Graphics, Inc. (AGI)</a> provides COTS software to national security and space professionals for integrated analyses and visualization of land, sea, air, and space assets. AGI has integrated Cesium, their WebGL based virtual globe, with the framework. Check out their cesium app above.', 
+        description: '<a target="_blank" href="http://www.agi.com/">Analytical Graphics, Inc. (AGI)</a> provides COTS software to national security and space professionals for integrated analysis and visualization of land, sea, air, and space assets. AGI has integrated Cesium, their WebGL-based virtual globe, with the framework. Check out their cesium app above.', 
         hyperlink: 'http://www.agi.com/',
         logo: '/images/gallery-agi.jpg'
       },
@@ -256,15 +267,12 @@ title: Demos - Virtual World Framework
 
     function addOrganizationEntry( name, description, hyperlink, logo ) {
       var orgDivElement = document.createElement('div');
-      orgDivElement.className = 'demo-entry';
 
       var tableElement = document.createElement('table');
       tableElement.className = 'table table-striped';
 
       var trElement = document.createElement('tr');
-
       var col1Element = document.createElement('td');
-      col1Element.className = 'demo-entry-col1';
 
       var linkElement = document.createElement('a');
       linkElement.href = hyperlink;
@@ -278,9 +286,9 @@ title: Demos - Virtual World Framework
       $(col1Element).append(linkElement);
 
       var col2Element = document.createElement('td');
-      col2Element.className = 'demo-entry-col2';
 
       var nameElement = document.createElement('h3');
+      nameElement.setAttribute("style", "display:inline");
       nameElement.innerHTML = name;
 
       $(col2Element).append(nameElement);
