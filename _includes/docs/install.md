@@ -1,6 +1,10 @@
-App Developer Installation 
-==========================
+<a name="install"></a>
+
+# Installation Instructions
+
 --------------------------
+
+## App Developer Installation
 
 ### Windows 
 
@@ -14,8 +18,6 @@ Change into your new application folder and start the  server.
 
     c:\> cd MyApp
     c:\MyApp> vwf
-
---------------------------
 
 ### Mac OS X / Linux 
 
@@ -34,13 +36,12 @@ Change into your new folder application, and start the server.
     /home/user# cd MyApp
     /home/user/MyApp# vwf
 
-Core Developer Installation 
-==========================
 --------------------------
+
+## Core Developer Installation  - Ruby
 
 Note: You need only follow these instructions if you plan on developing VWF core functionality (for example, writing or modifying a driver). If instead, you wish to develop VWF Applications on top of the framework, please follow the instructions above.
 
---------------------------
 ### Windows 
 
 Please make sure you have the following software packages installed:
@@ -76,9 +77,8 @@ Perform the following shell command at a user shell prompt:
 	sudo curl https://raw.github.com/virtual-world-framework/vwf/master/support/build/Scripts/build_redhat.sh | bash -x
 
 ### Linux / Mac OS X
- 
- 
-### RubyGems
+  
+#### RubyGems
 
 Ensure RubyGems is installed (for Debian/Ubuntu). 
 
@@ -125,13 +125,13 @@ This installs RVM which is a version manager for Ruby.
 	brew install git
 	This installs git if you do not have it already on your machine.
 
-### Download Virtual World Framework
+#### Download Virtual World Framework
 
 Download the contents of the GitHub Master VWF Baseline to your local directory:
 
 	sudo git clone http://www.github.com/virtual-world-framework/vwf --recursive
 
-### Install the Gems
+#### Install the Gems
 
 Launch a terminal window and cd to your VWF development directory:
 
@@ -147,23 +147,23 @@ Now you can install the RubyGems to the system (as root):
 
 	sudo bundle install
 
-### Build the Server
+#### Build the Server
 This command will compile and setup the server baseline.
 
     sudo bundle exec rake 
 
-### Launch the Server
+#### Launch the Server
 This command launches Ruby's Thin web server to start serving your VWF applications.
 
 	sudo bundle exec thin start
 
-### Connect
+#### Connect
 
 The server runs on port 3000 in development mode by default. Use Google Chrome to view the website.
 
-NodeJS Core Developer Installation
-==========================
 --------------------------
+
+## Core Developer Installation - NodeJS
 
 As an alternative to the ruby version of the VWF server, there also exists a node.js version (which will soon become the primary supported server). To be on the bleeding edge and use the node.js version of the server now:
 
@@ -179,9 +179,9 @@ As an alternative to the ruby version of the VWF server, there also exists a nod
 
     vwf
 
-Configuring HTTPS/SSL Traffic
-==========================
 --------------------------
+
+## Configuring HTTPS/SSL Traffic
 
 The Virtual World Framework is able to work over an HTTPS/SSL configuration.  Below we outline how to setup a Linux environment running Thin web server with SSL as this is our preferred operational environment for the VWF server; however you may use SSL for any combination of operating system, and we ask that if you do configure and run SSL installations on other platforms that you please generate a Pull Request on GitHub and update this page with instructions on your preferred platform. Thank you in advance!
 
