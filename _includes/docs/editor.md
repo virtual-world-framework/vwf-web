@@ -17,7 +17,7 @@ The editor is not enabled by default. The app's config file can be updated to in
 	  vwf/view/threejs: "#vwf-root"
 	  vwf/view/editor:
 
-The editor interface will now be available within the app. To open, move the mouse to the upper ride side of the screen. Upon a mouse rollover, five editor tabs should be displayed. Selecting one will open the editor on the right hand side of the screen, pushing the application view to the left.
+The editor interface will now be available within the app. To open, move the mouse to the upper right side of the screen. Upon a mouse rollover, five editor tabs should be displayed. Selecting one will open the editor on the right hand side of the screen, pushing the application view to the left.
 
 The editor consists of five tabs:
 
