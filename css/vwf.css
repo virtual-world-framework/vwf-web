@@ -159,3 +159,13 @@ h3 small {
   padding-bottom: 30px;
   color: #777;
 }
+
+.navmenu {
+  position:fixed;
+  top:100px;
+  left:40px;
+}
+
+.navmenu ul {
+  list-style:none;
+}
