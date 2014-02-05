@@ -11,37 +11,32 @@ title: Demos - Virtual World Framework
 {% contentfor scripts %}
   <!-- CURRENT SESSION UPDATE SCRIPT -->
   <script type='text/javascript'>
-    var instances$;
-    var match;
-
     function showInfo(app, query) {
       function update(app) {
-        instances$ = $('#'+ app.replace(/\//g,'') + 'instances');
+        var instances$ = $('#'+ app.replace(/\//g,'') + 'instances');
+        var match;
         jQuery.ajax({
-          url: "http://master.virtual.wf/" + app + "/admin/instances/jsonp",
+          url: "http://demo.virtual.wf/" + app + "/admin/instances",
           dataType: "jsonp",
-          jsonp: "jsonCallback"
+          success: function(data) {
+            instances$.empty();
+            if ( Object.keys(data).length != 0 ) {
+              instances$.html("<p class='current-header'><b>Current Sessions</b></p>");
+            }
+            jQuery.each( 
+              data, function( key, value ) {
+                if ( match = key.match( RegExp( "/([^/]*)$" ) ) ) { 
+                  var instanceHTML = htmlEscape( match[1] );
+                  var size = Object.size(value.clients); 
+                  instances$.append("<table><tr><td class='current-col1'><span class='badge badge-success'>" + size + "</span>"+"</td><td class='current-col2'>Name: " + instanceHTML + "</td><td class='current-col3'><a class='btn btn-success btn-small' target='_blank' href='http://demo.virtual.wf/" + app + "/" + instanceHTML + "'>Join Session</a>" + "</td></tr></table>" );
+                }
+              } 
+            );
+          }
         });
         setTimeout(update, 60000, app);
       }
       update(app);
-    }
-
-    function jsonCallback(data) {
-      instances$.empty();
-      if ( Object.keys(data).length != 0 ) {
-        instances$.html("<p><b>Current Sessions</b></p>");
-      }
-      jQuery.each( 
-        data, function( key, value ) {
-          var app = key.substr( 1, key.indexOf('/') );
-          if ( match = key.match( RegExp( "/([^/]*)$" ) ) ) { 
-            var instanceHTML = htmlEscape( match[1] );
-            var size = Object.size(value.clients); 
-            instances$.append("<table style='width:75%;'><tr><td style='width:10%;'><span class='badge badge-success'>" + size + "</span>"+"</td><td style='width:60%;'>Name: " + instanceHTML + "</td><td style='text-align:right;width:30%;'><a class='btn btn-success btn-small' target='_blank' href='../" + app + "/" + instanceHTML + "'>Join Session</a>" + "</td></tr></table>" );
-          }
-        } 
-      );
     }
 
     // From http://stackoverflow.com/a/7124052
@@ -182,10 +177,8 @@ title: Demos - Virtual World Framework
       if ( partOfCore ) {
         var currentSessionDivElement = document.createElement('div');
         currentSessionDivElement.id = name + '-content';
-        currentSessionDivElement.className = 'overlayContent';
 
         var innerSessionDivElement = document.createElement('div');
-        innerSessionDivElement.className = 'overlay';
 
         var instancesDivElement = document.createElement('div');
         instancesDivElement.id = name.replace(/\//g,'') + 'instances';

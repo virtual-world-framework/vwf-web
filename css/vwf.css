@@ -160,6 +160,23 @@ h3 small {
   color: #777;
 }
 
+.current-col1 {
+  width:10%;
+}
+
+.current-col2 {
+  width:60%;
+}
+
+.current-col3 {
+  text-align:right;
+  width:30%;
+}
+
+.current-header {
+  font-size:18px;
+}
+
 .navmenu {
   position:fixed;
   top:100px;
