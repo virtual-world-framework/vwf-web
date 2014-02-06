@@ -26,7 +26,7 @@ Each part is optional and only needs to be included in the component definition 
 
 #### extends
 
-This specifies the URI or descriptor of the prototype component that is extended to make the new component. All behaviors, properties, methods, events, children and scripts are inherited by the component. The default prototype is *http://vwf.example.com/node.vwf*.
+This specifies the URI or descriptor of the prototype component that is extended to make the new component. All behaviors, properties, methods, events, children and scripts are inherited by the component. The default prototype is <code>http://vwf.example.com/node.vwf</code>.
 
 To specify a prototype using a URI, simply provide the URI.
 
@@ -143,16 +143,16 @@ To listen for events, a javascript function that matches the event name is added
 
 VWF also defines several dispatched events. These are triggered when outside actions, such as a key press or mouse click occur. When one of these events occurs, the system automatically finds any nodes that have been definined as triggering the event, and dispatches the event from those nodes. Currently, the dispatched events defined by VWF are:
 
-* keyDown
-* keyUp
-* pointerClick
-* pointerDown
-* pointerOver
-* pointerHover
-* pointerOut
-* pointerMove
-* pointerUp
-* pointerWheel
+* <code>keyDown</code>
+* <code>keyUp</code>
+* <code>pointerClick</code>
+* <code>pointerDown</code>
+* <code>pointerOver</code>
+* <code>pointerHover</code>
+* <code>pointerOut</code>
+* <code>pointerMove</code>
+* <code>pointerUp</code>
+* <code>pointerWheel</code>
 
 #### children
 
@@ -208,7 +208,7 @@ Scripts define the component's internal behavior and can be used to create and u
 	  	...
 	  }
 
-Inside a script **this** always refers to the component that owns the script. Other components can be accessed by navigating up or down the component hierarchy using **this.parent** and **this.children.childName**. VWF also defines an **intialize** function that is automatically executed when a component is intialized. In order to use this function, define it like any other function.
+Inside a script <code>this</code> always refers to the component that owns the script. Other components can be accessed by navigating up or down the component hierarchy using <code>this.parent</code> and <code>this.children.childName</code>. VWF also defines an **intialize</code> function that is automatically executed when a component is intialized. In order to use this function, define it like any other function.
 
 	scripts:
 	- |
@@ -288,7 +288,7 @@ From inside an existing node, the new component can be created using the followi
 
 	this.children.create("componentName", component);
 
-The first argument is the name of the new component to be created, and the second is the JavaScript object for the component itself. The new component will be created as a child of **this**, and will be treated the same as any other children that were already present.
+The first argument is the name of the new component to be created, and the second is the JavaScript object for the component itself. The new component will be created as a child of <code>this</code>, and will be treated the same as any other children that were already present.
 
 Children can also be deleted. The delete function takes the JavaScript object of the child that will be deleted.
 

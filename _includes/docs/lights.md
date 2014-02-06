@@ -34,7 +34,7 @@ Directional lights equally illuminate all objects from a given direction. An app
 
 #### Spot
 
-Spot lights emit light in a cone shape instead of a sphere. Other than that, spot lights and point lights share the similar properties. Spot lights also have the additional properties of **spotCosCutOff** and **spotExponent**, as described in the light API.
+Spot lights emit light in a cone shape instead of a sphere. Other than that, spot lights and point lights share the similar properties. Spot lights also have the additional properties of <code>spotCosCutOff</code> and <code>spotExponent</code>, as described in the light API.
 
 ~~~
  Spot01:

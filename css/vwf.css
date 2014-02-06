@@ -177,3 +177,20 @@ h3 small {
 .navmenu ul {
   list-style:none;
 }
+
+.navmenu a {
+  color: #336699;
+}
+
+.navmenu a:focus,
+.navmenu a:active,
+.navmenu a:hover {
+  color: #29527a;
+  text-decoration: none;
+}
+
+code {
+  color: #336699;
+	font-size: 12px;
+	background-color: none;
+}
