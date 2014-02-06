@@ -6,7 +6,7 @@
 
 The primary way to accomplish animations in VWF is the animation behavior. All components that extend node3 automatically implement the animation behavior, which provides standardized methods and properties for creating and executing an animation. 
 
-In order to create an animation on a node, the <code>animationUpdate</code> method needs to be implemented. This method is called each time the animation time changes, and is used to update the node to the correct state for that time.
+In order to create an animation on a node, the **animationUpdate** method needs to be implemented. This method is called each time the animation time changes, and is used to update the node to the correct state for that time.
 
 	scripts:
 	- |
@@ -15,29 +15,29 @@ In order to create an animation on a node, the <code>animationUpdate</code> meth
 	    this.translateBy([0, 0, 1 * time], 0);
 	  }
 
-The animation can then be started by calling the <code>animationPlay</code> method and stopped by calling <code>animationStop</code>.
+The animation can then be started by calling the **animationPlay** method and stopped by calling **animationStop**.
 
 Common properties used to customize the animation include:
 
-* animationDuration - The length of the animation
-* animationRate - The animation playback rate
-* animationLoop - Whether or not the animation should replay after reaching the end
+* *animationDuration* - The length of the animation
+* *animationRate* - The animation playback rate
+* *animationLoop* - Whether or not the animation should replay after reaching the end
 
-A full list of methods and properties can be found under [animation](jsdoc_cmp/symbols/animation.vwf.html) in the [Application API](application.html).
+A full list of methods and properties can be found under [animation](http://demo.virtual.wf/web/docs/jsdoc_cmp/symbols/animation.vwf.html) in the [Application API](#application-api).
 
 -------------------
 
 ### Collada Animations
 
-Animations defined in the collada document will also be loaded and available to the framework. They are controlled the same way as animations created in a component, except there is no need to implement an <code>animationUpdate</code> method, since the animation information is pulled from the collada file.
+Animations defined in the collada document will also be loaded and available to the framework. They are controlled the same way as animations created in a component, except there is no need to implement an **animationUpdate** method, since the animation information is pulled from the collada file.
 
 Common properties used to customize collada animations include:
 
-* animationStartTime - The time the animation should start at. Used to play a subsection of the animation.
-* animationStopTime - The time the animation should stop at. Used to play a subsection of the animation.
-* animationStartFrame - Equivalent to animationStartTime, but in frames, instead of seconds.
-* animationStopFrame - Equivalent to animationStopTime, but in frames, instead of seconds.
-* fps - The frames per second the animation should play at.
+* *animationStartTime* - The time the animation should start at. Used to play a subsection of the animation.
+* *animationStopTime* - The time the animation should stop at. Used to play a subsection of the animation.
+* *animationStartFrame* - Equivalent to animationStartTime, but in frames, instead of seconds.
+* *animationStopFrame* - Equivalent to animationStopTime, but in frames, instead of seconds.
+* *fps* - The frames per second the animation should play at.
 
 -------------------
 
