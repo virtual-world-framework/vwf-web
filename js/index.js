@@ -1,6 +1,8 @@
 function setFocusPongFrame() {
     var iframe = $("#pongFrame")[0];
-    iframe.contentWindow.focus();
+    setTimeout( function() { 
+        iframe.contentWindow.focus();
+    }, 0);
 }
 
 function preparePongFrame() {
