@@ -26,19 +26,19 @@ The first step is to create the HTML content as you'd like it to appear on the s
 	  </script>
 	</body>
 
-In order to attach the content as an overlay to the application, we've added an additonal script tag, that appends the *wrapper* div to *vwf-root*, or the main application view. 
+In order to attach the content as an overlay to the application, we've added an additonal script tag, that appends the <code>wrapper</code> div to <code>vwf-root</code>, or the main application view. 
 
-*Note* - The loader strips out header and body tags and inserts content directly into index.html. HTML5 formatting is helpful for testing as a standalone webpage, but not required for VWF. 
+**Note**: The loader strips out header and body tags and inserts content directly into index.html. HTML5 formatting is helpful for testing as a standalone webpage, but not required for VWF. 
 
 -------------------
 
 ### Allow HTML to Monitor and Change the Simulation State
 
-The HTML has access to the VWF application models through vwf_view. Thus, the HTML can watch what happens within the simulation and make changes to it such as setting properties, calling methods, and firing events. 
+The HTML has access to the VWF application models through <code>vwf_view</code>. Thus, the HTML can watch what happens within the simulation and make changes to it such as setting properties, calling methods, and firing events. 
 
-The <code>vwf.api.kernel</code> in the [system API](system.html) contains a full list of possible kernel calls that can be made from the HTML.
+The <code>vwf.api.kernel</code> in the [system API](#system-api) contains a full list of possible kernel calls that can be made from HTML.
 
-The following sections show examples of how to do just that. Refer to [querying](query.html) for more information about obtaining node IDs to pass to the following functions.
+The following sections show examples of how to do just that. Refer to [querying](#querying) for more information about obtaining node IDs to pass to the following functions.
 
 -------------------
 
@@ -58,7 +58,7 @@ Application methods can be called directly from the HTML, with or without parame
 
 	vwf_view.kernel.callMethod(vwf_view.kernel.find(undefined, "/nodeName")[0], "method1");
 
-The first argument is the ID of the node where the method resides. In this case, the ID is found using the [find](query.html) function call passing in the name of the node. The second parameter is the name of the method as defined in the main application file. In order to pass parameters directly to the method call, a third parameter may be passed as an array of values. 
+The first argument is the ID of the node where the method resides. In this case, the ID is found using the <code>find</code> function call passing in the name of the node. The second parameter is the name of the method as defined in the main application file. In order to pass parameters directly to the method call, a third parameter may be passed as an array of values. 
 
 	vwf_view.kernel.callMethod(vwf_view.kernel.find(undefined, "/nodeName")[0], "method1", [ parameter1, parameter2, etc ]);
 
@@ -77,7 +77,7 @@ currently functional.
 
 ### Monitor the Simulation to Manipulate HTML
 
-The HTML can reflect changes to the simulation as they occur. These changes can include property updates, method calls, or event fires. The following example allows the HTML to be notified of property changes in the simulation. 
+HTML can reflect changes to the simulation as they occur. These changes can include property updates, method calls, or event fires. The following example allows the HTML to be notified of property changes in the simulation. 
 
 	vwf_view.satProperty = function (nodeId, propertyName, propertyValue) {
 	  if (nodeId == vwf_view.kernel.application() ) {
@@ -93,12 +93,12 @@ In this case, any time a property has been set, this function will check to see 
 
 Similarly, the HTML can monitor other types of application updates as well. A few common ones are listed below.
 
-* Node created - vwf_view.createdNode = function ...
-* Node deleted - vwf_view.deletedNode = function ...
-* Method called - vwf_view.calledMethod = function ...
-* Event fired - vwf_view.firedEvent = function ...
+* Node created - <code>vwf_view.createdNode = function ...</code>
+* Node deleted - <code>vwf_view.deletedNode = function ...</code>
+* Method called - <code>vwf_view.calledMethod = function ...</code>
+* Event fired - <code>vwf_view.firedEvent = function ...</code>
 
-The <code>vwf.api.view</code> in the [system API](system.html) contains a full list of view driver calls.
+The <code>vwf.api.view</code> in the [system API](#system-api) contains a full list of view driver calls.
 
 -------------------
 
