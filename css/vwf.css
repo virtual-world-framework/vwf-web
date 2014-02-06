@@ -164,6 +164,7 @@ h3 small {
   position:fixed;
   top:100px;
   left:40px;
+  text-transform: uppercase;
 }
 
 .navmenu ul {
