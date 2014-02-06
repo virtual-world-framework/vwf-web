@@ -161,10 +161,17 @@ h3 small {
 }
 
 .navmenu {
-  position:fixed;
-  top:100px;
-  left:40px;
+  position: fixed;
+  top: 100px;
+  left: 20px;
   text-transform: uppercase;
+  width: 220px;
+  height: calc(100% - 100px);
+}
+
+.navmenu-scroll {
+  overflow:auto;
+  height:100%;
 }
 
 .navmenu ul {
