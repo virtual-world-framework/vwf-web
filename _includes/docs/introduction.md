@@ -58,7 +58,7 @@ The developer's guide is designed for those with web development skills (HTML5, 
 
 ## Using VWF
 
-The Virtual World Framework is a server package and zero-install client. Demo application can be directly run on the [VWF website](http://virtualworldframework.com/web/catalog.html). A server can be set up locally to build new applications. Please download the source packages from [github](https://github.com/virtual-world-framework/vwf) and follow the readme and [installation instructions](install.html) to start your own server.
+VWF is a server package and zero-install client. Demo applications can be directly run on the [VWF website](/demos.html). A server can be set up locally to build new applications. Please download the source packages from [github](https://github.com/virtual-world-framework/vwf) and follow the readme and [installation instructions](#install) to start your own server.
 
 -------------------
 

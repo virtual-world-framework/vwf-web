@@ -4,7 +4,7 @@
 
 The following resources may be helpful for troubleshooting any issues that arise.
 
-* Verify [installation instructions](install.html) were followed.
+* Verify [installation instructions](#install) were followed.
 
 * Load an application, and verify all the requirements are met on the loading screen. 
 
@@ -20,7 +20,7 @@ The following resources may be helpful for troubleshooting any issues that arise
 		<img src='images/firebug.png' alt='firebug' style='width:500px' />
 
 
-* Search or post a question to the [VWF Forum](http://virtualworldframework.com/web/forum.html) for additional assistance. 
+* Search or post a question to the [VWF Forum](http://demo.virtual.wf/web/forum.html) for additional assistance. 
 
 -------------------
 
