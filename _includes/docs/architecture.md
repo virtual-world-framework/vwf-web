@@ -2,19 +2,19 @@
 
 # Architecture
 
-The architecture behind the Virtual World Framework is by design:
+The architecture behind VWF is by design:
 
 * Fully web-based
 * Component-based
 * Multi-user collaborative
 
-The VWF architecture allows an application developer to focus on creating content in the mindset of a single-user application. If development is performed using the standard framework conventions, nothing else must be done to achieve a synchronized state across multiple users in the environment. 
+The VWF architecture allows an app developer to focus on creating content in the mindset of a single-user application. If development is performed using the standard framework conventions, nothing else must be done to achieve a synchronized state across multiple users in the environment. 
 
 -------------------
 
 ### Collaborative Nature
 
-The Virtual World Framework is a model - view based architecture. Views exist for each client joined in the application. Each view provides input into a model that keeps track of the state of the simulation. 
+VWF has a model-view based architecture. Views exist for each client joined in the app. Each view provides input into a model that keeps track of the state of the simulation. 
 
 <div style='width:100%;text-align:center'><img src='images/arch1.png' alt='arch' width='512' /></div>
 
@@ -22,11 +22,11 @@ The single model, or shared state, of the application has multiple copies that r
 
 <div style='width:100%;text-align:center'><img src='images/arch2.png' alt='arch' width='512' /></div>
 
-Each client then has their own replicated model that they take with them. The model, however, remains the same as the one that every other user is viewing. All clients show the same state with each having an indentical copy of the application. The applications are separately but simultaneously updated to retain identical states. 
+Each client then has their own replicated model that they take with them. The model, however, remains the same as the one that every other user is viewing. All clients show the same state with each having an identical copy of the app. The app are separately but simultaneously updated to retain identical states. 
 
-The application then is a state machine. The same state machine is in different locations (different clients). If the state machines all have the same properties and children, they will all move to the same successive state.
+The app then is a state machine. The same state machine is in different locations (different clients). If the state machines all have the same properties and children, they will all move to the same successive state.
 
-A client's browser may have multiple views. For example, a user may see and renderer view and an editor view in their browser window. The renderer view shows a 3D visualization of the model state, and the editor view shows the hierachy of the scene and the pieces that make it up such as it's properties and children.
+A client's browser may have multiple views. For example, a user may see a renderer view and an editor view in their browser window. The renderer view shows a 3D visualization of the model state, and the editor view shows the hierachy of the scene and the pieces that make it up such as it's properties and children.
 
 <div style='width:100%;text-align:center'><img src='images/arch3.png' alt='arch' width='512' /></div>
 
@@ -78,7 +78,7 @@ We've discussed how to write an application using the framework. The next sectio
 
 The drivers define the autonomic actions that happen within a system, dividing responsibility and delegating work for each action of the system. These actions include things such as creating or deleting a node, getting or setting a property, calling methods, and firing events. The drivers stand side by side without direct interaction between them. Rather, they interact by autonomic actions that the kernel manages. 
 
-For example, the GLGE driver is responsible for any manipulation on the node that's part of the scene, like setting the translation of a node. This information may be ignored by the rest of the drivers if it is not needed. 
+For example, the Three.js driver is responsible for any manipulation on the node that's part of the scene, like setting the translation of a node. This information may be ignored by the rest of the drivers if it is not needed. 
 
 Model and view drivers have the same structure; however, the model driver doesn't reach out, and a view driver does not have direct control. 
 

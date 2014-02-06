@@ -2,7 +2,7 @@
 
 # Components
 
-Components define the behavior, state and visual representation of an object, and are the basic building blocks of VWF. Components make up a hierarchical structure, with each component acting as the parent or child to another component. At the root of the structure is the application, which is also a component, and is created automatically when the application loads.
+Components define the behavior, state and visual representation of an object and are the basic building blocks of VWF. Components make up a hierarchical structure, with each component acting as the parent or child to another component. At the root of the structure is the application, which is also a component, and is created automatically when the application loads.
 
 -------------------
 
@@ -22,11 +22,11 @@ There are eight parts that make up a component, seen here as a skeleton in YAML.
 	scripts:
 
 
-Each part is optional and only needs to be include in the component definition if that part needs to be customized in the component. All relative paths are resolved using the current component as the base.
+Each part is optional and only needs to be included in the component definition if that part needs to be customized in the component. All relative paths are resolved using the current component as the base.
 
 #### extends
 
-This specifies the URI or descriptor of the prototype component that is extended to make the new component. All behaviors, properties, methods, events, children and scripts are inherited by the component. The default prototype is <code>http://vwf.example.com/node.vwf</code>.
+This specifies the URI or descriptor of the prototype component that is extended to make the new component. All behaviors, properties, methods, events, children and scripts are inherited by the component. The default prototype is *http://vwf.example.com/node.vwf*.
 
 To specify a prototype using a URI, simply provide the URI.
 
@@ -45,7 +45,7 @@ Since a prototype is also a component, it can be specified using the same format
 	  children:
 	  scripts:
 
-See [prototypes](prototypes.html) for more information.
+See [prototypes](#prototypes) for more information.
 
 #### implements
 
@@ -54,7 +54,7 @@ This specifies the URIs of components that will be used as behaviors. All behavi
 	implements:
 	- http://vwf.example.com/path/to/behavior.vwf
 
-See [behaviors](behaviors.html) for more information.
+See [behaviors](#behaviors) for more information.
 
 #### source/type
 
@@ -156,7 +156,7 @@ VWF also defines several dispatched events. These are triggered when outside act
 
 #### children
 
-Children are instances of other components that are attached to this component. A child can be a simple reference to a seperate component, or the reference can include a configuration. The format for a child specification is the same as for a component.
+Children are instances of other components that are attached to this component. A child can be a simple reference to a separate component, or the reference can include a configuration. The format for a child specification is the same as for a component.
 
 	children:
 	  childFromURI: http://vwf.example.com/path/to/component.vwf
@@ -208,7 +208,7 @@ Scripts define the component's internal behavior and can be used to create and u
 	  	...
 	  }
 
-Inside a script <code>this</code> always refers to the component that owns the script. Other components can be accessed by navigating up or down the component hierarchy using <code>this.parent</code> and <code>this.children.childName</code>. VWF also defines an <code>intialize</code> function that is automatically executed when a component is intialized. In order to use this function, define it like any other function.
+Inside a script **this** always refers to the component that owns the script. Other components can be accessed by navigating up or down the component hierarchy using **this.parent** and **this.children.childName**. VWF also defines an **intialize** function that is automatically executed when a component is intialized. In order to use this function, define it like any other function.
 
 	scripts:
 	- |
@@ -228,7 +228,7 @@ New properties can be added using the following syntax.
 
 	this.properties.create("propertyName", value);
 
-The first parameter is the name of the new property, and the second is the value the property will be initialized with. There are also two optional parameters that customize the getter and setter of the parameter. These are passed in as strings.
+The first parameter is the name of the new property, and the second is the value the property to be initialized. There are also two optional parameters that customize the getter and setter of the parameter. These are passed in as strings.
 	
 	this.properties.create("propertyName", value, "return this.propertyName;", "this.propertyName = value;");
 
@@ -288,7 +288,7 @@ From inside an existing node, the new component can be created using the followi
 
 	this.children.create("componentName", component);
 
-The first argument is the name the new component will be created with, and the second is the JavaScript object for the component itself. The new component will be created as a child of <code>this</code>, and will be treated the same as any other children that were already present.
+The first argument is the name of the new component to be created, and the second is the JavaScript object for the component itself. The new component will be created as a child of **this**, and will be treated the same as any other children that were already present.
 
 Children can also be deleted. The delete function takes the JavaScript object of the child that will be deleted.
 
