@@ -28,7 +28,7 @@ title: Demos - Virtual World Framework
                 if ( match = key.match( RegExp( "/([^/]*)$" ) ) ) { 
                   var instanceHTML = htmlEscape( match[1] );
                   var size = Object.size(value.clients); 
-                  instances$.append("<table><tr><td class='current-col1'><span class='badge badge-success'>" + size + "</span>"+"</td><td class='current-col2'>Name: " + instanceHTML + "</td><td class='current-col3'><a class='btn btn-success btn-small' target='_blank' href='http://demo.virtual.wf/" + app + "/" + instanceHTML + "'>Join Session</a>" + "</td></tr></table>" );
+                  instances$.append("<div class='row session-table'><div class='col-md-1 session'><span class='vcenter'><span class='badge badge-success'>" + size + "</span></span></div><div class='col-md-5 session'><span class='vcenter'>Name: " + instanceHTML + "</span></div><div class='col-md-2 session'><a class='btn btn-success btn-small' target='_blank' href='http://demo.virtual.wf/" + app + "/" + instanceHTML + "'>Join Session</a>" + "</div></div>" );
                 }
               } 
             );
