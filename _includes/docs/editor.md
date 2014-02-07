@@ -2,13 +2,26 @@
 
 # Editor
 
-The editor capability of the Virtual World Framework allows for the application to be edited in a live environment. It provides full control to the user and has the ability to navigate through the current state of the application, consisting of its various nodes and properties. The editor allows changes to be made to the shared simulation by setting properties, calling methods, and firing events. 
+The editor capability of VWF allows for the app to be edited in a live environment. It provides full control to the user and has the ability to navigate through the current state of the app, consisting of its various nodes and properties. The editor allows changes to be made to the shared simulation by setting properties, calling methods, and firing events. 
 
 -------------------
 
 ### Opening the Editor
 
-To open the editor interface, move the mouse to the upper ride side of the screen. Upon a mouse rollover, five editor tabs should be displayed. Selecting one will open the editor on the right hand side of the screen, pushing the application view to the left.
+The editor is not enabled by default. The app's config file can be updated to include the editor interface under the *view:* tag. Additionally, the threejs model and view drivers must be added, as adding just the editor will override the default drivers. An example configuration is below.
+
+	---
+	model:
+	  vwf/model/threejs:
+	view:
+	  vwf/view/threejs: "#vwf-root"
+	  vwf/view/editor:
+
+Alternatively, the threejs and editor driver parameters can be passed via the URL. For example, the following URL will enable the editor.
+
+	http://virtual.wf/app/?threejs#!threejs&editor
+
+The editor interface will now be available within the app. To open, move the mouse to the upper right side of the screen. Upon a mouse rollover, five editor tabs should be displayed. Selecting one will open the editor on the right hand side of the screen, pushing the application view to the left.
 
 The editor consists of five tabs:
 
