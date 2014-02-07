@@ -1,6 +1,10 @@
 function setFocusPongFrame() {
     var iframe = $("#pongFrame")[0];
-    iframe.contentWindow.focus();
+
+    // Focus is set after returning to the browser so it works in Firefox
+    setTimeout( function() { 
+        iframe.contentWindow.focus();
+    }, 0);
 }
 
 function preparePongFrame() {
