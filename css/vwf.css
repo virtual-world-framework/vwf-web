@@ -189,3 +189,13 @@ h3 small {
 .navmenu ul {
   list-style:none;
 }
+
+/* Demos */
+
+.panel-demo {
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+}
+.panel-demo h3 {
+  margin-top: 0;
+}
