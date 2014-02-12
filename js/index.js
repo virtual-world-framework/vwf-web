@@ -1,3 +1,25 @@
+function checkCompatibility() {
+
+    var compatibility = {
+        websocket: false,
+        webgl: false
+    };
+
+    // Test for WebSockets
+    compatibility.websocket = !!( window.WebSocket || window.MozWebSocket );
+
+    // Test for WebGL
+    if ( window.WebGLRenderingContext ) {
+        var canvas = document.createElement('canvas');
+        compatibility.webgl = !!( canvas.getContext( "webgl" ) || 
+                                  canvas.getContext( "experimental-webgl" ) || 
+                                  canvas.getContext( "webkit-3d" ) || 
+                                  canvas.getContext( "moz-webgl" ) );
+    }
+
+    return compatibility;
+}
+
 function setFocusPongFrame() {
     var iframe = $("#pongFrame")[0];
 
@@ -8,16 +30,21 @@ function setFocusPongFrame() {
 }
 
 function preparePongFrame() {
+    var $iframe = $("#pongFrame");
+    $iframe.removeClass( "hide" );
+
     var qs = (function(a) {
-    if (a == "") return {};
-    var b = {};
-    for (var i = 0; i < a.length; ++i)
-    {
-        var p=a[i].split('=');
-        if (p.length != 2) continue;
-        b[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
-    }
-    return b;
+        if (a == "") {
+            return {};
+        }
+        var b = {};
+        for (var i = 0; i < a.length; ++i)
+        {
+            var p=a[i].split('=');
+            if (p.length != 2) continue;
+            b[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
+        }
+        return b;
     })(window.location.search.substr(1).split('&'));
 
     var id = qs["id"];
@@ -28,7 +55,7 @@ function preparePongFrame() {
     // Load the iframe with the correct URL
     var vwfServer = "http://demo.virtual.wf";
     var pongUrl = vwfServer + "/vwf-pong/" + id;
-    var iframe = $("#pongFrame")[0];
+    var iframe = $iframe[0];
     iframe.src = pongUrl;
 
     // Fill the form to copy with the share URL
@@ -90,20 +117,40 @@ function setUpInstallButton() {
 }
 
 $(document).ready(function() {
-    preparePongFrame();
+    var compatibility = checkCompatibility();
+    var $errorText = $( "#errorText" );
 
-    $( "body" ).keydown(function( event ) {
-        switch( event.which ) {
-            case 76:
-            case 79:
-            case 70:
-            case 82:
-                setFocusPongFrame();
+    if ( compatibility.websocket && compatibility.webgl ) {
+        $errorText.addClass( "hide" );
+        preparePongFrame();
+        $( ".panel-footer" ).removeClass( "hide" );
+
+        $( "body" ).keydown(function( event ) {
+            switch( event.which ) {
+                case 76:
+                case 79:
+                case 70:
+                case 82:
+                    setFocusPongFrame();
+            }
+            event.preventDefault();
+        });
+
+        setUpCopyButtons();
+    } else {
+        var errorText = "Your browser does not support ";
+        if ( !compatibility.websocket ) {
+            errorText += "WebSockets";
+            if ( !compatibility.webgl ) {
+                errorText += " and "
+            }
         }
-        event.preventDefault();
-    });
-
-    setUpCopyButtons();
+        if ( !compatibility.webgl ) {
+            errorText += "WebGL";
+        }
+        errorText += ". For a list of compatible browsers, see <a href='http://virtual.wf/documentation.html#requirements'>Browser Requirements</a>. If your browser is listed, you may need to enable the necessary features. Google can help you find how to do that.";
+        $errorText[ 0 ].innerHTML = errorText;
+    }
 
     setUpInstallButton();
 });
