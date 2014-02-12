@@ -37,9 +37,12 @@ title: Virtual World Framework
       <div class="col-md-7 col-lg-6 hidden-xs">
         <div class="panel panel-default vwf-panel">
           <div class="panel-body">
-            <p id="errorText">
-              <noscript>To see our awesome demo, you will need to enable javascript in your browser.</noscript>
-            </p>
+            <div class="well" id="errorBox">
+              <h3 id="errorTitle"><noscript>I need javascript.</noscript></h3> 
+              <p id="errorText">
+                <noscript>To see our awesome demo, you will need to enable javascript in your browser.</noscript>
+              </p>
+            </div>
             <iframe class="vwf-frame hide" id="pongFrame" frameborder="0" src=""></iframe>
           </div>
           <div class="panel-footer hide">

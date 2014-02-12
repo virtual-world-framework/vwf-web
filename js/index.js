@@ -118,10 +118,9 @@ function setUpInstallButton() {
 
 $(document).ready(function() {
     var compatibility = checkCompatibility();
-    var $errorText = $( "#errorText" );
 
     if ( compatibility.websocket && compatibility.webgl ) {
-        $errorText.addClass( "hide" );
+        $( "#errorBox" ).addClass( "hide" );
         preparePongFrame();
         $( ".panel-footer" ).removeClass( "hide" );
 
@@ -138,6 +137,7 @@ $(document).ready(function() {
 
         setUpCopyButtons();
     } else {
+        $( "#errorTitle" )[ 0 ].innerHTML = "Let's beef up your browser.";
         var errorText = "Your browser does not support ";
         if ( !compatibility.websocket ) {
             errorText += "WebSockets";
@@ -149,7 +149,7 @@ $(document).ready(function() {
             errorText += "WebGL";
         }
         errorText += ". For a list of compatible browsers, see <a href='http://virtual.wf/documentation.html#requirements'>Browser Requirements</a>. If your browser is listed, you may need to enable the necessary features. Google can help you find how to do that.";
-        $errorText[ 0 ].innerHTML = errorText;
+        $( "#errorText" )[ 0 ].innerHTML = errorText;
     }
 
     setUpInstallButton();
