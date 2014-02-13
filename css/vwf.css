@@ -3,6 +3,12 @@
   background-color: #fff;
 }
 
+a[name] {
+  padding-top: 80px;
+  margin-top: -80px;
+  display: inline-block; /* required for webkit browsers */
+}
+
 .navbar-brand {
   font-size: 15px;
   line-height: 16px;
