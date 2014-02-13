@@ -36,7 +36,7 @@ In order to attach the content as an overlay to the application, we've added an 
 
 The HTML has access to the VWF application models through <code>vwf_view</code>. Thus, the HTML can watch what happens within the simulation and make changes to it such as setting properties, calling methods, and firing events. 
 
-The <code>vwf.api.kernel</code> in the [system API](#system-api) contains a full list of possible kernel calls that can be made from HTML.
+The <code>vwf.api.kernel</code> in the [system API](#system-api) contains a full list of possible kernel calls that can be made from the view (.html).
 
 The following sections show examples of how to do just that. Refer to [querying](#querying) for more information about obtaining node IDs to pass to the following functions.
 
@@ -58,7 +58,7 @@ Application methods can be called directly from the HTML, with or without parame
 
 	vwf_view.kernel.callMethod(vwf_view.kernel.find(undefined, "/nodeName")[0], "method1");
 
-The first argument is the ID of the node where the method resides. In this case, the ID is found using the <code>find</code> function call passing in the name of the node. The second parameter is the name of the method as defined in the main application file. In order to pass parameters directly to the method call, a third parameter may be passed as an array of values. 
+The first argument is the ID of the node where the method resides. In this case, the ID is found using the [find](#querying) function call passing in the name of the node. The second parameter is the name of the method as defined in the main application file. In order to pass parameters directly to the method call, a third parameter may be passed as an array of values. 
 
 	vwf_view.kernel.callMethod(vwf_view.kernel.find(undefined, "/nodeName")[0], "method1", [ parameter1, parameter2, etc ]);
 

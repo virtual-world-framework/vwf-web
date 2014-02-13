@@ -76,7 +76,7 @@ The HTML can reflect changes to the simulation such as property updates, method 
 
 In this case, any time a property has been set, this function will check to see if the property was changed on a specific node, and if so, will check the name of the property. If it is the property we are looking for, we can write javascript to update the HTML state.
 
-Similarly, HTML can monitor other application updates, such as those listed below:
+Similarly, the view (.html) can monitor other application updates, such as those listed below:
 
 * Method called - <code>vwf_view.calledMethod = function ...</code>
 * Event fired - <code>vwf_view.firedEvent = function ...</code>

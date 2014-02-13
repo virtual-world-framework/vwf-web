@@ -208,7 +208,7 @@ Scripts define the component's internal behavior and can be used to create and u
 	  	...
 	  }
 
-Inside a script <code>this</code> always refers to the component that owns the script. Other components can be accessed by navigating up or down the component hierarchy using <code>this.parent</code> and <code>this.children.childName</code>. VWF also defines an **intialize</code> function that is automatically executed when a component is intialized. In order to use this function, define it like any other function.
+Inside a script <code>this</code> always refers to the component that owns the script. Other components can be accessed by navigating up or down the component hierarchy using <code>this.parent</code> and <code>this.children.childName</code>. VWF also defines an <code>initialize</code> function that is automatically executed when a component is initialized. In order to use this function, define it like any other function.
 
 	scripts:
 	- |
@@ -228,7 +228,7 @@ New properties can be added using the following syntax.
 
 	this.properties.create("propertyName", value);
 
-The first parameter is the name of the new property, and the second is the value the property to be initialized. There are also two optional parameters that customize the getter and setter of the parameter. These are passed in as strings.
+The first parameter is the name of the new property, and the second is its initial value. There are also two optional parameters that customize the getter and setter of the parameter. These are passed in as strings.
 	
 	this.properties.create("propertyName", value, "return this.propertyName;", "this.propertyName = value;");
 

@@ -2,7 +2,7 @@
 
 # Create a Multi-user Application
 
-<sup>(Note: This recipe is based on the [multiuser example app](https://demo.virtualworldframework.com/example/multiuser) - check it out for greater context.  You can find the source for the app in the [github repository](https://github.com/virtual-world-framework/vwf) in public/web/example/multiuser.)</sup>
+<sup>(Note: This recipe is based on the [multiuser example app](https://demo.virtualworldframework.com/web/example/multiuser) - check it out for greater context.  You can find the source for the app in the [github repository](https://github.com/virtual-world-framework/vwf) in public/web/example/multiuser.)</sup>
 
 All that is needed for a VWF app to become a multi-user app is for a second person to navigate to the same url. By default, both users share the same view of the virtual world.
 

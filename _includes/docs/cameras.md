@@ -32,9 +32,9 @@ The <code>cameraType</code> property controls whether the camera is a *persepect
 The camera component extends from node3, and inherits the transform properties, such as translation and rotation. 
 
 The <code>translation</code> property controls the position of the camera. Changing this property will move the camera to the new coordinates, and the view will automatically update with it. <code>translation</code> defaults to \[ 0, 0, 0 \] and can be set using the following syntax. The coordinate system defaults to +x to the right, +y forward, and +z up, if no rotation has been applied.
-
-	this.children['newCamera'].translation = [ 100, -20, 30 ]; 
+ 
 	// Moves the camera to 100 on the x-axis, -20 on the y-axis, and 30 on the z-axis
+	this.children['newCamera'].translation = [ 100, -20, 30 ];
 
 The <code>rotation</code> property controls the direction the camera is pointing, as an offset from the default orientation. Changing this property will rotate the camera and automatically update the view. The value takes the from of \[ x, y, z, angle \] where the amount rotation around an axis is axis * angle. 
 

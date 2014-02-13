@@ -31,7 +31,7 @@ The <code>vwf</code> object gives a coder direct access to manipulate the model 
 
 When changing a property, the property's setter must be called to trigger VWF's synchronization mechanism. If one sets only a field of a property (for example, the *x* field on a vector property), the setter will not be called, and that change will not be replicated to other users. Instead (using the vector example again), create a new vector that has the updated properties and assign the entire vector to the property (to call the property's setter).
 
-In cases like above when a property (let's call it *containerProperty*) has properties of its own, it is often better to make *containerProperty* a child of the object it is on, rather than a property.  That way its sub-properties can automatically be synchronized when set. Beware of doing this on components, though.
+In cases like above when a property (let's call it *containerProperty*) has properties of its own, it is often better to make *containerProperty* a child of the object it is on, rather than a property.  That way its sub-properties can automatically be synchronized when set. Beware of doing this on components, though. See *Do not add children to components* for more details.
 
 -------------------
 

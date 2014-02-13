@@ -78,7 +78,7 @@ We've discussed how to write an application using the framework. The next sectio
 
 The drivers define the autonomic actions that happen within a system, dividing responsibility and delegating work for each action of the system. These actions include things such as creating or deleting a node, getting or setting a property, calling methods, and firing events. The drivers stand side by side without direct interaction between them. Rather, they interact by autonomic actions that the kernel manages. 
 
-For example, the Three.js driver is responsible for any manipulation on the node that's part of the scene, like setting the translation of a node. This information may be ignored by the rest of the drivers if it is not needed. 
+For example, the three.js driver is responsible for any manipulation on the node that's part of the scene, like setting the translation of a node. This information may be ignored by the rest of the drivers if it is not needed. 
 
 Model and view drivers have the same structure; however, the model driver doesn't reach out, and a view driver does not have direct control. 
 
