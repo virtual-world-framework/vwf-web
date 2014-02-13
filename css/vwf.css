@@ -180,33 +180,27 @@ h3 small {
   height: 40px;
 }
 
-.navmenu {
-  position: fixed;
-  top: 100px;
-  left: 20px;
-  text-transform: uppercase;
-  width: 220px;
-  height: calc(100% - 100px);
+ul.navmenu {
+  margin-top: 30px;
+  font-size: 18px;
 }
 
-.navmenu-scroll {
-  overflow:auto;
-  height:100%;
+ul.navmenu > li {
+  font-weight: bold;
+  margin-bottom: 30px;
 }
 
-.navmenu ul {
-  list-style:none;
+ul.navmenu ul li {
+  font-weight: normal;
+  margin-top: 5px;
 }
 
 .navmenu a {
-  color: #336699;
 }
 
 .navmenu a:focus,
 .navmenu a:active,
 .navmenu a:hover {
-  color: #29527a;
-  text-decoration: none;
 }
 
 code {
