@@ -181,11 +181,36 @@ h3 small {
 }
 
 .navmenu {
-  position:fixed;
-  top:100px;
-  left:40px;
+  position: fixed;
+  top: 100px;
+  left: 20px;
+  text-transform: uppercase;
+  width: 220px;
+  height: calc(100% - 100px);
+}
+
+.navmenu-scroll {
+  overflow:auto;
+  height:100%;
 }
 
 .navmenu ul {
   list-style:none;
+}
+
+.navmenu a {
+  color: #336699;
+}
+
+.navmenu a:focus,
+.navmenu a:active,
+.navmenu a:hover {
+  color: #29527a;
+  text-decoration: none;
+}
+
+code {
+  color: #336699;
+	font-size: 12px;
+	background-color: none;
 }

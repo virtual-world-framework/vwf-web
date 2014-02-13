@@ -12,7 +12,7 @@ Persistence is the ability to save the state of any given instance of an applica
 
 ### Save the State of an Instance
 
-The primary way to save the state of an application instance is using a POST HTTP request. (Note: The POST ability is only allowable when the server is in development mode by default.)
+The primary way to save the state of an application instance is using a POST HTTP request. (**Note**: The POST ability is only allowable when the server is in development mode by default.)
 
 	// Save State Information
 	var xhr = new XMLHttpRequest();
@@ -38,7 +38,7 @@ If desired, the configuration file data can also be saved in the same manner.
 
 ### List Saved States for an Application
 
-The primary way to retrieve saved states from the server is using a GET HTTP request via jQuery.getJSON(). There are two available URLs that can be passed as parameters to retrieve states. A URL including "listsaves" will return an object for every saved state of the given application (root). A URL including "listallsaves" will return an object for every saved state for any application. 
+The primary way to retrieve saved states from the server is using a GET HTTP request via <code>jQuery.getJSON()</code>. There are two available URLs that can be passed as parameters to retrieve states. A URL including "listsaves" will return an object for every saved state of the given application (root). A URL including "listallsaves" will return an object for every saved state for any application. 
 
 	$.getJSON( "/" + root + "/listsaves", function( data ) {
 	  $.each( data, function( key, value ) {
@@ -73,16 +73,16 @@ Persistence is a built-in feature of the editor view of the framework by default
 
 To save the current state of an application instance:
 
-  1. Open the Users tab of the [editor](documentation.html#editor).  
-  2. Enter a file name for the file to save (if no name is entered, the instance ID from the URL will be selected).  
-  3. Click the Save button. The document will be saved in /documents/app_name/file_name/ within the vwf directory.  
+  1. Open the Users tab of the [editor](#editor).
+  2. Enter a file name for the file to save (if no name is entered, the instance ID from the URL will be selected).
+  3. Click the Save button. The document will be saved in /documents/app_name/file_name/ within the vwf directory.
 
 To open a previously saved application:
 
-  1. Open the Users tab of the [editor](documentation.html#editor).  
-  2. Select the drop down list above the Load button, and choose a file to load.  
-  3. Click the Load button. The application will be loaded in the current browser tab.  
+  1. Open the Users tab of the [editor](#editor).
+  2. Select the drop down list above the Load button, and choose a file to load.
+  3. Click the Load button. The application will be loaded in the current browser tab.
 
-Note: Persistence functionality is only enabled by default in development mode on the server.
+**Note**: Persistence functionality is only enabled by default in development mode on the server.
 
 -------------------

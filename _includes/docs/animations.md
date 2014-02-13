@@ -19,11 +19,11 @@ The animation can then be started by calling the <code>animationPlay</code> meth
 
 Common properties used to customize the animation include:
 
-* animationDuration - The length of the animation
-* animationRate - The animation playback rate
-* animationLoop - Whether or not the animation should replay after reaching the end
+* <code>animationDuration</code> - The length of the animation
+* <code>animationRate</code> - The animation playback rate
+* <code>animationLoop</code> - Whether or not the animation should replay after reaching the end
 
-A full list of methods and properties can be found under [animation](jsdoc_cmp/symbols/animation.vwf.html) in the [Application API](application.html).
+A full list of methods and properties can be found under [animation](http://demo.virtual.wf/web/docs/jsdoc_cmp/symbols/animation.vwf.html) in the [Application API](#application-api).
 
 -------------------
 
@@ -33,11 +33,11 @@ Animations defined in the collada document will also be loaded and available to 
 
 Common properties used to customize collada animations include:
 
-* animationStartTime - The time the animation should start at. Used to play a subsection of the animation.
-* animationStopTime - The time the animation should stop at. Used to play a subsection of the animation.
-* animationStartFrame - Equivalent to animationStartTime, but in frames, instead of seconds.
-* animationStopFrame - Equivalent to animationStopTime, but in frames, instead of seconds.
-* fps - The frames per second the animation should play at.
+* <code>animationStartTime</code> - The time the animation should start at. Used to play a subsection of the animation.
+* <code>animationStopTime</code> - The time the animation should stop at. Used to play a subsection of the animation.
+* <code>animationStartFrame</code> - Equivalent to animationStartTime, but in frames, instead of seconds.
+* <code>animationStopFrame</code> - Equivalent to animationStopTime, but in frames, instead of seconds.
+* <code>fps</code> - The frames per second the animation should play at.
 
 -------------------
 
@@ -51,7 +51,7 @@ Animations can also be created using the future call. The VWF future call can be
 	    {
 	      doSomething();
 	      this.future( 0.05 ).methodName();
-        }
+	    }
 
 The future call schedules the next step. The parameter passed to the function call can be raised or lowered to smooth or optimize the animation, respectively.
 

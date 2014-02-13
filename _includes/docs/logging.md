@@ -10,9 +10,9 @@ As you're building applications in the framework, it often helps to be familiar 
 
 #### VWF Logging
 
-The logging levels are defined in *support/client/lib/logger.js*, documented under [logger](jsdoc/module-logger.html) in the [system API](system.html). The logging options are TRACE, DEBUG, INFO, WARN,  and ERROR. This module requires the configuration module, defined in *support/client/lib/vwf/configuration.js*. The default log level on a development server is **info** and the default log level on a production server is **warn**. These values can be updated in the configuration.js file. 
+The logging levels are defined in *support/client/lib/logger.js*, documented under [logger](http://demo.virtual.wf/web/docs/jsdoc/module-logger.html) in the [system API](#system-api). The logging options are <code>TRACE</code>, <code>DEBUG</code>, <code>INFO</code>, <code>WARN</code>, and <code>ERROR</code>. This module requires the configuration module, defined in *support/client/lib/vwf/configuration.js*. The default log level on a development server is <code>INFO</code> and the default log level on a production server is <code>WARN</code>. These values can be updated in the configuration.js file. 
 
-Logging is preferred over generic console output(e.g. *console.error*), as console output can cause the browser to crash if proper debugging tools are not installed. 
+Logging is preferred over generic console output (e.g. <code>console.error</code>), as console output can cause the browser to crash if proper debugging tools are not installed. 
 
 The loggers can be used throughout the framework and have a knowledge of their context, or the object to which they're attached. The following example will output the context of the message followed by the message itself.
 
@@ -54,7 +54,7 @@ Additionally, in Chrome, the *Elements* tab allows browsing the HTML of the docu
 
 #### Model Source
 
-By adding "//@ sourceURL=*file reference*" to the end of scripts in the model file as show below, the script functions will be available in the *Sources* tab of the browser console. From here, breakpoints and other debugging tools can be used. 
+By adding <code>//@ sourceURL=*file reference*</code> to the end of scripts in the model file as show below, the script functions will be available in the *Sources* tab of the browser console. From here, breakpoints and other debugging tools can be used. 
 
 	scripts:
 	- |

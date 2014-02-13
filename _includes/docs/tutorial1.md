@@ -2,9 +2,9 @@
 
 # Tutorials
 
-To get started, please view the sample step by step guides to building an application within the framework. The [first example](documentation.html#tutorial1) walks through the basic components of an application, and serves as a *Hello World* for the Virtual World Framework.
+To get started, please view the sample step by step guides to building an application within the framework. The [first example](#tutorial1) walks through the basic components of an application, and serves as a *Hello World* for the Virtual World Framework.
 
-The [second example](documentation.html#tutorial1) is a basic tutorial that consists of four stages, bringing the developer from the creation of a primitive scene to a simple sandtable application. 
+The [second example](#tutorial2) is a basic tutorial that consists of four stages, bringing the developer from the creation of a primitive scene to a simple sandtable application. 
 
 -------------------
 
@@ -12,44 +12,30 @@ The [second example](documentation.html#tutorial1) is a basic tutorial that cons
 
 # Hello World Tutorial 
 
-Virtual World Framework (VWF) is a collaborative training platform that is scalable, sustainable and can be run via a browser.
+The most basic implementation of VWF is a single asset in a COLLADA format. An asset can be wrapped in a VWF app by specifying the source file in the code. 
 
--------------------
-
-The most basic implementation of VWF is a single asset in a COLLADA format. A URL pointing directly to an asset COLLADA file (.dae) with no code will result in a scene containing the specified asset with default light, camera, and navigation.
-
-Sample URL: *http://vwf.example.com/application/hello.dae*
-
--------------------
-
-An asset can be wrapped in a VWF application by specifying the source file in the code.
+Prototypes for nodes are defined within the framework. Extend these prototypes and specify a file source to create application components. An app scene extends the scene prototype and a COLLADA model extends the node3 prototype. 
 
 Code View: *index.vwf.yaml*
 
-	---
-	source: hello.dae
+	--- 
+	extends: http://vwf.example.com/scene.vwf
+	children: 
+	  hello: 
+	    extends: http://vwf.example.com/node3.vwf
+	    source: hello.dae
+	    type: model/vnd.collada+xml
 
 Sample URL: *http://vwf.example.com/application/index.vwf*
 
 -------------------
 
-Prototypes for nodes are defined within the framework. Extend these prototypes and specify a file source to create application components. For example, an application child can extend a node type with a COLLADA file.
-
-	--- 
-	children:
-	  hello:
-	    extends: http://vwf.example.com/node3.vwf
-	    source: hello.dae
-	    type: model/vnd.collada+xml
-
--------------------
-
-An application scene can extend the navscene type and transform properties may be set directly on a child node.
+Transform properties may be set directly on a child node.
 
 Code View: *index.vwf.yaml*
 
 	--- 
-	extends: http://vwf.example.com/navscene.vwf
+	extends: http://vwf.example.com/scene.vwf
 	children: 
 	  hello: 
 	    extends: http://vwf.example.com/node3.vwf
@@ -62,7 +48,7 @@ Sample URL: *http://vwf.example.com/web/example/1/*
 
 <!-- <iframe src="../../web/example/1">Example 1</iframe> -->
 <div style="text-align:center">
-<span style="color:3399FF" onclick="document.getElementById('ex1_frame').src = '../../web/example/1'">Activate Application</span><br/><br/>
+<span style="color:3399FF" onclick="document.getElementById('ex1_frame').src = 'https://demo.virtualworldframework.com/web/example/1'">Activate Application</span><br/><br/>
 <iframe id="ex1_frame" src="about:blank" style="width:100%;"></iframe>
 </div>
 
@@ -90,7 +76,7 @@ Add additional children to the application and set their properties.
 Code View: *index.vwf.yaml*
 
 	--- 
-	extends: http://vwf.example.com/navscene.vwf
+	extends: http://vwf.example.com/scene.vwf
 	children:
 	  hello:
 	    extends: http://vwf.example.com/node3.vwf
@@ -113,20 +99,20 @@ Sample URL: *http://vwf.example.com/web/example/2/*
 
 <!-- <iframe src="../../web/example/2">Example 2</iframe> -->
 <div style="text-align:center">
-<span style="color:3399FF" onclick="document.getElementById('ex2_frame').src = '../../web/example/2'">Activate Application</span><br/><br/>
+<span style="color:3399FF" onclick="document.getElementById('ex2_frame').src = 'https://demo.virtualworldframework.com/web/example/2'">Activate Application</span><br/><br/>
 <iframe id="ex2_frame" src="about:blank" style="width:100%;"></iframe>
 </div>
 
 -------------------
 
-**Note:** A component specification may be an object literal, a uniform resource identifier (URI) to a .vwf or another type such as .dae, or a JSON-encoded object (primarily for use in the single-user mode application= URI parameter). Components may appear as an extends, implements, or child within the application or another component. 
+**Note:** A component specification may be an object literal, a uniform resource identifier (URI) to a .vwf or another type such as .dae, or a JSON-encoded object. Components may appear as an extends, implements, or child within the application or another component. 
 
 -------------------
 
 Define properties of the application and children with or without accessors.
 
 	--- 
-	extends: http://vwf.example.com/navscene.vwf
+	extends: http://vwf.example.com/scene.vwf
 	children:
 	  hello:
 	    extends: http://vwf.example.com/node3.vwf
@@ -143,7 +129,7 @@ Define properties of the application and children with or without accessors.
 Specifying set or get as null prevents writing and/or reading, respectively.
 
 	--- 
-	extends: http://vwf.example.com/navscene.vwf
+	extends: http://vwf.example.com/scene.vwf
 	children:
 	  hello:
 	    extends: http://vwf.example.com/node3.vwf
@@ -161,7 +147,7 @@ Bind child nodes defined in the asset file to the application and modify their p
 Code View: *index.vwf.yaml*
 
 	---
-	extends: http://vwf.example.com/navscene.vwf
+	extends: http://vwf.example.com/scene.vwf
 	children:
 	  hello:
 	    extends: http://vwf.example.com/node3.vwf
@@ -190,7 +176,7 @@ URL: *http://vwf.example.com/web/example/3/*
 
 <!-- <iframe src="../../web/example/3">Example 3</iframe> -->
 <div style="text-align:center">
-<span style="color:3399FF" onclick="document.getElementById('ex3_frame').src = '../../web/example/3'">Activate Application</span><br/><br/>
+<span style="color:3399FF" onclick="document.getElementById('ex3_frame').src = 'https://demo.virtualworldframework.com/web/example/3'">Activate Application</span><br/><br/>
 <iframe id="ex3_frame" src="about:blank" style="width:100%;"></iframe>
 </div>
 
@@ -199,6 +185,7 @@ URL: *http://vwf.example.com/web/example/3/*
 The properties of the default lighting and navigation can be specified within the application file.
 
 	---
+	extends: http://vwf.example.com/scene.vwf
 	children:
 	  maincamera:
 	    extends: http://vwf.example.com/camera.vwf
@@ -210,6 +197,7 @@ The properties of the default lighting and navigation can be specified within th
 Assemble applications from content on multiple servers.
 
 	--- 
+	extends: http://vwf.example.com/scene.vwf
 	children:
 	  hello:
 	    extends: http://vwf.example.com/node3.vwf
@@ -225,6 +213,7 @@ Assemble applications from content on multiple servers.
 Specify methods related to children of application.
 
 	--- 
+	extends: http://vwf.example.com/scene.vwf
 	children:
 	  hello:
 	    extends: http://vwf.example.com/node3.vwf
@@ -242,12 +231,14 @@ Move the child of the application or asset to a component, placing related code 
 Code View: *rotate.vwf.yaml*
 
 	---
+	extends: http://vwf.example.com/node3.vwf
 	methods:
 	  click: this.rotation.z += 5
     
 Code View: *index.vwf.yaml*
 
 	---
+	extends: http://vwf.example.com/scene.vwf
 	children:
 	  hello:
 	    extends: rotate.vwf
@@ -265,7 +256,7 @@ Add JavaScript functions to application components by defining scripts as a chil
 Code View: *index.vwf.yaml*
 
 	---
-	extends: http://vwf.example.com/navscene.vwf
+	extends: http://vwf.example.com/scene.vwf
 	children:
 	  hello:
 	    extends: http://vwf.example.com/node3.vwf
@@ -314,18 +305,18 @@ In this example, clicking on an object will run the pointerClick function, chang
 
 <!-- <iframe src="../../web/example/4">Example 4</iframe> -->
 <div style="text-align:center">
-<span style="color:3399FF" onclick="document.getElementById('ex4_frame').src = '../../web/example/4'">Activate Application</span><br/><br/>
+<span style="color:3399FF" onclick="document.getElementById('ex4_frame').src = 'https://demo.virtualworldframework.com/web/example/4'">Activate Application</span><br/><br/>
 <iframe id="ex4_frame" src="about:blank" style="width:100%;"></iframe>
 </div>
 
 -------------------
 
-Define additional HTML and jQuery components in an index.vwf.html file. The application will look for a file of this name on load, and will load any scripts or two dimensional components identified. This HTML file interaction can bind user interface components to children and properties defined in the application file. The following example shows the JavaScript defined in the HTML file interacting with the property defined in the YAML file.
+Define additional HTML and jQuery components in an *index.vwf.html* file. The app will look for a file of this name on load, and will load any scripts or two dimensional components identified. This HTML file interaction can bind user interface components to children and properties defined in the application file. The following example shows the JavaScript defined in the HTML file interacting with the property defined in the YAML file.
 
 Code View: *index.vwf.yaml*
 
 	--- 
-	extends: http://vwf.example.com/node.vwf
+	extends: http://vwf.example.com/scene.vwf
 	children: 
 	  game:
 	    extends: http://vwf.example.com/node.vwf
@@ -370,10 +361,10 @@ URL: *http://vwf.example.com/application/index.vwf*
 
 -------------------
 
-By default, the framework will search for the index.vwf.yaml file. Thus, if the application is defined in that file, the application can be reached with the following URL: http://*IP:port*/*applicationname*/ and index.vwf will automatically be initiated. If the application is defined in another file, the application can be reached with the following URL: http://*servername*/*applicationname*/*applicationname*.vwf.
+By default, the framework will search for the index.vwf.yaml file. Thus, if the application is defined in that file, the app can be reached with the following URL: http://*IP:port*/*applicationname*/ and index.vwf will automatically be initiated. If the app is defined in another file, it can be reached with the following URL: http://*servername*/*applicationname*/*applicationname*.vwf.
 
 -------------------
 
-The Virtual World Framework can be used in either single user or multi-user mode. An independent session of the application can be initialized by a URL without a session ID: *http://vwf.example.com/application/*. The URL from the initial user can be used to allow additional users to join the session, specified by the session ID. Example: *http://vwf.example.com/application/561f86e42b6763d0/*. This session ID will be pulled out of the URL, and replaced with a session variable that will still be accessible via the URL. The session can run for a given time, and as a new user joins, the content will be synched to the current state of the application.
+VWF can be used in either single user or multi-user mode. An independent session of the application can be initialized by a URL without a session ID: *http://vwf.example.com/application/*. The URL from the initial user can be used to allow additional users to join the session, specified by the session ID. Example: *http://vwf.example.com/application/561f86e42b6763d0/*. This session ID will be pulled out of the URL, and replaced with a session variable that will still be accessible via the URL. The session can run for a given time, and as a new user joins, the content will be synched to the current state of the application.
 
 -------------------

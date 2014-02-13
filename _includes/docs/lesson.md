@@ -2,7 +2,7 @@
 
 # Add Training Instruction
 
-One purpose of using VWF is to create a lesson application, with the intent of teaching a user how to accomplish a series of tasks, or steps in a process. 
+One purpose of using VWF is to create a lesson app, with the intent of teaching a user how to accomplish a series of tasks, or steps in a process. 
 
 We'll start with the simplest form of a lesson - one with a single correct path. This means there is only one sequence of steps in the lesson, and no choice of which step to take next.
 
@@ -10,32 +10,32 @@ We'll start with the simplest form of a lesson - one with a single correct path.
 
 ### The Task Component
 
-At every step, the lesson will issue a task to the student. The sequence of tasks will form the building blocks of the lesson. The [task component](jsdoc_cmp/symbols/lesson.task.vwf.html) serves as the prototype for lesson tasks, and may be used for each required lesson step. 
+At every step, the lesson will issue a task to the student. The sequence of tasks will form the building blocks of the lesson. The [task component](http://virtual.wf/web/docs/jsdoc_cmp/symbols/lesson.task.vwf.html) serves as the prototype for lesson tasks, and may be used for each required lesson step. 
 
 The task component contains the following properties that can be set in the lesson model file:
 
-* **text**: Text to display to the user to explain the task
-* **cameraPoseRef**: Search string used to find a node3 that represents the transform to which the camera will move at the beginning of this task
-* **scenePath**: xpath reference to the top node of the scene to which the lesson listens for task completion events
-* **taskIndex**: Index of the currently active subtask; used internally and does not need to be explicitly set in the application
+* <code>text</code>: Text to display to the user to explain the task
+* <code>cameraPoseRef</code>: Search string used to find a node3 that represents the transform to which the camera will move at the beginning of this task
+* <code>scenePath</code>: xpath reference to the top node of the scene to which the lesson listens for task completion events
+* <code>taskIndex</code>: Index of the currently active subtask; used internally and does not need to be explicitly set in the application
 
-In the following example, we'll focus on the *text* and *cameraPoseRef* properties. 
+In the following example, we'll focus on the <code>text</code> and <code>cameraPoseRef</code> properties. 
 
 The task component also consists of the following methods and events:
 
 Methods:
 
-* **enter**
-* **next**
-* **exit**
+* <code>enter</code>
+* <code>next</code>
+* <code>exit</code>
 
 Events:
 
-* **entering**
-* **completed**
-* **exiting**
+* <code>entering</code>
+* <code>completed</code>
+* <code>exiting</code>
 
-We can use the events defined above to add steps to the event handlers for each task. For instance, the entering event is in most cases the best place to define the success event, or the step required to complete the task (i.e. fire the *completed* event), as stated in the text property.
+We can use the events defined above to add steps to the event handlers for each task. For instance, the <code>entering</code> event is in most cases the best place to define the success event, or the step required to complete the task (i.e. fire the <code>completed</code> event), as stated in the text property.
 
 	this.entering = function() {
 	  var self = this;
@@ -49,19 +49,19 @@ We can use the events defined above to add steps to the event handlers for each 
 
 ### Setting Up Lesson Structure in the Model
 
-One can turn a VWF application into an instructional lesson by adding a task hierarchy to the model, using the task component type, described above.
+One can turn a VWF application into an instructional lesson by adding a task hierarchy to the model, using the <code>task</code> component type, described above.
 
 First we'll need to add an overall lesson task as a child of the application. 
 
 	--- 
-	extends: http://vwf.example.com/navscene.vwf
+	extends: http://vwf.example.com/scene.vwf
 	children:
 	  lesson:
-        extends: http://vwf.example.com/lesson/task.vwf
-        properties:
-          scenePath: /
+	    extends: http://vwf.example.com/lesson/task.vwf
+	    properties:
+	      scenePath: /
 
-Subtasks of the lesson can then be defined as children of the lesson component. Here the *text* and *cameraPosRef* are set, and the entering event is used to define the success event - where clicking on the application object flushes the click event and calls the completed event for the step. 
+Subtasks of the lesson can then be defined as children of the lesson component. Here the <code>text</code> and <code>cameraPosRef</code> are set, and the <code>entering</code> event is used to define the success event - where clicking on the app object flushes the click event and calls the completed event for the step. 
 
         children:
           step1:
@@ -158,7 +158,7 @@ The standard lesson interface view driver, described below, supports multiple le
 
 ### Add Lesson Interface to the View
 
-The user interface for the lesson will mainly be defined in the application using the lesson view driver. The primary interface for a lesson will consist of the instructional text for each lesson step, a bar to show overall lesson progress, and navigation buttons to start, complete, and skip over lesson tasks.
+The user interface for the lesson will mainly be defined in the app using the lesson view driver. The primary interface for a lesson will consist of the instructional text for each lesson step, a bar to show overall lesson progress, and navigation buttons to start, complete, and skip over lesson tasks.
 
 In order to pull in the lesson view driver (defined in *support/client/lib/vwf/view/lesson.js*), we simply need to create a configuration file for the application and activate the lesson view.
 
@@ -168,19 +168,16 @@ The contents of the file will look as follows:
 
 	---
 	model:
-	  vwf/model/glge:
+	  vwf/model/threejs:
 	view:
-	  vwf/view/glge: "#vwf-root"
-	  vwf/view/lesson: "#vwf-root"
+	  vwf/view/threejs: "#vwf-root"
+	  vwf/view/lesson: 
 
-This configuration sets the renderer to use the glge model and view driver in addition to the lesson view driver. 
+This configuration sets the renderer to use the threejs model and view driver in addition to the lesson view driver. 
 
-By activating the lesson driver, the application's user interface will automatically be updated to autogenerate an instruction panel upon lesson start. This instruction panel will pull in the *text* properties defined in the task components in the model. Additionally, the instruction panel will update based on *entering* and *completed* events fired in order to show the current step and progress of the overall lesson. 
+By activating the lesson driver, the app's user interface will automatically be updated to autogenerate an instruction panel upon lesson start. This instruction panel will pull in the <code>text</code> properties defined in the task components in the model. Additionally, the instruction panel will update based on <code>entering</code> and <code>completed</code> events fired in order to show the current step and progress of the overall lesson. 
 
-Visit the [humvee lesson](../../../humvee-lesson) or the [duck lesson](../../../lesson) to view the final result.
+Visit the [humvee lesson](https://demo.virtualworldframework.com/humvee-lesson) to view the final result.
 
 --------------
-
-<!-- **Note: need to update build to include subfolders** 
-[task component](jsdoc_cmp/symbols/instruction.vwf.html) -->
 
