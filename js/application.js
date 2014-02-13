@@ -1,12 +1,12 @@
 function updateCurrentSessions($app) {
-    var appName = $app[0].id;
-    console.log("Updating " + appName);
+    var appName = $($app[0]).data("app-name");
 
     jQuery.ajax({
         url: "http://development.virtual.wf/" + appName + "/admin/instances",
         dataType: "jsonp",
+        context: $app,
         success: function(data) {
-		    var $demoBody = $("#" + appName).find(".demo-info");
+		    var $demoBody = $(this).find(".demo-info");
 		    if ($demoBody.find('.current-sessions').length == 0) {
 			    $demoBody.append("<div class='current-sessions'>");
 		    }
