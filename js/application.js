@@ -2,7 +2,7 @@ function updateCurrentSessions($app) {
     var appName = $($app[0]).data("app-name");
 
     jQuery.ajax({
-        url: "http://development.virtual.wf/" + appName + "/admin/instances",
+        url: "http://demo.virtual.wf/" + appName + "/admin/instances",
         dataType: "jsonp",
         context: $app,
         success: function(data) {
