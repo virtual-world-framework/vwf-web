@@ -32,7 +32,7 @@ function checkCompatibility() {
         if ( !compatibility.webgl ) {
             errorMessage += "WebGL";
         }
-        errorMessage += ". It does not. For a list of compatible browsers, see <a href='http://virtual.wf/documentation.html#requirements'>Browser Requirements</a>. If your browser is listed, you may need to enable the necessary features. Google can help you find how to do that.";
+        errorMessage += " ... and it does not. For a list of compatible browsers, see <a href='http://virtual.wf/documentation.html#requirements'>Browser Requirements</a>. If your browser is listed, you may need to enable the necessary features. Google can help you find how to do that.";
         compatibility.errorMessage = errorMessage;
     }
 
