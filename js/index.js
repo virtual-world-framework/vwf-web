@@ -1,11 +1,20 @@
+// Use strict mode to test for ECMAScript5 in browser (in checkCompatibility)
+"use strict";
+
 function checkCompatibility() {
 
     var compatibility = {
         overall: false,
+        ecmascript5: false,
         websocket: false,
         webgl: false,
-        errorMessage: ""
+        errorHtml: ""
     };
+
+    // Test for ECMAScript5
+    // In ECMAScript5 strict mode (specified above), the global "this" object is null.
+    // That is not the case in previous versions of ECMAScript (and in non-strict mode).
+    compatibility.ecmascript5 = ( function() { return !this; } )();
 
     // Test for WebSockets
     compatibility.websocket = !!( window.WebSocket || window.MozWebSocket );
@@ -19,21 +28,25 @@ function checkCompatibility() {
                                   canvas.getContext( "moz-webgl" ) );
     }
 
-    compatibility.overall = compatibility.websocket && compatibility.webgl;
+    compatibility.overall = compatibility.ecmascript5 && compatibility.websocket && 
+                            compatibility.webgl;
 
     if ( !compatibility.overall ) {
-        var errorMessage = "To see our awesome demo, your browser needs to support ";
+        var errorHtml = "<h3>Let's beef up your browser.</h3>\n" + 
+                        "<p>To see our awesome demo, your browser needs to support:</p>\n" +
+                        "<ul>\n";
+        if ( !compatibility.ecmascript5 ) {
+            errorHtml += "  <li>ECMAScript5</li>\n";
+        }
         if ( !compatibility.websocket ) {
-            errorMessage += "WebSockets";
-            if ( !compatibility.webgl ) {
-                errorMessage += " and "
-            }
+            errorHtml += "  <li>WebSockets</li>\n";
         }
         if ( !compatibility.webgl ) {
-            errorMessage += "WebGL";
+            errorHtml += "  <li>WebGL</li>\n";
         }
-        errorMessage += " ... and it does not. For a list of compatible browsers, see <a href='http://virtual.wf/documentation.html#requirements'>Browser Requirements</a>. If your browser is listed, you may need to enable the necessary features. Google can help you find how to do that.";
-        compatibility.errorMessage = errorMessage;
+        errorHtml += "</ul>\n" +
+                     "<p>... and it does not. For a list of compatible browsers, see <a href='http://virtual.wf/documentation.html#requirements'>Browser Requirements</a>. If your browser is listed, you may need to enable the necessary features. Google can help you find how to do that.</p>\n";
+        compatibility.errorHtml = errorHtml;
     }
 
     return compatibility;
@@ -156,8 +169,7 @@ $(document).ready(function() {
 
         setUpCopyButtons();
     } else {
-        $( "#errorTitle" )[ 0 ].innerHTML = "Let's beef up your browser.";
-        $( "#errorText" )[ 0 ].innerHTML = compatibility.errorMessage;
+        $( "#errorBox" )[ 0 ].innerHTML = compatibility.errorHtml;
     }
 
     setUpInstallButton();
