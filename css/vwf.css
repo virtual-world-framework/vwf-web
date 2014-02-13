@@ -180,6 +180,21 @@ h3 small {
   height: 40px;
 }
 
+#docs {
+  position: relative;
+}
+
+#nav {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  padding-bottom: 80px;
+  overflow: scroll;
+  height: 100%;
+  border-right: 1px solid #ddd;
+  z-index: 100;
+}
+
 ul.navmenu {
   margin-top: 30px;
   font-size: 18px;
@@ -201,6 +216,10 @@ ul.navmenu ul li {
 .navmenu a:focus,
 .navmenu a:active,
 .navmenu a:hover {
+}
+
+#content {
+  z-index: 0;
 }
 
 code {

@@ -2,9 +2,9 @@
 layout: default
 ---
 
-<div class="container">
+<div class="container" id="docs">
   <div class="row">
-    <div class="col-md-2 hidden-sm hidden-xs">
+    <div id="nav" class="col-md-2 hidden-sm hidden-xs">
       <ul class="navmenu list-unstyled">
         <li>
           <a href='#introduction' class='header' title='Introduction'>Introduction</a>
@@ -64,7 +64,7 @@ layout: default
       </ul>
       <!-- End documentation specific layout -->
     </div>
-    <div class="col-md-10">
+    <div id="content" class="col-md-10 col-md-offset-2">
       {{content}} 
     </div>
   </div>
