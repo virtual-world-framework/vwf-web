@@ -1,8 +1,10 @@
 function checkCompatibility() {
 
     var compatibility = {
+        overall: false,
         websocket: false,
-        webgl: false
+        webgl: false,
+        errorMessage: ""
     };
 
     // Test for WebSockets
@@ -15,6 +17,23 @@ function checkCompatibility() {
                                   canvas.getContext( "experimental-webgl" ) || 
                                   canvas.getContext( "webkit-3d" ) || 
                                   canvas.getContext( "moz-webgl" ) );
+    }
+
+    compatibility.overall = compatibility.websocket && compatibility.webgl;
+
+    if ( !compatibility.overall ) {
+        var errorMessage = "To see our awesome demo, your browser needs to support ";
+        if ( !compatibility.websocket ) {
+            errorMessage += "WebSockets";
+            if ( !compatibility.webgl ) {
+                errorMessage += " and "
+            }
+        }
+        if ( !compatibility.webgl ) {
+            errorMessage += "WebGL";
+        }
+        errorMessage += ". It does not. For a list of compatible browsers, see <a href='http://virtual.wf/documentation.html#requirements'>Browser Requirements</a>. If your browser is listed, you may need to enable the necessary features. Google can help you find how to do that.";
+        compatibility.errorMessage = errorMessage;
     }
 
     return compatibility;
@@ -119,7 +138,7 @@ function setUpInstallButton() {
 $(document).ready(function() {
     var compatibility = checkCompatibility();
 
-    if ( compatibility.websocket && compatibility.webgl ) {
+    if ( compatibility.overall ) {
         $( "#errorBox" ).addClass( "hide" );
         preparePongFrame();
         $( ".panel-footer" ).removeClass( "hide" );
@@ -138,18 +157,7 @@ $(document).ready(function() {
         setUpCopyButtons();
     } else {
         $( "#errorTitle" )[ 0 ].innerHTML = "Let's beef up your browser.";
-        var errorText = "Your browser does not support ";
-        if ( !compatibility.websocket ) {
-            errorText += "WebSockets";
-            if ( !compatibility.webgl ) {
-                errorText += " and "
-            }
-        }
-        if ( !compatibility.webgl ) {
-            errorText += "WebGL";
-        }
-        errorText += ". For a list of compatible browsers, see <a href='http://virtual.wf/documentation.html#requirements'>Browser Requirements</a>. If your browser is listed, you may need to enable the necessary features. Google can help you find how to do that.";
-        $( "#errorText" )[ 0 ].innerHTML = errorText;
+        $( "#errorText" )[ 0 ].innerHTML = compatibility.errorMessage;
     }
 
     setUpInstallButton();
