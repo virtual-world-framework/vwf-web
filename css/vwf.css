@@ -152,6 +152,10 @@ h3 small {
   border: 1px solid #ddd;
   background-color: #f5f5f5;
 }
+#errorBox {
+  line-height: 1.4;
+  margin-bottom: 0;
+}
 
 @media (min-width: 992px) and (max-width: 1199px) {
   .vwf-frame {
