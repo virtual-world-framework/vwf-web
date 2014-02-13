@@ -160,26 +160,6 @@ h3 small {
   color: #777;
 }
 
-.current-header {
-  font-size:18px;
-}
-
-.session-table {
-  margin-right: 0px;
-  margin-left: 0px;	
-}
-
-.session {
-  display: table;
-}
-
-.session .vcenter {
-  display: table-cell;
-  vertical-align: middle;
-  padding: 2px;
-  height: 40px;
-}
-
 .navmenu {
   position:fixed;
   top:100px;
@@ -195,7 +175,18 @@ h3 small {
 .panel-demo {
   background-color: #f5f5f5;
   border: 1px solid #ccc;
+  margin-bottom: 30px;
 }
 .panel-demo h3 {
   margin-top: 0;
+}
+.current-sessions-header {
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+  margin-top: 20px;
+}
+.instances .instance span {
+  display: inline-block;
+  margin-top: 10px;
+  margin-right: 15px;
 }

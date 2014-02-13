@@ -89,6 +89,54 @@ function setUpInstallButton() {
     }
 }
 
+function updateCurrentSessions($app) {
+    var appName = $app[0].id;
+    console.log("Updating " + appName);
+    var $demoBody = $app.children(".demo-info");
+    jQuery.ajax({
+        url: "http://development.virtual.wf/" + appName + "/admin/instances",
+        dataType: "jsonp",
+        success: function(data) {
+            $demoBody.empty();
+            if ( Object.keys(data).length != 0 ) {
+                $demoBody.append("<h4 class='current-sessions'>Current Sessions</h4><ul class='list-unstyled instances'>");
+            }
+            var match;
+            jQuery.each( 
+                data, function( key, value ) {
+                    if ( match = key.match( RegExp( "/([^/]*)$" ) ) ) { 
+                        var instanceHTML = htmlEscape( match[1] );
+                        var size = Object.size(value.clients);
+                        $demoBody.append("<li class='instance'><span class='badge badge-success'>" + size + "</span><span class='instance-name'>Name: " + instanceHTML + "</span><a class='btn btn-success btn-small pull-right' target='_blank' href='http://demo.virtual.wf/" + appName + "/" + instanceHTML + "'>Join Session</a>" + "</li>" );
+                    }
+                } 
+            );
+            if ( Object.keys(data).length != 0 ) {
+                    $demoBody.append("</ul>");
+            }
+        }
+    });
+    setTimeout(updateCurrentSessions, 60000, $app);
+}
+
+// From http://stackoverflow.com/a/7124052
+function htmlEscape( string ) {
+  return String( string ).
+    replace( /&/g, "&amp;" ).
+    replace( /"/g, "&quot;" ).
+    replace( /'/g, "&#39;" ).
+    replace( /</g, "&lt;" ).
+    replace( />/g, "&gt;" );
+}
+
+Object.size = function(obj) { 
+  var size = 0, key; 
+  for (key in obj) { 
+    if (obj.hasOwnProperty(key)) size++; 
+  } 
+  return size; 
+}; 
+
 $(document).ready(function() {
     preparePongFrame();
 
@@ -106,4 +154,7 @@ $(document).ready(function() {
     setUpCopyButtons();
 
     setUpInstallButton();
+
+    updateCurrentSessions($(".panel-demo.core"));
+    console.log('ya');
 });
