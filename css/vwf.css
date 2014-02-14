@@ -154,8 +154,8 @@ h3 small {
   .jumbotron .vwf-title {
     font-size: 40px;
   }
-  .jumbotron .github-view {
-    margin-bottom: 15px;
+  .jumbotron .call-to-action {
+    margin-top: 15px;
   }
 }
 
@@ -176,7 +176,7 @@ h3 small {
     font-size: 40px;
   }
 
-  .jumbotron .btn {
+  .jumbotron .call-to-action {
     margin-bottom: 15px;
   }
 }
