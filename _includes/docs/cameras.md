@@ -38,7 +38,10 @@ The <code>translation</code> property controls the position of the camera. Chang
 
 The <code>rotation</code> property controls the direction the camera is pointing, as an offset from the default orientation. Changing this property will rotate the camera and automatically update the view. The value takes the from of \[ x, y, z, angle \] where the amount rotation around an axis is axis * angle. 
 
-	this.children['newCamera].rotation = [ 1, 2, 0.5, 90 ]; // From looking down the positive y-axis, rotate 90 degrees around the x-axis, rotation 180 degrees around the y-axis and 45 degrees around the z-axis.
+	this.children['newCamera].rotation = [ 1, 2, 0.5, 90 ]; 
+	// From looking down the positive y-axis, rotate 90 degrees 
+	// around the x-axis, rotation 180 degrees around the y-axis 
+	// and 45 degrees around the z-axis.
 
 Note that the x, y and z values in the rotation array are automatically normalized to a unit vector. So after the above example, reading the value of <code>rotation</code> would return \[ 0.4364357888698578, 0.8728715777397156, 0.21821792423725128, 90 \].
 
