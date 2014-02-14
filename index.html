@@ -36,9 +36,18 @@ title: Virtual World Framework
       
       <div class="col-md-7 col-lg-6 hidden-xs">
         <div class="panel panel-default vwf-panel">
-          <div class="panel-body"> <iframe class="vwf-frame" id="pongFrame" frameborder="0" src=""></iframe>
+          <div class="panel-body">
+            <div class="well" id="errorBox">
+              <noscript>
+                <h3>I need javascript.</h3> 
+                <p>
+                  To see our awesome demo, you will need to enable javascript in your browser.
+                </p>
+              </noscript>
+            </div>
+            <iframe class="vwf-frame hide" id="pongFrame" frameborder="0" src=""></iframe>
           </div>
-          <div class="panel-footer">
+          <div class="panel-footer hide">
             <span class="small">Play VWF Pong with a friend with the below URL:</span>
             <div class="input-group">
               <input type="text" class="form-control" id="vwfPongId" placeholder="Loading VWF...">
