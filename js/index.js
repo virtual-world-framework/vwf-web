@@ -91,7 +91,6 @@ function setUpInstallButton() {
 
 function updateCurrentSessions($app) {
     var appName = $app[0].id;
-    console.log("Updating " + appName);
     var $demoBody = $app.children(".demo-info");
     jQuery.ajax({
         url: "http://development.virtual.wf/" + appName + "/admin/instances",
@@ -156,5 +155,4 @@ $(document).ready(function() {
     setUpInstallButton();
 
     updateCurrentSessions($(".panel-demo.core"));
-    console.log('ya');
 });
