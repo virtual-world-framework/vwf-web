@@ -3,6 +3,10 @@
   background-color: #fff;
 }
 
+h2, h3 {
+  font-family: "Arial Narrow Bold", sans-serif;
+}
+
 a[name] {
   padding-top: 80px;
   margin-top: -80px;
@@ -62,6 +66,7 @@ a[name] {
 .navbar {
   background-color: #fff;
   border-color: #ddd;
+  font-family: "Arial Narrow Bold", sans-serif;
 }
 .navbar .navbar-nav>li>a {
   color: #333;
