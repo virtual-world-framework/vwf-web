@@ -147,6 +147,40 @@ h3 small {
   background-color: #f5f5f5;
 }
 
+@media (min-width: 992px) and (max-width: 1199px) {
+  .vwf-frame {
+    /*height: 300px;*/
+  }
+  .jumbotron .vwf-title {
+    font-size: 40px;
+  }
+  .jumbotron .github-view {
+    margin-bottom: 15px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .vwf-panel {
+    margin-top: 15px;
+  }
+
+  .jumbotron .vwf-title {
+    font-size: 45px;
+    text-align: center;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .jumbotron .vwf-title {
+    font-size: 40px;
+  }
+
+  .jumbotron .btn {
+    margin-bottom: 15px;
+  }
+}
+
 #macInstall {
   margin-top: 20px;
   line-height: 1.4;
