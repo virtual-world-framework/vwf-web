@@ -10,8 +10,8 @@ a[name] {
 }
 
 .navbar-brand {
-  font-size: 15px;
-  line-height: 16px;
+  font-size: 17px;
+  line-height: 17px;
   padding: 15px 15px 15px;
 }
 
@@ -66,7 +66,7 @@ a[name] {
 .navbar .navbar-nav>li>a {
   color: #333;
   text-transform: uppercase;
-  font-size: 15px;
+  font-size: 17px;
   padding: 30px 10px;
 }
 .navbar .navbar-nav>.active>a, 
@@ -80,6 +80,7 @@ a[name] {
 }
 .navbar-btn {
   margin-top: 20px;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 .navbar-collapse.in .navbar-btn {
   margin-top: 10px;
@@ -94,8 +95,6 @@ a[name] {
 }
 
 .jumbotron .vwf-title {
-  /*text-align: center;*/
-  /*padding-bottom: 20px;*/
   font-size: 50px;
 }
 .github-img {
@@ -224,12 +223,15 @@ h3 small {
   height: 100%;
   border-right: 1px solid #ddd;
   z-index: 100;
+  font-family: "Open Sans Condensed", "Arial Narrow Bold", sans-serif;
+  font-weight: 700;
+  line-height: 1.1;
+  font-size: 16px;
 }
 
 ul.navmenu {
   margin-top: 30px;
-  font-size: 16px;
-  margin-bottom: 120px;
+  padding-bottom: 80px;
 }
 
 ul.navmenu > li {
