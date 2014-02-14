@@ -3,6 +3,12 @@
   background-color: #fff;
 }
 
+a[name] {
+  padding-top: 80px;
+  margin-top: -80px;
+  display: inline-block; /* required for webkit browsers */
+}
+
 .navbar-brand {
   font-size: 15px;
   line-height: 16px;
@@ -214,33 +220,46 @@ h3 small {
   height: 40px;
 }
 
-.navmenu {
+#docs {
+  position: relative;
+}
+
+#nav {
   position: fixed;
-  top: 100px;
-  left: 20px;
-  text-transform: uppercase;
-  width: 220px;
-  height: calc(100% - 100px);
+  top: 80px;
+  left: 0;
+  padding-bottom: 80px;
+  overflow: auto;
+  height: 100%;
+  border-right: 1px solid #ddd;
+  z-index: 100;
 }
 
-.navmenu-scroll {
-  overflow:auto;
-  height:100%;
+ul.navmenu {
+  margin-top: 30px;
+  font-size: 16px;
 }
 
-.navmenu ul {
-  list-style:none;
+ul.navmenu > li {
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+ul.navmenu ul li {
+  font-weight: normal;
+  margin-top: 5px;
 }
 
 .navmenu a {
-  color: #336699;
 }
 
 .navmenu a:focus,
 .navmenu a:active,
 .navmenu a:hover {
-  color: #29527a;
-  text-decoration: none;
+}
+
+#content {
+  z-index: 0;
 }
 
 code {
