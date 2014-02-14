@@ -2,9 +2,9 @@
 
 # Add Sound Effects to Your Application
 
-For any interactive application, you may want to add sound, either for effect or to notify all users that something has occurred (e.g. a laser was fired, a message has been sent, etc). As with much of the framework, we can accomplish simple sound effects through the use of HTML5's native features. 
+For any interactive app, you may want to add sound, either for effect or to notify all users that something has occurred (e.g. a laser was fired, a message has been sent, etc). As with much of the framework, we can accomplish simple sound effects through the use of HTML5's native features. 
 
-A method or event within the application's model may be used to play a synchronized sound effect by setting up a VWF listener in the HTML view that will play the sound whenever a specific method is called or an event is fired.
+A method or event within the app's model may be used to play a synchronized sound effect by setting up a VWF listener in the HTML view that will play the sound whenever a specific method is called or an event is fired.
 
 --------------
 
@@ -41,6 +41,6 @@ In addition to defining the sound source using the HTML5 native audio tag, set u
 	  }
 	}
 
-Each time the *playSound* method is called, each client will hear the *exampleAudio* sound bite.
+Each time the <code>playSound</code> method is called, each client will hear the <code>exampleAudio</code> sound bite.
 
 --------------

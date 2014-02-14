@@ -2,7 +2,7 @@
 
 # Create a Simulation
 
-Let's define a *simulation* as any application that models a sequence of causes and effects.  Here's how to create one:
+Let's define a *simulation* as any application that models a sequence of causes and effects. Here's how to create one:
 
 -------------------
 
@@ -12,10 +12,10 @@ Let's use the 3D model of a radio that comes with the VWF source in /public/radi
 
 ![The radio 3D model for this recipe](images/radio.png)
 
-Let's load it in our index.vwf.yaml file:
+Let's load it in our *index.vwf.yaml* file:
 
 	---
-	extends: http://vwf.example.com/navscene.vwf
+	extends: http://vwf.example.com/scene.vwf
 	children:
 	  radio:
 	    extends: http://vwf.example.com/node3.vwf
@@ -25,12 +25,12 @@ Let's load it in our index.vwf.yaml file:
 
 ### Add a behavior to an object that reacts to user interaction
 
-A *behavior* is a component that can be added to another to give it added functionality.  Once created, these behaviors can be reused like building blocks, making it faster to create your applications.  Luckily, someone has already written a *control* behavior that we can reuse.  Let's put it on the volume knob, inside the radio 3D model.
+A *behavior* is a component that can be added to another to give it added functionality. Once created, these behaviors can be reused like building blocks, making it faster to create your applications.  Luckily, someone has already written a *control* behavior that we can reuse. Let's put it on the volume knob, inside the radio 3D model.
 
-Hold down the Alt key and click anywhere in the scene; the console will print the hierarchy of the scene in both yaml and json format.  Copy and paste the yaml into your application document (unfortunately, it will bring the console line numbers with it, but they are all identical, so a string replace can rid you of them easily).  Here is a subset of it below with the behavior added to the *ic40Volume* node:
+Hold down the *Alt* key and click anywhere in the scene; the console will print the hierarchy of the scene in both yaml and json format. Copy and paste the yaml into your application document (unfortunately, it will bring the console line numbers with it, but they are all identical, so a string replace can rid you of them easily). Here is a subset of it below with the behavior added to the <code>ic40Volume</code> node:
 
 	---
-	extends: http://vwf.example.com/navscene.vwf
+	extends: http://vwf.example.com/scene.vwf
 	children:
 	  radio:
 	    extends: http://vwf.example.com/node3.vwf
@@ -54,7 +54,7 @@ Hold down the Alt key and click anywhere in the scene; the console will print th
 
 ### Add a behavior to another object that reacts to the first
 
-We need another behavior to turn the screen on when the power switch is clicked.  This one we will create ourselves.  Let's create a file called *turnon.vwf.yaml* and place it in support/proxy/vwf.example.com.  
+We need another behavior to turn the screen on when the power switch is clicked. This one we will create ourselves. Let's create a file called *turnon.vwf.yaml* and place it in support/proxy/vwf.example.com.  
 
 	---
 	extends: http://vwf.example.com/node3.vwf
@@ -76,7 +76,7 @@ We need another behavior to turn the screen on when the power switch is clicked.
 Place this behavior on the display screen and add a child to the screen of type material (this is the material specified in the code above, on which we will swap the texture):
 
 	---
-	extends: http://vwf.example.com/navscene.vwf
+	extends: http://vwf.example.com/scene.vwf
 	children:
 	  radio:
 	    ...
@@ -96,10 +96,10 @@ Place this behavior on the display screen and add a child to the screen of type 
 	                          material:
 	                            extends: http://vwf.example.com/material.vwf
 
-Next, we just need to add a line of code on the Radio that will add the screen's *setScreenOn* function as an event handler for the  control's *controlValueUpdated* event:
+Next, we just need to add a line of code on the Radio that will add the screen's <code>setScreenOn</code> function as an event handler for the  control's <code>controlValueUpdated</code> event:
 
 	---
-	extends: http://vwf.example.com/navscene.vwf
+	extends: http://vwf.example.com/scene.vwf
 	children:
 	  radio:
 	    ...
@@ -116,11 +116,11 @@ Next, we just need to add a line of code on the Radio that will add the screen's
 	                        this.ic40Volume.controlValueUpdated = this.LCD.setScreenOn();
 	                      }
 
-Voila!  You have created your very first "simulation".  Now you're ready for the *Advanced Event Handling* tutorial which will complete your knowledge and give you all the tools you need to create a simulation of any complexity.
+Voila!  You have created your very first "simulation".
 
 **Tips:**
 
-- Always be on the lookout for existing components that you can use and save yourself some work
-- Consider paying it forward by sharing (or selling!) the components that you create so that others can stand on your shoulders to reach even greater heights
+- Always be on the lookout for existing components that you can use and save yourself some work.
+- Consider paying it forward by sharing the components that you create so that others can stand on your shoulders to reach even greater heights.
 
 -------------------

@@ -3,6 +3,12 @@
   background-color: #fff;
 }
 
+a[name] {
+  padding-top: 80px;
+  margin-top: -80px;
+  display: inline-block; /* required for webkit browsers */
+}
+
 .navbar-brand {
   font-size: 15px;
   line-height: 16px;
@@ -147,6 +153,40 @@ h3 small {
   background-color: #f5f5f5;
 }
 
+@media (min-width: 992px) and (max-width: 1199px) {
+  .vwf-frame {
+    /*height: 300px;*/
+  }
+  .jumbotron .vwf-title {
+    font-size: 40px;
+  }
+  .jumbotron .call-to-action {
+    margin-top: 15px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .vwf-panel {
+    margin-top: 15px;
+  }
+
+  .jumbotron .vwf-title {
+    font-size: 45px;
+    text-align: center;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .jumbotron .vwf-title {
+    font-size: 40px;
+  }
+
+  .jumbotron .call-to-action {
+    margin-bottom: 15px;
+  }
+}
+
 #macInstall {
   margin-top: 20px;
   line-height: 1.4;
@@ -160,14 +200,56 @@ h3 small {
   color: #777;
 }
 
-.navmenu {
-  position:fixed;
-  top:100px;
-  left:40px;
+.current-header {
+  font-size:18px;
 }
 
-.navmenu ul {
-  list-style:none;
+#docs {
+  position: relative;
+}
+
+#nav {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  padding-bottom: 80px;
+  overflow: auto;
+  height: 100%;
+  border-right: 1px solid #ddd;
+  z-index: 100;
+}
+
+ul.navmenu {
+  margin-top: 30px;
+  font-size: 16px;
+}
+
+ul.navmenu > li {
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+ul.navmenu ul li {
+  font-weight: normal;
+  margin-top: 5px;
+}
+
+.navmenu a {
+}
+
+.navmenu a:focus,
+.navmenu a:active,
+.navmenu a:hover {
+}
+
+#content {
+  z-index: 0;
+}
+
+code {
+  color: #336699;
+	font-size: 12px;
+	background-color: none;
 }
 
 /* Demos */

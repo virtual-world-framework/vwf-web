@@ -2,9 +2,9 @@
 
 # Running Tests
 
-The Virtual World Framework has tests against the server and some of the core client libraries. This page provides information on how to run the tests on your development machine.
+VWF has tests against the server and some of the core client libraries. This page provides information on how to run the tests on your development machine.
 
-**NOTE:** If you are not changing the core VWF files, you probably don't need to run these tests. See [Troubleshooting](documentation.html#troubleshooting) for info on verifying that your VWF application is working in the browser.
+**Note:** If you are not changing the core VWF files, you probably don't need to run these tests. See [Troubleshooting](#troubleshooting) for info on verifying that your VWF application is working in the browser.
 
 -------------------
 
