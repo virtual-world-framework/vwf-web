@@ -156,6 +156,10 @@ h3 small {
   line-height: 1.4;
   margin-bottom: 0;
 }
+#errorBox p,
+#errorBox ul li {
+  font-size: 18px;
+}
 
 @media (min-width: 992px) and (max-width: 1199px) {
   .vwf-frame {
@@ -189,7 +193,7 @@ h3 small {
   .jumbotron .call-to-action {
     margin-bottom: 15px;
   }
-}
+
 
 #macInstall {
   margin-top: 20px;
