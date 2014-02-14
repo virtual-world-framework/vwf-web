@@ -40,7 +40,7 @@ The following code creates a child node of the application named blueCube, of ty
 
 The above is all that is needed to create an application. The default fly mode allows the user to navigate with the standard WASD keys, as well as Q and E to rotate. 
 
-Example: [Primitive Scene](../../tutorial/00)
+Example: [Primitive Scene](https://demo.virtualworldframework.com/tutorial/00)
 
 -------------------
 
@@ -92,7 +92,7 @@ The code to do so is as follows:
 
 In this application, the WASD controls can be used for navigation; however, the camera will continue to focus on the sceneCenter point.
 
-Example: [Terrain Model and Orbit Navigation](../../tutorial/01)
+Example: [Terrain Model and Orbit Navigation](https://demo.virtualworldframework.com/tutorial/01)
 
 -------------------
 
@@ -141,15 +141,15 @@ In the third stage, we'll add an additional child node for a predator vehicle ca
 	    this.camera.lookAt = this.sceneCenter.id;
 	  }
 
-Example: [Multiple Models and Behaviors](../../tutorial/02)
+Example: [Multiple Models and Behaviors](https://demo.virtualworldframework.com/tutorial/02)
 
 -------------------
 
 ## Stage 4 - HTML Overlays and Interaction
 
-In the fourth stage, we'll add an HTML overlay to the application, and setup the javascript to allow the 2D HTML components interact with the 3D nodes. For this application, we'll create a toolbar of two images, one to select navigation mode, and one to select pindrop mode, where navigation will be disabled, and a click of the mouse will mark the location selected. 
+In the fourth stage, we'll add an HTML overlay to the application, and setup the javascript to allow the 2D HTML components to interact with the 3D nodes. For this application, we'll create a toolbar of two images, one to select navigation mode, and one to select pindrop mode, where navigation will be disabled, and a click of the mouse will mark the location selected. 
 
-First, we'll create a file called 'index.vwf.html' that will load separately or on top of the application. The name must match that of the 'index.vwf.yaml' file, and the framework will automatically look for that file. We'll define the body with a simple HTML toolbar div containing the two button images. This will allow us to select either navigation mode, or pindrop mode. 
+First, we'll create a file called *index.vwf.html* that will load separately or on top of the application. The name must match that of the *index.vwf.yaml* file, and the framework will automatically look for that file. We'll define the body with a simple HTML toolbar div containing the two button images. This will allow us to select either navigation mode, or pindrop mode. 
 
 In the yaml file, we'll add a mouseMode property with a setter. This property will determine whether the navmode is set to 'orbit' or turned off. We'll then add javascript variables and additional functions to drop the pins. The pushpin variable describes the child node that will be added, and will look similar to a child definition. The pointerUp function checks the navigation mode and will call the pindrop function if necessary to create the new node. 
 
@@ -228,7 +228,7 @@ In the yaml file, we'll add a mouseMode property with a setter. This property wi
 	    }
 	  }
 
-Finally, back in the HTML file, we'll need to add a few javascript functions to highlight the appropriate button selected, as well as to set the global application property, mouseMode. The final thing to add is a listener for the mouseMode property. This will come into play if the mode is changed on another client, and the button highlighted is appropriately changed. 
+Finally, back in the HTML file, we'll need to add a few javascript functions to highlight the appropriate button selected, as well as to set the global application property, mouseMode. The final thing to add is a listener for the mouseMode property. This will come into play if the mode is changed on another client, so the highlighted button is appropriately changed. 
 
 	function setMode(mode) {
     	highlightMode(mode);
@@ -252,6 +252,6 @@ Finally, back in the HTML file, we'll need to add a few javascript functions to 
         }
     }
 
-Example: [HTML Overlays and Interaction](../../tutorial/03)
+Example: [HTML Overlays and Interaction](https://demo.virtualworldframework.com/tutorial/03)
 
 -------------------

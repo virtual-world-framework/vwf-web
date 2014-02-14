@@ -50,13 +50,14 @@ Prerequisites:
 
 1. [Ruby 1.9.3](http://dl.bintray.com/oneclick/rubyinstaller/rubyinstaller-1.9.3-p484.exe?direct)
 2. [Ruby DevKit 4.5.2](https://github.com/downloads/oneclick/rubyinstaller/DevKit-tdm-32-4.5.2-20111229-1559-sfx.exe)
-2a. Download it, run it to extract it somewhere (permanent). Then cd to it, run “ruby dk.rb init” and “ruby dk.rb install” to bind it to ruby installations in your path.
+	- Download and run to extract it somewhere (permanent), and cd to it. 
+	- Run *ruby dk.rb init* and *ruby dk.rb install* to bind it to ruby installations in your path.
 3. [RubyGems](http://rubygems.org/pages/download#formats)
 4. [Git Client For Windows](http://git-scm.com/download/win) or [TortoiseGit](https://code.google.com/p/tortoisegit/) 
 
 Once your Ruby and Git environments are set up for Windows, the easiest way to start developing is to:
 
-1. [Fork the VWF repo from the Development Branch](https://github.com/virtual-world-framework/vwf/tree/development)
+1. Fork the [VWF repo](https://github.com/virtual-world-framework/vwf/tree/development) from the Development Branch.
 2. Clone your newly forked VWF repo to your local machine.
 3. Run *bundle install* to install your local gems.
 3. Make your code modifications.
@@ -150,7 +151,7 @@ Now you can install the RubyGems to the system (as root):
 #### Build the Server
 This command will compile and setup the server baseline.
 
-    sudo bundle exec rake 
+	sudo bundle exec rake 
 
 #### Launch the Server
 This command launches Ruby's Thin web server to start serving your VWF applications.
@@ -169,73 +170,75 @@ As an alternative to the ruby version of the VWF server, there also exists a nod
 
 1. Install Node.js for your specific environment [http://www.nodejs.org](http://www.nodejs.org).
 
-2. You should already have a baseline on your local machine by following the [Core Developer Installation Instructions](http://localhost:3000/web/documentation.html#advancedInstall)
+2. You should already have a baseline on your local machine by following the *Core Developer Installation Instructions* above.
 
-3. Launch a terminal/command prompt window and cd to your VWF application directory.
+3. Launch a terminal / command prompt window and cd to your VWF application directory.
 
-    cd Path\To\YourApp
+	**cd Path\To\YourApp**
 
 4. Run the vwf command to start the Node JS server.
 
-    vwf
+	**vwf**
 
 --------------------------
 
 ## Configuring HTTPS/SSL Traffic
 
-The Virtual World Framework is able to work over an HTTPS/SSL configuration.  Below we outline how to setup a Linux environment running Thin web server with SSL as this is our preferred operational environment for the VWF server; however you may use SSL for any combination of operating system, and we ask that if you do configure and run SSL installations on other platforms that you please generate a Pull Request on GitHub and update this page with instructions on your preferred platform. Thank you in advance!
-
-The following is an extremely simplified view of how SSL is implemented and what part the certificate plays in the entire process.
+VWF works over an HTTPS/SSL configuration. The following instructions set up a Linux environment running Thin web server with SSL. However, you may use SSL for any combination of operating system. The process below is an extremely simplified view of how SSL is implemented and what part the certificate plays in the entire process.
 
 Normal web traffic is sent unencrypted over the Internet. That is, anyone with access to the right tools can snoop all of that traffic. Obviously, this can lead to problems, especially where security and privacy is necessary, such as in credit card data and bank transactions. The Secure Socket Layer is used to encrypt the data stream between the web server and the web client (the browser).
 
 ### Step 1. Generate a Private Key
 
-The openssl toolkit is used to generate an RSA Private Key and CSR (Certificate Signing Request). It can also be used to generate self-signed certificates which can be used for testing purposes or internal usage.
+The *openssl* toolkit is used to generate an RSA Private Key and CSR (Certificate Signing Request). It can also be used to generate self-signed certificates which can be used for testing purposes or internal usage.
 
-The first step is to create your RSA Private Key. This key is a 1024 bit RSA key which is encrypted using Triple-DES and stored in a PEM format so that it is readable as ASCII text.
+The first step is to create your RSA Private Key. This key is a 1024 bit key which is encrypted using Triple-DES and stored in a PEM format so that it is readable as ASCII text.
 
     openssl genrsa -des3 -out server.key 1024
 
-Generating RSA private key, 1024 bit long modulus<br/>
-.........................................................++++++<br/>
-........++++++<br/>
-e is 65537 (0x10001)<br/>
-Enter PEM pass phrase:<br/>
-Verifying password - Enter PEM pass phrase:<br/><br/>
+Results:
+
+    Generating RSA private key, 1024 bit long modulus<br/>
+    .........................................................++++++<br/>
+    ........++++++<br/>
+    e is 65537 (0x10001)<br/>
+    Enter PEM pass phrase:<br/>
+    Verifying password - Enter PEM pass phrase:<br/><br/>
  
 ### Step 2: Generate a CSR (Certificate Signing Request)
 
-Once the private key is generated a Certificate Signing Request can be generated. The CSR is then used in one of two ways. Ideally, the CSR will be sent to a Certificate Authority, such as Thawte or Verisign who will verify the identity of the requestor and issue a signed certificate. The second option is to self-sign the CSR, which will be demonstrated in the next section.
+Once the private key is generated, a *Certificate Signing Request (CSR)* can be generated. The CSR is then used in one of two ways. Ideally, the CSR will be sent to a Certificate Authority, such as Thawte or Verisign who will verify the identity of the requestor and issue a signed certificate. The second option is to self-sign the CSR, which will be demonstrated in the next section.
 
-During the generation of the CSR, you will be prompted for several pieces of information. These are the X.509 attributes of the certificate. One of the prompts will be for "Common Name (e.g., YOUR name)". It is important that this field be filled in with the fully qualified domain name of the server to be protected by SSL. If the website to be protected will be https://public.akadia.com, then enter public.akadia.com at this prompt. The command to generate the CSR is as follows:
+During the generation of the CSR, you will be prompted for several pieces of information. These are the X.509 attributes of the certificate. One of the prompts will be for "Common Name (e.g., YOUR name)". It is important that this field be filled in with the fully qualified domain name of the server to be protected by SSL. If the website to be protected will be *https://public.akadia.com*, then enter *public.akadia.com* at this prompt. The command to generate the CSR is as follows:
 
     openssl req -new -key server.key -out server.csr
 
-Country Name (2 letter code) \[GB\]:US<br/>
-State or Province Name (full name) \[Berkshire\]:Florida<br/>
-Locality Name (eg, city) \[Newbury\]:Orlando<br/>
-Organization Name (eg, company) \[My Company Ltd\]:Test<br/>
-Organizational Unit Name (eg, section) []:Test Technology<br/>
-Common Name (eg, your name or your server's hostname) []:public.whatever.com<br/>
-Email Address []:test@test.com<br/>
-Please enter the following 'extra' attributes<br/>
-to be sent with your certificate request<br/>
-A challenge password:<br/>
-An optional company name:<br/><br/>
+Results:
+
+    Country Name (2 letter code) \[GB\]:US<br/>
+    State or Province Name (full name) \[Berkshire\]:Florida<br/>
+    Locality Name (eg, city) \[Newbury\]:Orlando<br/>
+    Organization Name (eg, company) \[My Company Ltd\]:Test<br/>
+    Organizational Unit Name (eg, section) []:Test Technology<br/>
+    Common Name (eg, your name or your server's hostname) []:public.whatever.com<br/>
+    Email Address []:test@test.com<br/>
+    Please enter the following 'extra' attributes<br/>
+    to be sent with your certificate request<br/>
+    A challenge password:<br/>
+    An optional company name:<br/><br/>
 
 ### Step 3: Remove Passphrase from Key
 
-One unfortunate side-effect of the pass-phrased private key is that Apache will ask for the pass-phrase each time the web server is started. Obviously this is not necessarily convenient as someone will not always be around to type in the pass-phrase, such as after a reboot or crash. mod_ssl includes the ability to use an external program in place of the built-in pass-phrase dialog, however, this is not necessarily the most secure option either. It is possible to remove the Triple-DES encryption from the key, thereby no longer needing to type in a pass-phrase. If the private key is no longer encrypted, it is critical that this file only be readable by the root user! If your system is ever compromised and a third party obtains your unencrypted private key, the corresponding certificate will need to be revoked. With that being said, use the following command to remove the pass-phrase from the key:
+One unfortunate side-effect of the pass-phrased private key is that Apache will ask for the pass-phrase each time the web server is started. Obviously this is not necessarily convenient as someone will not always be around to type in the pass-phrase, such as after a reboot or crash. mod_ssl includes the ability to use an external program in place of the built-in pass-phrase dialog. However, this is not necessarily the most secure option either. It is possible to remove the Triple-DES encryption from the key, thereby no longer needing to type in a pass-phrase. If the private key is no longer encrypted, it is critical that this file only be readable by the root user! If your system is ever compromised and a third party obtains your unencrypted private key, the corresponding certificate will need to be revoked. With that being said, use the following command to remove the pass-phrase from the key:
 
     cp server.key server.key.org
     openssl rsa -in server.key.org -out server.key
 
 The newly created server.key file has no more passphrase in it.
 
--rw-r--r-- 1 root root 745 Jun 29 12:19 server.csr
--rw-r--r-- 1 root root 891 Jun 29 13:22 server.key
--rw-r--r-- 1 root root 963 Jun 29 13:22 server.key.org
+    -rw-r--r-- 1 root root 745 Jun 29 12:19 server.csr
+    -rw-r--r-- 1 root root 891 Jun 29 13:22 server.key
+    -rw-r--r-- 1 root root 963 Jun 29 13:22 server.key.org
 
 ### Step 4: Generating a Self-Signed Certificate
 
@@ -245,9 +248,11 @@ To generate a temporary certificate which is good for 365 days, issue the follow
 
     openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt
 
-Signature ok<br/>
-subject=/C=CH/ST=Test/L=TestName/O=Test Co/OU=Test Technology/CN=public.whatever.com/Email=test@test.com<br/>
-Getting Private key<br/>
+Results:
+
+    Signature ok<br/>
+    subject=/C=CH/ST=Test/L=TestName/O=Test Co/OU=Test Technology/CN=public.whatever.com/Email=test@test.com<br/>
+    Getting Private key<br/>
 
 ### Step 5: Installing the Private Key and Certificate
 
@@ -263,5 +268,5 @@ At this point you will want to add three lines to your Thin Server yml file:
     ssl_cert_file: /etc/thin_ssl/ssl.crt
     ssl_key_file: /etc/thin_ssl/ssl.key
 
-Restart your thin servers at this point and you should now be able to connect to your server using https://  
-Please remember that SSL traffic is on port 443, and you will need to have this port open in your firewall.
+Restart your thin servers at this point and you should now be able to connect to your server using *https://*.
+Remember that SSL traffic is on port 443, and you will need to have this port open in your firewall.

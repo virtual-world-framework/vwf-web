@@ -1,117 +1,71 @@
 ---
-layout: default
+layout: default_no_footer
 ---
 
-<div class="container">
-	<div class="row">
-		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-			<!-- Begin documentation specific layout -->
-			<div id='navmenu' class='navmenu'>
-				<ul>
-					<li><a href='documentation.html#introduction' class='header' title='Introduction'>Introduction</a></li>
-					<li><a href='documentation.html#requirements' title='Requirements'>Requirements</a></li>
-					<li><a href='documentation.html#troubleshooting' title='Troubleshooting'>Troubleshooting</a></li>
-					<li><a href='documentation.html#install' title='Installation'>Installation</a></li>
-					<br/>
-					<li><a href='documentation.html#tutorials' class='header' title='Tutorials'>Tutorials</a></li>
-					<li><a href='documentation.html#tutorial1' title='Tutorial1'>Hello World Tutorial</a></li>
-					<li><a href='documentation.html#tutorial2' title='Tutorial2'>Sandtable Tutorial</a></li>
-					<br/>
-					<li><a href='documentation.html#devguide' class='header' title='Dev Guide'>Dev Guide</a></li>
-					<li><a href='documentation.html#architecture' title='Architecture'>Architecture</a></li>
-					<li><a href='documentation.html#components' title='Components'>Components</a></li>
-					<li><a href='documentation.html#cameras' title='Cameras'>Cameras</a></li>
-					<li><a href='documentation.html#lights' title='Lights'>Lights</a></li>
-					<li><a href='documentation.html#prototypes' title='Prototypes'>Prototypes</a></li>
-					<li><a href='documentation.html#behaviors' title='Behaviors'>Behaviors</a></li>
-					<li><a href='documentation.html#animations' title='Animations'>Animations</a></li>
-					<li><a href='documentation.html#html' title='HTML'>HTML</a></li>
-					<li><a href='documentation.html#drivers' title='Drivers'>Drivers</a></li>
-					<li><a href='documentation.html#editor' title='Editor'>Editor</a></li>
-					<li><a href='documentation.html#querying' title='Querying'>Querying</a></li>
-					<br/>
-					<li><a href='documentation.html#cookbook' class='header' title='Cookbook'>Cookbook</a></li>
-					<li><a href='documentation.html#multiuser' title='Multiuser'>Multiuser</a></li>
-					<li><a href='documentation.html#simulation' title='Simulation'>Simulation</a></li>
-					<li><a href='documentation.html#2d-interface' title='2D-Interface'>2D Interface</a></li>
-					<li><a href='documentation.html#materials' title='Materials'>Materials</a></li>
-					<li><a href='documentation.html#chat' title='Chat'>Chat</a></li>
-					<li><a href='documentation.html#sound' title='Sound'>Sound</a></li>
-					<li><a href='documentation.html#transforms' title='Transforms'>Transforms</a></li>
-					<li><a href='documentation.html#lesson' title='Lesson'>Lesson</a></li>
-					<li><a href='documentation.html#logging' title='Logging'>Logging</a></li>
-					<li><a href='documentation.html#persistence' title='Persistence'>Persistence</a></li>
-					<li><a href='documentation.html#testing' title='Testing'>Testing</a></li>
-					<li><a href='documentation.html#pitfalls' title='Pitfalls'>Pitfalls</a></li>
-					<br/>
-					<li><a href='documentation.html#application-api' class='header' title='APIs'>APIs</a></li>
-					<li><a href='documentation.html#application-api' title='Application API'>Application API</a></li>
-					<li><a href='documentation.html#system-api' title='System API'>System API</a></li>
-				</ul>
-			</div>			
-			{% capture introduction %}{% include docs/introduction.md %}{% endcapture %}
-			{{ introduction | markdownify }}
-			{% capture install %}{% include docs/install.md %}{% endcapture %}
-			{{ install | markdownify }}
-			{% capture tutorial1 %}{% include docs/tutorial1.md %}{% endcapture %}
-			{{ tutorial1 | markdownify }}
-			{% capture tutorial2 %}{% include docs/tutorial2.md %}{% endcapture %}
-			{{ tutorial2 | markdownify }}
-			{% capture devguide %}{% include docs/devguide.md %}{% endcapture %}
-			{{ devguide | markdownify }}
-			{% capture architecture %}{% include docs/architecture.md %}{% endcapture %}
-			{{ architecture | markdownify }}
-			{% capture components %}{% include docs/components.md %}{% endcapture %}
-			{{ components | markdownify }}
-			{% capture cameras %}{% include docs/cameras.md %}{% endcapture %}
-			{{ cameras | markdownify }}
-			{% capture lights %}{% include docs/lights.md %}{% endcapture %}
-			{{ lights | markdownify }}
-			{% capture prototypes %}{% include docs/prototypes.md %}{% endcapture %}
-			{{ prototypes | markdownify }}
-			{% capture behaviors %}{% include docs/behaviors.md %}{% endcapture %}
-			{{ behaviors | markdownify }}
-			{% capture animations %}{% include docs/animations.md %}{% endcapture %}
-			{{ animations | markdownify }}
-			{% capture html %}{% include docs/html.md %}{% endcapture %}
-			{{ html | markdownify }}
-			{% capture drivers %}{% include docs/drivers.md %}{% endcapture %}
-			{{ drivers | markdownify }}
-			{% capture editor %}{% include docs/editor.md %}{% endcapture %}
-			{{ editor | markdownify }}
-			{% capture query %}{% include docs/query.md %}{% endcapture %}
-			{{ query | markdownify }}
-			{% capture cookbook %}{% include docs/cookbook.md %}{% endcapture %}
-			{{ cookbook | markdownify }}
-			{% capture multiuser %}{% include docs/multiuser.md %}{% endcapture %}
-			{{ multiuser | markdownify }}
-			{% capture simulation %}{% include docs/simulation.md %}{% endcapture %}
-			{{ simulation | markdownify }}
-			{% capture 2dInterface %}{% include docs/2dInterface.md %}{% endcapture %}
-			{{ 2dInterface | markdownify }}
-			{% capture materials %}{% include docs/materials.md %}{% endcapture %}
-			{{ materials | markdownify }}
-			{% capture chat %}{% include docs/chat.md %}{% endcapture %}
-			{{ chat | markdownify }}
-			{% capture sound %}{% include docs/sound.md %}{% endcapture %}
-			{{ sound | markdownify }}
-			{% capture transforms %}{% include docs/transforms.md %}{% endcapture %}
-			{{ transforms | markdownify }}
-			{% capture lesson %}{% include docs/lesson.md %}{% endcapture %}
-			{{ lesson | markdownify }}
-			{% capture logging %}{% include docs/logging.md %}{% endcapture %}
-			{{ logging | markdownify }}
-			{% capture persistence %}{% include docs/persistence.md %}{% endcapture %}
-			{{ persistence | markdownify }}
-			{% capture testing %}{% include docs/testing.md %}{% endcapture %}
-			{{ testing | markdownify }}
-			{% capture pitfalls %}{% include docs/pitfalls.md %}{% endcapture %}
-			{{ pitfalls | markdownify }}
-			{% capture application %}{% include docs/application.md %}{% endcapture %}
-			{{ application | markdownify }}
-			{% capture system %}{% include docs/system.md %}{% endcapture %}
-			{{ system | markdownify }}
-			<!-- End documentation specific layout -->
-		</div>
-	</div>
+<div class="container" id="docs">
+  <div class="row">
+    <div id="nav" class="col-md-2 hidden-sm hidden-xs">
+      <ul class="navmenu list-unstyled">
+        <li>
+          <a href='#introduction' class='header' title='Introduction'>Introduction</a>
+          <ul class="list-unstyled">
+            <li><a href='#requirements' title='Requirements'>Requirements</a></li>
+            <li><a href='#troubleshooting' title='Troubleshooting'>Troubleshooting</a></li>
+            <li><a href='#install' title='Installation'>Installation</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href='#tutorials' class='header' title='Tutorials'>Tutorials</a>
+          <ul class="list-unstyled">
+            <li><a href='#tutorial1' title='Tutorial1'>Hello World</a></li>
+            <li><a href='#tutorial2' title='Tutorial2'>Sandtable</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href='#devguide' class='header' title='Dev Guide'>Dev Guide</a>
+          <ul class="list-unstyled">
+            <li><a href='#architecture' title='Architecture'>Architecture</a></li>
+            <li><a href='#components' title='Components'>Components</a></li>
+            <li><a href='#cameras' title='Cameras'>Cameras</a></li>
+            <li><a href='#lights' title='Lights'>Lights</a></li>
+            <li><a href='#prototypes' title='Prototypes'>Prototypes</a></li>
+            <li><a href='#behaviors' title='Behaviors'>Behaviors</a></li>
+            <li><a href='#animations' title='Animations'>Animations</a></li>
+            <li><a href='#html' title='HTML'>HTML</a></li>
+            <li><a href='#drivers' title='Drivers'>Drivers</a></li>
+            <li><a href='#editor' title='Editor'>Editor</a></li>
+            <li><a href='#querying' title='Querying'>Querying</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href='#cookbook' class='header' title='Cookbook'>Cookbook</a>
+          <ul class="list-unstyled">
+            <li><a href='#multiuser' title='Multiuser'>Multiuser</a></li>
+            <li><a href='#simulation' title='Simulation'>Simulation</a></li>
+            <li><a href='#2d-interface' title='2D-Interface'>2D Interface</a></li>
+            <li><a href='#materials' title='Materials'>Materials</a></li>
+            <li><a href='#chat' title='Chat'>Chat</a></li>
+            <li><a href='#sound' title='Sound'>Sound</a></li>
+            <li><a href='#transforms' title='Transforms'>Transforms</a></li>
+            <li><a href='#lesson' title='Lesson'>Lesson</a></li>
+            <li><a href='#logging' title='Logging'>Logging</a></li>
+            <li><a href='#persistence' title='Persistence'>Persistence</a></li>
+            <li><a href='#testing' title='Testing'>Testing</a></li>
+            <li><a href='#pitfalls' title='Pitfalls'>Pitfalls</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href='#application-api' class='header' title='APIs'>APIs</a>
+          <ul class="list-unstyled">
+            <li><a href='#application-api' title='Application API'>Application API</a></li>
+            <li><a href='#system-api' title='System API'>System API</a></li>
+          </ul>
+        </li>
+      </ul>
+      <!-- End documentation specific layout -->
+    </div>
+    <div id="content" class="col-md-9 col-md-offset-2">
+      {{content}} 
+    </div>
+  </div>
 </div>

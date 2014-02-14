@@ -26,7 +26,7 @@ function preparePongFrame() {
     }
 
     // Load the iframe with the correct URL
-    var vwfServer = "http://development.virtual.wf"; // "http://apps.virtual.wf";
+    var vwfServer = "http://demo.virtual.wf";
     var pongUrl = vwfServer + "/vwf-pong/" + id;
     var iframe = $("#pongFrame")[0];
     iframe.src = pongUrl;

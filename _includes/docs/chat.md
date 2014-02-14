@@ -4,7 +4,7 @@
 
 Often for multi-user applications, it is useful to have text-based communication among all users. In VWF, the model and the HTML view need to be integrated through the use of methods and/or events. 
 
-For a basic chat feature within a VWF application, define a method or event within the model. Setup the HTML view to call that method with the appropriate parameters (i.e. who is sending the message and the actual text of the message). The view will also need an event listener to capture these parameters. When one client calls "send chat", the model will then call the method, and each view will pick up the parameters from the associated listener. 
+For a basic chat feature within a VWF application, define a method or event within the model. Setup the HTML view to call that method with the appropriate parameters (i.e. who is sending the message and the actual text of the message). The view will also need an event listener to capture these parameters. When one client calls <code>sendChat</code>, the model will then call the method, and each view will pick up the parameters from the associated listener. 
 
 --------------
 
@@ -29,11 +29,11 @@ Begin by adding a section to the HTML to capture a chat conversation and an inpu
 	  <textarea id="chatInput" rows="1" style="width:100%" />
 	</div>
 
-In the view side JavaScript, we'll need a way to track which client is represented by the view (so that when a message is sent, all clients will know who sent it). In this example, we'll create a variable playerName to store this information. Because this is defined in the view, it will be unique to each client in the application. This field can be populated by either a login input screen or upon creation of the player node. Visit the [multi-user recipe](multiuser.html) for more information. 
+In the view side JavaScript, we'll need a way to track which client is represented by the view (so that when a message is sent, all clients will know who sent it). In this example, we'll create a variable playerName to store this information. Because this is defined in the view, it will be unique to each client in the application. This field can be populated by either a login input screen or upon creation of the player node. Visit the [multi-user recipe](#multiuser) for more information. 
 
 	var playerName = $("#playerNameInput").val();;
 
-Next, setup a jQuery listener for the chat *textarea* input field. Set a keydown listener for the *Enter* key to trigger the sendChat method, by passing in the following: the scene node, where the method is defined, the name of the method to call, and the method parameters - the value of the playerName field defined above, and the current value of the *chatInput textarea*. Additionally, set a keyup listener to clear the *textarea* upon sending, so it's ready for the next chat message. 
+Next, setup a jQuery listener for the chat *textarea* input field. Set a keydown listener for the *Enter* key to trigger the sendChat method, by passing in the following: the scene node, where the method is defined, the name of the method to call, and the method parameters - the value of the <code>playerName</code> field defined above, and the current value of the <code>chatInput</code> *textarea*. Additionally, set a keyup listener to clear the *textarea* upon sending, so it's ready for the next chat message. 
 
 	$('#chatInput').keydown(function(e) {
 	  e.stopPropagation();
@@ -49,7 +49,7 @@ Next, setup a jQuery listener for the chat *textarea* input field. Set a keydown
 	  }
 	});
 
-Finally, setup a VWF method listener in the view, so that each client in the application can respond to the *sendChat* method call. 
+Finally, setup a VWF method listener in the view, so that each client in the application can respond to the <code>sendChat</code> method call. 
 
 	vwf_view.calledMethod = function (nodeId, methodName, methodParameters) {
 	  if (nodeId == sceneNode ) {
@@ -61,6 +61,6 @@ Finally, setup a VWF method listener in the view, so that each client in the app
 	  }
 	}
 
-Essentially this listener will add the chat message to the *chatContent div* created above. 
+Essentially this listener will add the chat message to the <code>chatContent</code> *div* created above. 
 
 --------------

@@ -8,7 +8,7 @@ The editor capability of VWF allows for the app to be edited in a live environme
 
 ### Opening the Editor
 
-The editor is not enabled by default. The app's config file can be updated to include the editor interface under the *view:* tag. Additionally, the threejs model and view drivers must be added, as adding just the editor will override the default drivers. An example configuration is below.
+The editor is not enabled by default. The app's config file can be updated to include the editor interface under the <code>view:</code> tag. Additionally, the threejs model and view drivers must be added, as adding just the editor will override the default drivers. An example configuration is below.
 
 	---
 	model:
@@ -43,11 +43,11 @@ The Application tab displays a list of all children, properties, methods, events
 
 #### Properties
 
-All properties of a given node can be edited while the application is running. Using the editor interface, drill down into the appropriate node, or find the property in the application's property list. The property value can simply be edited by entering or changing the value and clicking the *Enter* key.
+All properties of a given node can be edited while the application is running. Using the editor interface, drill down into the appropriate node, or find the property in the app's property list. The property value can simply be edited by entering or changing the value and clicking the *Enter* key.
 
 <div style='width:100%;text-align:center'><img src='images/editor_properties.png' alt='properties' /></div>
 
-Properties may be booleans, numbers, or strings, and their values are represented in form they would be as a javascript format. Strings must be quoted, and arrays must be intered in the form of *\[ 0, 0, 0 \]*. Values can also be null or undefined.
+Properties may be booleans, numbers, or strings, and their values are represented in form they would be as a javascript format. Strings must be quoted, and arrays must be entered in the form of <code>\[ 0, 0, 0 \]</code>. Values can also be <code>null</code> or </code>undefined</code>.
 
 #### Methods
 
@@ -126,7 +126,7 @@ The Models tab is a listing of assets on the server that are available for dragg
 
 ### About
 
-The About tab displays the current version of the Virtual World Framework used in the application, where the first number describes a major release, the second a minor release, the third a patch, and finally, the revision number of the build. The tab also contains links to the main webpage and github repository for user reference.
+The About tab displays the current version of the VWF used in the app, where the first number describes a major release, the second a minor release, the third a patch, and finally, the revision number of the build. The tab also contains links to the main webpage and github repository for user reference.
 
 <div style='width:100%;text-align:center'><img src='images/editor_about.png' alt='about' /></div>
 
