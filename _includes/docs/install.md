@@ -4,7 +4,11 @@
 
 ## Windows 
 
-Download and run the VWF Windows Installer (coming soon! - for now, follow the [For Core Contributors](#corecontributors) installation instructions below).
+*VWF Windows Installer is coming soon! (For now, follow the instructions below.)*
+
+<!--
+
+Download and run the Windows Installer. 
 
 Launch a command prompt window and create a new VWF application:
 
@@ -14,6 +18,38 @@ Change into your new application folder and start the  server.
 
     c:\> cd MyApp
     c:\MyApp> vwf
+
+-->
+Download and install [TortoiseGit](https://code.google.com/p/tortoisegit/wiki/Download). 
+
+Clone the VWF repo into a folder of your choosing (we'll assume you named it "vwf").
+
+Install [Node.js](http://nodejs.org/).
+
+Launch a command prompt and navigate to your "vwf" folder. 
+
+Edit npm configuration settings:
+
+    npm config set strict-ssl false
+    npm config set registry http://registry.npmjs.org/
+
+Note: You may also need to set a proxy if required by your network:
+
+    npm config set proxy http://yourproxy.com:80
+    npm config set https-proxy http://yourproxy.com:80
+
+Install all the prerequisites for the VWF server:
+
+    npm install
+
+Start the server:
+
+    npm start
+
+Navigate to "localhost:3000/duck" to see the sample duck application from your local machine.
+
+
+
 
 ## Mac OS X / Linux 
 
