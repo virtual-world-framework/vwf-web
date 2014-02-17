@@ -221,6 +221,8 @@ h3 small {
   font-size:18px;
 }
 
+/* Documentation */
+
 #docs {
   position: relative;
 }
@@ -232,12 +234,17 @@ h3 small {
   text-align: right;
   overflow: auto;
   height: 100%;
-  border-right: 1px solid #ddd;
   z-index: 100;
   font-family: "Open Sans Condensed", "Arial Narrow Bold", sans-serif;
   font-weight: 700;
   line-height: 1.1;
   font-size: 19px;
+}
+
+@media (min-width: 992px) {
+  #content {
+    border-left: 1px solid #ddd;
+  }
 }
 
 ul.navmenu {
