@@ -10,9 +10,9 @@ VWF has tests against the server and some of the core client libraries. This pag
 
 The Ruby tests exercise parts of the Ruby server and are run using rake.
 
-~~~
+```
 bundle exec rake test
-~~~
+```
 
 -------------------
 
@@ -24,48 +24,47 @@ To install PhantomJS, follow the instructions for your platform.
 
 #### Linux
 
-1\. Install PhantomJS using APT-GET or YUM install commands depending on your Linux flavor.
+1. Install PhantomJS using APT-GET or YUM install commands depending on your Linux flavor.
 
-~~~
-apt-get install phantomjs or yum instal phantomjs
-~~~
+    ```
+    apt-get install phantomjs or yum instal phantomjs
+    ```
 
-2\. Run the tests.
+2. Run the tests.
 
-~~~
-bundle exec rake client:test
-~~~
+    ```
+    bundle exec rake client:test
+    ```
 
 #### Mac
 
-1\. Install PhantomJS using [Homebrew](http://brew.sh/).
+1. Install PhantomJS using [Homebrew](http://brew.sh/).
 
-~~~
-brew install phantomjs
-~~~
+    ```
+    brew install phantomjs
+    ```
 
-2\. Run the tests.
+2. Run the tests.
 
-~~~
-bundle exec rake client:test
-~~~
+    ```
+    bundle exec rake client:test
+    ```
 
 #### Windows
 
+1. Visit [PhantomJS Downloads](http://phantomjs.org/download.html) and download the Windows zip file. 
 
-1\. Visit [PhantomJS Downloads](http://phantomjs.org/download.html) and download the Windows zip file. 
+2. Unzip the file and copy phantomjs.exe to a known location.
 
-2\. Unzip the file and copy phantomjs.exe to a known location.
+3. Run the tests, specifying the location of phantomjs.exe, like so.
 
-3\. Run the tests, specifying the location of phantomjs.exe, like so.
+    ```
+    PHANTOMJS_BIN=/path/to/phantomjs.exe rake client:test
+    ```
 
-~~~
-PHANTOMJS_BIN=/path/to/phantomjs.exe rake client:test
-~~~
+    NOTE: If you have a space in your path, make sure to surround it with quotes 
+    and escape it with a "\", like so.
 
-NOTE: If you have a space in your path, make sure to surround it with quotes 
-and escape it with a "\", like so.
-
-~~~
-PHANTOMJS_BIN="/space\ path/path/to/phantomjs.exe rake client:test
-~~~
+    ```
+    PHANTOMJS_BIN="/space\ path/path/to/phantomjs.exe rake client:test
+    ```

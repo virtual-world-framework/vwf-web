@@ -25,16 +25,16 @@ NOTE: On Mac OS X, please make sure you have [Xcode Command Line Tools](https://
 
 Execute the following command at your terminal/shell prompt:
 
-    /home/user# curl -kL http://get.virtual.wf  | sh
+    $ curl -kL http://get.virtual.wf  | sh
 	
 Launch a command prompt window and create a new VWF application:
 
-    /home/user# vwf create MyApp
+    $ vwf create MyApp
 
 Change into your new folder application, and start the server.
 
-    /home/user# cd MyApp
-    /home/user/MyApp# vwf
+    $ cd MyApp
+    MyApp$ vwf
 
 --------------------------
 

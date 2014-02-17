@@ -12,25 +12,31 @@ Persistence is the ability to save the state of any given instance of an applica
 
 The primary way to save the state of an application instance is using a POST HTTP request. (**Note**: The POST ability is only allowable when the server is in development mode by default.)
 
-	// Save State Information
-	var xhr = new XMLHttpRequest();
-	var state = vwf.getState();
+```javascript
+// Save State Information
+var xhr = new XMLHttpRequest();
+var state = vwf.getState();
+```
 
 The state of the application then needs to be converted to JSON and encoded for URI. 
 
-	xhr.open("POST", "/"+root+"/save/"+filename, true);
-	xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-	xhr.send("root="+root+"/"+filename+"&filename=saveState&inst="+inst+"&timestamp="+timestamp+"&extension=.vwf.json"+"&jsonState="+json);
+```javascript
+xhr.open("POST", "/"+root+"/save/"+filename, true);
+xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+xhr.send("root="+root+"/"+filename+"&filename=saveState&inst="+inst+"&timestamp="+timestamp+"&extension=.vwf.json"+"&jsonState="+json);
+```
 
 The above request will store the saved state (json) to 'documents/root/filename/saveState_inst.vwf.json' based on the input provided. 
 
 If desired, the configuration file data can also be saved in the same manner.
 
-	// Save config file to server
-	var xhrConfig = new XMLHttpRequest();
-	xhrConfig.open("POST", "/"+root+"/save/"+filename, true);
-	xhrConfig.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-	xhrConfig.send("root="+root+"/"+filename+"&filename=saveState&inst="+inst+"&timestamp="+timestamp+"&extension=.vwf.config.json"+"&jsonState="+jsonConfig);
+```javascript
+// Save config file to server
+var xhrConfig = new XMLHttpRequest();
+xhrConfig.open("POST", "/"+root+"/save/"+filename, true);
+xhrConfig.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+xhrConfig.send("root="+root+"/"+filename+"&filename=saveState&inst="+inst+"&timestamp="+timestamp+"&extension=.vwf.config.json"+"&jsonState="+jsonConfig);
+```
 
 -------------------
 
@@ -38,11 +44,13 @@ If desired, the configuration file data can also be saved in the same manner.
 
 The primary way to retrieve saved states from the server is using a GET HTTP request via <code>jQuery.getJSON()</code>. There are two available URLs that can be passed as parameters to retrieve states. A URL including "listsaves" will return an object for every saved state of the given application (root). A URL including "listallsaves" will return an object for every saved state for any application. 
 
-	$.getJSON( "/" + root + "/listsaves", function( data ) {
-	  $.each( data, function( key, value ) {
-	    // Programmatically append to selection list
-	  } );
-	} );
+```javascript
+$.getJSON( "/" + root + "/listsaves", function( data ) {
+  $.each( data, function( key, value ) {
+    // Programmatically append to selection list
+  } );
+} );
+```
 
 The above call using either "listsaves" or "listallsaves" will return an object array where each object contains the following information:
 
@@ -59,7 +67,9 @@ This information can then be used to generate a list of available saved states, 
 
 The selected saved state can be loaded programmatically via the URL path using the information obtained from the listsaves array object:
 
+```javascript
 	window.location.pathname = applicationPath + "/" + instanceID + '/load/' + savename + '/';
+```
 
 The instance ID is optional. If one is not provided, a new one will be randomly generated. 
 
@@ -82,4 +92,3 @@ To open a previously saved application:
   3. Click the Load button. The application will be loaded in the current browser tab.
 
 **Note**: Persistence functionality is only enabled by default in development mode on the server.
-

@@ -6,9 +6,11 @@ All that is needed for a VWF app to become a multi-user app is for a second pers
 
 Often, you will want your users to be different "characters" in the scene. For this to happen, we need to set the scene's <code>usersShareView</code> property to <code>false</code>:
 
-	extends: http://vwf.example.com/scene.vwf
-	properties:
-	  usersShareView: false
+```yaml
+extends: http://vwf.example.com/scene.vwf
+properties:
+  usersShareView: false
+```
 
 By default, the system will create a camera for each user who joins the application so users can move independently through the scene. Often you will want some represention of each user (an avatar) in your application so users can see each other. To specify the object that we want the system to create for each user, we need to set the scene's <code>userObject</code> property to a description of the desired object. This userObject must play by two rules:
 
@@ -17,25 +19,27 @@ By default, the system will create a camera for each user who joins the applicat
 
 Here is an example of a user object that is a duck with a camera attached:
 
-	  userObject:
-	    extends: http://vwf.example.com/node3.vwf
-	    implements: [ "http://vwf.example.com/navigable.vwf" ]
-	    properties:
-	      translationSpeed: 10000
-	    children:     
-	      camera:
-	        extends: http://vwf.example.com/camera.vwf
-	        properties:
-	          translation: [ 0, 0, 800 ]
-	          far: 1000000
-	          near: 1
-	      avatar:
-	        extends: http://vwf.example.com/node3.vwf
-	        source: models/duck.dae
-	        type: model/vnd.collada+xml
-	        properties:
-	          rotation: [ 0, 0, 1, 90 ]
-	          scale: 4.5
+```yaml
+userObject:
+  extends: http://vwf.example.com/node3.vwf
+  implements: [ "http://vwf.example.com/navigable.vwf" ]
+  properties:
+    translationSpeed: 10000
+  children:     
+    camera:
+      extends: http://vwf.example.com/camera.vwf
+      properties:
+        translation: [ 0, 0, 800 ]
+        far: 1000000
+        near: 1
+    avatar:
+      extends: http://vwf.example.com/node3.vwf
+      source: models/duck.dae
+      type: model/vnd.collada+xml
+      properties:
+        rotation: [ 0, 0, 1, 90 ]
+        scale: 4.5
+```
 
 That's all!
 

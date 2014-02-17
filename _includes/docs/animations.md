@@ -6,12 +6,14 @@ The primary way to accomplish animations in VWF is the animation behavior. All c
 
 In order to create an animation on a node, the <code>animationUpdate</code> method needs to be implemented. This method is called each time the animation time changes, and is used to update the node to the correct state for that time.
 
-	scripts:
-	- |
-	  this.animationUpdate = function(time, duration) {
-	    // Animate the node. For example, update the translation based on the time
-	    this.translateBy([0, 0, 1 * time], 0);
-	  }
+```yaml
+scripts:
+- |
+  this.animationUpdate = function(time, duration) {
+    // Animate the node. For example, update the translation based on the time
+    this.translateBy([0, 0, 1 * time], 0);
+  }
+```
 
 The animation can then be started by calling the <code>animationPlay</code> method and stopped by calling <code>animationStop</code>.
 
@@ -43,18 +45,21 @@ Common properties used to customize collada animations include:
 
 Animations can also be created using the future call. The VWF future call can be used to run a method at a specified time in the future. This call can be inserted into the method call chain, and a parameter passed with an amount of time from the current point for when the method should be called. An example of the future call is shown below. 
 
-	methods:
-	  methodName: |
-	    if( criteriaMet )
-	    {
-	      doSomething();
-	      this.future( 0.05 ).methodName();
-	    }
+```yaml
+methods:
+  methodName: |
+    if( criteriaMet )
+    {
+      doSomething();
+      this.future( 0.05 ).methodName();
+    }
+```
 
 The future call schedules the next step. The parameter passed to the function call can be raised or lowered to smooth or optimize the animation, respectively.
 
-Future calls may also be used for property assignment or to fire an event at a given time in the future. 
+Future calls may also be used for property assignment or to fire an event at a given time in the future.
 
-	this.future.eventName();
-	this.future.propertyName = value;
-
+```javascript
+this.future.eventName();
+this.future.propertyName = value;
+```

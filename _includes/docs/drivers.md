@@ -6,19 +6,23 @@ An application allows for both its model and view drivers to be selected and act
 
 Within the configuration, both model and view drivers may be defined within the <code>model:</code> or <code>view:</code> tag, using the path to the driver file, as shown below. 
 
-	---
-	model:
-	  vwf/model/threejs:
-	view:
-	  vwf/view/threejs: "#vwf-root"
-	  vwf/view/lesson: 
+```yaml
+---
+model:
+  vwf/model/threejs:
+view:
+  vwf/view/threejs: "#vwf-root"
+  vwf/view/lesson: 
+```
 
 For drivers that require parameters, such as the renderer view driver that requires the correct HTML element ID, these can be passed in one of two ways. If there is only one parameter, it can be passed in as shown above to the right of the colon: <code>"#vwf-root"</code>. Alternatively, the parameter name may also be explicitly listed as defined below.
 
-	---
-	view:
-	  vwf/view/glge: 
-	    application-root: "#vwf-root"
+```yaml
+---
+view:
+  vwf/view/glge: 
+    application-root: "#vwf-root"
+```
 
 -------------------
 
@@ -43,9 +47,11 @@ Alternative driver options also include:
 
 For 2D applications, or any application where the default drivers are not necessary, the keyword <code>nodriver</code> may be used. For example, in *tile-puzzle-2D*, a WebGL renderer is not required, and thus uses the following configuration:
 
-	---
-	model:
-	  nodriver: 
+```yaml
+---
+model:
+  nodriver: 
+```
 
 -------------------
 
@@ -53,9 +59,11 @@ For 2D applications, or any application where the default drivers are not necess
 
 In addition to defining the driver configuration for your application, the <code>config.yaml</code> file also allows you to set some additional information: an HTML title for the page. The following example configuration will set the title to the specified value, rather than the default *Virtual World Framework.*
 
-	---
-	info:
-	  title: "My New VWF Application"
+```yaml
+---
+info:
+  title: "My New VWF Application"
+```
 
 -------------------
 
