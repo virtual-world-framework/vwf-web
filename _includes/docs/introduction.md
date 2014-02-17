@@ -1,6 +1,4 @@
-<a name="introduction"></a>
-
-# Introduction
+<h1><a name="introduction">Introduction</a></h1>
 
 The Virtual World Framework (VWF) provides a synchronized collaborative 3D environment for the web browser. VWF allows for easy application creation, and provides a simple interface to allow multiple users to interact with the state of the application that is synchronized across clients. 
 
