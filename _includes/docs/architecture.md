@@ -1,6 +1,4 @@
-<a name="architecture"></a>
-
-# Architecture
+## <a name="architecture">Architecture</a>
 
 The architecture behind VWF is by design:
 
@@ -83,7 +81,4 @@ For example, the three.js driver is responsible for any manipulation on the node
 Model and view drivers have the same structure; however, the model driver doesn't reach out, and a view driver does not have direct control. 
 
 For more detailed information regarding the drivers, please reference the [drivers](#drivers) page.
-
---------------------
-
 

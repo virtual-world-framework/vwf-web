@@ -1,6 +1,4 @@
-<a name="cameras"></a>
-
-# Cameras
+## <a name="cameras">Cameras</a>
 
 The camera capability provides the users a viewpoint into the app. Every app automatically creates a camera as part of the scene. This camera can be accessed in javascript through the <code>camera</code> property of the scene node, or through the editor. 
 
@@ -73,4 +71,3 @@ The application uses the <code>activeCamera</code> property of the scene to dete
 	// this is the scene
 	this.activeCamera = this.children['newCamera'].id;
 
--------------------

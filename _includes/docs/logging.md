@@ -1,6 +1,4 @@
-<a name="logging"></a>
-
-# Logging and Debugging
+## <a name="logging">Logging and Debugging</a>
 
 As you're building applications in the framework, it often helps to be familiar with the different logging and debugging tools available, both built into the browser as well as in the framwework. 
 
@@ -64,4 +62,3 @@ By adding <code>//@ sourceURL=*file reference*</code> to the end of scripts in t
 
 <img src='images/source.png' alt='chrome' style='width:500px' />
 
--------------------

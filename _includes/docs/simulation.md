@@ -1,6 +1,4 @@
-<a name="simulation"></a>
-
-# Create a Simulation
+# <a name="simulation">Create a Simulation</a>
 
 Let's define a *simulation* as any application that models a sequence of causes and effects. Here's how to create one:
 
@@ -122,5 +120,3 @@ Voila!  You have created your very first "simulation".
 
 - Always be on the lookout for existing components that you can use and save yourself some work.
 - Consider paying it forward by sharing the components that you create so that others can stand on your shoulders to reach even greater heights.
-
--------------------

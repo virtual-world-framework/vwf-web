@@ -1,6 +1,4 @@
-<a name="persistence"></a>
-
-# Persistence
+## <a name="persistence">Persistence</a>
 
 Persistence is the ability to save the state of any given instance of an application to load at a later time. For example, the state of 'instance-x' of 'my-app' can be saved at point 'A'. Another instance, 'instance-y', of 'my-app' can then load the saved state 'A'.
 
@@ -85,4 +83,3 @@ To open a previously saved application:
 
 **Note**: Persistence functionality is only enabled by default in development mode on the server.
 
--------------------

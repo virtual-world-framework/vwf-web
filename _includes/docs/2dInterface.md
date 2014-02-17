@@ -1,6 +1,4 @@
-<a name="2d-interface"></a>
-
-# Create a 2D Interface
+## <a name="2d-interface">Create a 2D Interface</a>
 
 You can add two dimensional components to a user's *view* via HTML. These components can interact with the *model* state (update it and be updated from it).
 
@@ -101,4 +99,3 @@ Additionally, the favicon of an application may be set simply by dropping a *fav
 
 For an example of setting these items, visit the [duck application](https://demo.virtualworldframework.com/duck).
 
--------------------

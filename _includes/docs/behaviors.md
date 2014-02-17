@@ -1,6 +1,6 @@
-<a name="behaviors"></a>
 
-# Behaviors
+
+## <a name="behaviors">Behaviors</a>
 
 A behavior is a component that is used to add functionality to another component. It is referenced from a seperate file, allowing multiple components to reuse the same behavior. To use a behavior, add an <code>implements</code> section to the component with the URI to the behavior.
 
@@ -21,7 +21,7 @@ When a behavior is loaded, all behaviors, properties, methods, events, children 
 	      // Do something else
 	    }
 
-<code>anotherProperty</code> is definied in the implementing component, but is still usable in the behavior. If the component that is implementing the behavior needs <code>behavior-someProperty</code> to be false, it simply overrides the value in its own properties. 
+<code>anotherProperty</code> is defined in the implementing component, but is still usable in the behavior. If the component that is implementing the behavior needs <code>behavior-someProperty</code> to be false, it simply overrides the value in its own properties. 
 
 	---
 	implements:
@@ -36,6 +36,4 @@ When a behavior is loaded, all behaviors, properties, methods, events, children 
 	  }
 
 When <code>someMethod</code> executes, it will read the overridden value of <code>behavior-someProperty</code>, and go into the else statement.
-
--------------------
 

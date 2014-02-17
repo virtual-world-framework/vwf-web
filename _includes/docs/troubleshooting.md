@@ -1,6 +1,4 @@
-<a name="troubleshooting"></a>
-
-## Troubleshooting
+## <a name="troubleshooting">Troubleshooting</a>
 
 The following resources may be helpful for troubleshooting any issues that arise.
 
@@ -21,6 +19,3 @@ The following resources may be helpful for troubleshooting any issues that arise
 
 
 * Search or post a question to the [VWF Forum](http://demo.virtual.wf/web/forum.html) for additional assistance. 
-
--------------------
-

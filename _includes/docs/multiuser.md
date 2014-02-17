@@ -1,6 +1,4 @@
-<a name="multiuser"></a>
-
-# Create a Multi-user Application
+## <a name="multiuser">Create a Multi-user Application</a>
 
 <sup>(Note: This recipe is based on the [multiuser example app](https://demo.virtualworldframework.com/web/example/multiuser) - check it out for greater context.  You can find the source for the app in the [github repository](https://github.com/virtual-world-framework/vwf) in public/web/example/multiuser.)</sup>
 
@@ -58,4 +56,3 @@ That's all!
 
 - For a full list of pitfalls, see the document located [here](#pitfalls).
 
--------------------

@@ -1,6 +1,4 @@
-<a name="transforms"></a>
-
-# Complex Transforms
+## <a name="transforms">Complex Transforms</a>
 
 Among the most common properties to set on a node within VWF are various transforms. The [node3](http://virtual.wf/web/docs/jsdoc_cmp/symbols/node3.vwf.html) component defines the basic transforms including the following:
 
@@ -115,5 +113,3 @@ Finally, here are few more examples to do matrix operations such as normalizatio
 	goog.vec.Mat4.invert( example, exampleInverse );
 
 	goog.vec.Quaternion.createFromValues( 0, 0, 0, 1 );
-
--------------------

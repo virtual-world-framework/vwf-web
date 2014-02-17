@@ -1,7 +1,3 @@
-<a name="devguide"></a>
+## <a name="devguide">Dev Guide</a>
 
-# Dev Guide
-
-The developers guide is an overview of the different components and concepts used with the framework. Try the links to the left to view the current guide. 
-
--------------------
+The developers guide is an overview of the different components and concepts used with the framework. 

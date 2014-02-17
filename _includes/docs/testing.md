@@ -1,6 +1,4 @@
-<a name="testing"></a>
-
-# Running Tests
+## <a name="testing">Running Tests</a>
 
 VWF has tests against the server and some of the core client libraries. This page provides information on how to run the tests on your development machine.
 
@@ -71,5 +69,3 @@ and escape it with a "\", like so.
 ~~~
 PHANTOMJS_BIN="/space\ path/path/to/phantomjs.exe rake client:test
 ~~~
-
--------------------

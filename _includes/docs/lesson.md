@@ -1,6 +1,5 @@
-<a name="lesson"></a>
 
-# Add Training Instruction
+## <a name="lesson">Add Training Instruction</a>
 
 One purpose of using VWF is to create a lesson app, with the intent of teaching a user how to accomplish a series of tasks, or steps in a process. 
 
@@ -178,6 +177,4 @@ This configuration sets the renderer to use the threejs model and view driver in
 By activating the lesson driver, the app's user interface will automatically be updated to autogenerate an instruction panel upon lesson start. This instruction panel will pull in the <code>text</code> properties defined in the task components in the model. Additionally, the instruction panel will update based on <code>entering</code> and <code>completed</code> events fired in order to show the current step and progress of the overall lesson. 
 
 Visit the [humvee lesson](https://demo.virtualworldframework.com/humvee-lesson) to view the final result.
-
---------------
 

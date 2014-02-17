@@ -1,6 +1,4 @@
-<a name="animations"></a>
-
-# Animations
+## <a name="animations">Animations</a>
 
 ### Animation Behavior
 
@@ -60,4 +58,3 @@ Future calls may also be used for property assignment or to fire an event at a g
 	this.future.eventName();
 	this.future.propertyName = value;
 
--------------------

@@ -1,6 +1,5 @@
-<a name="chat"></a>
 
-# Add Chat to Your Application
+## <a name="chat">Add Chat to Your Application</a>
 
 Often for multi-user applications, it is useful to have text-based communication among all users. In VWF, the model and the HTML view need to be integrated through the use of methods and/or events. 
 
@@ -63,4 +62,3 @@ Finally, setup a VWF method listener in the view, so that each client in the app
 
 Essentially this listener will add the chat message to the <code>chatContent</code> *div* created above. 
 
---------------

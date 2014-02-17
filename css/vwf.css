@@ -4,18 +4,9 @@
 }
 
 a[name] {
-  padding-top: 80px;
-  margin-top: -80px;
+  padding-top: 100px;
+  margin-top: -100px;
   display: inline-block; /* required for webkit browsers */
-}
-
-h1 a {
-  color: #000;
-}
-
-h1 a:hover {
-  color: #000;
-  text-decoration: none;
 }
 
 .navbar-brand {
@@ -228,29 +219,12 @@ h3 small {
 }
 
 #nav {
-  /*position: fixed;*/
-  /*top: 80px;*/
-  /*left: 0;*/
-  /*text-align: right;*/
   overflow: auto;
   height: 100%;
-  /*z-index: 100;*/
   font-family: "Open Sans Condensed", "Arial Narrow Bold", sans-serif;
   font-weight: 700;
   line-height: 1.1;
   font-size: 19px;
-}
-
-@media (min-width: 992px) {
-  #nav {
-    /*margin-left: 80px;*/
-  }
-}
-
-@media (min-width: 1200px) {
-  #nav {
-    /*margin-left: 100px;*/
-  }
 }
 
 .nav-wrap {
@@ -263,6 +237,17 @@ h3 small {
   #content {
     border-left: 1px solid #ddd;
   }
+}
+
+#content h1 a,
+#content h2 a {
+  color: #000;
+}
+
+#content h1 a:hover,
+#content h2 a:hover {
+  color: #000;
+  text-decoration: none;
 }
 
 ul.navmenu {

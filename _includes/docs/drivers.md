@@ -1,6 +1,4 @@
-<a name="drivers"></a>
-
-# Drivers
+## <a name="drivers">Drivers</a>
 
 ### Configuring Drivers for an Application
 
@@ -78,8 +76,6 @@ Parameters may also be passed in via the URL. The following example passes in pa
 	http://virtualworldframework.com/sandtable/?threejs#!threejs={"application-root":"#vwf-root","experimental-pick-interval":50}
 
 **Note**: The URL takes precedence and will override anything defined via the configuration file.
-
--------------------
 
 <!-- **How Drivers Connect to the Kernel** -->
 

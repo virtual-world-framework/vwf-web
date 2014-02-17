@@ -1,6 +1,4 @@
-<a name="tutorial2"></a>
-
-# Sandtable Tutorial
+## <a name="tutorial2">Sandtable Tutorial</a>
 
 <iframe width="560" height="315" src="http://www.youtube.com/embed/mMhgA9fwdWs" frameborder="0" allowfullscreen></iframe>
  
@@ -13,7 +11,7 @@ The goal of the following tutorial is to allow a developer to build an applicati
 
 -------------------
 
-## Stage 1 - Primitive Scene
+### Stage 1 - Primitive Scene
 
 In the first stage, we'll add in a basic primitive collada file, and set up the initial camera position. The application will contain the default navigation of a fly mode.
 
@@ -44,7 +42,7 @@ Example: [Primitive Scene](https://demo.virtualworldframework.com/tutorial/00)
 
 -------------------
 
-## Stage 2 - Terrain Model and Orbit Navigation
+### Stage 2 - Terrain Model and Orbit Navigation
 
 In the second stage, we will:
 
@@ -96,7 +94,7 @@ Example: [Terrain Model and Orbit Navigation](https://demo.virtualworldframework
 
 -------------------
 
-## Stage 3 - Multiple Models and Behaviors
+### Stage 3 - Multiple Models and Behaviors
 
 In the third stage, we'll add an additional child node for a predator vehicle called 'predator' with similar property definitions. We'll then apply a behavior to the 'predator' node, which is defined in a separate yaml file. Setting the property 'fly-flying' to true will enable the flying behavior immediately upon application load. 
 
@@ -145,7 +143,7 @@ Example: [Multiple Models and Behaviors](https://demo.virtualworldframework.com/
 
 -------------------
 
-## Stage 4 - HTML Overlays and Interaction
+### Stage 4 - HTML Overlays and Interaction
 
 In the fourth stage, we'll add an HTML overlay to the application, and setup the javascript to allow the 2D HTML components to interact with the 3D nodes. For this application, we'll create a toolbar of two images, one to select navigation mode, and one to select pindrop mode, where navigation will be disabled, and a click of the mouse will mark the location selected. 
 
@@ -253,5 +251,3 @@ Finally, back in the HTML file, we'll need to add a few javascript functions to 
     }
 
 Example: [HTML Overlays and Interaction](https://demo.virtualworldframework.com/tutorial/03)
-
--------------------
