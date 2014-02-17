@@ -3,4 +3,4 @@ layout: page
 title: Downloads - Virtual World Framework
 ---
 
-<iframe SRC="http://download.virtualworldframework.com/" width="100%" height="1040px" frameBorder="0"></iframe>
+<iframe class="download-frame" src="http://download.virtualworldframework.com/" height="700"></iframe>
