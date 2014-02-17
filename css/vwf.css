@@ -220,6 +220,7 @@ h3 small {
   position: fixed;
   top: 80px;
   left: 0;
+  text-align: right;
   overflow: auto;
   height: 100%;
   border-right: 1px solid #ddd;
@@ -227,7 +228,7 @@ h3 small {
   font-family: "Open Sans Condensed", "Arial Narrow Bold", sans-serif;
   font-weight: 700;
   line-height: 1.1;
-  font-size: 16px;
+  font-size: 17px;
 }
 
 ul.navmenu {
