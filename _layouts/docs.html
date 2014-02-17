@@ -4,7 +4,8 @@ layout: default_no_footer
 
 <div class="container" id="docs">
   <div class="row">
-    <div id="nav" class="col-md-2 col-md-offset-1 hidden-sm hidden-xs">
+    <div id="nav" class="col-md-2 hidden-sm hidden-xs">
+      <div class="nav-wrap" data-spy="affix" data-offset-top="0">
       <ul class="navmenu list-unstyled">
         <li>
           <a href='#introduction' class='header' title='Introduction'>Introduction</a>
@@ -62,10 +63,14 @@ layout: default_no_footer
           </ul>
         </li>
       </ul>
+      </div>
       <!-- End documentation specific layout -->
     </div>
-    <div id="content" class="col-md-8 col-md-offset-3">
+    <div id="content" class="col-md-8 col-md-offset-n">
       {{content}} 
     </div>
   </div>
 </div>
+
+<script src="js/jquery-1.10.2.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
