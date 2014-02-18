@@ -68,7 +68,7 @@ This information can then be used to generate a list of available saved states, 
 The selected saved state can be loaded programmatically via the URL path using the information obtained from the listsaves array object:
 
 ```javascript
-	window.location.pathname = applicationPath + "/" + instanceID + '/load/' + savename + '/';
+window.location.pathname = applicationPath + "/" + instanceID + '/load/' + savename + '/';
 ```
 
 The instance ID is optional. If one is not provided, a new one will be randomly generated. 
