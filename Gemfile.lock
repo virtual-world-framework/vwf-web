@@ -37,6 +37,7 @@ GEM
     pygments.rb (0.5.4)
       posix-spawn (~> 0.3.6)
       yajl-ruby (~> 1.1.0)
+    rack (1.5.2)
     rb-fsevent (0.9.4)
     rb-inotify (0.9.3)
       ffi (>= 0.5.0)
@@ -56,4 +57,5 @@ DEPENDENCIES
   haml
   jekyll
   jekyll-contentblocks
+  rack
   redcarpet
