@@ -239,13 +239,13 @@ h3 small {
   }
 }
 
-#content h1 a,
-#content h2 a {
+#docs h1 a,
+#docs h2 a {
   color: #000;
 }
 
-#content h1 a:hover,
-#content h2 a:hover {
+#docs h1 a:hover,
+#docs h2 a:hover {
   color: #000;
   text-decoration: none;
 }
@@ -271,10 +271,6 @@ ul.navmenu ul li {
 .navmenu a:focus,
 .navmenu a:active,
 .navmenu a:hover {
-}
-
-#content {
-  z-index: 0;
 }
 
 code {
