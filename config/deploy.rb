@@ -5,7 +5,7 @@ set :scm,               :none
 set :deploy_via,        :copy
 set :copy_compression,  :gzip
 set :use_sudo,          false
-set :host,              '192.241.250.175'
+set :host,              '162.243.107.198'
  
 role :web,  host
  
