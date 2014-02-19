@@ -4,11 +4,9 @@
 
 ## Windows 
 
-*VWF Windows Installer is coming soon! (For now, follow the instructions below.)*
-
 <!--
 
-Download and run the Windows Installer. 
+Download and run the VWF Windows Installer. 
 
 Launch a command prompt window and create a new VWF application:
 
@@ -47,9 +45,6 @@ Start the server:
     npm start
 
 Navigate to "localhost:3000/duck" to see the sample duck application from your local machine.
-
-
-
 
 ## Mac OS X / Linux 
 
