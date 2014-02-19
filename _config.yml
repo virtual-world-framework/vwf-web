@@ -1,4 +1,4 @@
 name: Virtual World Framework
 markdown: redcarpet
 pygments: true
-exclude: [ Gemfile, Gemfile.lock, Procfile, vendor]
+exclude: [ Gemfile, Gemfile.lock, Capfile, config]
