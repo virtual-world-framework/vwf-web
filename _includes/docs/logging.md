@@ -1,6 +1,4 @@
-<a name="logging"></a>
-
-# Logging and Debugging
+## <a name="logging">Logging and Debugging</a>
 
 As you're building applications in the framework, it often helps to be familiar with the different logging and debugging tools available, both built into the browser as well as in the framwework. 
 
@@ -16,11 +14,15 @@ Logging is preferred over generic console output (e.g. <code>console.error</code
 
 The loggers can be used throughout the framework and have a knowledge of their context, or the object to which they're attached. The following example will output the context of the message followed by the message itself.
 
-	this.logger.warn( message );
+```javascript
+this.logger.warn( message );
+```
 
 While the above example shows the most common type of logger message, the "x" variants are available for specifying deeper context, such as a specific function name. In the following example, the logger message adds an extra one-time label before the message. 
 
-	this.logger.warnx( "someFunction", "This message is coming from someFunction." )
+```javascript
+this.logger.warnx( "someFunction", "This message is coming from someFunction." )
+```
 
 This type of message is primarily for the kernel and drivers, and most likely is not relevant for components. 
 
@@ -29,8 +31,10 @@ This type of message is primarily for the kernel and drivers, and most likely is
 
 Turn logging to files on in *lib/vwf/application/reflector.rb*. Setting the *if* statement to true in the *def log* area will log events to a directory under "log/". The path will match the application's location in "public/" plus application/instance/client. Messages are logged to a separate file for each unique time stamp.
 
-	def log fields, direction
-	  if true 
+```ruby
+def log fields, direction
+  if true 
+```
 
 This form of logging is a heavy operation and should only be used for trace-level debugging. This option is planned to be configurable, so the reflector will not need to be edited. At it's current state, if this option is set to true, the server will need to be restarted to begin logging. 
 
@@ -56,12 +60,13 @@ Additionally, in Chrome, the *Elements* tab allows browsing the HTML of the docu
 
 By adding <code>//@ sourceURL=*file reference*</code> to the end of scripts in the model file as show below, the script functions will be available in the *Sources* tab of the browser console. From here, breakpoints and other debugging tools can be used. 
 
-	scripts:
-	- |
-	  this.initialize = function() {
-	    doSomething();
-	  } //@ sourceURL=index.vwf
+```yaml
+scripts:
+- |
+  this.initialize = function() {
+    doSomething();
+  } //@ sourceURL=index.vwf
+```
 
 <img src='images/source.png' alt='chrome' style='width:500px' />
 
--------------------

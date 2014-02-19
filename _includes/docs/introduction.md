@@ -1,4 +1,4 @@
-<h1><a name="introduction">Introduction</a></h1>
+# <a name="introduction">Introduction</a>
 
 The Virtual World Framework (VWF) provides a synchronized collaborative 3D environment for the web browser. VWF allows for easy application creation, and provides a simple interface to allow multiple users to interact with the state of the application that is synchronized across clients. 
 
@@ -36,7 +36,7 @@ Use the Virtual World Framework (VWF) to create apps that are:
 
 -------------------
 
-## Technology
+### Technology
 
 The underlying technology of VWF includes:
 
@@ -48,15 +48,13 @@ The underlying technology of VWF includes:
 
 -------------------
 
-## Audience
+### Audience
 
 The developer's guide is designed for those with web development skills (HTML5, JavaScript, etc), and will serve as a guide to the user creating applications with the Virtual World Framework. 
 
 -------------------
 
-## Using VWF
+### Using VWF
 
-VWF is a server package and zero-install client. Demo applications can be directly run on the [VWF website](/demos.html). A server can be set up locally to build new applications. Please download the source packages from [github](https://github.com/virtual-world-framework/vwf) and follow the readme and [installation instructions](#install) to start your own server.
-
--------------------
+VWF is a server package *and* a zero-install client. Demo applications can be directly run on the [VWF website](/demos.html). A server can be set up locally to build new applications. Please download the source packages from [github](https://github.com/virtual-world-framework/vwf) and follow the readme and [installation instructions](#install) to start your own server.
 

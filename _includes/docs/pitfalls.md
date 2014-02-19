@@ -1,6 +1,4 @@
-<a name="pitfalls"></a>
-
-# Pitfalls
+## <a name="pitfalls">Pitfalls</a>
 
 When you begin programming with VWF, it can be easy to wander off the well-worn path that keeps your apps synchronized across users.  Here are a mix of best practices and the most common pitfalls to avoid:
 
@@ -75,12 +73,14 @@ When programming in the view, calls to get/set model properties and call model m
 
 If you assign something like:
 
-	node1.event = node2.method;
+```javascript
+node1.event = node2.method;
+```
 
 VWF will try to call *method* from node1, not node2.  Instead, set the event handler like so:
 
-	node1.event = function() {
-	  node2.method();
-	}
-
--------------------
+```javascript
+node1.event = function() {
+  node2.method();
+}
+```

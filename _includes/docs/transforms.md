@@ -1,6 +1,4 @@
-<a name="transforms"></a>
-
-# Complex Transforms
+## <a name="transforms">Complex Transforms</a>
 
 Among the most common properties to set on a node within VWF are various transforms. The [node3](http://virtual.wf/web/docs/jsdoc_cmp/symbols/node3.vwf.html) component defines the basic transforms including the following:
 
@@ -15,15 +13,19 @@ These properties may be used to either initially set the property on application
 
 Transform property values may be set directly in the property definition, as shown below.
 
-	properties:
-	  rotation: [ 1, 0, 0, 90 ]
-	  scale: 10
+```yaml
+properties:
+  rotation: [ 1, 0, 0, 90 ]
+  scale: 10
+```
 
 Additionally, property values can be set within script, as shown below. 
 
-	this.transform = [ 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 10, 500, 100, 1 ];
-	this.translation = [ 0, 100, 0 ];
-	this.scale = [ 10, 0, 0 ];
+```javascript
+this.transform = [ 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 10, 500, 100, 1 ];
+this.translation = [ 0, 100, 0 ];
+this.scale = [ 10, 0, 0 ];
+```
 
 **Note**: There is an example app called [transforms](https://demo.virtualworldframework.com/web/example/transforms). This application allows the user to set and view the various properties discussed in this recipe, and see the outcome on an actual model. The source for this app can be found in the [github repository](https://github.com/virtual-world-framework/vwf) in public/web/example/transforms.) 
 
@@ -42,11 +44,15 @@ Each of these methods takes in an array transform (or scalar value in the case o
 
 Example from the model:
 
-	this.objectNode.rotateTo( [ 0, 0, 1, 45 ], 10 );
+```javascript
+this.objectNode.rotateTo( [ 0, 0, 1, 45 ], 10 );
+```
 
 Example from the view:
 
-	vwf_view.kernel.callMethod( objectNode, "rotateTo", [ [ 0, 0, 1, 45 ], 10 ] );
+```javascript
+vwf_view.kernel.callMethod( objectNode, "rotateTo", [ [ 0, 0, 1, 45 ], 10 ] );
+```
 
 The above method calls will rotate objectNode 45 degrees around the z-axis, over a duration of 10 milliseconds. 
 
@@ -64,11 +70,15 @@ Another option for transforming an object over time is the <code>transformTo</co
 
 Example from the model:
 
-	this.camera.translateTo( [ 0, 0, 5 ], 10 );
+```javascript
+this.camera.translateTo( [ 0, 0, 5 ], 10 );
+```
 
 Example from the view:
 
-	vwf_view.kernel.callMethod( camera, "translateTo", [ [ 0, 0, 5 ], 10 ] );
+```javascript
+vwf_view.kernel.callMethod( camera, "translateTo", [ [ 0, 0, 5 ], 10 ] );
+```
 
 The above method calls will translate the camera to [ 0, 0, 5 ], over a duration of 10 milliseconds. 
 
@@ -82,38 +92,44 @@ The following are some examples of the closure library in action. There are seve
 
 The functions below will create a new vector or matrix. 
 
-	var newVector = goog.vec.Vec3.create();
+```javascript
+var newVector = goog.vec.Vec3.create();
 
-	var newMatrix = goog.vec.Mat4.create();
+var newMatrix = goog.vec.Mat4.create();
 
-	newVector = goog.vec.Vec3.createFromArray( [ value[0], value[1], value[2] + newValue ] );
+newVector = goog.vec.Vec3.createFromArray( [ value[0], value[1], value[2] + newValue ] );
+```
+
 
 Below are examples of using the closure library to perform operations on vectors and matrices, and assigning them to a variable or directly to a transform. 
 
-	var newMat = goog.vec.Mat4.multMat( mat1, mat2,
-	  goog.vec.Mat4.create()
-	);
+```javascript
+var newMat = goog.vec.Mat4.multMat( mat1, mat2,
+  goog.vec.Mat4.create()
+);
 
-	var trans = goog.vec.Vec3.scale(
-	  this.directionVector,
-	  this.distance,
-	  goog.vec.Vec3.create()
-	);
+var trans = goog.vec.Vec3.scale(
+  this.directionVector,
+  this.distance,
+  goog.vec.Vec3.create()
+);
 
-	this.camera.translation = goog.vec.Vec3.add(
-	  this.camera.translation,
-	  this.translationToAdd,
-	  goog.vec.Vec3.create()
-	);
+this.camera.translation = goog.vec.Vec3.add(
+  this.camera.translation,
+  this.translationToAdd,
+  goog.vec.Vec3.create()
+);
+```
 
 Finally, here are few more examples to do matrix operations such as normalization, transposition, inversion, and quaternions. 
 
-	goog.vec.Vec3.normalize( v1, normalizedV1 );
+```javascript
+goog.vec.Vec3.normalize( v1, normalizedV1 );
 
-	goog.vec.Mat4.transpose( example, exampleTranspose ); 
+goog.vec.Mat4.transpose( example, exampleTranspose ); 
 
-	goog.vec.Mat4.invert( example, exampleInverse );
+goog.vec.Mat4.invert( example, exampleInverse );
 
-	goog.vec.Quaternion.createFromValues( 0, 0, 0, 1 );
+goog.vec.Quaternion.createFromValues( 0, 0, 0, 1 );
+```
 
--------------------

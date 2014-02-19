@@ -1,6 +1,4 @@
-<a name="editor"></a>
-
-# Editor
+## <a name="editor">Editor</a>
 
 The editor capability of VWF allows for the app to be edited in a live environment. It provides full control to the user and has the ability to navigate through the current state of the app, consisting of its various nodes and properties. The editor allows changes to be made to the shared simulation by setting properties, calling methods, and firing events. 
 
@@ -10,12 +8,14 @@ The editor capability of VWF allows for the app to be edited in a live environme
 
 The editor is not enabled by default. The app's config file can be updated to include the editor interface under the <code>view:</code> tag. Additionally, the threejs model and view drivers must be added, as adding just the editor will override the default drivers. An example configuration is below.
 
-	---
-	model:
-	  vwf/model/threejs:
-	view:
-	  vwf/view/threejs: "#vwf-root"
-	  vwf/view/editor:
+```yaml
+---
+model:
+  vwf/model/threejs:
+view:
+  vwf/view/threejs: "#vwf-root"
+  vwf/view/editor:
+```
 
 Alternatively, the threejs and editor driver parameters can be passed via the URL. For example, the following URL will enable the editor.
 
@@ -129,6 +129,4 @@ The Models tab is a listing of assets on the server that are available for dragg
 The About tab displays the current version of the VWF used in the app, where the first number describes a major release, the second a minor release, the third a patch, and finally, the revision number of the build. The tab also contains links to the main webpage and github repository for user reference.
 
 <div style='width:100%;text-align:center'><img src='images/editor_about.png' alt='about' /></div>
-
--------------------
 

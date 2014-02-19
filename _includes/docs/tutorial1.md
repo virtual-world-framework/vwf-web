@@ -1,6 +1,4 @@
-<a name="tutorials"></a>
-
-# Tutorials
+# <a name="tutorials">Tutorials</a>
 
 To get started, please view the sample step by step guides to building an application within the framework. The [first example](#tutorial1) walks through the basic components of an application, and serves as a *Hello World* for the Virtual World Framework.
 
@@ -8,9 +6,7 @@ The [second example](#tutorial2) is a basic tutorial that consists of four stage
 
 -------------------
 
-<a name="tutorial1"></a>
-
-# Hello World Tutorial 
+## <a name="tutorial1">Hello World Tutorial </a>
 
 The most basic implementation of VWF is a single asset in a COLLADA format. An asset can be wrapped in a VWF app by specifying the source file in the code. 
 
@@ -366,5 +362,3 @@ By default, the framework will search for the index.vwf.yaml file. Thus, if the 
 -------------------
 
 VWF can be used in either single user or multi-user mode. An independent session of the application can be initialized by a URL without a session ID: *http://vwf.example.com/application/*. The URL from the initial user can be used to allow additional users to join the session, specified by the session ID. Example: *http://vwf.example.com/application/561f86e42b6763d0/*. This session ID will be pulled out of the URL, and replaced with a session variable that will still be accessible via the URL. The session can run for a given time, and as a new user joins, the content will be synched to the current state of the application.
-
--------------------

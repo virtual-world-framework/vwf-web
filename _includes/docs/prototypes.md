@@ -1,6 +1,4 @@
-<a name="prototypes"></a>
-
-# Prototypes
+## <a name="prototypes">Prototypes</a>
 
 Prototypes are the base component types for inheritance in the Virtual World Framework. A prototype has the same structure as a VWF [component](#components), and contains common properties, methods, and events. 
 
@@ -24,5 +22,3 @@ Prototypes can be housed on any server, and any URI passed to the extends keywor
 * <code>scene.vwf</code> - base type for a scene
 
 The [Application API](#application-api) covers the complete list of VWF prototypes and their property, method, and event definitions.
-
--------------------
