@@ -43,7 +43,7 @@ Once your environment is set up, the easiest way to start developing is to:
 5. Run *npm install* from the command prompt in your VWF folder to install all the prerequisites for the VWF server.
 6. Make your code modifications.
 7. Start your server using *npm start* from the command prompt in your VWF folder to test your changes. The server runs on port 3000 in development by default. Use a modern browser to view the website and VWF apps. 
-8. Submit a Pull Request after you complete your updates and testing back to the Virtual World Framework Team's VWF repo.
+8. After you complete your updates and testing, submit a Pull Request back to the Virtual World Framework Team's VWF repo.
 
 --------------------------
 
