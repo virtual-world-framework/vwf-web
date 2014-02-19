@@ -7,7 +7,7 @@ This section is for those who don't just want to write VWF applications, but wan
 Please make sure you have the following software packages installed:
 
 1. Install [Node.js](http://nodejs.org/) for your specific environment.
-2. Install **git**.
+2. Install **git** for your specific environment.
 
 * [TortoiseGit for Windows](https://code.google.com/p/tortoisegit/)
 
