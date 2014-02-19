@@ -1,6 +1,4 @@
-<a name="sound"></a>
-
-# Add Sound Effects to Your Application
+## <a name="sound">Add Sound Effects to Your Application</a>
 
 For any interactive app, you may want to add sound, either for effect or to notify all users that something has occurred (e.g. a laser was fired, a message has been sent, etc). As with much of the framework, we can accomplish simple sound effects through the use of HTML5's native features. 
 
@@ -12,9 +10,11 @@ A method or event within the app's model may be used to play a synchronized soun
 
 HTML5 allows one to specify sound through the use of the *audio* tag. The audio tag simply contains a source which specifies the file location of a sound effect. This audio tag will need to be added to the application's HTML. 
 
-	<audio id='exampleAudio'>
-	  <source src="sounds/example.wav"></source>
-	</audio>
+```html
+<audio id='exampleAudio'>
+  <source src="sounds/example.wav"></source>
+</audio>
+```
 
 --------------
 
@@ -22,8 +22,10 @@ HTML5 allows one to specify sound through the use of the *audio* tag. The audio 
 
 Within the model, define a method or event. This method can either be completely separate, used solely to play a sound, or attached to another method or event, so that a sound is played in conjunction with another action. 
 
-	methods:
-	  playSound:
+```yaml
+methods:
+  playSound:
+```
 
 --------------
 
@@ -31,16 +33,16 @@ Within the model, define a method or event. This method can either be completely
 
 In addition to defining the sound source using the HTML5 native audio tag, set up a listener for the method call. 
 
-	vwf_view.calledMethod = function (nodeId, methodName, methodParameters) {
-	  if (nodeId == sceneNode ) {
-	    switch (methodName) {
-	      case "playSound":
-	        $('#exampleAudio')[0].play();
-	        break;
-	    }
-	  }
-	}
+```javascript
+vwf_view.calledMethod = function (nodeId, methodName, methodParameters) {
+  if (nodeId == sceneNode ) {
+    switch (methodName) {
+      case "playSound":
+        $('#exampleAudio')[0].play();
+        break;
+    }
+  }
+}
+```
 
 Each time the <code>playSound</code> method is called, each client will hear the <code>exampleAudio</code> sound bite.
-
---------------

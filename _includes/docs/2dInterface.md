@@ -1,6 +1,4 @@
-<a name="2d-interface"></a>
-
-# Create a 2D Interface
+## <a name="2d-interface">Create a 2D Interface</a>
 
 You can add two dimensional components to a user's *view* via HTML. These components can interact with the *model* state (update it and be updated from it).
 
@@ -29,8 +27,10 @@ The [vwf/api/kernel](http://demo.virtual.wf/web/docs/jsdoc/2c8753578a.html) in t
 
 To set a property on an object, we first find a reference to that object and then set the property.  Like so:
 
-	var nodeId = vwf_view.find( ... );
-	vwf_view.kernel.setProperty( nodeId, "property1", value );
+```javascript
+var nodeId = vwf_view.find( ... );
+vwf_view.kernel.setProperty( nodeId, "property1", value );
+```
 
 Explanations of the parameters can be found in the [query](#querying) and [setProperty](http://demo.virtual.wf/web/docs/jsdoc/2c8753578a.html#setProperty) documentation. Note that the call to <code>find</code> returns immediately, but <code>setProperty</code> and the other kernel calls in this recipe are asynchronous. You can find out when the property has been set by creating an event handler for the [satProperty](http://demo.virtual.wf/web/docs/jsdoc/a2d7e1ef81.html#satProperty) event - and yes... we know that *sat* is not really the past tense of *set*.
 
@@ -40,11 +40,15 @@ Explanations of the parameters can be found in the [query](#querying) and [setPr
 
 To call a model method from the view, we first find a reference to the object (in the same manner as above) and then call the method like so:
 
-	vwf_view.kernel.callMethod( nodeId, "method1" );
+```javascript
+vwf_view.kernel.callMethod( nodeId, "method1" );
+```
 
 Pass parameters to the method by passing an array of values as a third parameter: 
 
-	vwf_view.kernel.callMethod( nodeId, "method1", [ parameter1, parameter2, etc ] );
+```javascript
+vwf_view.kernel.callMethod( nodeId, "method1", [ parameter1, parameter2, etc ] );
+```
 
 Explanations of the parameters can be found in the [callMethod](http://demo.virtual.wf/web/docs/jsdoc/2c8753578a.html#callMethod)  API description.
 
@@ -54,7 +58,9 @@ Explanations of the parameters can be found in the [callMethod](http://demo.virt
 
 Create a model component from the view like so:
 
-	vwf_view.kernel.createChild( nodeId, "componentName", component, undefined, callback );
+```javascript
+vwf_view.kernel.createChild( nodeId, "componentName", component, undefined, callback );
+```
 
 Explanations of the parameters can be found in the [createChild](http://demo.virtual.wf/web/docs/jsdoc/2c8753578a.html#createChild) API description.
 
@@ -64,15 +70,17 @@ Explanations of the parameters can be found in the [createChild](http://demo.vir
 
 The HTML can reflect changes to the simulation such as property updates, method calls, or events. The following example enables the HTML to catch property changes in the application. 
 
-	vwf_view.satProperty = function (nodeId, propertyName, propertyValue) {
-	  if ( nodeId == someSpecificNodeId ) {
-	    switch ( propertyName ) {
-	      case "mouseMode":
-	        doSomething( propertyValue );
-	        break;
-        }
-      }
-	}
+```javascript
+vwf_view.satProperty = function (nodeId, propertyName, propertyValue) {
+  if ( nodeId == someSpecificNodeId ) {
+    switch ( propertyName ) {
+      case "mouseMode":
+        doSomething( propertyValue );
+        break;
+    }
+  }
+}
+```
 
 In this case, any time a property has been set, this function will check to see if the property was changed on a specific node, and if so, will check the name of the property. If it is the property we are looking for, we can write javascript to update the HTML state.
 
@@ -93,12 +101,12 @@ To learn more about these events, you can look at the System API for the [view](
 
 The default browser title for a VWF application is *Virtual World Framework*. The title may be specified in an app's configuration file as shown below. 
 
-	---
-	info:
-	  title: "Name of Application"
+```yaml
+---
+info:
+  title: "Name of Application"
+```
 
 Additionally, the favicon of an application may be set simply by dropping a *favicon.ico* file into the application folder. 
 
 For an example of setting these items, visit the [duck application](https://demo.virtualworldframework.com/duck).
-
--------------------

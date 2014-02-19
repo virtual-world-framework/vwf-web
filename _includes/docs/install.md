@@ -1,12 +1,12 @@
-<a name="install"></a>
 
-# Installation Instructions
+
+## <a name="install">Installation Instructions</a>
 
 --------------------------
 
-## App Developer Installation
+### App Developer Installation
 
-### Windows 
+#### Windows 
 
 Download and run the [VWF Windows Installer](http://download.virtualworldframework.com/files/VWF_Windows_Install.exe).
 
@@ -19,30 +19,30 @@ Change into your new application folder and start the  server.
     c:\> cd MyApp
     c:\MyApp> vwf
 
-### Mac OS X / Linux 
+#### Mac OS X / Linux 
 
 NOTE: On Mac OS X, please make sure you have [Xcode Command Line Tools](https://developer.apple.com/xcode/) installed prior to executing the script.
 
 Execute the following command at your terminal/shell prompt:
 
-    /home/user# curl -kL http://get.virtual.wf  | sh
+    $ curl -kL http://get.virtual.wf  | sh
 	
 Launch a command prompt window and create a new VWF application:
 
-    /home/user# vwf create MyApp
+    $ vwf create MyApp
 
 Change into your new folder application, and start the server.
 
-    /home/user# cd MyApp
-    /home/user/MyApp# vwf
+    $ cd MyApp
+    MyApp$ vwf
 
 --------------------------
 
-## Core Developer Installation  - Ruby
+### Core Developer Installation - Ruby
 
 Note: You need only follow these instructions if you plan on developing VWF core functionality (for example, writing or modifying a driver). If instead, you wish to develop VWF Applications on top of the framework, please follow the instructions above.
 
-### Windows 
+#### Windows 
 
 Please make sure you have the following software packages installed:
 
@@ -65,21 +65,21 @@ Once your Ruby and Git environments are set up for Windows, the easiest way to s
 5. Start your server using *bundle exec thin start* from the command prompt in your VWF folder to test your changes.
 5. Submit a Pull Request after you complete your updates and testing back to the Virtual World Framework Team's VWF repo.
 
-### Ubuntu/Debian Package  
+#### Ubuntu/Debian Package  
 
 Perform the following shell command at a user shell prompt:
 
 	sudo curl https://raw.github.com/virtual-world-framework/vwf/master/support/build/Scripts/build_debian.sh | bash -x
 
-### Red Hat Enterprise Linux Automatic Installation
+#### Red Hat Enterprise Linux Automatic Installation
 
 Perform the following shell command at a user shell prompt:
 
 	sudo curl https://raw.github.com/virtual-world-framework/vwf/master/support/build/Scripts/build_redhat.sh | bash -x
 
-### Linux / Mac OS X
+#### Linux / Mac OS X
   
-#### RubyGems
+##### RubyGems
 
 Ensure RubyGems is installed (for Debian/Ubuntu). 
 
@@ -126,13 +126,13 @@ This installs RVM which is a version manager for Ruby.
 	brew install git
 	This installs git if you do not have it already on your machine.
 
-#### Download Virtual World Framework
+##### Download Virtual World Framework
 
 Download the contents of the GitHub Master VWF Baseline to your local directory:
 
 	sudo git clone http://www.github.com/virtual-world-framework/vwf --recursive
 
-#### Install the Gems
+##### Install the Gems
 
 Launch a terminal window and cd to your VWF development directory:
 
@@ -148,23 +148,23 @@ Now you can install the RubyGems to the system (as root):
 
 	sudo bundle install
 
-#### Build the Server
+##### Build the Server
 This command will compile and setup the server baseline.
 
 	sudo bundle exec rake 
 
-#### Launch the Server
+##### Launch the Server
 This command launches Ruby's Thin web server to start serving your VWF applications.
 
 	sudo bundle exec thin start
 
-#### Connect
+##### Connect
 
 The server runs on port 3000 in development mode by default. Use Google Chrome to view the website.
 
 --------------------------
 
-## Core Developer Installation - NodeJS
+### Core Developer Installation - NodeJS
 
 As an alternative to the ruby version of the VWF server, there also exists a node.js version (which will soon become the primary supported server). To be on the bleeding edge and use the node.js version of the server now:
 
@@ -174,21 +174,25 @@ As an alternative to the ruby version of the VWF server, there also exists a nod
 
 3. Launch a terminal / command prompt window and cd to your VWF application directory.
 
-	**cd Path\To\YourApp**
+    ```
+    cd Path/To/YourApp
+    ```
 
 4. Run the vwf command to start the Node JS server.
 
-	**vwf**
+    ```
+    vwf
+    ```
 
 --------------------------
 
-## Configuring HTTPS/SSL Traffic
+### Configuring HTTPS/SSL Traffic
 
 VWF works over an HTTPS/SSL configuration. The following instructions set up a Linux environment running Thin web server with SSL. However, you may use SSL for any combination of operating system. The process below is an extremely simplified view of how SSL is implemented and what part the certificate plays in the entire process.
 
 Normal web traffic is sent unencrypted over the Internet. That is, anyone with access to the right tools can snoop all of that traffic. Obviously, this can lead to problems, especially where security and privacy is necessary, such as in credit card data and bank transactions. The Secure Socket Layer is used to encrypt the data stream between the web server and the web client (the browser).
 
-### Step 1. Generate a Private Key
+#### Step 1. Generate a Private Key
 
 The *openssl* toolkit is used to generate an RSA Private Key and CSR (Certificate Signing Request). It can also be used to generate self-signed certificates which can be used for testing purposes or internal usage.
 
@@ -205,7 +209,7 @@ Results:
     Enter PEM pass phrase:<br/>
     Verifying password - Enter PEM pass phrase:<br/><br/>
  
-### Step 2: Generate a CSR (Certificate Signing Request)
+#### Step 2: Generate a CSR (Certificate Signing Request)
 
 Once the private key is generated, a *Certificate Signing Request (CSR)* can be generated. The CSR is then used in one of two ways. Ideally, the CSR will be sent to a Certificate Authority, such as Thawte or Verisign who will verify the identity of the requestor and issue a signed certificate. The second option is to self-sign the CSR, which will be demonstrated in the next section.
 
@@ -227,7 +231,7 @@ Results:
     A challenge password:<br/>
     An optional company name:<br/><br/>
 
-### Step 3: Remove Passphrase from Key
+#### Step 3: Remove Passphrase from Key
 
 One unfortunate side-effect of the pass-phrased private key is that Apache will ask for the pass-phrase each time the web server is started. Obviously this is not necessarily convenient as someone will not always be around to type in the pass-phrase, such as after a reboot or crash. mod_ssl includes the ability to use an external program in place of the built-in pass-phrase dialog. However, this is not necessarily the most secure option either. It is possible to remove the Triple-DES encryption from the key, thereby no longer needing to type in a pass-phrase. If the private key is no longer encrypted, it is critical that this file only be readable by the root user! If your system is ever compromised and a third party obtains your unencrypted private key, the corresponding certificate will need to be revoked. With that being said, use the following command to remove the pass-phrase from the key:
 
@@ -240,7 +244,7 @@ The newly created server.key file has no more passphrase in it.
     -rw-r--r-- 1 root root 891 Jun 29 13:22 server.key
     -rw-r--r-- 1 root root 963 Jun 29 13:22 server.key.org
 
-### Step 4: Generating a Self-Signed Certificate
+#### Step 4: Generating a Self-Signed Certificate
 
 At this point you will need to generate a self-signed certificate because you either don't plan on having your certificate signed by a CA, or you wish to test your new SSL implementation while the CA is signing your certificate. This temporary certificate will generate an error in the client browser to the effect that the signing certificate authority is unknown and not trusted.
 
@@ -254,7 +258,7 @@ Results:
     subject=/C=CH/ST=Test/L=TestName/O=Test Co/OU=Test Technology/CN=public.whatever.com/Email=test@test.com<br/>
     Getting Private key<br/>
 
-### Step 5: Installing the Private Key and Certificate
+#### Step 5: Installing the Private Key and Certificate
 
 Thin is capable of reading SSL within a configuration yml file for startup.  First we move the certificates generated to a permanent location.
 
