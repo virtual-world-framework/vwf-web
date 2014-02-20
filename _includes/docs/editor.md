@@ -19,7 +19,7 @@ view:
 
 Alternatively, the threejs and editor driver parameters can be passed via the URL. For example, the following URL will enable the editor.
 
-	https://demo.virtual.wf/app/?threejs#!threejs&editor
+	http://hostname.com/app/?threejs#!threejs&editor
 
 The editor interface will now be available within the app. To open, move the mouse to the upper right side of the screen. Upon a mouse rollover, five editor tabs should be displayed. Selecting one will open the editor on the right hand side of the screen, pushing the application view to the left.
 
