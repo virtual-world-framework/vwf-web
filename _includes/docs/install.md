@@ -20,19 +20,19 @@ Change into your new application folder and start the  server.
 -->
 Download and install [TortoiseGit](https://code.google.com/p/tortoisegit/wiki/Download). 
 
-Clone the VWF repo into a folder of your choosing (we'll assume you named it "vwf").
+Clone the VWF repo into a folder of your choosing (we'll assume you named it *vwf*).
 
 Install [Node.js](http://nodejs.org/).
 
-Launch a command prompt and navigate to your "vwf" folder. 
+Launch a command prompt and navigate to your *vwf* folder. 
 
 Edit npm configuration settings:
 
-    npm config set strict-ssl false
     npm config set registry http://registry.npmjs.org/
 
 Note: You may also need to set a proxy if required by your network:
 
+    npm config set strict-ssl false
     npm config set proxy http://yourproxy.com:80
     npm config set https-proxy http://yourproxy.com:80
 

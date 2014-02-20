@@ -8,41 +8,36 @@ Please make sure you have the following software packages installed:
 
 1. Install [Node.js](http://nodejs.org/) for your specific environment.
 2. Install **git** for your specific environment.
+    * [TortoiseGit for Windows](https://code.google.com/p/tortoisegit/)
+    * [Git Client For Windows](http://git-scm.com/download/win)
+    * [Git Client for Mac](http://git-scm.com/download/mac)
+    * [Git for Linux distributions](http://git-scm.com/download/linux)
+        * Example: Ubuntu
 
-* [TortoiseGit for Windows](https://code.google.com/p/tortoisegit/)
-
-* [Git Client For Windows](http://git-scm.com/download/win) 
-
-* [Git Client for Mac](http://git-scm.com/download/mac)
-
-* [Git for Linux distributions](http://git-scm.com/download/linux)
-
-  Example: Ubuntu
-
-		sudo apt-get install git
+        		sudo apt-get install git
 
 #### Development 
 
 Once your environment is set up, the easiest way to start developing is to:
 
-1. Fork the [VWF repo](https://github.com/virtual-world-framework/vwf/tree/development) from the Development Branch.
-2. Clone your newly forked VWF repo to your local machine. For example, to clone the VWF master repository: 
+1. Fork the [VWF repo](https://github.com/virtual-world-framework/vwf).
+2. Clone your newly forked VWF repo to your local machine:
 
-		git clone http://www.github.com/virtual-world-framework/vwf --recursive
+		git clone http://www.github.com/*username*/vwf --recursive -branch development
 
 3. Edit any npm configuration settings necessary:
 
-		npm config set strict-ssl false
 		npm config set registry http://registry.npmjs.org/
 
 4. Set a network proxy, if required by your network:
 
+		npm config set strict-ssl false
 		npm config set proxy http://yourproxy.com:80
 		npm config set https-proxy http://yourproxy.com:80
 
-5. Run *npm install* from the command prompt in your VWF folder to install all the prerequisites for the VWF server.
+5. Run `npm install` from the command prompt in your VWF folder to install all the prerequisites for the VWF server.
 6. Make your code modifications.
-7. Start your server using *npm start* from the command prompt in your VWF folder to test your changes. The server runs on port 3000 in development by default. Use a modern browser to view the website and VWF apps. 
+7. Start your server using `npm start` from the command prompt in your VWF folder to test your changes. The server runs on port 3000 in development by default. Use a modern browser to view the website and VWF apps. 
 8. After you complete your updates and testing, submit a Pull Request back to the Virtual World Framework Team's VWF repo.
 
 --------------------------
