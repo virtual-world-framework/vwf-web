@@ -18,9 +18,8 @@ Change into your new application folder and start the  server.
     c:\MyApp> vwf
 
 -->
-Download and install [TortoiseGit](https://code.google.com/p/tortoisegit/wiki/Download). 
 
-Clone the VWF repo into a folder of your choosing (we'll assume you named it *vwf*).
+Download and extract the latest [Windows build](http://download.virtualworldframework.com/files/vwf-0.6.23.windows-full.zip).
 
 Install [Node.js](http://nodejs.org/).
 

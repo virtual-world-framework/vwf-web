@@ -7,14 +7,21 @@ title: Downloads - Virtual World Framework
 
 ## Latest Release Baselines
 
-- [VWF-Mac-OS-X-latest.tar.gz](http://download.virtualworldframework.com/files/VWF_Mac_OS_X_latest.tar.gz)
-- [VWF-Linux-latest.tar.gz](http://download.virtualworldframework.com/files/VWF_Linux_latest.tar.gz)
-- Windows installer coming soon!  (for now, clone our source code on github)
+- [vwf-0.6.23.tar.gz](http://download.virtualworldframework.com/files/vwf-0.6.23.tar.gz)
+- [vwf-0.6.23-windows-full.zip](http://download.virtualworldframework.com/files/vwf-0.6.23-windows-full.zip)
+- [vwf-0.6.23-source-code.zip](http://download.virtualworldframework.com/files/vwf-0.6.23-source-code.zip)
 
 <!-- Disabling Windows installer until we can verify that it doesn't override person's PATH variable -->
-<!--[VWF-Windows-Install.exe](http://download.virtualworldframework.com/files/VWF_Windows_Install.exe)-->
+<!--[vwf-0.6.23-windows-installer.exe](http://download.virtualworldframework.com/files/vwf-0.6.23-windows-installer.exe)-->
 
 ## Previous Archive Versions
+
+<!-- Disabling Windows installer until we can verify that it doesn't override person's PATH variable -->
+<!--[vwf-0.6.23-windows-installer.exe](http://download.virtualworldframework.com/files/vwf-0.6.23-windows-installer.exe)-->
+
+- [vwf-0.6.23.tar.gz](http://download.virtualworldframework.com/files/vwf-0.6.23.tar.gz)
+- [vwf-0.6.23-windows-full.zip](http://download.virtualworldframework.com/files/vwf-0.6.23-windows-full.zip)
+- [vwf-0.6.23-source-code.zip](http://download.virtualworldframework.com/files/vwf-0.6.23-source-code.zip)
 - [VWF-0.6.22-windows.zip](http://download.virtualworldframework.com/files/archive/VWF_Master_0.6.22.0-windows-full.zip)
 - [VWF-0.6.21-windows.zip](http://download.virtualworldframework.com/files/archive/VWF_Master_0.6.21.0-windows-full.zip)
 - [VWF-0.6.20-windows.zip](http://download.virtualworldframework.com/files/archive/VWF_Master_0.6.20.0-windows-full.zip)
