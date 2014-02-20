@@ -40,7 +40,7 @@ this.initialize = function() {
 }
 ```
 
-A full list of material properties can be found in the [material](http://virtual.wf/web/docs/jsdoc_cmp/symbols/material.vwf.html) application API.
+A full list of material properties can be found in the [material](https://demo.virtual.wf/web/docs/jsdoc_cmp/symbols/material.vwf.html) application API.
 
 Sometimes it may be desirable to switch out the entire material - if for example, you wanted to toggle between two that had many distinct properties or have more than one object share the same material.  Here's how you could do that:
 

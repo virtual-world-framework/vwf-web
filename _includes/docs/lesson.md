@@ -9,7 +9,7 @@ We'll start with the simplest form of a lesson - one with a single correct path.
 
 ### The Task Component
 
-At every step, the lesson will issue a task to the student. The sequence of tasks will form the building blocks of the lesson. The [task component](http://virtual.wf/web/docs/jsdoc_cmp/symbols/lesson.task.vwf.html) serves as the prototype for lesson tasks, and may be used for each required lesson step. 
+At every step, the lesson will issue a task to the student. The sequence of tasks will form the building blocks of the lesson. The [task component](https://demo.virtual.wf/web/docs/jsdoc_cmp/symbols/lesson.task.vwf.html) serves as the prototype for lesson tasks, and may be used for each required lesson step. 
 
 The task component contains the following properties that can be set in the lesson model file:
 
@@ -189,4 +189,4 @@ This configuration sets the renderer to use the threejs model and view driver in
 
 By activating the lesson driver, the app's user interface will automatically be updated to autogenerate an instruction panel upon lesson start. This instruction panel will pull in the <code>text</code> properties defined in the task components in the model. Additionally, the instruction panel will update based on <code>entering</code> and <code>completed</code> events fired in order to show the current step and progress of the overall lesson. 
 
-Visit the [humvee lesson](https://demo.virtualworldframework.com/humvee-lesson) to view the final result.
+Visit the [humvee lesson](https://demo.virtual.wf/humvee-lesson) to view the final result.

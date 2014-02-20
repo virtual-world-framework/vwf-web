@@ -20,7 +20,7 @@ Use the Virtual World Framework (VWF) to create apps that are:
   var chars = [ '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f' ];
     for ( var i = 0; i < 16; i++ )
       sessionId += chars[ Math.floor( Math.random() * 16 ) ];
-    return "http://virtual.wf/duck/" + sessionId;
+    return "https://virtual.wf/duck/" + sessionId;
   };
 
   this.Url = this.createAppUrl();

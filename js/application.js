@@ -2,7 +2,7 @@ function updateCurrentSessions($app) {
     var appName = $($app[0]).data("app-name");
 
     jQuery.ajax({
-        url: "http://demo.virtual.wf/" + appName + "/admin/instances",
+        url: "https://demo.virtual.wf/" + appName + "/admin/instances",
         dataType: "jsonp",
         context: $app,
         success: function(data) {
@@ -23,7 +23,7 @@ function updateCurrentSessions($app) {
                     if ( match = key.match( RegExp( "/([^/]*)$" ) ) ) { 
                         var instanceHTML = htmlEscape( match[1] );
                         var size = Object.size(value.clients);
-                        $instancesList.append("<li class='instance'><span class='badge badge-success'>" + size + "</span><span class='instance-name'>Name: " + instanceHTML + "</span><a class='btn btn-success btn-small pull-right' target='_blank' href='http://demo.virtual.wf/" + appName + "/" + instanceHTML + "'>Join Session</a>" + "</li>" );
+                        $instancesList.append("<li class='instance'><span class='badge badge-success'>" + size + "</span><span class='instance-name'>Name: " + instanceHTML + "</span><a class='btn btn-success btn-small pull-right' target='_blank' href='https://demo.virtual.wf/" + appName + "/" + instanceHTML + "'>Join Session</a>" + "</li>" );
                     }
                 } 
             );

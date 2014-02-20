@@ -23,7 +23,7 @@ Common properties used to customize the animation include:
 * <code>animationRate</code> - The animation playback rate
 * <code>animationLoop</code> - Whether or not the animation should replay after reaching the end
 
-A full list of methods and properties can be found under [animation](http://demo.virtual.wf/web/docs/jsdoc_cmp/symbols/animation.vwf.html) in the [Application API](#application-api).
+A full list of methods and properties can be found under [animation](https://demo.virtual.wf/web/docs/jsdoc_cmp/symbols/animation.vwf.html) in the [Application API](#application-api).
 
 -------------------
 

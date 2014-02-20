@@ -1,6 +1,6 @@
 ## <a name="transforms">Complex Transforms</a>
 
-Among the most common properties to set on a node within VWF are various transforms. The [node3](http://virtual.wf/web/docs/jsdoc_cmp/symbols/node3.vwf.html) component defines the basic transforms including the following:
+Among the most common properties to set on a node within VWF are various transforms. The [node3](https://demo.virtual.wf/web/docs/jsdoc_cmp/symbols/node3.vwf.html) component defines the basic transforms including the following:
 
 * <code>worldTransform</code>
 * <code>transform</code>
@@ -27,7 +27,7 @@ this.translation = [ 0, 100, 0 ];
 this.scale = [ 10, 0, 0 ];
 ```
 
-**Note**: There is an example app called [transforms](https://demo.virtualworldframework.com/web/example/transforms). This application allows the user to set and view the various properties discussed in this recipe, and see the outcome on an actual model. The source for this app can be found in the [github repository](https://github.com/virtual-world-framework/vwf) in public/web/example/transforms.) 
+**Note**: There is an example app called [transforms](https://demo.virtual.wf/web/example/transforms). This application allows the user to set and view the various properties discussed in this recipe, and see the outcome on an actual model. The source for this app can be found in the [github repository](https://github.com/virtual-world-framework/vwf) in public/web/example/transforms.) 
 
 -------------------
 
