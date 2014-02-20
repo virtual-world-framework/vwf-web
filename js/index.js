@@ -129,21 +129,21 @@ function setUpInstallButton() {
         });
 
         if (platform.os.family.indexOf("OS X") != -1) {
-            $("button.mac-install").removeClass("hide");
-            $("button.windows-install").addClass("hide");
+            $(".mac-install").removeClass("hide");
+            $(".windows-install").addClass("hide");
         } else if (platform.os.family.indexOf("Win") != -1) {
-            $("button.mac-install").addClass("hide");
-            $("button.windows-install").removeClass("hide");
+            $(".mac-install").addClass("hide");
+            $(".windows-install").removeClass("hide");
         } else if (platform.os.family.indexOf("iOS") != -1) {
-            $("button.mac-install").addClass("hide");
-            $("button.windows-install").addClass("hide");
+            $(".mac-install").addClass("hide");
+            $(".windows-install").addClass("hide");
         } else if (platform.os.family.indexOf("Linux") != -1) {
-            $("button.mac-install").removeClass("hide");
-            $("button.windows-install").addClass("hide");
+            $(".mac-install").removeClass("hide");
+            $(".windows-install").addClass("hide");
         } else {
             // We don't know what platform it is, so it's probably a weird *nix.
-            $("button.mac-install").removeClass("hide");
-            $("button.windows-install").addClass("hide");
+            $(".mac-install").removeClass("hide");
+            $(".windows-install").addClass("hide");
         }
     }
 }
