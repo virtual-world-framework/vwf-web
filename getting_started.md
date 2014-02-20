@@ -132,9 +132,9 @@ You'll notice that we set the value for the color by adding a `properties` secti
 
 The `material.vwf` component uses the `color` property to determine the object's color. If you tried changing the name of the `color` property to `myColor`, you'll notice that the ball is still gray.
 
-`material.vwf` does a whole lot more than just color. It can handle textures, opacity, and even shininess. Check out the [Material Documentation](https://virtual.wf/documentation.html#materials) for a proper rundown.
+`material.vwf` does a whole lot more than just color. It can handle textures, opacity, and even shininess. Check out the [Material Documentation](/documentation.html#materials) for a proper rundown.
 
-For more information on components, properties, and the `extends` keyword, see the [Components Documentation](https://virtual.wf/documentation.html#components).
+For more information on components, properties, and the `extends` keyword, see the [Components Documentation](/documentation.html#components).
 
 ### Lighting Things Up
 
@@ -170,7 +170,7 @@ Once again, we added a few special properties to `light` that `light.vwf` depend
 
 `distance` tells the light how far it's effective range is. Since we're moving ours about 1000 units or so from the board, let's make distance comfortably large, like 2000, to make sure it's lighting all the models in our scene.
 
-Lights default to being point lights, meaning they shine in all directions simultaneously. VWF also supports directional and spot lights, as well as a host of properties for manipulating lighting including color, intensity, and softness. For more information on lighting in VWF, see the [Lighting Documentation](https://virtual.wf/documentation.html#lights).
+Lights default to being point lights, meaning they shine in all directions simultaneously. VWF also supports directional and spot lights, as well as a host of properties for manipulating lighting including color, intensity, and softness. For more information on lighting in VWF, see the [Lighting Documentation](/documentation.html#lights).
 
 ### Positioning the Camera
 
@@ -228,7 +228,7 @@ Give that a reload, and you should have the board centered in your application's
 
 ![](/images/shot4.png)
 
-For more information about manipulating the camera, see the [Camera Documentation](http://virtual.wf/documentation.html#cameras).
+For more information about manipulating the camera, see the [Camera Documentation](/documentation.html#cameras).
 
 ### Position the Paddle
 

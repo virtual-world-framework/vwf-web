@@ -45,7 +45,7 @@ function checkCompatibility() {
             errorHtml += "  <li>WebGL</li>\n";
         }
         errorHtml += "</ul>\n" +
-                     "<p>... and it does not. For a list of compatible browsers, see <a href='https://virtual.wf/documentation.html#requirements'>Browser Requirements</a>. If your browser is listed, you may need to enable the necessary features. Google can help you find how to do that.</p>\n";
+                     "<p>... and it does not. For a list of compatible browsers, see <a href='/documentation.html#requirements'>Browser Requirements</a>. If your browser is listed, you may need to enable the necessary features. Google can help you find how to do that.</p>\n";
         compatibility.errorHtml = errorHtml;
     }
 
