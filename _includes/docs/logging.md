@@ -8,7 +8,7 @@ As you're building applications in the framework, it often helps to be familiar 
 
 #### VWF Logging
 
-The logging levels are defined in *support/client/lib/logger.js*, documented under [logger](http://demo.virtual.wf/web/docs/jsdoc/module-logger.html) in the [system API](#system-api). The logging options are <code>TRACE</code>, <code>DEBUG</code>, <code>INFO</code>, <code>WARN</code>, and <code>ERROR</code>. This module requires the configuration module, defined in *support/client/lib/vwf/configuration.js*. The default log level on a development server is <code>INFO</code> and the default log level on a production server is <code>WARN</code>. These values can be updated in the configuration.js file. 
+The logging levels are defined in *support/client/lib/logger.js*, documented under [logger](https://demo.virtual.wf/web/docs/jsdoc/module-logger.html) in the [system API](#system-api). The logging options are <code>TRACE</code>, <code>DEBUG</code>, <code>INFO</code>, <code>WARN</code>, and <code>ERROR</code>. This module requires the configuration module, defined in *support/client/lib/vwf/configuration.js*. The default log level on a development server is <code>INFO</code> and the default log level on a production server is <code>WARN</code>. These values can be updated in the configuration.js file. 
 
 Logging is preferred over generic console output (e.g. <code>console.error</code>), as console output can cause the browser to crash if proper debugging tools are not installed. 
 

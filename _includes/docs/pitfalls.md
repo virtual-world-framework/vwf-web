@@ -47,7 +47,7 @@ When accessing children of an object, the kernel does not delegate to the object
 
 ### Do not hard-code node ids
 
-From the view, you will reference nodes by using [find()](#querying) to get their nodeIDs and then using that nodeID in [kernel calls](http://virtual.wf/web/docs/jsdoc/2c8753578a.html) to get and set properties and call methods. These nodeIDs are not guaranteed to be identical from one run of the application to the next. Therefore, you must not hard-code them. For more information on accessing model nodes from the view, read the [Create a 2D Interface](#2d-interface) cookbook recipe.
+From the view, you will reference nodes by using [find()](#querying) to get their nodeIDs and then using that nodeID in [kernel calls](https://demo.virtual.wf/web/docs/jsdoc/2c8753578a.html) to get and set properties and call methods. These nodeIDs are not guaranteed to be identical from one run of the application to the next. Therefore, you must not hard-code them. For more information on accessing model nodes from the view, read the [Create a 2D Interface](#2d-interface) cookbook recipe.
 
 -------------------
 

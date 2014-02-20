@@ -11,7 +11,7 @@ Inside that file, you can place any valid HTML, but you must obey two rules:
 
 **Note**: The loader strips out header and body tags and inserts your content directly into a nameless, classless div in the VWF *index.html* page (view your app's page source to see what we mean). Including header and body tags is helpful for testing as a standalone webpage, but not required for VWF. 
 
-**Note**: The example application [transforms](https://demo.virtualworldframework.com/web/example/transforms) provides a basic demonstration of the principles described in this recipe. It provides a series of 2D HTML form panels which can be used to set properties, call methods, and receive data from the VWF model. The source for this app can be found in the [github repository](https://github.com/virtual-world-framework/vwf) in public/web/example/transforms.)
+**Note**: The example application [transforms](https://demo.virtual.wf/web/example/transforms) provides a basic demonstration of the principles described in this recipe. It provides a series of 2D HTML form panels which can be used to set properties, call methods, and receive data from the VWF model. The source for this app can be found in the [github repository](https://github.com/virtual-world-framework/vwf) in public/web/example/transforms.)
 
 -------------------
 
@@ -19,7 +19,7 @@ Inside that file, you can place any valid HTML, but you must obey two rules:
 
 The view (html) can access the model (yaml) through the <code>vwf_view.kernel</code> object. Thus, the HTML can watch what happens within the simulation and make changes to it such as setting properties, calling methods, and firing events. 
 
-The [vwf/api/kernel](http://demo.virtual.wf/web/docs/jsdoc/2c8753578a.html) in the [system API](#system-api) contains the list of kernel calls that can be made from HTML.
+The [vwf/api/kernel](https://demo.virtual.wf/web/docs/jsdoc/2c8753578a.html) in the [system API](#system-api) contains the list of kernel calls that can be made from HTML.
 
 -------------------
 
@@ -32,7 +32,7 @@ var nodeId = vwf_view.find( ... );
 vwf_view.kernel.setProperty( nodeId, "property1", value );
 ```
 
-Explanations of the parameters can be found in the [query](#querying) and [setProperty](http://demo.virtual.wf/web/docs/jsdoc/2c8753578a.html#setProperty) documentation. Note that the call to <code>find</code> returns immediately, but <code>setProperty</code> and the other kernel calls in this recipe are asynchronous. You can find out when the property has been set by creating an event handler for the [satProperty](http://demo.virtual.wf/web/docs/jsdoc/a2d7e1ef81.html#satProperty) event - and yes... we know that *sat* is not really the past tense of *set*.
+Explanations of the parameters can be found in the [query](#querying) and [setProperty](https://demo.virtual.wf/web/docs/jsdoc/2c8753578a.html#setProperty) documentation. Note that the call to <code>find</code> returns immediately, but <code>setProperty</code> and the other kernel calls in this recipe are asynchronous. You can find out when the property has been set by creating an event handler for the [satProperty](https://demo.virtual.wf/web/docs/jsdoc/a2d7e1ef81.html#satProperty) event - and yes... we know that *sat* is not really the past tense of *set*.
 
 -------------------
 
@@ -50,7 +50,7 @@ Pass parameters to the method by passing an array of values as a third parameter
 vwf_view.kernel.callMethod( nodeId, "method1", [ parameter1, parameter2, etc ] );
 ```
 
-Explanations of the parameters can be found in the [callMethod](http://demo.virtual.wf/web/docs/jsdoc/2c8753578a.html#callMethod)  API description.
+Explanations of the parameters can be found in the [callMethod](https://demo.virtual.wf/web/docs/jsdoc/2c8753578a.html#callMethod)  API description.
 
 -------------------
 
@@ -62,7 +62,7 @@ Create a model component from the view like so:
 vwf_view.kernel.createChild( nodeId, "componentName", component, undefined, callback );
 ```
 
-Explanations of the parameters can be found in the [createChild](http://demo.virtual.wf/web/docs/jsdoc/2c8753578a.html#createChild) API description.
+Explanations of the parameters can be found in the [createChild](https://demo.virtual.wf/web/docs/jsdoc/2c8753578a.html#createChild) API description.
 
 -------------------
 
@@ -91,9 +91,9 @@ Similarly, the view (.html) can monitor other application updates, such as those
 * Node created - <code>vwf_view.createdNode = function ...</code>
 * Node deleted - <code>vwf_view.deletedNode = function ...</code>
 
-To learn more about these events, you can look at the System API for the [view](http://demo.virtual.wf/web/docs/jsdoc/a2d7e1ef81.html). Earlier we mentioned that calls to set a property and call a method are asynchronous. If you would like to know when the action has completed, you may do so in [satProperty](http://demo.virtual.wf/web/docs/jsdoc/a2d7e1ef81.html#satProperty)/[calledMethod](http://demo.virtual.wf/web/docs/jsdoc/a2d7e1ef81.html#calledMethod)/etc.  However, remember that you will get calls into those event handlers for every property/method/etc that is set/called/etc.
+To learn more about these events, you can look at the System API for the [view](https://demo.virtual.wf/web/docs/jsdoc/a2d7e1ef81.html). Earlier we mentioned that calls to set a property and call a method are asynchronous. If you would like to know when the action has completed, you may do so in [satProperty](https://demo.virtual.wf/web/docs/jsdoc/a2d7e1ef81.html#satProperty)/[calledMethod](https://demo.virtual.wf/web/docs/jsdoc/a2d7e1ef81.html#calledMethod)/etc.  However, remember that you will get calls into those event handlers for every property/method/etc that is set/called/etc.
 
-**Note**: If a property setter alters the incoming value before storing it, [satProperty](http://demo.virtual.wf/web/docs/jsdoc/a2d7e1ef81.html#satProperty) will notify the app of the transformed value that is stored, not the original value. See the API description of [node](http://demo.virtual.wf/web/docs/jsdoc_cmp/symbols/node.vwf.html) for more details.
+**Note**: If a property setter alters the incoming value before storing it, [satProperty](https://demo.virtual.wf/web/docs/jsdoc/a2d7e1ef81.html#satProperty) will notify the app of the transformed value that is stored, not the original value. See the API description of [node](https://demo.virtual.wf/web/docs/jsdoc_cmp/symbols/node.vwf.html) for more details.
 
 -------------------
 
@@ -109,4 +109,4 @@ info:
 
 Additionally, the favicon of an application may be set simply by dropping a *favicon.ico* file into the application folder. 
 
-For an example of setting these items, visit the [duck application](https://demo.virtualworldframework.com/duck).
+For an example of setting these items, visit the [duck application](https://demo.virtual.wf/duck).

@@ -16,6 +16,3 @@ The following resources may be helpful for troubleshooting any issues that arise
   * In Mozilla Firefox, download and install [Firebug](https://addons.mozilla.org/en-us/firefox/addon/firebug). Select the bug icon in the upper right of the browser to run, and then select the Console window. 
 
 		<img src='images/firebug.png' alt='firebug' style='width:500px' />
-
-
-* Search or post a question to the [VWF Forum](http://demo.virtual.wf/web/forum.html) for additional assistance. 

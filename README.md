@@ -1,7 +1,7 @@
 VWF-Web
 =======
 
-Public website of the [Virtual World Framework](http://virtual.wf) project.
+Public website of the [Virtual World Framework](https://virtual.wf) project.
 
 ## Getting Started
 

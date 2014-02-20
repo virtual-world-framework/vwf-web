@@ -73,15 +73,15 @@ An alternative option to using the <code>config.yaml</code> file is to pass in d
 
 For instance, the Google Earth view driver may be loaded in an application without a configuration file:
 
-	http://virtualworldframework.com/earth/#!google-earth
+	https://demo.virtual.wf/earth/#!google-earth
 
 Both a model and a view driver may be loaded in an application with the following URL:
 
-	http://virtualworldframework.com/humvee/?glge#!glge
+	https://demo.virtual.wf/humvee/?threejs#!threejs
 
 Parameters may also be passed in via the URL. The following example passes in parameters for the application root and setting the pick interval:
 
-	http://virtualworldframework.com/sandtable/?threejs#!threejs={"application-root":"#vwf-root","experimental-pick-interval":50}
+	https://demo.virtual.wf/sandtable/?threejs#!threejs={"application-root":"#vwf-root","experimental-pick-interval":50}
 
 **Note**: The URL takes precedence and will override anything defined via the configuration file.
 
