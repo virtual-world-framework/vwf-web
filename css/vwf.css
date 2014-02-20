@@ -214,10 +214,6 @@ h3 small {
 
 /* Documentation */
 
-#docs {
-  position: relative;
-}
-
 #nav {
   overflow: auto;
   height: 100%;
@@ -234,20 +230,29 @@ h3 small {
 }
 
 @media (min-width: 992px) {
-  #content {
+  #docs-content {
     border-left: 1px solid #ddd;
   }
 }
 
-#docs h1 a,
-#docs h2 a {
+#docs-content h1,
+#docs-content h2 {
+}
+
+#docs-content h1 a,
+#docs-content h2 a {
   color: #000;
 }
 
-#docs h1 a:hover,
-#docs h2 a:hover {
+#docs-content h1 a:hover,
+#docs-content h2 a:hover {
   color: #000;
   text-decoration: none;
+}
+
+#docs-content p a {
+  position: relative;
+  z-index: 10;
 }
 
 ul.navmenu {
