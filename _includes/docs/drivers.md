@@ -77,7 +77,7 @@ For instance, the Google Earth view driver may be loaded in an application witho
 
 Both a model and a view driver may be loaded in an application with the following URL:
 
-	https://demo.virtual.wf/humvee/?glge#!glge
+	https://demo.virtual.wf/humvee/?threejs#!threejs
 
 Parameters may also be passed in via the URL. The following example passes in parameters for the application root and setting the pick interval:
 
