@@ -48,11 +48,11 @@ Spot1:
 
 ### Lighting Effects
 
-#### Specular Reflection
+#### Specular
 
-Specular reflection is the reflection of light from a surface where the ray is reflected in a single direction. 
+Specular reflection is the reflection of light from a surface where the ray is reflected in a single direction.
 
-#### Diffuse Reflection
-   
+#### Diffuse
+
 Diffuse reflection is the reflection of light from a surface where the ray is reflected at many angles.
 
