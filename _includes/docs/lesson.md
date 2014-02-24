@@ -103,7 +103,8 @@ The overall lesson entering script can also be defined, as needed.
       } //@ sourceURL=lesson.exiting
 ```
 
-Additionally, the cameraPoses referenced in the task properties each need to be defined. These represent the transform to which the camera will move at the beginning of the task. 
+Additionally, the cameraPoses referenced in the task properties each need to be defined. These represent the transform to which the camera will move at the beginning of the task.
+ 
 ```yaml
   cameraPose1:
     extends: http://vwf.example.com/node3.vwf
