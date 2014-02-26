@@ -68,8 +68,8 @@ PLATFORMS
 
 DEPENDENCIES
   capistrano (~> 2.15)
-  haml (~> 4.0)
-  jekyll (~> 1.4)
-  jekyll-contentblocks (~> 0.0.2)
-  rack (~> 1.5)
-  redcarpet (~> 2.3)
+  haml
+  jekyll
+  jekyll-contentblocks
+  rack
+  redcarpet
