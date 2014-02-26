@@ -294,6 +294,14 @@ code {
 .panel-demo h3 {
   margin-top: 0;
 }
+.panel-demo .alert {
+  margin-bottom: 0;
+  margin-top: 15px;
+}
+.panel-demo .alert .glyphicon {
+  padding-right: 20px;
+  text-shadow: #ccc 1px 1px 1px;
+}
 .current-sessions-header {
   border-top: 1px solid #ccc;
   padding-top: 10px;
