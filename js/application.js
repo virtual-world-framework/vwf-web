@@ -72,12 +72,4 @@ $( document ).ready( function() {
     $('.call-to-action.windows-install').on('click', function() {
         ga('send', 'event', 'install', 'click', 'Windows');
     });
-
-    $('#copyInstallButton').on('click', function() {
-        ga('send', 'event', 'install', 'copy', 'Mac/Linux');
-    });
-
-    $('#copyButton').on('click', function() {
-        ga('send', 'event', 'demo', 'copy-url', 'Pong');
-    });
 });

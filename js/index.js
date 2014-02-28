@@ -118,6 +118,13 @@ function setUpCopyButtons() {
             $(this).removeClass("btn-info");
             $(this).text("Copied!");
             $(this).addClass("btn-success");
+
+            // Send a Google Analytics event 
+            if ($(this).attr("id") == "copyButton") {
+                ga('send', 'event', 'demo', 'copy-url', 'Pong');
+            } else if ($(this).attr("id") == "copyInstallButton") {
+                ga('send', 'event', 'install', 'copy', 'Mac/Linux');
+            }
         });
     } );
 }
@@ -174,6 +181,14 @@ $(document).ready(function() {
         $( "#errorBox" )[ 0 ].innerHTML = compatibility.errorHtml;
         ga('send', 'event', 'browser', 'compatibility', 'false');
     }
+
+    $('.call-to-action.mac-install').on('click', function() {
+        ga('send', 'event', 'install', 'click', 'Mac/Linux');
+    });
+
+    $('.call-to-action.windows-install').on('click', function() {
+        ga('send', 'event', 'install', 'click', 'Windows');
+    });
 
     setUpInstallButton();
 });
