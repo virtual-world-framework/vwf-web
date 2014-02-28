@@ -57,4 +57,27 @@ $( document ).ready( function() {
 	$( ".panel-demo.core" ).each( function( index, element ) {
 		updateCurrentSessions( $( element ) );
 	});
+
+    $('a').on('click', function() {
+        // Look to see if they're downloading one of the files on the downloads page.
+        if (this.href.match(/download\.virtualworldframework\.com/) && window.location.href.match(/releases\.html/)) {
+            ga('send', 'event', 'downloads', 'click', this.text);
+        }
+    });
+
+    $('.call-to-action.mac-install').on('click', function() {
+        ga('send', 'event', 'install', 'click', 'Mac/Linux');
+    });
+
+    $('.call-to-action.windows-install').on('click', function() {
+        ga('send', 'event', 'install', 'click', 'Windows');
+    });
+
+    $('#copyInstallButton').on('click', function() {
+        ga('send', 'event', 'install', 'copy', 'Mac/Linux');
+    });
+
+    $('#copyButton').on('click', function() {
+        ga('send', 'event', 'demo', 'copy-url', 'Pong');
+    });
 });

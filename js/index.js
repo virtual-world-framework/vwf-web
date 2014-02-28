@@ -152,6 +152,8 @@ $(document).ready(function() {
     var compatibility = checkCompatibility();
 
     if ( compatibility.overall ) {
+        ga('send', 'event', 'browser', 'compatibility', 'true');
+
         $( "#errorBox" ).addClass( "hide" );
         preparePongFrame();
         $( ".panel-footer" ).removeClass( "hide" );
@@ -162,6 +164,7 @@ $(document).ready(function() {
                 case 79:
                 case 70:
                 case 82:
+                    ga('send', 'event', 'demo', 'move paddles');
                     setFocusPongFrame();
             }
         });
@@ -169,6 +172,7 @@ $(document).ready(function() {
         setUpCopyButtons();
     } else {
         $( "#errorBox" )[ 0 ].innerHTML = compatibility.errorHtml;
+        ga('send', 'event', 'browser', 'compatibility', 'false');
     }
 
     setUpInstallButton();
