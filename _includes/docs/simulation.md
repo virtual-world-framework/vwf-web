@@ -1,4 +1,4 @@
-# <a name="simulation">Create a Simulation</a>
+## <a name="simulation">Create a Simulation</a>
 
 Let's define a *simulation* as any application that models a sequence of causes and effects. Here's how to create one:
 

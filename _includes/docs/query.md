@@ -1,4 +1,4 @@
-# <a name="querying">Querying</a>
+## <a name="querying">Querying</a>
 
 Within VWF, there are several ways to query for a specific node for use in any application script. The <code>this.find</code> function runs a search and returns a set of matching nodes. The <code>this.test</code> function takes in a parameter to test against and returns a boolean value depending on whether the search was successful. 
 
