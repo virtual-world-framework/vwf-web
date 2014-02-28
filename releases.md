@@ -12,6 +12,8 @@ title: Downloads - Virtual World Framework
 - [VWF-Windows-Install.exe](http://download.virtualworldframework.com/files/VWF_Windows_Install.exe)
 
 ## Previous Archive Versions
+- [VWF-Master-0.6.22.0-windows-full.zip](http://download.virtualworldframework.com/files/archive/VWF_Master_0.6.22.0-windows-full.zip)
+- [VWF-Master-0.6.22.0-source-code.zip](http://download.virtualworldframework.com/files/archive/VWF_Master_0.6.22.0-source-code.zip)
 - [VWF-Master-0.6.21.0-windows-full.zip](http://download.virtualworldframework.com/files/archive/VWF_Master_0.6.21.0-windows-full.zip)
 - [VWF-Master-0.6.21.0-source-code.zip](http://download.virtualworldframework.com/files/archive/VWF_Master_0.6.21.0-source-code.zip)
 - [VWF-Master-0.6.20.0-windows-full.zip](http://download.virtualworldframework.com/files/archive/VWF_Master_0.6.20.0-windows-full.zip)
