@@ -164,7 +164,6 @@ $(document).ready(function() {
                 case 82:
                     setFocusPongFrame();
             }
-            event.preventDefault();
         });
 
         setUpCopyButtons();
