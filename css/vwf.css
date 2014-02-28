@@ -200,14 +200,6 @@ h3 small {
   line-height: 1.4;
 }
 
-.vwf-footer {
-  border-top: 1px solid #ddd;
-  margin-top: 30px;
-  padding-top: 40px;
-  padding-bottom: 30px;
-  color: #777;
-}
-
 .current-header {
   font-size:18px;
 }
@@ -324,3 +316,28 @@ body.downloads-page {
   border: none;
 }
 
+/* Footer */
+
+.get-started + .vwf-footer {
+  margin-top: 0px;
+}
+
+.vwf-footer {
+  border-top: 1px solid #ddd;
+  margin-top: 30px;
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+
+.vwf-footer .contacts {
+  margin-bottom: 20px;
+}
+
+.vwf-footer .contacts td {
+  padding: 3px 10px 3px 0;
+  color: #333;
+}
+
+.vwf-footer .legal {
+  color: #aaa;
+}
