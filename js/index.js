@@ -140,7 +140,8 @@ function setUpInstallButton() {
             $(".windows-install").addClass("hide");
         } else if (platform.os.family.indexOf("Win") != -1) {
             $(".mac-install").addClass("hide");
-            $(".windows-install").removeClass("hide");
+            // Disabling Windows installer until we can verify that it doesn't override person's PATH variable
+            // $(".windows-install").removeClass("hide");
         } else if (platform.os.family.indexOf("iOS") != -1) {
             $(".mac-install").addClass("hide");
             $(".windows-install").addClass("hide");
