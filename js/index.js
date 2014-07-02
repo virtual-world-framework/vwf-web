@@ -52,18 +52,11 @@ function checkCompatibility() {
     return compatibility;
 }
 
-function setFocusPongFrame() {
-    var iframe = $("#pongFrame")[0];
-
-    // Focus is set after returning to the browser so it works in Firefox
-    setTimeout( function() { 
-        iframe.contentWindow.focus();
-    }, 0);
-}
-
-function preparePongFrame() {
-    var $iframe = $("#pongFrame");
-    $iframe.removeClass( "hide" );
+function prepareAppFrames() {
+    var $iframeApp1 = $( "#app1" );
+    $iframeApp1.removeClass( "hide" );
+    var $iframeApp2 = $( "#app2" );
+    $iframeApp2.removeClass( "hide" );
 
     var qs = (function(a) {
         if (a == "") {
@@ -86,16 +79,11 @@ function preparePongFrame() {
 
     // Load the iframe with the correct URL
     var vwfServer = "https://demo.virtual.wf";
-    var pongUrl = vwfServer + "/vwf-pong/" + id;
-    var iframe = $iframe[0];
-    iframe.src = pongUrl;
-
-    // Fill the form to copy with the share URL
-    var vwfWebServer = "https://virtual.wf";
-    var pongShareUrl = vwfWebServer + "?id=" + id;
-    $('#vwfPongId').val(pongShareUrl);
-
-    setTimeout(setFocusPongFrame, 100);
+    var appUrl = vwfServer + "/duck/" + id;
+    var iframeApp1 = $iframeApp1[0];
+    iframeApp1.src = appUrl;
+    var iframeApp2 = $iframeApp2[0];
+    iframeApp2.src = appUrl;
 }
 
 function makeid() {
@@ -162,8 +150,9 @@ $(document).ready(function() {
     if ( compatibility.overall ) {
         ga('send', 'event', 'browser', 'compatibility', 'true');
 
-        $( "#errorBox" ).addClass( "hide" );
-        preparePongFrame();
+        $( "#errorBox1" ).addClass( "hide" );
+        $( "#errorBox2" ).addClass( "hide" );
+        prepareAppFrames();
         $( ".panel-footer" ).removeClass( "hide" );
 
         $( "body" ).keydown(function( event ) {
@@ -179,7 +168,8 @@ $(document).ready(function() {
 
         setUpCopyButtons();
     } else {
-        $( "#errorBox" )[ 0 ].innerHTML = compatibility.errorHtml;
+        $( "#errorBox1" )[ 0 ].innerHTML = compatibility.errorHtml;
+        $( "#errorBox2" )[ 0 ].innerHTML = compatibility.errorHtml;
         ga('send', 'event', 'browser', 'compatibility', 'false');
     }
 
