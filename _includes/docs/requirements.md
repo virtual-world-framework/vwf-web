@@ -1,4 +1,4 @@
-## <a name="requirements">Browser Requirements</a>
+# Browser Requirements
  
 In order to successfully run the Virtual World Framework, the following browser requirements must be met:
 
@@ -15,15 +15,15 @@ The following browsers are recommended for use:
 
 -------------------
 
-### VWF Compatibility Quirks
+## Compatibility Quirks
 
-#### Windows
+### Windows
 
 *   At this time we have limited support for Internet Explorer 10. Please see our demos of Google Earth and Tile Puzzle 2D to see what can be done with the framework without WebGL.  
 
 *   Internet Explorer 11 is rumored at this time to support WebGL, and we are constantly looking to the future of modern browsers to determine how well the Virtual World Framework is supported.
 
-#### Macintosh OS X
+### Macintosh OS X
 
 *   Safari 5 is experiencing some issues at this time. We are working through multiple issues with Safari to get VWF and Safari compatibility completed.
 
@@ -31,18 +31,18 @@ The following browsers are recommended for use:
 
 -------------------
 
-### Enabling WebGL
+## Enabling WebGL
 
 Use the following steps to verify that WebGL is enabled in your browser.
 
-#### Chrome
+### Chrome
 
 *   Open a new tab and type *chrome://flags* in the address bar.
 *   Search for WebGL.
 *   Verify *Disable WebGL* is not enabled. 
 *   If on an Android device, verify *Enable WebGL Android* is enabled.
 
-#### Firefox
+### Firefox
 
 *   Open a new tab and type *about:config* in the address bar. 
 *   Search for *WebGL.*
