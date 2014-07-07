@@ -32,37 +32,6 @@ function prepareAppFrames() {
     iframeApp2.src = appUrl;
 }
 
-function makeid() {
-    var text = "";
-    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-
-    for( var i=0; i < 16; i++ ) {
-        text += possible.charAt(Math.floor(Math.random() * possible.length));
-    }
-
-    return text;
-}
-
-function setUpCopyButtons() {
-    var client = new ZeroClipboard( $(".copy-button"), { 
-        moviePath: "/swf/ZeroClipboard.swf" 
-    } );
-    client.on( "load", function(client) {
-        client.on( "complete", function(client, args) {
-            $(this).removeClass("btn-info");
-            $(this).text("Copied!");
-            $(this).addClass("btn-success");
-
-            // Send a Google Analytics event 
-            if ($(this).attr("id") == "copyButton") {
-                ga('send', 'event', 'demo', 'copy-url', 'Pong');
-            } else if ($(this).attr("id") == "copyInstallButton") {
-                ga('send', 'event', 'install', 'copy', 'Mac/Linux');
-            }
-        });
-    } );
-}
-
 function setUpInstallButton() {
     if (platform) {
         $(".mac-install").click(function () {
@@ -95,28 +64,14 @@ $(document).ready(function() {
 
     if ( compatibility.overall ) {
         ga('send', 'event', 'browser', 'compatibility', 'true');
-
         $( "#errorBox1" ).addClass( "hide" );
         $( "#errorBox2" ).addClass( "hide" );
         prepareAppFrames();
         $( ".panel-footer" ).removeClass( "hide" );
-
-        $( "body" ).keydown(function( event ) {
-            switch( event.which ) {
-                case 76:
-                case 79:
-                case 70:
-                case 82:
-                    ga('send', 'event', 'demo', 'move paddles');
-                    setFocusPongFrame();
-            }
-        });
-
-        setUpCopyButtons();
     } else {
+        ga('send', 'event', 'browser', 'compatibility', 'false');
         $( "#errorBox1" )[ 0 ].innerHTML = compatibility.errorHtml;
         $( "#errorBox2" )[ 0 ].innerHTML = compatibility.errorHtml;
-        ga('send', 'event', 'browser', 'compatibility', 'false');
     }
 
     $('.call-to-action.mac-install').on('click', function() {
