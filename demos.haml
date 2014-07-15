@@ -10,40 +10,58 @@ title: Demos - Virtual World Framework
   .panel-body
     .row
       .demo-info.col-sm-8
-        %h3 Sandbox
+        %h3 Grassy Terrain
         %p
           %a{href: "http://www.adlnet.gov"} Advanced Distributed Learning's (ADL)
-          Sandbox app allows the user to create and edit their own environment. Be sure to check out some of the demo environments - you can reach them from the "Visit an Existing World" button.
-        %a.btn.btn-info{role: "button", href: "http://vwf.adlnet.gov/adl/sandbox/"} Launch New Session
+          terrain demo shows dynamically generated terrain with atmospheric effects and grass that sways in the wind.
+        %a.btn.btn-info{role: "button", href: "https://vwf.adlnet.gov/0750/adl/sandbox/example_terraingrass/"} Launch New Session
       .col-sm-4
-        %a{href: "http://vwf.adlnet.gov/adl/sandbox/"}
-          %img.img-responsive.img-rounded.pull-right.hidden-xs{src: "/images/gallery-sandbox.png"}
+        %a{href: "https://vwf.adlnet.gov/0750/adl/sandbox/example_terraingrass/"}
+          %img.img-responsive.img-rounded.pull-right.hidden-xs{src: "/images/gallery-terraingrass.png"}
 
 .panel.panel-default.panel-demo
   .panel-body
     .row
       .demo-info.col-sm-8
-        %h3 Kimray
+        %h3 Middle-eastern Village
+        %p
+          ADL's middle-eastern village is a rich environment with human characters and vehicles.
+        %a.btn.btn-info{role: "button", href: "https://vwf.adlnet.gov/0750/adl/sandbox/z4xfNEQSbDYKB5WS/"} Launch New Session
+      .col-sm-4
+        %a{href: "https://vwf.adlnet.gov/0750/adl/sandbox/z4xfNEQSbDYKB5WS/"}
+          %img.img-responsive.img-rounded.pull-right.hidden-xs{src: "/images/gallery-village.png"}
+
+.panel.panel-default.panel-demo
+  .panel-body
+    .row
+      .demo-info.col-sm-8
+        %h3 Mars Game (beta)
+        %p
+          ADL's Mars Game teaches high school students math and computer programming concepts as players operate a brave Mars rover who needs to save the human explorers on their way to Mars.
+        %a.btn.btn-info{role: "button", href: "https://development.virtual.wf/mars-game"} Launch New Session
+      .col-sm-4
+        %a{href: "https://development.virtual.wf/mars-game"}
+          %img.img-responsive.img-rounded.pull-right.hidden-xs{src: "/images/gallery-mars-game.png"}
+    .row
+      .col-xs-12
+        .alert.alert-warning
+          %p.small
+            %span.glyphicon.glyphicon-warning-sign
+            This app will probably warn of certificate errors because it is self-signed with the wrong name.  No need to fear.  We'll fix it at some point.
+
+.panel.panel-default.panel-demo
+  .panel-body
+    .row
+      .demo-info.col-sm-8
+        %h3 Valve Maintenance
         %p
           The Kimray valve app, built for the 
           %a{target: "_blank", href: "http://www.nmjc.edu/"} New Mexico Junior College
-          , is a live 3D Immersive Maintenance Demonstration built on top of VWF to demonstrate the capabilities of Remote Subject Matter Experts interacting with a student using a shared real-time lesson workspace. This app uses WebRTC to deliver real-time video and voice over IP without any browser plugins.
+          , is a 3D Immersive Maintenance Demonstration built on VWF to demonstrate the capabilities of Remote Subject Matter Experts interacting with a student via video chat, using a shared real-time lesson workspace.
         %a.btn.btn-info{role: "button", href: "https://ec2-54-226-9-164.compute-1.amazonaws.com/kimray/"} Launch New Session
       .col-sm-4
         %a{href: "https://ec2-54-226-9-164.compute-1.amazonaws.com/kimray/"}
           %img.img-responsive.img-rounded.pull-right.hidden-xs{src: "/images/gallery-kimray.png"}
-
-.panel.panel-default.panel-demo.core{"data-app-name" => "bzflag"}
-  .panel-body
-    .row
-      .demo-info.col-sm-8
-        %h3 bzflag
-        %p
-          The bzflag app is VWF's version of the classic arcade game. Use the WASD keys to move and the Enter key to fire your laser cannon. Use the chat feature to communicate and taunt your opponents, but most of all look out for opposing tanks!
-        %a.btn.btn-info{role: "button", href: "https://demo.virtual.wf/bzflag"} Launch New Session
-      .col-sm-4
-        %a{href: "https://demo.virtual.wf/bzflag"}
-          %img.img-responsive.img-rounded.pull-right.hidden-xs{src: "/images/gallery-bzflag.png"}
 
 .panel.panel-default.panel-demo.core{"data-app-name" => "command-center"}
   .panel-body
@@ -63,30 +81,6 @@ title: Demos - Virtual World Framework
             %span.glyphicon.glyphicon-warning-sign
             This demo features highly detailed models and may not load on slower internet connections.
 
-.panel.panel-default.panel-demo.core{"data-app-name" => "humvee-lesson"}
-  .panel-body
-    .row
-      .demo-info.col-sm-8
-        %h3 Humvee Lesson
-        %p
-          Using the VWF lesson configuration and interface, the humvee lesson app walks the user through the process of starting and driving the humvee.
-        %a.btn.btn-info{role: "button", href: "https://demo.virtual.wf/humvee-lesson"} Launch New Session
-      .col-sm-4
-        %a{href: "https://demo.virtual.wf/humvee-lesson"}
-          %img.img-responsive.img-rounded.pull-right.hidden-xs{src: "/images/gallery-humvee-lesson.png"}
-
-.panel.panel-default.panel-demo.core{"data-app-name" => "radio-lesson"}
-  .panel-body
-    .row
-      .demo-info.col-sm-8
-        %h3 Radio Lesson
-        %p
-          The radio lesson app uses VWF's lesson interface to walk a user through the basic operations of the radio.
-        %a.btn.btn-info{role: "button", href: "https://demo.virtual.wf/radio-lesson"} Launch New Session
-      .col-sm-4
-        %a{href: "https://demo.virtual.wf/radio-lesson"}
-          %img.img-responsive.img-rounded.pull-right.hidden-xs{src: "/images/gallery-radio-lesson.png"}
-
 / .panel.panel-default.panel-demo{"data-app-name" => "agi/cesium"}
 /   .panel-body
 /     .row
@@ -100,17 +94,17 @@ title: Demos - Virtual World Framework
 /         %a{href: "https://demo.virtual.wf/agi/cesium#!cesium"}
 /           %img.img-responsive.img-rounded.pull-right.hidden-xs{src: "/images/gallery-agi-cesium.jpg"}
 
-.panel.panel-default.panel-demo.core{"data-app-name" => "minesweeper"}
+.panel.panel-default.panel-demo.core{"data-app-name" => "bzflag"}
   .panel-body
     .row
       .demo-info.col-sm-8
-        %h3 Minesweeper
+        %h3 bzflag
         %p
-          VWF's take on the classic Minesweeper game. Click tiles to turn them over and see the number of neighboring mines. Unveiling all numbers wins the game - select the wrong tile and it's game over.
-        %a.btn.btn-info{role: "button", href: "https://demo.virtual.wf/minesweeper"} Launch New Session
+          The bzflag app is VWF's version of the classic arcade game. Use the WASD keys to move and the Enter key to fire your laser cannon. Use the chat feature to communicate and taunt your opponents, but most of all look out for opposing tanks!
+        %a.btn.btn-info{role: "button", href: "https://demo.virtual.wf/bzflag"} Launch New Session
       .col-sm-4
-        %a{href: "https://demo.virtual.wf/minesweeper"}
-          %img.img-responsive.img-rounded.pull-right.hidden-xs{src: "/images/gallery-minesweeper.png"}
+        %a{href: "https://demo.virtual.wf/bzflag"}
+          %img.img-responsive.img-rounded.pull-right.hidden-xs{src: "/images/gallery-bzflag.png"}
 
 .panel.panel-default.panel-demo.core{"data-app-name" => "tile-puzzle-2D"}
   .panel-body
