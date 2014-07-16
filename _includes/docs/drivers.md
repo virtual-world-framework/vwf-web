@@ -1,5 +1,15 @@
 ## <a name="drivers">Drivers</a>
 
+We've discussed how to write an application using the framework. The next section describes how the system works, and how to reconfigure the system to accomplish more complex tasks. The drivers of the system are the things that connect components to the 3D visualization and the user interaction that you see. 
+
+The drivers define the autonomic actions that happen within a system, dividing responsibility and delegating work for each action of the system. These actions include things such as creating or deleting a node, getting or setting a property, calling methods, and firing events. The drivers stand side by side without direct interaction between them. Rather, they interact by autonomic actions that the kernel manages. 
+
+For example, the three.js driver is responsible for any manipulation on the node that's part of the scene, like setting the translation of a node. This information may be ignored by the rest of the drivers if it is not needed. 
+
+Model and view drivers have the same structure; however, the model driver doesn't reach out, and a view driver does not have direct control. 
+
+For more detailed information regarding the drivers, please reference the [drivers](#drivers) page.
+
 ### Configuring Drivers for an Application
 
 An application allows for both its model and view drivers to be selected and activated via a configuration file. This system will look for a config file with the same base name as the application being loaded. For instance, <code>application.vwf</code> will search for and attempt to load a config file entitled <code>application.vwf.config.yaml</code>.

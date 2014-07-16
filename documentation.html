@@ -3,15 +3,10 @@ layout: docs
 title: Documentation - Virtual World Framework
 ---
 
-
-	{% capture introduction %}{% include docs/introduction.md %}{% endcapture %}
-	{{ introduction | markdownify }}
-	{% capture requirements %}{% include docs/requirements.md %}{% endcapture %}
-	{{ requirements | markdownify }}
-	{% capture troubleshooting %}{% include docs/troubleshooting.md %}{% endcapture %}
-	{{ troubleshooting | markdownify }}
 	{% capture install %}{% include docs/install.md %}{% endcapture %}
 	{{ install | markdownify }}
+	{% capture troubleshooting %}{% include docs/troubleshooting.md %}{% endcapture %}
+	{{ troubleshooting | markdownify }}
 	{% capture devguide %}{% include docs/devguide.md %}{% endcapture %}
 	{{ devguide | markdownify }}
 	{% capture architecture %}{% include docs/architecture.md %}{% endcapture %}
@@ -66,3 +61,5 @@ title: Documentation - Virtual World Framework
 	{{ application | markdownify }}
 	{% capture system %}{% include docs/system.md %}{% endcapture %}
 	{{ system | markdownify }}
+	{% capture corecontributors %}{% include docs/corecontributors.md %}{% endcapture %}
+	{{ corecontributors | markdownify }}
