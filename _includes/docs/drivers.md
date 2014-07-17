@@ -8,8 +8,6 @@ For example, the three.js driver is responsible for any manipulation on the node
 
 Model and view drivers have the same structure; however, the model driver doesn't reach out, and a view driver does not have direct control. 
 
-For more detailed information regarding the drivers, please reference the [drivers](#drivers) page.
-
 ### Configuring Drivers for an Application
 
 An application allows for both its model and view drivers to be selected and activated via a configuration file. This system will look for a config file with the same base name as the application being loaded. For instance, <code>application.vwf</code> will search for and attempt to load a config file entitled <code>application.vwf.config.yaml</code>.
