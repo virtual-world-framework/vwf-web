@@ -3,7 +3,34 @@ layout: page
 title: Getting Started - Virtual World Framework
 ---
 
-# Getting Started: Pong In An Hour
+# Tutorial: Create Pong In An Hour
+
+<h2 class="subtitle">(and play with a remote friend!)</h2>
+
+<div class="hidden-xs">
+  <div class="panel panel-default vwf-panel">
+    <div class="panel-body">
+      <div class="well errorBox" id="errorBox">
+        <noscript>
+          <h3>I need javascript.</h3> 
+          <p>
+            To see the pong app in action, you will need to enable javascript in your browser.
+          </p>
+        </noscript>
+      </div>
+      <iframe class="vwf-frame hide" id="pongFrame" frameborder="0" src=""></iframe>
+    </div>
+    <div class="panel-footer hide">
+      <span class="small">Play VWF Pong with a friend with the below URL:</span>
+      <div class="input-group">
+        <input type="text" class="form-control" id="vwfPongId" readonly="readonly" placeholder="Loading VWF...">
+        <span class="input-group-btn">
+          <button id="copyButton" data-clipboard-target="vwfPongId" class="btn btn-info copy-button" type="button">Copy and share!</button>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
 
 You're going to need to have VWF installed in order to follow along with this guide. If you haven't installed it yet, check out our [Installation Instructions](https://github.com/virtual-world-framework/vwf#installation).
 
@@ -668,3 +695,9 @@ This does exactly what you would expect. It sets the title of the webpage.
 ## Wrapping It Up
 
 That's it! In these past minutes, you've explored the basics of creating 3D, collaborative applications with VWF. As you can see, fairly complex applications can be created rather quickly. We're excited to see what you'll do with it.
+
+{% contentfor scripts %}
+<script src="js/compatibility.js"></script>
+<script src="js/utility.js"></script>
+<script src="js/getting_started.js"></script>
+{% endcontentfor %}

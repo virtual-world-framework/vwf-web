@@ -6,10 +6,39 @@ title: Virtual World Framework
 <div class="jumbotron">
   <div class="container">
     <div class="row">
-      <div class="col-md-5 col-lg-6">
-        <h1 class="vwf-title">The Next 3D Platform<br class="hidden-sm"> Is Your Browser</h1>
-        <p>Create interactive, multi-user apps without the headache.</p>
-        <!-- <p>Create your own Pong app in 10 minutes. Check out our <a href="#">Getting Started Guide</a>.</p> -->
+      <div class="col-md-6 col-lg-6">
+        <h1 class="vwf-title">The Web is a lonely place ... invite a friend.</h1>
+        <p>Imagine that you are in New York...</p>
+        <div class="well errorBox" id="errorBox1">
+          <noscript>
+            <h3>I need javascript.</h3> 
+            <p>
+              To see our awesome demo, you will need to enable javascript in your browser.
+            </p>
+          </noscript>
+        </div>
+        <iframe class="vwf-frame hide" id="app1" frameborder="0" src=""></iframe>
+      </div>
+      
+      <div class="col-md-6 col-lg-6">
+        <div class="well errorBox" id="errorBox2">
+          <noscript>
+            <h3>I need javascript.</h3> 
+            <p>
+              To see our awesome demo, you will need to enable javascript in your browser.
+            </p>
+          </noscript>
+        </div>
+        <iframe class="vwf-frame hide" id="app2" frameborder="0" src=""></iframe>
+        <p>...working with someone in San Francisco ... sharing a 100% synchronized workspace.</p>
+        <p>On VWF, you can build web apps that make that possible.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-lg-6">
+        <p>(Click the duck to see it spin in synchrony)</p>
+      </div>
+      <div class="col-md-6 col-lg-6">
         <a href="http://github.com/virtual-world-framework/vwf" class="btn btn-default btn-lg github-view call-to-action" role="button">
           View on GitHub &nbsp;
           <img class="github-img" src="/images/github-mark.png"/>
@@ -22,39 +51,13 @@ title: Virtual World Framework
           Install VWF &nbsp;
           <span class="glyphicon glyphicon-download-alt"></span>
         </button>
-
         <div id="macInstall" class="hide">
           <span class="small">Paste the following in your terminal:</span>
           <div class="input-group">
-            <input type="text" id="installCommand" class="form-control" readonly="readonly" value="curl -kL http://get.virtual.wf  | sh">
+            <input type="text" id="installCommand" class="form-control" readonly="readonly" value="curl -L http://get.virtual.wf  | sh">
             <span class="input-group-btn">
               <button id="copyInstallButton" data-clipboard-target="installCommand" class="btn btn-info copy-button" type="button">Copy!</button>
             </span>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-md-7 col-lg-6 hidden-xs">
-        <div class="panel panel-default vwf-panel">
-          <div class="panel-body">
-            <div class="well" id="errorBox">
-              <noscript>
-                <h3>I need javascript.</h3> 
-                <p>
-                  To see our awesome demo, you will need to enable javascript in your browser.
-                </p>
-              </noscript>
-            </div>
-            <iframe class="vwf-frame hide" id="pongFrame" frameborder="0" src=""></iframe>
-          </div>
-          <div class="panel-footer hide">
-            <span class="small">Play VWF Pong with a friend with the below URL:</span>
-            <div class="input-group">
-              <input type="text" class="form-control" id="vwfPongId" readonly="readonly" placeholder="Loading VWF...">
-              <span class="input-group-btn">
-                <button id="copyButton" data-clipboard-target="vwfPongId" class="btn btn-info copy-button" type="button">Copy and share!</button>
-              </span>
-            </div>
           </div>
         </div>
       </div>
@@ -64,25 +67,26 @@ title: Virtual World Framework
 
 <div class="container">
   <div class="row feature-row">
+    <h2>On VWF, you can build web apps that are:</h2>
     <div class="col-sm-4">
       <img class="img-responsive center-block" src="/images/collaboration-icon.png">
       <h3>Collaborative</h3>
       <p>
-        Seamlessly share state between users.
+        Seamlessly share state between users without a hassle.
       </p>
     </div>
     <div class="col-sm-4">
       <img class="img-responsive center-block" src="/images/3d-glasses-icon.png">
-      <h3>Immersive</h3>
+      <h3>3D</h3>
       <p>
-        Go beyond text and images. 3D. WebRTC. Or roll your own driver and the sky's the limit.
+        Take advantage of WebGL graphics. Or stick to 2D, if you prefer.
       </p>
     </div>
     <div class="col-sm-4">
       <img class="img-responsive center-block" src="/images/toolbox-icon.png">
       <h3>Integrated</h3>
       <p>
-        All the tools you need in one place. It just works.
+        All the tools you need in one place.  Add video chat with WebRTC. Or roll your own driver and the sky's the limit.
       </p>
     </div>
   </div>
@@ -96,7 +100,7 @@ title: Virtual World Framework
       <div class="panel-body">
         <div class="row">
           <div class="col-sm-6">
-            <h3>Get inspired. <small>Check out other <a href="/demos.html">demos</a> for ideas of what's possible.</small></h3>
+            <h3>Get inspired. <small>Check out our <a href="/demos.html">demos</a> for ideas of what's possible.</small></h3>
           </div>
           <div class="col-sm-6 img-get-started">
             <img class="img-responsive hidden-xs" src="/images/screenshot-bzflag.png">
@@ -109,7 +113,7 @@ title: Virtual World Framework
       <div class="panel-body">
         <div class="row">
           <div class="col-sm-6">
-            <h3>Learn the basics. <small>Browse our <a href="/documentation.html#cookbook">cookbook</a>.</small></h3>
+            <h3>Learn the basics. <small>Follow our <a href="/getting_started.html">tutorial</a>.</small></h3>
           </div>
           <div class="col-sm-6 img-get-started">
             <img class="img-responsive hidden-xs" src="/images/screenshot-cookbook.png">
@@ -147,6 +151,8 @@ title: Virtual World Framework
 </div><!-- /.feature-wrap -->
 
 {% contentfor scripts %}
-    <script src="js/platform.js"></script>
-    <script src="js/index.js"></script>
+  <script src="js/platform.js"></script>
+  <script src="js/compatibility.js"></script>
+  <script src="js/utility.js"></script>
+  <script src="js/index.js"></script>
 {% endcontentfor %}
