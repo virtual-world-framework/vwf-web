@@ -21,7 +21,7 @@ NOTE: On Mac OS X, please make sure you have [Xcode Command Line Tools](https://
 
 Execute the following command at your terminal/shell prompt:
 
-    $ curl -kL http://get.virtual.wf  | sh
+    $ curl -L http://get.virtual.wf  | sh
 	
 Launch a command prompt window and create a new VWF application:
 
