@@ -288,10 +288,20 @@ The first parameter is the name of the new event and the second is an array of a
 New event listeners can also be added.
 
 ```javascript
-this.events.eventName = this.events.add(function() { ... }, phases, this.children.listeningNode);
+this.events.eventName = this.events.add(function() { ... }, phases, this.children.listeningNode, callback /* listenerID */);
 ```
 
-The first parameter is the function that will be executed when the event occurs. The second parameter is optional and defaults to "bubble". Setting phases to "capture" will prevent the event from propagating to other nodes. The final parameter is the node that is listening for the event. 
+The first parameter is the function that will be executed when the event occurs.
+
+The second parameter is optional and defaults to `"bubble"`. Setting phases to `"capture"` will prevent the event from propagating to other nodes.
+
+The third parameter affects the `this` value for the event and defaults to the node firing the event. Setting the parameter to the node listening for the event allows the listener function to find its node more easily. This parameter is also optional.
+
+The final parameter is an optional callback function to receive the ID assigned to the listener. The listener ID is used to remove a listener from the event.
+
+```javascript
+this.events.eventName = this.events.remove(listenerID);
+```
 
 #### children
 
