@@ -160,9 +160,9 @@ Normal web traffic is sent unencrypted over the Internet. That is, anyone with a
 
 The *openssl* toolkit is used to generate an RSA Private Key and CSR (Certificate Signing Request). It can also be used to generate self-signed certificates which can be used for testing purposes or internal usage.
 
-The first step is to create your RSA Private Key. This key is a 1024 bit key which is encrypted using Triple-DES and stored in a PEM format so that it is readable as ASCII text.
+The first step is to create your RSA Private Key. This key is a 2048 bit key which is encrypted using Triple-DES and stored in a PEM format so that it is readable as ASCII text.
 
-    openssl genrsa -des3 -out server.key 1024
+    openssl genrsa -des3 -out server.key 2048
 
 Results:
 
