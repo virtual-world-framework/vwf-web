@@ -166,7 +166,7 @@ The first step is to create your RSA Private Key. This key is a 2048 bit key whi
 
 Results:
 
-    Generating RSA private key, 1024 bit long modulus<br/>
+    Generating RSA private key, 2048 bit long modulus<br/>
     .........................................................++++++<br/>
     ........++++++<br/>
     e is 65537 (0x10001)<br/>
