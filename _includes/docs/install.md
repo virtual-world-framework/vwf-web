@@ -4,7 +4,9 @@
 
 ## Windows 
 
-Download and run the VWF Windows Installer (coming soon! - for now, follow the [For Core Contributors](#corecontributors) installation instructions below).
+<!--
+
+Download and run the VWF Windows Installer. 
 
 Launch a command prompt window and create a new VWF application:
 
@@ -14,6 +16,34 @@ Change into your new application folder and start the  server.
 
     c:\> cd MyApp
     c:\MyApp> vwf
+
+-->
+
+Download and extract the latest [Windows build](http://download.virtualworldframework.com/files/vwf-0.6.23.windows-full.zip).
+
+Install [Node.js](http://nodejs.org/).
+
+Launch a command prompt and navigate to your *vwf* folder. 
+
+Edit npm configuration settings:
+
+    npm config set registry http://registry.npmjs.org/
+
+Note: You may also need to set a proxy if required by your network:
+
+    npm config set strict-ssl false
+    npm config set proxy http://yourproxy.com:80
+    npm config set https-proxy http://yourproxy.com:80
+
+Install all the prerequisites for the VWF server:
+
+    npm install
+
+Start the server:
+
+    npm start
+
+Navigate to "localhost:3000/duck" to see the sample duck application from your local machine.
 
 ## Mac OS X / Linux 
 

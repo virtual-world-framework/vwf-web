@@ -1,152 +1,44 @@
-# <a name="corecontributors">For Core contributors</a>
+# <a name="corecontributors">For Core Contributors</a>
 
-This section is for those who don't just want to write VWF applications, but want to write new drivers and modify the VWF Core.
+This section is for those who don't just want to write VWF applications, but want to write new drivers and modify the VWF Core. If instead, you wish to develop VWF Applications on top of the framework, please follow the instructions above.
 
-### Core Developer Installation - Ruby
-
-Note: You need only follow these instructions if you plan on developing VWF core functionality (for example, writing or modifying a driver). If instead, you wish to develop VWF Applications on top of the framework, please follow the instructions above.
-
-#### Windows 
+#### Prerequisites
 
 Please make sure you have the following software packages installed:
 
-Prerequisites:
+1. Install [Node.js](http://nodejs.org/) for your specific environment.
+2. Install **git** for your specific environment.
+    * [TortoiseGit for Windows](https://code.google.com/p/tortoisegit/)
+    * [Git Client For Windows](http://git-scm.com/download/win)
+    * [Git Client for Mac](http://git-scm.com/download/mac)
+    * [Git for Linux distributions](http://git-scm.com/download/linux)
+        * Example: Ubuntu
 
-1. [Ruby 1.9.3](http://dl.bintray.com/oneclick/rubyinstaller/rubyinstaller-1.9.3-p484.exe?direct)
-2. [Ruby DevKit 4.5.2](https://github.com/downloads/oneclick/rubyinstaller/DevKit-tdm-32-4.5.2-20111229-1559-sfx.exe)
-	- Download and run to extract it somewhere (permanent), and cd to it. 
-	- Run *ruby dk.rb init* and *ruby dk.rb install* to bind it to ruby installations in your path.
-3. [RubyGems](http://rubygems.org/pages/download#formats)
-4. [Git Client For Windows](http://git-scm.com/download/win) or [TortoiseGit](https://code.google.com/p/tortoisegit/) 
+        		sudo apt-get install git
 
-Once your Ruby and Git environments are set up for Windows, the easiest way to start developing is to:
+#### Development 
 
-1. Fork the [VWF repo](https://github.com/virtual-world-framework/vwf/tree/development) from the Development Branch.
-2. Clone your newly forked VWF repo to your local machine.
-3. Run *bundle install* to install your local gems.
-3. Make your code modifications.
-4. Compile the code using *bundle exec rake windows* from the command prompt in your VWF folder.
-5. Start your server using *bundle exec thin start* from the command prompt in your VWF folder to test your changes.
-5. Submit a Pull Request after you complete your updates and testing back to the Virtual World Framework Team's VWF repo.
+Once your environment is set up, the easiest way to start developing is to:
 
-#### Ubuntu/Debian Package  
+1. Fork the [VWF repo](https://github.com/virtual-world-framework/vwf).
+2. Clone your newly forked VWF repo to your local machine:
 
-Perform the following shell command at a user shell prompt:
+		git clone http://www.github.com/*username*/vwf --recursive -branch development
 
-	sudo curl https://raw.github.com/virtual-world-framework/vwf/master/support/build/Scripts/build_debian.sh | bash -x
+3. Edit any npm configuration settings necessary:
 
-#### Red Hat Enterprise Linux Automatic Installation
+		npm config set registry http://registry.npmjs.org/
 
-Perform the following shell command at a user shell prompt:
+4. Set a network proxy, if required by your network:
 
-	sudo curl https://raw.github.com/virtual-world-framework/vwf/master/support/build/Scripts/build_redhat.sh | bash -x
+		npm config set strict-ssl false
+		npm config set proxy http://yourproxy.com:80
+		npm config set https-proxy http://yourproxy.com:80
 
-#### Linux / Mac OS X
-  
-##### RubyGems
-
-Ensure RubyGems is installed (for Debian/Ubuntu). 
-
-	sudo apt-get update
-	sudo apt-get install ruby1.9.1 ruby1.9.1-dev \ rubygems1.9.1 irb1.9.1 ri1.9.1 rdoc1.9.1 \ build-essential libopenssl-ruby1.9.1 libssl-dev zlib1g-dev
-	sudo update-alternatives --install /usr/bin/ruby ruby /usr/bin/ruby1.9.1 400 \
-         --slave   /usr/share/man/man1/ruby.1.gz ruby.1.gz \
-                        /usr/share/man/man1/ruby1.9.1.1.gz \
-        --slave   /usr/bin/ri ri /usr/bin/ri1.9.1 \
-        --slave   /usr/bin/irb irb /usr/bin/irb1.9.1 \
-        --slave   /usr/bin/rdoc rdoc /usr/bin/rdoc1.9.1
-	sudo update-alternatives --config ruby
-	sudo update-alternatives --config gem	
-
-Now try 
-
-	ruby --version
-
-and you should get the 1.9.# baseline for ruby reported back.	
-	
-Or (for Red Hat/Fedora)
-
-	yum install ruby rubygems
-
-Or (for OSX with Homebrew)
-
-Make sure you have the [Command Line Tools for XCode](https://developer.apple.com/downloads/index.action) installed.
-	
-	ruby -e "$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"
-	brew install automake
-
-The script explains what it will do and then pauses before it does it
-	
-	\curl -L https://get.rvm.io | bash -s stable --ruby
-	source ~/.rvm/scripts/rvm
-
-This installs RVM which is a version manager for Ruby.
-	
-	rvm install 1.9.3-head
-	rvm use ruby-1.9.3-head
-	rvm rubygems current
-	This adds Ruby 1.9.3 to your machine and sets 1.9.3 as the default Ruby version.
-
-	brew install git
-	This installs git if you do not have it already on your machine.
-
-##### Download Virtual World Framework
-
-Download the contents of the GitHub Master VWF Baseline to your local directory:
-
-	sudo git clone http://www.github.com/virtual-world-framework/vwf --recursive
-
-##### Install the Gems
-
-Launch a terminal window and cd to your VWF development directory:
-
-	cd vwf/
-
-Then enter these commands:
-
-	sudo gem install rubygems-update
-	sudo update_rubygems 
-	sudo gem install bundler
-
-Now you can install the RubyGems to the system (as root):
-
-	sudo bundle install
-
-##### Build the Server
-This command will compile and setup the server baseline.
-
-	sudo bundle exec rake 
-
-##### Launch the Server
-This command launches Ruby's Thin web server to start serving your VWF applications.
-
-	sudo bundle exec thin start
-
-##### Connect
-
-The server runs on port 3000 in development mode by default. Use Google Chrome to view the website.
-
---------------------------
-
-### Core Developer Installation - NodeJS
-
-As an alternative to the ruby version of the VWF server, there also exists a node.js version (which will soon become the primary supported server). To be on the bleeding edge and use the node.js version of the server now:
-
-1. Install Node.js for your specific environment [http://www.nodejs.org](http://www.nodejs.org).
-
-2. You should already have a baseline on your local machine by following the *Core Developer Installation Instructions* above.
-
-3. Launch a terminal / command prompt window and cd to your VWF application directory.
-
-    ```
-    cd Path/To/YourApp
-    ```
-
-4. Run the vwf command to start the Node JS server.
-
-    ```
-    vwf
-    ```
+5. Run `npm install` from the command prompt in your VWF folder to install all the prerequisites for the VWF server.
+6. Make your code modifications.
+7. Start your server using `npm start` from the command prompt in your VWF folder to test your changes. The server runs on port 3000 in development by default. Use a modern browser to view the website and VWF apps. 
+8. After you complete your updates and testing, submit a Pull Request back to the Virtual World Framework Team's VWF repo.
 
 --------------------------
 
