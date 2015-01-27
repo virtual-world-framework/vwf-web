@@ -43,7 +43,7 @@ Start the server:
 
     npm start
 
-Navigate to "localhost:3000/duck" to see the sample duck application from your local machine.
+Navigate to "localhost:3000" to see the sample duck application from your local machine.
 
 ## Mac OS X / Linux 
 

@@ -51,7 +51,7 @@ function preparePongFrame() {
 
     // Load the iframe with the correct URL
     var vwfServer = "https://demo.virtual.wf";
-    var pongUrl = vwfServer + "/vwf-pong/" + id;
+    var pongUrl = vwfServer + "/demos/pong/" + id;
     var iframe = $iframe[ 0 ];
     iframe.src = pongUrl;
 

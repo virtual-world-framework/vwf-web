@@ -109,4 +109,4 @@ info:
 
 Additionally, the favicon of an application may be set simply by dropping a *favicon.ico* file into the application folder. 
 
-For an example of setting these items, visit the [duck application](https://demo.virtual.wf/duck).
+For an example of setting these items, visit the [duck application](https://demo.virtual.wf/demos/duck).
