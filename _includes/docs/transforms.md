@@ -27,7 +27,7 @@ this.translation = [ 0, 100, 0 ];
 this.scale = [ 10, 0, 0 ];
 ```
 
-**Note**: There is an example app called [transforms](https://demo.virtual.wf/web/example/transforms). This application allows the user to set and view the various properties discussed in this recipe, and see the outcome on an actual model. The source for this app can be found in the [github repository](https://github.com/virtual-world-framework/vwf) in public/web/example/transforms.) 
+**Note**: There is an example app called [transforms](https://demo.virtual.wf/demos/transforms). This application allows the user to set and view the various properties discussed in this recipe, and see the outcome on an actual model. The source for this app can be found in the [github repository](https://github.com/virtual-world-framework/vwf) in public/web/example/transforms.) 
 
 -------------------
 
