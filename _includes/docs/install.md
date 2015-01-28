@@ -19,7 +19,7 @@ Change into your new application folder and start the  server.
 
 -->
 
-Download and extract the latest [Windows build](http://download.virtualworldframework.com/files/vwf-0.6.23.windows-full.zip).
+Download and extract the latest Windows build from the [Downloads](https://virtual.wf/releases.html) page.
 
 Install [Node.js](http://nodejs.org/).
 
@@ -61,5 +61,9 @@ Change into your new folder application, and start the server.
 
     $ cd MyApp
     MyApp$ vwf
+
+## Demo Apps
+
+For additional VWF app examples, download the [vwf-apps repo](https://github.com/virtual-world-framework/vwf-apps/archive/master.zip), and unzip to your *public* directory. 
 
 --------------------------

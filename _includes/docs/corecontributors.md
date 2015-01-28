@@ -23,22 +23,26 @@ Once your environment is set up, the easiest way to start developing is to:
 1. Fork the [VWF repo](https://github.com/virtual-world-framework/vwf).
 2. Clone your newly forked VWF repo to your local machine:
 
-		git clone http://www.github.com/*username*/vwf --recursive -branch development
+		git clone https://www.github.com/*username*/vwf --recursive -branch development
 
-3. Edit any npm configuration settings necessary:
+3. For additional VWF app examples, clone the [vwf-apps repo](https://github.com/virtual-world-framework/vwf-apps) into your public directory:
+
+        git clone https://www.github.com/virtual-world-framework/vwf-apps /path/to/public/vwf-apps/
+
+4. Edit any npm configuration settings necessary:
 
 		npm config set registry http://registry.npmjs.org/
 
-4. Set a network proxy, if required by your network:
+5. Set a network proxy, if required by your network:
 
 		npm config set strict-ssl false
 		npm config set proxy http://yourproxy.com:80
 		npm config set https-proxy http://yourproxy.com:80
 
-5. Run `npm install` from the command prompt in your VWF folder to install all the prerequisites for the VWF server.
-6. Make your code modifications.
-7. Start your server using `npm start` from the command prompt in your VWF folder to test your changes. The server runs on port 3000 in development by default. Use a modern browser to view the website and VWF apps. 
-8. After you complete your updates and testing, submit a Pull Request back to the Virtual World Framework Team's VWF repo.
+6. Run `npm install` from the command prompt in your VWF folder to install all the prerequisites for the VWF server.
+7. Make your code modifications.
+8. Start your server using `npm start` from the command prompt in your VWF folder to test your changes. The server runs on port 3000 in development by default. Use a modern browser to view the website and VWF apps. 
+9. After you complete your updates and testing, submit a Pull Request back to the Virtual World Framework Team's VWF repo.
 
 --------------------------
 
