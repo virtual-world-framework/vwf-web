@@ -41,11 +41,11 @@ We're going to walk through the step-by-step process of writing the classic game
 From the command line, you can create an empty application using the `vwf` command:
 
 ```
-$ vwf create vwf-pong
-VWF application created at 'vwf-pong'.
+$ vwf create pong
+VWF application created at 'pong'.
 
 To get started quickly:
-  $ cd vwf-pong
+  $ cd pong
   $ vwf
 
 See the Getting Started documentation at:
@@ -55,7 +55,7 @@ https://virtual.wf/getting_started.html
 Change into the directory you just created.
 
 ```
-$ cd vwf-pong
+$ cd pong
 ```
 
 In that directory you'll find a file called `index.vwf.yaml`, which describes the simplest possible VWF application. In each section of this document, we will be adding code to this file as we add and demonstrate features. Open the file in a text editor to get started and add the following:
@@ -71,7 +71,7 @@ Run the server using the `vwf` command and check out the results of loading this
 ```
 $ vwf
 LogLevel = 1
-Serving VWF applications from /path/to/vwf-pong
+Serving VWF applications from /path/to/pong
 Serving on port 3000
 ```
 

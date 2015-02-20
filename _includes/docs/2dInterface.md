@@ -11,7 +11,7 @@ Inside that file, you can place any valid HTML, but you must obey two rules:
 
 **Note**: The loader strips out header and body tags and inserts your content directly into a nameless, classless div in the VWF *index.html* page (view your app's page source to see what we mean). Including header and body tags is helpful for testing as a standalone webpage, but not required for VWF. 
 
-**Note**: The example application [transforms](https://demo.virtual.wf/web/example/transforms) provides a basic demonstration of the principles described in this recipe. It provides a series of 2D HTML form panels which can be used to set properties, call methods, and receive data from the VWF model. The source for this app can be found in the [github repository](https://github.com/virtual-world-framework/vwf) in public/web/example/transforms.)
+**Note**: The example application [transforms](https://demo.virtual.wf/demos/transforms) provides a basic demonstration of the principles described in this recipe. It provides a series of 2D HTML form panels which can be used to set properties, call methods, and receive data from the VWF model. The source for this app can be found in the [github repository](https://github.com/virtual-world-framework/vwf) in public/web/example/transforms.)
 
 -------------------
 
@@ -109,4 +109,4 @@ info:
 
 Additionally, the favicon of an application may be set simply by dropping a *favicon.ico* file into the application folder. 
 
-For an example of setting these items, visit the [duck application](https://demo.virtual.wf/duck).
+For an example of setting these items, visit the [duck application](https://demo.virtual.wf/demos/duck).

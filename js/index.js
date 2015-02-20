@@ -25,7 +25,7 @@ function prepareAppFrames() {
 
     // Load the iframe with the correct URL
     var vwfServer = "https://demo.virtual.wf";
-    var appUrl = vwfServer + "/duck/" + id;
+    var appUrl = vwfServer + "/" + id;
     var iframeApp1 = $iframeApp1[0];
     iframeApp1.src = appUrl;
     var iframeApp2 = $iframeApp2[0];
