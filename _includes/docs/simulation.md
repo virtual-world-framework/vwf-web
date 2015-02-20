@@ -6,7 +6,7 @@ Let's define a *simulation* as any application that models a sequence of causes 
 
 ### Load the 3D scene
 
-Let's use the 3D model of a radio that comes with the VWF source in /public/radio:
+Let's use the 3D model of a radio that comes with the VWF source in /public/demos/radio:
 
 ![The radio 3D model for this recipe](images/radio.png)
 
